@@ -1,37 +1,50 @@
-Anne Beth Andersen – Portfolio
+# Anne Beth Andersen
 
-Dette repoet inneholder prosjekter jeg har laget i forbindelse med min læringsreise fra helse-IT til utvikling. Målet er å bygge et solid teknisk fundament innen web, Python, cloud og IoT, samtidig som jeg bruker erfaringen min fra digitale arbeidsprosesser og brukernære systemer.
+Software development portfolio focused on full-stack development, APIs, automation, cloud technologies and healthcare technology.
 
-🔧 Teknologi jeg jobber med
+I combine a healthcare technology background with hands-on experience in software development, automation, IoT, system configuration and digital workflows.
 
-HTML & CSS
+## Technical Skills
 
-Python (grunnleggende)
+* HTML, CSS and JavaScript
+* Python and FastAPI
+* REST APIs
+* SQL and PostgreSQL
+* Git and GitHub
+* Docker
+* Home Assistant
+* MQTT, Zigbee and IoT integrations
+* Raspberry Pi and Linux-based systems
+* Microsoft 365 and digital workflow tools
+* Troubleshooting, system configuration and technical user support
 
-Git & GitHub Pages
+## Currently Expanding
 
-Azure Fundamentals
+* React
+* C# and ASP.NET Core
+* .NET
+* Microsoft Azure
+* CI/CD and GitHub Actions
+* Containerized application development
 
-Home Assistant & IoT-integrasjoner (Tuya)
+## Current Development Focus
 
+* Full-stack web applications
+* REST API development
+* Backend development with Python and .NET
+* Home Assistant and IoT integrations
+* Automation and digital workflows
+* Cloud deployment and DevOps fundamentals
 
-📁 Prosjekter i dette repoet
+## Portfolio
 
-1. Porteføljeside (HTML/CSS)
-En enkel og responsiv nettside som viser prosjekter og kompetanse. Publisert via GitHub Pages.
+I am building practical projects that demonstrate progression from frontend development to APIs, full-stack applications, cloud deployment, automation and IoT.
 
-2. Home Assistant – automasjoner
-Eksempler på hvordan jeg jobber med IoT, integrasjoner og automatisering i praksis.
+Current projects include:
 
-3. Python-øvelser
-Små oppgaver og scripts jeg har bygget mens jeg lærer datastrukturer og logikk.
+* JavaScript Calculator
+* Digital Clock
+* JavaScript Counter
+* FastAPI REST API project
 
-🎯 Hva jeg fokuserer på nå
-
-Videreutvikle frontend-ferdigheter
-
-Bygge små backend-prosjekter i Python
-
-Utforske API-er og skytjenester
-
-Lære mer om strukturert utvikling og beste praksis
+Upcoming projects will expand into React, ASP.NET Core, Docker, CI/CD, Azure and Home Assistant integrations.
