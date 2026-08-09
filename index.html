@@ -1,0 +1,278 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Developer portfolio showcasing JavaScript, Python, FastAPI and web development projects.">
+  <title>AB | Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="nav">
+  <a class="logo" href="#home">AB<span>.</span></a>
+
+  <nav>
+    <a href="#projects">Projects</a>
+    <a href="#lab">Live Lab</a>
+    <a href="#skills">Skills</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
+
+<main>
+
+<section id="home" class="hero">
+  <div class="hero-content">
+    <p class="eyebrow">DEVELOPER PORTFOLIO</p>
+
+    <h1>
+      Building practical
+      <span>software solutions.</span>
+    </h1>
+
+    <p class="intro">
+      Developing full-stack applications with JavaScript, Python,
+      FastAPI and modern web technologies, with a background in
+      healthcare technology and digital solutions.
+    </p>
+
+    <div class="hero-actions">
+      <a class="button primary" href="#projects">Explore projects</a>
+      <a class="button secondary"
+         href="https://github.com/abla86"
+         target="_blank"
+         rel="noopener noreferrer">
+         GitHub
+      </a>
+    </div>
+  </div>
+
+  <div class="terminal">
+    <div class="terminal-top">
+      <span></span><span></span><span></span>
+    </div>
+
+    <pre><code><span class="muted">$</span> whoami
+AB
+
+<span class="muted">$</span> focus
+Web Development
+APIs
+Automation
+
+<span class="muted">$</span> currently_building
+Developer Portfolio
+
+<span class="success">● ready</span></code></pre>
+  </div>
+</section>
+
+
+<section id="projects" class="section">
+  <div class="section-heading">
+    <p class="eyebrow">SELECTED WORK</p>
+    <h2>Projects</h2>
+    <p>Projects documenting my progression across frontend and backend development.</p>
+  </div>
+
+  <div class="project-grid">
+
+    <article class="project featured">
+      <div class="project-number">01</div>
+      <p class="project-type">JAVASCRIPT APPLICATION</p>
+      <h3>Advanced JavaScript Counter</h3>
+      <p>
+        Interactive JavaScript project demonstrating DOM manipulation,
+        event handling and application logic.
+      </p>
+      <div class="tags">
+        <span>JavaScript</span>
+        <span>HTML</span>
+        <span>CSS</span>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-number">02</div>
+      <p class="project-type">WEB APPLICATION</p>
+      <h3>Task Manager</h3>
+      <p>
+        Task-management project focused on interactive application
+        behaviour and structured frontend development.
+      </p>
+      <div class="tags">
+        <span>JavaScript</span>
+        <span>Web</span>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-number">03</div>
+      <p class="project-type">BACKEND / REST API</p>
+      <h3>FastAPI Learning</h3>
+      <p>
+        REST API with CRUD operations and persistent data storage,
+        developed with Python and FastAPI.
+      </p>
+      <div class="tags">
+        <span>Python</span>
+        <span>FastAPI</span>
+        <span>REST API</span>
+        <span>PostgreSQL</span>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-number">04</div>
+      <p class="project-type">JAVASCRIPT</p>
+      <h3>Calculator</h3>
+      <p>
+        Browser-based calculator demonstrating JavaScript interaction
+        and user-interface logic.
+      </p>
+      <div class="tags">
+        <span>JavaScript</span>
+        <span>CSS</span>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-number">05</div>
+      <p class="project-type">WEB DEVELOPMENT</p>
+      <h3>Digital Clock</h3>
+      <p>
+        Real-time browser clock built with JavaScript and dynamic DOM updates.
+      </p>
+      <div class="tags">
+        <span>JavaScript</span>
+        <span>HTML</span>
+        <span>CSS</span>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-number">06</div>
+      <p class="project-type">FOUNDATIONS</p>
+      <h3>Hello HTML</h3>
+      <p>
+        Web-development foundation project documenting the start of
+        the portfolio progression.
+      </p>
+      <div class="tags">
+        <span>HTML</span>
+        <span>CSS</span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+<section id="lab" class="section lab-section">
+  <div class="section-heading">
+    <p class="eyebrow">INTERACTIVE</p>
+    <h2>Live Lab</h2>
+    <p>Small components running directly inside the portfolio.</p>
+  </div>
+
+  <div class="lab-grid">
+
+    <div class="widget">
+      <p class="widget-label">LOCAL TIME</p>
+      <div id="clock" class="clock">00:00:00</div>
+      <div id="date" class="date"></div>
+    </div>
+
+    <div class="widget">
+      <p class="widget-label">COUNTER</p>
+      <div id="count" class="counter-value">0</div>
+
+      <div class="counter-controls">
+        <button id="decrease" aria-label="Decrease counter">−</button>
+        <button id="reset">Reset</button>
+        <button id="increase" aria-label="Increase counter">+</button>
+      </div>
+    </div>
+
+    <div class="widget status-widget">
+      <p class="widget-label">PORTFOLIO STATUS</p>
+
+      <div class="status-row">
+        <span>Frontend</span>
+        <strong>Active</strong>
+      </div>
+
+      <div class="status-row">
+        <span>Backend API</span>
+        <strong>Development</strong>
+      </div>
+
+      <div class="status-row">
+        <span>GitHub</span>
+        <strong>Active</strong>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="skills" class="section">
+  <div class="section-heading">
+    <p class="eyebrow">TECHNOLOGY</p>
+    <h2>Skills & Tools</h2>
+  </div>
+
+  <div class="skills">
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>Python</span>
+    <span>FastAPI</span>
+    <span>REST APIs</span>
+    <span>PostgreSQL</span>
+    <span>Git</span>
+    <span>GitHub</span>
+  </div>
+</section>
+
+
+<section id="about" class="section about">
+  <div>
+    <p class="eyebrow">ABOUT</p>
+    <h2>Technology with practical context.</h2>
+  </div>
+
+  <div class="about-text">
+    <p>
+      I combine software development with experience from healthcare,
+      healthcare technology and digital systems.
+    </p>
+
+    <p>
+      My current work focuses on building practical applications,
+      APIs and web solutions while continuously expanding my
+      full-stack development skills.
+    </p>
+
+    <a href="https://github.com/abla86"
+       target="_blank"
+       rel="noopener noreferrer">
+       github.com/abla86 →
+    </a>
+  </div>
+</section>
+
+</main>
+
+
+<footer>
+  <span>AB Developer Portfolio</span>
+  <span id="year"></span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
