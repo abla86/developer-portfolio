@@ -1,47 +1,95 @@
 ﻿# Developer Portfolio
 
-Personal developer portfolio showcasing my projects, technical skills and progression in software development.
+Personal developer portfolio showcasing practical projects across software development, APIs, automation and data.
 
-## Live Portfolio
-
-https://abla86.github.io/developer-portfolio/
-
-## Features
-
-- Responsive developer portfolio
-- Project showcase
-- Interactive Live Lab
-- Real-time digital clock and date
-- Interactive JavaScript counter
-- Skills and technology overview
-- About section
-- Responsive desktop and mobile layout
-
-## Projects
-
-- Advanced JavaScript Counter
-- Task Manager
-- FastAPI Learning
-- Calculator
-- Digital Clock
-- Hello HTML
-
-## Technologies
-
-**Frontend:** HTML5, CSS3, JavaScript
-
-**Backend:** Python, FastAPI, REST APIs, PostgreSQL
-
-**Development:** Git, GitHub, GitHub Pages, PowerShell
+**Live portfolio:** https://abla86.github.io/developer-portfolio/
 
 ## About
 
-I combine software development with experience from healthcare, healthcare technology and digital systems.
+I build practical software projects using JavaScript, React, Python, C#, .NET and SQL.
 
-My current work focuses on practical applications, APIs and web solutions while expanding my full-stack development skills.
+My projects focus on software development, backend APIs, automation, data analysis and practical problem solving. Some projects use healthcare as a domain example, reflecting previous domain experience rather than limiting the portfolio to a specific industry.
 
-## GitHub
+## Technical Skills
 
-https://github.com/abla86
+- HTML5 and CSS3
+- JavaScript
+- React
+- Python
+- C#
+- .NET 9
+- ASP.NET Core
+- REST APIs
+- OpenAPI
+- SQL Server
+- Docker
+- Git and GitHub
+- GitHub Actions CI
+- CodeQL security scanning
+- Dependabot
+- Automated testing with xUnit, Jest and pytest
 
-Built with HTML, CSS and JavaScript.
+## Portfolio Projects
+
+### HealthTech Device API
+
+ASP.NET Core REST API demonstrating backend development, CRUD operations, filtering, validation, automated testing and modern development workflows.
+
+Demonstrated practices:
+
+- C# and ASP.NET Core
+- REST API design
+- 7/7 automated xUnit tests
+- GitHub Actions CI
+- Docker containerization
+- Docker build and runtime verification in CI
+- CodeQL security scanning
+- Dependabot dependency monitoring
+- OpenAPI
+
+Repository: https://github.com/abla86/HealthTechDeviceApi
+
+### Healthcare Workforce SQL
+
+SQL Server project demonstrating relational database design and workforce data analysis.
+
+Includes:
+
+- Relational schema design
+- Seed data
+- JOIN and aggregate queries
+- Views
+- Stored procedures
+- Validation queries
+- Staffing and competence coverage analysis
+
+Repository: https://github.com/abla86/healthcare-workforce-sql
+
+### Additional Projects
+
+The portfolio also contains projects demonstrating JavaScript, React, Python, APIs, data analysis and frontend development.
+
+See the live portfolio for the complete project overview.
+
+## Development Practices
+
+Projects are used to demonstrate practical development workflows including:
+
+- Version control with Git
+- Public GitHub repositories
+- Automated testing
+- Continuous integration
+- Containerization
+- Security scanning
+- Dependency monitoring
+- API design
+- Database development
+- Documentation
+
+## Current Focus
+
+Continuing to develop skills in full-stack development, backend systems, APIs, cloud technologies, automation and modern software development practices.
+
+## Author
+
+Anne Beth Andersen
