@@ -1176,6 +1176,73 @@ GitHub Profile
 
 </div>
 
+
+<!-- AB-PROJECT-EXPLORER-START -->
+<style>
+#ab-project-explorer{margin:56px 0 28px;padding:0}
+#ab-project-explorer *{box-sizing:border-box}
+.abpx-head{margin-bottom:20px}
+.abpx-head h2{margin:4px 0 7px;font-size:clamp(1.8rem,3vw,2.5rem)}
+.abpx-head p{max-width:760px;opacity:.78}
+.abpx-kicker{text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;font-weight:800;opacity:.72}
+.abpx-filters{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}
+.abpx-filter{border:1px solid rgba(128,150,180,.35);background:rgba(120,145,180,.08);color:inherit;border-radius:999px;padding:8px 11px;cursor:pointer}
+.abpx-filter.active{background:currentColor;color:var(--bg,#101722)}
+.abpx-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.abpx-card{border:1px solid rgba(128,150,180,.28);border-radius:15px;padding:17px;background:rgba(120,145,180,.055);display:flex;flex-direction:column;min-height:220px}
+.abpx-card:first-child{grid-column:span 2;border-color:rgba(73,190,128,.55);background:rgba(73,190,128,.07)}
+.abpx-type{font-size:.68rem;text-transform:uppercase;letter-spacing:.13em;font-weight:800;opacity:.7}
+.abpx-card h3{margin:7px 0 7px}
+.abpx-card p{margin:0 0 12px;opacity:.78;font-size:.9rem}
+.abpx-tech{margin-top:auto;padding-top:10px;font-size:.77rem;opacity:.82}
+.abpx-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:13px}
+.abpx-btn{display:inline-block;border:1px solid rgba(128,150,180,.35);border-radius:8px;padding:7px 9px;font-size:.76rem;font-weight:750;text-decoration:none;color:inherit}
+.abpx-live{border-color:rgba(73,190,128,.55)}
+.abpx-more{margin-top:28px;padding-top:22px;border-top:1px solid rgba(128,150,180,.22)}
+.abpx-more h3{margin:0 0 4px}.abpx-more p{margin:0 0 13px;opacity:.72}
+.abpx-mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.abpx-mini{display:block;border:1px solid rgba(128,150,180,.22);border-radius:10px;padding:11px;text-decoration:none;color:inherit}
+.abpx-mini strong,.abpx-mini span{display:block}.abpx-mini span{font-size:.76rem;opacity:.7;margin-top:3px}
+@media(max-width:900px){.abpx-grid{grid-template-columns:1fr 1fr}.abpx-card:first-child{grid-column:1/-1}.abpx-mini-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.abpx-grid,.abpx-mini-grid{grid-template-columns:1fr}.abpx-card:first-child{grid-column:auto}}
+</style>
+
+<section id="ab-project-explorer">
+  <div class="abpx-head">
+    <div class="abpx-kicker">Complete project portfolio</div>
+    <h2>Projects & development progression</h2>
+    <p>The complete project range is visible here without requiring visitors to browse through separate repositories. Stronger projects appear first; smaller projects document the progression from fundamentals to full-stack development.</p>
+  </div>
+
+  <div class="abpx-filters">
+    <button class="abpx-filter active" data-abpx-filter="All">All</button>
+    <button class="abpx-filter" data-abpx-filter="Full stack">Full stack</button>
+    <button class="abpx-filter" data-abpx-filter="Backend">Backend</button>
+    <button class="abpx-filter" data-abpx-filter="Data">Data</button>
+    <button class="abpx-filter" data-abpx-filter="Frontend">Frontend</button>
+    <button class="abpx-filter" data-abpx-filter="Learning">Progression</button>
+  </div>
+
+  <div class="abpx-grid">
+    
+  </div>
+
+  
+</section>
+
+<script>
+document.querySelectorAll('.abpx-filter').forEach(function(button){
+  button.addEventListener('click',function(){
+    document.querySelectorAll('.abpx-filter').forEach(function(b){b.classList.remove('active')});
+    button.classList.add('active');
+    var filter=button.getAttribute('data-abpx-filter');
+    document.querySelectorAll('.abpx-card').forEach(function(card){
+      card.style.display=(filter==='All'||card.getAttribute('data-abpx-cat')===filter)?'flex':'none';
+    });
+  });
+});
+</script>
+<!-- AB-PROJECT-EXPLORER-END -->
 </main>
 
 
@@ -1192,6 +1259,8 @@ Developer portfolio · Anne Beth Andersen
 
 </body>
 </html>
+
+
 
 
 
