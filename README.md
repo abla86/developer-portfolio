@@ -1,94 +1,72 @@
 ﻿# Developer Portfolio
 
-Personal developer portfolio showcasing practical projects across software development, APIs, automation and data.
+Personal developer portfolio presenting my complete development progression in one place.
 
-**Live portfolio:** https://abla86.github.io/developer-portfolio/
+Live portfolio: https://abla86.github.io/developer-portfolio/
 
-## About
+## Focus
 
-I build practical software projects using JavaScript, React, Python, C#, .NET and SQL.
+Software Development · APIs · Automation · Data
 
-My projects focus on software development, backend APIs, automation, data analysis and practical problem solving. Some projects use healthcare as a domain example, reflecting previous domain experience rather than limiting the portfolio to a specific industry.
+The portfolio shows the full progression from HTML and JavaScript fundamentals to React, Python, C#, APIs, SQL, Docker and full-stack development.
 
-## Technical Skills
+## Featured Project
 
-- HTML5 and CSS3
-- JavaScript
-- React
-- Python
-- C#
-- .NET 9
-- ASP.NET Core
-- REST APIs
-- OpenAPI
+### Workforce & Competence Management System
+
+Interactive full-stack workforce and competence management application.
+
+- React + Vite frontend
+- ASP.NET Core REST API
+- Entity Framework Core
 - SQL Server
-- Docker
-- Git and GitHub
+- Docker Compose
+- Employee CRUD
+- Competence levels and validity
+- Shift planning and employee assignment
+- Staffing requirements
+- Competence requirements
+- Automatic staffing and competence gap analysis
+- GREEN / AMBER / RED operational status
+- 3/3 xUnit tests
+- Frontend lint and production build
 - GitHub Actions CI
-- CodeQL security scanning
+- CodeQL
 - Dependabot
-- Automated testing with xUnit, Jest and pytest
 
-## Portfolio Projects
+Repository:
+https://github.com/abla86/workforce-competence-management
 
-### HealthTech Device API
+## Projects
 
-ASP.NET Core REST API demonstrating backend development, CRUD operations, filtering, validation, automated testing and modern development workflows.
+The homepage presents all main projects directly so visitors do not need to browse through many separate repositories.
 
-Demonstrated practices:
+### Full Stack
+- Workforce & Competence Management
 
-- C# and ASP.NET Core
-- REST API design
-- 7/7 automated xUnit tests
-- GitHub Actions CI
-- Docker containerization
-- Docker build and runtime verification in CI
-- CodeQL security scanning
-- Dependabot dependency monitoring
-- OpenAPI
+### Backend & Data
+- HealthTech Device API
+- Workforce SQL
+- Shift & Competence Planner
+- Healthcare Data Analyzer
+- FastAPI Learning
 
-Repository: https://github.com/abla86/HealthTechDeviceApi
+### Frontend Applications
+- React Task Dashboard
+- To-Do App
+- Task Manager
+- Dashboard UI
 
-### Healthcare Workforce SQL
+### Development Progression
+- Advanced JavaScript Counter
+- Calculator
+- Digital Clock
+- JavaScript Counter
+- Hello HTML
 
-SQL Server project demonstrating relational database design and workforce data analysis.
+## Demonstrated Technologies
 
-Includes:
-
-- Relational schema design
-- Seed data
-- JOIN and aggregate queries
-- Views
-- Stored procedures
-- Validation queries
-- Staffing and competence coverage analysis
-
-Repository: https://github.com/abla86/healthcare-workforce-sql
-
-### Additional Projects
-
-The portfolio also contains projects demonstrating JavaScript, React, Python, APIs, data analysis and frontend development.
-
-See the live portfolio for the complete project overview.
-
-## Development Practices
-
-Projects are used to demonstrate practical development workflows including:
-
-- Version control with Git
-- Public GitHub repositories
-- Automated testing
-- Continuous integration
-- Containerization
-- Security scanning
-- Dependency monitoring
-- API design
-- Database development
-- Documentation
-
-## Current Focus
-
-Continuing to develop skills in full-stack development, backend systems, APIs, cloud technologies, automation and modern software development practices.
+HTML5 · CSS3 · JavaScript · React · Vite · Python · FastAPI · C# · .NET 9 · ASP.NET Core · Entity Framework Core · REST · OpenAPI · SQL Server · PostgreSQL · Docker · Docker Compose · xUnit · pytest · Jest · Git · GitHub Actions · CodeQL · Dependabot
 
 ## Author
 
