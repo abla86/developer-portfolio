@@ -1,72 +1,128 @@
-﻿# Developer Portfolio
+# Developer Portfolio — Anne Beth Andersen
 
-Personal developer portfolio presenting my complete development progression in one place.
+Personal developer portfolio presenting practical software development, healthcare technology, research software, APIs, automation and data projects.
 
-Live portfolio: https://abla86.github.io/developer-portfolio/
+**Live portfolio:** https://abla86.github.io/developer-portfolio/
 
-## Focus
+## Profile
 
-Software Development · APIs · Automation · Data
+I build practical digital solutions across frontend, backend and data. My work combines healthcare-domain knowledge, research methodology, software development, structured workflows and automation.
 
-The portfolio shows the full progression from HTML and JavaScript fundamentals to React, Python, C#, APIs, SQL, Docker and full-stack development.
+The portfolio demonstrates progression from web fundamentals to React, Python, C#/.NET, REST APIs, SQL, Docker and secure CI/CD practices.
 
-## Featured Project
+## Featured projects
+
+### Evidence Appraisal Tool
+
+Research-focused full-stack application for transparent and structured evidence appraisal workflows.
+
+- React + Vite frontend
+- ASP.NET Core REST API
+- AMSTAR 2, CASP, AGREE II and GRADE workflows
+- Structured evidence location and researcher rationale
+- Researcher-confirmed judgements rather than unsupported automated conclusions
+- AMSTAR 2 Word, PDF, Excel and JSON export
+- SHA-256 verification for exported reports
+- 22/22 backend tests and 14/14 frontend tests
+- ESLint and production build
+- GitHub Actions CI
+- CodeQL and Dependabot
+
+Repository: https://github.com/abla86/evidence-appraisal-tool
+
+Live demo: https://evidence-appraisal-tool.onrender.com
 
 ### Workforce & Competence Management System
 
-Interactive full-stack workforce and competence management application.
+Interactive full-stack workforce planning and competence management application.
 
 - React + Vite frontend
 - ASP.NET Core REST API
 - Entity Framework Core
 - SQL Server
 - Docker Compose
-- Employee CRUD
-- Competence levels and validity
-- Shift planning and employee assignment
-- Staffing requirements
-- Competence requirements
-- Automatic staffing and competence gap analysis
+- Employee and competence management
+- Shift planning and staffing requirements
+- Automatic competence-gap analysis
 - GREEN / AMBER / RED operational status
-- 3/3 xUnit tests
+- xUnit tests
 - Frontend lint and production build
 - GitHub Actions CI
 - CodeQL
 - Dependabot
 
-Repository:
-https://github.com/abla86/workforce-competence-management
+Repository: https://github.com/abla86/workforce-competence-management
 
-## Projects
+## Selected projects
 
-The homepage presents all main projects directly so visitors do not need to browse through many separate repositories.
+### Healthcare, research and data
 
-### Full Stack
+- Evidence Appraisal Tool
 - Workforce & Competence Management
-
-### Backend & Data
 - HealthTech Device API
-- Workforce SQL
-- Shift & Competence Planner
 - Healthcare Data Analyzer
-- FastAPI Learning
+- Healthcare Workforce SQL
+- Shift & Competence Planner
 
-### Frontend Applications
+### Backend and APIs
+
+- FastAPI Learning
+- HealthTech Device API
+- ASP.NET Core / .NET projects
+
+### Frontend applications
+
 - React Task Dashboard
 - To-Do App
 - Task Manager
 - Dashboard UI
 
-### Development Progression
+### Development progression
+
 - Advanced JavaScript Counter
 - Calculator
 - Digital Clock
 - JavaScript Counter
 - Hello HTML
 
-## Demonstrated Technologies
+## Technical stack
 
-HTML5 · CSS3 · JavaScript · React · Vite · Python · FastAPI · C# · .NET 9 · ASP.NET Core · Entity Framework Core · REST · OpenAPI · SQL Server · PostgreSQL · Docker · Docker Compose · xUnit · pytest · Jest · Git · GitHub Actions · CodeQL · Dependabot
+### Frontend
+
+HTML5 · CSS3 · JavaScript · React · Vite · Jest
+
+### Backend and data
+
+Python · FastAPI · C# · .NET 9 · ASP.NET Core · Entity Framework Core · REST APIs · OpenAPI · SQL Server · PostgreSQL
+
+### Engineering and DevSecOps
+
+Git · GitHub · GitHub Actions · Docker · Docker Compose · CodeQL · Dependabot · xUnit · pytest · Jest · PowerShell
+
+### Automation and IoT
+
+Home Assistant · MQTT · Zigbee · Raspberry Pi · YAML automation
+
+### AI
+
+AI-assisted software development · Generative AI tooling · Workflow automation · Evaluation-oriented development
+
+## Engineering principles demonstrated
+
+- Build around real professional problems and workflows.
+- Keep domain judgement separate from software validation.
+- Prefer explicit evidence, rationale and traceability over opaque automation.
+- Test functionality and document verification.
+- Use CI/CD and security scanning as part of development rather than as an afterthought.
+- Keep claims about functionality aligned with what the repositories actually implement.
+
+## Portfolio
+
+Full project portfolio: https://abla86.github.io/developer-portfolio/
+
+## Direction
+
+Building toward full-stack and backend software development, digital health and health-tech product development, with particular interest in APIs, data, evidence, automation, AI and systems that solve real professional problems.
 
 ## Author
 
