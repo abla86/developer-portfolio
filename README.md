@@ -34,22 +34,27 @@ Live demo: https://evidence-appraisal-tool.onrender.com
 
 ### Workforce & Competence Management System
 
-Interactive full-stack workforce planning and competence management application.
+Interactive full-stack workforce planning and competence management application covering employees, competence, shift planning and staffing coverage.
 
 - React + Vite frontend
 - ASP.NET Core REST API
-- Entity Framework Core
+- Entity Framework Core 10
 - SQL Server
 - Docker Compose
 - Employee and competence management
-- Shift planning and staffing requirements
-- Automatic competence-gap analysis
-- GREEN / AMBER / RED operational status
-- xUnit tests
+- Competence levels, validity and expiry/review indicators
+- Shift planning, assignments and staffing requirements
+- Required competence and role checks
+- Availability, approved absence, overlap and rest-period checks
+- Explainable GREEN / YELLOW / RED operational coverage status
+- Candidate ranking and qualified replacement suggestions
+- Non-destructive what-if scenario analysis
+- Coverage history/audit events
+- Authenticated CSV/JSON/spreadsheet-compatible data exchange
+- 11 backend unit tests
 - Frontend lint and production build
-- GitHub Actions CI
-- CodeQL
-- Dependabot
+- Full-stack Docker smoke testing in GitHub Actions
+- CodeQL and Dependabot
 
 Repository: https://github.com/abla86/workforce-competence-management
 
@@ -93,7 +98,7 @@ HTML5 · CSS3 · JavaScript · React · Vite · Jest
 
 ### Backend and data
 
-Python · FastAPI · C# · .NET 9 · ASP.NET Core · Entity Framework Core · REST APIs · OpenAPI · SQL Server · PostgreSQL
+Python · FastAPI · C# · .NET 10 · ASP.NET Core · Entity Framework Core · REST APIs · OpenAPI · SQL Server · PostgreSQL
 
 ### Engineering and DevSecOps
 
