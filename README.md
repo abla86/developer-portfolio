@@ -34,15 +34,16 @@ Live demo: https://evidence-appraisal-tool.onrender.com
 
 ### Workforce & Competence Management System
 
-Interactive full-stack workforce planning and competence management application covering employees, competence, shift planning and staffing coverage.
+Verified full-stack workforce planning and competence management application covering employees, competence, shift planning and staffing coverage.
 
-- React + Vite frontend
-- ASP.NET Core REST API
+- React 19 + Vite 7 frontend
+- ASP.NET Core Minimal API on .NET 10
 - Entity Framework Core 10
-- SQL Server
+- SQL Server 2022 container
 - Docker Compose
 - Employee and competence management
-- Competence levels, validity and expiry/review indicators
+- Basic / Intermediate / Advanced competence levels
+- Competence validity and expiry/review indicators
 - Shift planning, assignments and staffing requirements
 - Required competence and role checks
 - Availability, approved absence, overlap and rest-period checks
@@ -50,13 +51,54 @@ Interactive full-stack workforce planning and competence management application 
 - Candidate ranking and qualified replacement suggestions
 - Non-destructive what-if scenario analysis
 - Coverage history/audit events
-- Authenticated CSV/JSON/spreadsheet-compatible data exchange
-- 11 backend unit tests
-- Frontend lint and production build
-- Full-stack Docker smoke testing in GitHub Actions
+- Authenticated CSV/JSON data exchange and reports
+- **18/18 backend tests passed in final local verification**
+- EF model/migration validation passed with no pending model changes
+- Frontend lint and production build passed
+- Docker Compose, SQL Server, API and frontend health checks passed
+- GitHub Actions full-stack smoke testing
 - CodeQL and Dependabot
 
 Repository: https://github.com/abla86/workforce-competence-management
+
+Live demo: https://workforce-frontend.onrender.com/
+
+### What is actually used in the Workforce repository
+
+**Programming languages**
+
+- C#
+- JavaScript
+- PowerShell
+
+**Data/query language**
+
+- SQL/T-SQL through SQL Server and EF Core database operations
+
+**Markup, styling and configuration**
+
+- HTML
+- CSS
+- YAML
+- JSON
+- Dockerfile / Docker Compose configuration
+
+**Frameworks and libraries**
+
+- ASP.NET Core
+- React
+- Vite
+- Entity Framework Core
+- OpenAPI
+- xUnit
+
+**Infrastructure / DevOps / security**
+
+- Docker
+- Docker Compose
+- GitHub Actions
+- CodeQL
+- Dependabot
 
 ## Selected projects
 
