@@ -71,9 +71,11 @@ Live demo: https://workforce-frontend.onrender.com/
 - JavaScript
 - PowerShell
 
-**Data/query language**
+**Data and database technologies**
 
-- SQL/T-SQL through SQL Server and EF Core database operations
+- SQL Server 2022
+- Entity Framework Core 10 for database access and migrations
+- No standalone `.sql`/T-SQL source files are currently stored in the Workforce repository
 
 **Markup, styling and configuration**
 
