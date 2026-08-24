@@ -12,29 +12,32 @@ The portfolio demonstrates progression from web fundamentals to React, Python, C
 
 ## Featured projects
 
-### Evidence Appraisal Tool — published prototype
+### Evidence Appraisal Tool — advanced research prototype v1.0.0
 
-Research-focused full-stack application for transparent and structured evidence appraisal and research workflows. The repository has a public live prototype and an active development path for extending the appraisal engine without replacing existing functionality.
+A full-featured research-oriented web application for structured evidence appraisal, research workflow support and evidence traceability. The project is deliberately presented as a **prototype**: the implemented software is substantially more than a UI mock-up, while clinical validation, production security, institutional privacy governance and other formal deployment requirements are not claimed as complete.
 
-- React + Vite frontend
-- ASP.NET Core REST API
-- AMSTAR 2, CASP, AGREE II and GRADE workflows
+- React 19 + Vite frontend
+- ASP.NET Core REST API on .NET 9
+- AMSTAR 2, CASP, AGREE II and GRADE workflow support
+- RoB 2 workflow explicitly marked prototype
 - Structured evidence location and researcher rationale
 - Researcher-confirmed judgements rather than unsupported automated conclusions
-- AMSTAR 2 Word, PDF, Excel and JSON export
-- SHA-256 verification for exported reports
-- Research workflow modules including PRISMA, screening, extraction, inter-rater reliability, deduplication and conflict handling
-- Evidence document analysis with explicit methodological safeguards
-- Evidence verification and audit-history functionality
+- Bibliography import and duplicate-candidate detection
+- PRISMA workflow and export support
+- Screening, extraction, reviewer comparison and Cohen's kappa
+- Evidence document analysis with candidate/uncertain semantics
+- Evidence verification and hash-linked audit history
+- Project finalization with SHA-256 integrity marker and lock control
+- Defensive API hardening including request-size limits, rate limiting, CORS configuration and security headers
 - GitHub Actions CI
 - CodeQL and Dependabot
-- Public prototype deployment
+- Public demonstration deployment
 
 **Repository:** https://github.com/abla86/evidence-appraisal-tool
 
 **Live prototype:** https://evidence-appraisal-tool.onrender.com
 
-**Current development:** RoB 2 prototype workflow and additional AMSTAR 2 consistency validation are being integrated and regression-tested before becoming part of the published main deployment.
+**Status:** Full-featured advanced research prototype. Not clinically validated, certified or intended for confidential research data in the public deployment.
 
 ### Workforce & Competence Management System
 
@@ -67,7 +70,7 @@ Verified full-stack workforce planning and competence management application cov
 
 **Live demo:** https://workforce-frontend.onrender.com/
 
-### What is actually used in the Workforce repository
+## What is actually used in the Workforce repository
 
 **Programming languages**
 
