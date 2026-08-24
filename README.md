@@ -12,9 +12,9 @@ The portfolio demonstrates progression from web fundamentals to React, Python, C
 
 ## Featured projects
 
-### Evidence Appraisal Tool
+### Evidence Appraisal Tool — published prototype
 
-Research-focused full-stack application for transparent and structured evidence appraisal workflows.
+Research-focused full-stack application for transparent and structured evidence appraisal and research workflows. The repository has a public live prototype and an active development path for extending the appraisal engine without replacing existing functionality.
 
 - React + Vite frontend
 - ASP.NET Core REST API
@@ -23,14 +23,18 @@ Research-focused full-stack application for transparent and structured evidence 
 - Researcher-confirmed judgements rather than unsupported automated conclusions
 - AMSTAR 2 Word, PDF, Excel and JSON export
 - SHA-256 verification for exported reports
-- 22/22 backend tests and 14/14 frontend tests
-- ESLint and production build
+- Research workflow modules including PRISMA, screening, extraction, inter-rater reliability, deduplication and conflict handling
+- Evidence document analysis with explicit methodological safeguards
+- Evidence verification and audit-history functionality
 - GitHub Actions CI
 - CodeQL and Dependabot
+- Public prototype deployment
 
-Repository: https://github.com/abla86/evidence-appraisal-tool
+**Repository:** https://github.com/abla86/evidence-appraisal-tool
 
-Live demo: https://evidence-appraisal-tool.onrender.com
+**Live prototype:** https://evidence-appraisal-tool.onrender.com
+
+**Current development:** RoB 2 prototype workflow and additional AMSTAR 2 consistency validation are being integrated and regression-tested before becoming part of the published main deployment.
 
 ### Workforce & Competence Management System
 
@@ -59,9 +63,9 @@ Verified full-stack workforce planning and competence management application cov
 - GitHub Actions full-stack smoke testing
 - CodeQL and Dependabot
 
-Repository: https://github.com/abla86/workforce-competence-management
+**Repository:** https://github.com/abla86/workforce-competence-management
 
-Live demo: https://workforce-frontend.onrender.com/
+**Live demo:** https://workforce-frontend.onrender.com/
 
 ### What is actually used in the Workforce repository
 
@@ -164,6 +168,7 @@ AI-assisted software development · Generative AI tooling · Workflow automation
 - Test functionality and document verification.
 - Use CI/CD and security scanning as part of development rather than as an afterthought.
 - Keep claims about functionality aligned with what the repositories actually implement.
+- Extend existing functionality non-destructively rather than replacing working research workflows.
 
 ## Portfolio
 
