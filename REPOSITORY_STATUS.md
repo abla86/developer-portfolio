@@ -23,7 +23,7 @@ This file is the portfolio control document. It separates repositories by portfo
 | `shift-competence-planner` | C#/.NET planning application | Domain rules, tests, usage and status |
 | `healthtech-dashboard` | HealthTech demonstration | Implemented frontend/backend scope, data boundaries and status |
 
-## Tier 2 — Supporting engineering progression
+## Tier 2 — Archived supporting engineering progression
 
 - `react-task-dashboard`
 - `todo-app`
@@ -31,20 +31,20 @@ This file is the portfolio control document. It separates repositories by portfo
 - `advanced-javascript-counter`
 - `FastAPI-Learning`
 
-These demonstrate progression and specific engineering skills but should not compete visually with Tier 1.
+These archived repositories demonstrate progression and specific engineering skills but should not compete visually with Tier 1.
 
-## Tier 3 — Fundamentals / learning
+## Tier 3 — Archived fundamentals / learning
 
 - `hello-html`
 - `javascript-counter`
 - `digital-clock`
 - `calculator`
 
-These are evidence of progression, not flagship projects.
+These archived repositories are evidence of progression, not flagship projects.
 
 ## Separate / external project identity
 
-`kana-dojo` is kept separate from the main Anne Beth Andersen health-tech portfolio narrative unless its own evidence supports a specific portfolio claim.
+`kana-dojo`, `HA-Desktop-Widget` and `cross-device-sdk` are kept separate from the main Anne Beth Andersen health-tech portfolio narrative because their current repositories contain upstream/third-party project material rather than portfolio-authored work. They are not linked from the main portfolio.
 
 ## Portfolio status rules
 
