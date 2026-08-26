@@ -1,58 +1,80 @@
 # Repository Portfolio Status
 
-Review date: 2026-08-16
+**Review date:** 2026-08-26
 
-This document records how the public repositories are positioned for portfolio use. It distinguishes primary projects from learning/progression repositories and unrelated or archived repositories.
+This file is the portfolio control document. It separates repositories by portfolio importance and prevents learning projects from being presented as equivalent to the larger systems.
 
-## Tier 1 — Primary portfolio projects
+## Review order
 
-| Repository | Role in portfolio | Current focus |
+1. Featured / large projects — verify implementation, README, tests, CI, security and status before changing portfolio claims.
+2. Supporting engineering projects — verify README and evidence, then improve missing documentation.
+3. Learning / fundamentals — keep concise and label honestly; do not inflate them.
+4. Archived or unrelated repositories — exclude from the main portfolio narrative unless they provide relevant evidence.
+
+## Tier 1 — Featured projects
+
+| Repository | Portfolio role | Required evidence |
 |---|---|---|
-| `evidence-appraisal-tool` | Featured research software | Evidence appraisal, React/.NET, testing, CI, CodeQL, traceability |
-| `workforce-competence-management` | Featured full-stack system | Workforce, competence, React/.NET, SQL Server, Docker, CI |
-| `HealthTechDeviceApi` | Backend / HealthTech | ASP.NET Core, REST, testing, Docker, secure synthetic DICOM development |
-| `healthtech-dashboard` | HealthTech frontend/backend demo | FastAPI, JavaScript, device dashboard, synthetic data |
-| `healthcare-data-analyzer` | Python/data project | Structured healthcare-related CSV analysis |
-| `healthcare-workforce-sql` | Database project | Relational modelling and workforce analysis |
-| `shift-competence-planner` | C#/.NET application | Staffing and competence rules |
+| `evidence-appraisal-tool` | Research-support software | Implementation, scope, verification, methods boundaries, tests, CI/security |
+| `workforce-competence-management` | Full-stack workforce system | Frontend/backend, database, tests, Docker, CI/security, documented verification |
+| `HealthTechDeviceApi` | HealthTech backend/API | API implementation, validation, tests, containerisation and documentation |
+| `healthcare-data-analyzer` | Python/data project | Data processing, validation, tests and reproducible usage |
+| `healthcare-workforce-sql` | Database project | Schema, queries, relationships and documented examples |
+| `shift-competence-planner` | C#/.NET planning application | Domain rules, tests, usage and status |
+| `healthtech-dashboard` | HealthTech demonstration | Implemented frontend/backend scope, data boundaries and status |
 
-## Tier 2 — Frontend and development progression
+## Tier 2 — Supporting engineering progression
 
-| Repository | Role |
-|---|---|
-| `react-task-dashboard` | React/Vite frontend development |
-| `todo-app` | Modular vanilla JavaScript, accessibility and Jest |
-| `task-manager` | JavaScript application and browser persistence |
-| `advanced-javascript-counter` | Advanced vanilla JavaScript, state, accessibility and data import/export |
-| `FastAPI-Learning` | Python/FastAPI backend learning |
+- `react-task-dashboard`
+- `todo-app`
+- `task-manager`
+- `advanced-javascript-counter`
+- `FastAPI-Learning`
 
-## Tier 3 — Fundamentals
+These demonstrate progression and specific engineering skills but should not compete visually with Tier 1.
+
+## Tier 3 — Fundamentals / learning
 
 - `hello-html`
 - `javascript-counter`
 - `digital-clock`
 - `calculator`
 
-These repositories remain public as evidence of progression but should not dominate the portfolio.
+These are evidence of progression, not flagship projects.
 
-## Separate project
+## Separate / external project identity
 
-`kana-dojo` is a substantial open-source application with its own project identity, documentation and external community. It is not presented as an Anne Beth Andersen health-tech portfolio project on the main portfolio.
+`kana-dojo` is kept separate from the main Anne Beth Andersen health-tech portfolio narrative unless its own evidence supports a specific portfolio claim.
 
-## Archived repositories
+## Portfolio status rules
 
-Archived repositories are excluded from the active portfolio narrative unless a specific historical or technical reason makes them relevant.
+Every project shown on the portfolio must use one of these states:
 
-## Portfolio principle
+- **Implemented / documented** — implementation exists and supporting documentation is available.
+- **Active development** — implementation exists but work is ongoing.
+- **Prototype** — working or partial prototype; not presented as production-ready or validated.
+- **Learning project** — primarily demonstrates learning/progression.
 
-The main portfolio prioritises projects that demonstrate a combination of:
+Technical implementation must never be described as clinical, scientific or methodological validation unless independent evidence supports that claim.
 
-1. real-world problem framing
-2. domain or professional workflow understanding
-3. software architecture
-4. data and APIs
-5. automated verification
-6. security-conscious development
-7. clear documentation
+## Employer-facing standard
 
-Claims on the portfolio should remain aligned with what is actually implemented and verified in the repositories.
+A recruiter should be able to answer quickly:
+
+1. What problem does this project address?
+2. What was actually built?
+3. What technologies were actually used?
+4. What has been tested or otherwise verified?
+5. What is the current status?
+6. Where can the source and documentation be inspected?
+
+The portfolio should prioritise those answers over decorative badges or unverified technology lists.
+
+## Contact
+
+- annebeth.andersen@gmail.com
+- scriptcore1@pm.me
+
+## Education wording
+
+The correct wording is **Master's student in Knowledge-Based Practice**. This describes an ongoing master's education and must not be presented as a completed master's degree.
