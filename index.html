@@ -1,41 +1,194 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Anne Beth Andersen — software development, healthcare technology, research software, APIs, automation and data.">
-<title>Anne Beth Andersen | Software & HealthTech Portfolio</title>
-<style>
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(180deg,#080d19,#0d1424);color:#f4f7ff;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}a{color:inherit}.container{width:min(1180px,calc(100% - 32px));margin:auto}header{position:sticky;top:0;z-index:20;background:rgba(8,13,25,.9);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.1)}nav{min-height:68px;display:flex;justify-content:space-between;align-items:center;gap:20px}.brand{font-weight:800}.navlinks{display:flex;gap:18px}.navlinks a{text-decoration:none;color:#aab5ce;font-size:.9rem}.navlinks a:hover{color:#fff}.hero{padding:88px 0 58px;display:grid;grid-template-columns:1.35fr .65fr;gap:40px;align-items:center}.eyebrow{color:#78a3ff;font-size:.8rem;font-weight:800;text-transform:uppercase;letter-spacing:.14em}h1{margin:.18em 0 .22em;max-width:820px;font-size:clamp(3rem,7vw,6rem);line-height:.96}.lead{max-width:780px;color:#aab5ce;font-size:1.08rem;line-height:1.75}.hero-card,.card,.demo,.metric{background:linear-gradient(180deg,rgba(23,35,62,.96),rgba(14,22,40,.96));border:1px solid rgba(255,255,255,.1);border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.28)}.hero-card{padding:24px}.hero-card h3{margin-top:0}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.chip{padding:8px 11px;border-radius:999px;background:rgba(120,163,255,.1);border:1px solid rgba(120,163,255,.25);font-size:.86rem}.section{padding:35px 0 55px}.section-title{margin-bottom:22px}.section-title h2{margin:0 0 7px;font-size:2rem}.section-title p{margin:0;color:#aab5ce}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.metric{padding:20px}.metric strong{display:block;font-size:1.8rem}.metric span{color:#aab5ce;font-size:.9rem}.checks{padding:0;margin:16px 0 0;list-style:none;display:grid;gap:9px}.checks li::before{content:"✓";color:#62d49d;font-weight:900;margin-right:9px}.demo{overflow:hidden;margin-bottom:22px}.demo-header{padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px;border-bottom:1px solid rgba(255,255,255,.1)}.demo-header h3{margin:0 0 5px}.demo-header small{color:#aab5ce}.iframe-wrap{padding:18px;background:#080e1c}.iframe-wrap iframe{display:block;width:100%;height:560px;border:0;border-radius:12px;background:#fff}.button{display:inline-flex;align-items:center;padding:10px 14px;border-radius:10px;border:1px solid rgba(255,255,255,.1);background:#192644;text-decoration:none;font-weight:650;white-space:nowrap}.button:hover{background:#22345c}.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{padding:22px;display:flex;flex-direction:column}.featured{grid-column:1/-1;border-color:rgba(98,212,157,.35)}.project-header{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}.card h3{margin:0}.card p{color:#aab5ce}.tag{padding:6px 9px;border-radius:999px;border:1px solid rgba(98,212,157,.28);background:rgba(98,212,157,.1);color:#c4f5dc;font-size:.76rem;white-space:nowrap}.output{margin:18px 0;padding:15px;border-radius:12px;border:1px solid rgba(255,255,255,.1);background:#080e1c;font-family:Consolas,"Courier New",monospace;font-size:.87rem;line-height:1.55;color:#d4e3ff;white-space:pre-wrap}.card .button{margin-top:auto;align-self:flex-start}.stack{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.tech{padding:14px 10px;text-align:center;border-radius:12px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.035)}.contact{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}.contact p{color:#aab5ce}footer{margin-top:30px;padding:38px 0 50px;border-top:1px solid rgba(255,255,255,.1);color:#aab5ce}.note{padding:18px 20px;border-left:3px solid #78a3ff;background:rgba(120,163,255,.06);border-radius:10px;color:#c9d3e8}.verified{border-color:rgba(98,212,157,.5);background:rgba(98,212,157,.07)}
-@media(max-width:900px){.hero{grid-template-columns:1fr}.projects{grid-template-columns:1fr}.featured{grid-column:auto}.metrics{grid-template-columns:repeat(2,1fr)}.stack{grid-template-columns:repeat(3,1fr)}}@media(max-width:600px){.navlinks{display:none}.metrics{grid-template-columns:1fr 1fr}.stack{grid-template-columns:repeat(2,1fr)}.contact{grid-template-columns:1fr}.iframe-wrap iframe{height:650px}.demo-header{align-items:flex-start;flex-direction:column}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Anne Beth Andersen — software development, HealthTech, research software, APIs, data and automation portfolio.">
+  <meta name="theme-color" content="#08111f">
+  <title>Anne Beth Andersen | Software & HealthTech</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-<header><div class="container"><nav><div class="brand">Anne Beth Andersen</div><div class="navlinks"><a href="#profile">Profile</a><a href="#projects">Projects</a><a href="#live">Live Apps</a><a href="#stack">Stack</a><a href="#contact">Contact</a></div></nav></div></header>
-<main><div class="container">
-<section class="hero" id="profile"><div><div class="eyebrow">Software · HealthTech · Research</div><h1>Software development for real-world healthcare and professional workflows.</h1><p class="lead">I build practical digital solutions across frontend, backend and data. My work combines healthcare-domain knowledge, research methodology, structured workflows, APIs, automation and software engineering.</p><div class="chips"><span class="chip">React</span><span class="chip">Python</span><span class="chip">C# / .NET</span><span class="chip">REST APIs</span><span class="chip">SQL</span><span class="chip">Docker</span><span class="chip">GitHub Actions</span><span class="chip">CodeQL</span><span class="chip">Evidence</span><span class="chip">Automation</span></div></div><aside class="hero-card"><h3>What the portfolio demonstrates</h3><ul class="checks"><li>Healthcare and research software</li><li>Full-stack applications and APIs</li><li>Structured data and workflow logic</li><li>Automated testing and CI</li><li>Security-conscious development</li><li>Evidence-aware product thinking</li></ul></aside></section>
-<section class="section"><div class="metrics"><div class="metric"><strong>2</strong><span>featured full-stack systems</span></div><div class="metric"><strong>18/18</strong><span>Workforce backend tests passed in final verification</span></div><div class="metric"><strong>4</strong><span>evidence appraisal frameworks supported in the tool</span></div><div class="metric"><strong>3</strong><span>core engineering layers: frontend · API · data</span></div></div></section>
-<section class="section" id="projects"><div class="section-title"><h2>Featured projects</h2><p>Projects selected to show applied engineering rather than isolated coding exercises.</p></div><div class="projects">
-<article class="card featured"><div class="project-header"><div><div class="eyebrow">Research software</div><h3>Evidence Appraisal Tool</h3></div><span class="tag">React · .NET · Evidence</span></div><p>Full-stack application for transparent and structured evidence appraisal. It records researcher judgements, evidence locations and rationale while keeping methodological judgement with the researcher rather than attempting unsupported automatic quality conclusions.</p><ul class="checks"><li>AMSTAR 2, CASP, AGREE II and GRADE workflows</li><li>Structured evidence and rationale fields</li><li>AMSTAR 2 Word, PDF, Excel and JSON export</li><li>SHA-256 verification for exported reports</li><li>22 backend and 14 frontend tests documented</li><li>GitHub Actions CI, CodeQL and Dependabot</li></ul><a class="button" href="https://github.com/abla86/evidence-appraisal-tool" target="_blank" rel="noopener">View source and documentation</a></article>
-<article class="card featured verified"><div class="project-header"><div><div class="eyebrow">Verified full-stack workforce system</div><h3>Workforce &amp; Competence Management</h3></div><span class="tag">React · .NET 10 · EF Core 10 · SQL Server</span></div><p>Full-stack workforce-planning system combining <strong>shift planning, competence management and staffing coverage</strong> with explainable decision support. The local stack has now passed end-to-end verification.</p><ul class="checks"><li><strong>Shift planning:</strong> create shifts, define minimum staffing, assign employees and manage competence requirements</li><li><strong>Competence:</strong> catalogue, employee competence records, Basic/Intermediate/Advanced levels and validity/expiry tracking</li><li><strong>Staffing:</strong> automatic minimum-staffing and competence-coverage evaluation</li><li><strong>GREEN / YELLOW / RED:</strong> operational status with human-readable gap explanations</li><li>Candidate ranking, availability checks, absence, overlap and rest-period warnings</li><li>Non-destructive what-if scenario analysis and replacement suggestions</li><li>Authenticated data import/export, JSON backup and shift-plan sharing</li><li><strong>18/18 backend tests passed</strong></li><li>EF model/migration validation passed with no pending model changes</li><li>Frontend lint/build, Docker, SQL Server, API and frontend health all passed</li></ul><div class="output">Employee + competence
-        ↓
-Shift plan + staffing requirements
-        ↓
-Coverage engine
-        ↓
-GREEN / YELLOW / RED
-        ↓
-Gap explanation + candidate planning</div><a class="button" href="https://github.com/abla86/workforce-competence-management" target="_blank" rel="noopener">View source and documentation</a></article>
-<article class="card"><div class="project-header"><h3>HealthTech Device API</h3><span class="tag">ASP.NET Core</span></div><p>REST API demonstrating backend development, validation, testing, Docker and security scanning.</p><ul class="checks"><li>CRUD operations and filters</li><li>Health and statistics endpoints</li><li>Input validation and OpenAPI</li><li>7/7 automated API tests documented</li><li>CI, Docker, CodeQL and Dependabot</li></ul><a class="button" href="https://github.com/abla86/HealthTechDeviceApi" target="_blank" rel="noopener">View source</a></article>
-<article class="card"><div class="project-header"><h3>Healthcare Data Analyzer</h3><span class="tag">Python</span></div><p>Python application for validating, processing and analysing structured healthcare-related CSV data.</p><ul class="checks"><li>CSV parsing and validation</li><li>Risk-level analysis</li><li>Filtering and summary reporting</li><li>9/9 pytest tests documented</li></ul><a class="button" href="https://github.com/abla86/healthcare-data-analyzer" target="_blank" rel="noopener">View source</a></article>
-<article class="card"><div class="project-header"><h3>Healthcare Workforce SQL</h3><span class="tag">SQL Server</span></div><p>Relational database model for employees, competencies, staffing requirements, shifts and workforce analysis.</p><ul class="checks"><li>Primary and foreign keys</li><li>Many-to-many relationships</li><li>Constraints and indexes</li><li>JOIN and aggregate queries</li><li>Views and stored procedure</li><li>Competence coverage analysis</li></ul><a class="button" href="https://github.com/abla86/healthcare-workforce-sql" target="_blank" rel="noopener">View source</a></article>
-<article class="card"><div class="project-header"><h3>Shift &amp; Competence Planner</h3><span class="tag">C# / .NET</span></div><p>Focused workforce-planning prototype evaluating staffing levels and competence requirements for shifts.</p><ul class="checks"><li>Shift and staffing rules</li><li>Competence validation</li><li>Employee hour calculations</li><li>JSON persistence and CSV export</li><li>4/4 xUnit tests documented</li></ul><a class="button" href="https://github.com/abla86/shift-competence-planner" target="_blank" rel="noopener">View source</a></article>
-</div></section>
-<section class="section" id="live"><div class="section-title"><h2>Live applications</h2><p>Browser-based projects available directly from the portfolio.</p></div><div class="demo"><div class="demo-header"><div><h3>Workforce &amp; Competence Management</h3><small>Verified local full-stack demo · React · .NET 10 · SQL Server · Docker</small></div><a class="button" href="https://workforce-frontend.onrender.com/" target="_blank" rel="noopener">Open live demo</a></div><div class="note verified"><strong>Verified:</strong> 18/18 backend tests, EF model/migration validation, frontend lint/build, Docker, SQL Server, API health and frontend health passed in the final local verification. The live deployment is a portfolio/demo environment; do not enter real sensitive data.</div></div><div class="demo"><div class="demo-header"><div><h3>JavaScript To-Do App</h3><small>ES6 · LocalStorage · Accessibility · Jest</small></div><a class="button" href="https://github.com/abla86/todo-app" target="_blank" rel="noopener">GitHub</a></div><div class="iframe-wrap"><iframe src="https://abla86.github.io/todo-app/" title="JavaScript To-Do App" loading="lazy"></iframe></div></div><div class="demo"><div class="demo-header"><div><h3>React Task Dashboard</h3><small>React · Vite · Components · Hooks · State · Filters</small></div><a class="button" href="https://github.com/abla86/react-task-dashboard" target="_blank" rel="noopener">GitHub</a></div><div class="iframe-wrap"><iframe src="https://abla86.github.io/react-task-dashboard/" title="React Task Dashboard" loading="lazy"></iframe></div></div></section>
-<section class="section" id="stack"><div class="section-title"><h2>Technology stack</h2><p>Technologies represented by working repositories.</p></div><div class="stack"><div class="tech">HTML5</div><div class="tech">CSS3</div><div class="tech">JavaScript</div><div class="tech">React</div><div class="tech">Vite</div><div class="tech">Jest</div><div class="tech">Python</div><div class="tech">FastAPI</div><div class="tech">pytest</div><div class="tech">C#</div><div class="tech">.NET 10</div><div class="tech">ASP.NET Core</div><div class="tech">Entity Framework Core 10</div><div class="tech">REST</div><div class="tech">OpenAPI</div><div class="tech">SQL Server</div><div class="tech">PostgreSQL</div><div class="tech">Docker</div><div class="tech">Git</div><div class="tech">GitHub Actions</div><div class="tech">CodeQL</div><div class="tech">Dependabot</div><div class="tech">PowerShell</div><div class="tech">Home Assistant</div></div></section>
-<section class="section"><div class="note"><strong>Engineering approach:</strong> Build around real workflows, keep professional judgement explicit, validate functionality with tests and CI smoke checks, document limitations and use security practices as part of development.</div></section>
-<section class="section" id="contact"><div class="contact"><div><h2>Anne Beth Andersen</h2><p>Norway · Software Development · APIs · HealthTech · Research Software · Automation · Data</p></div><a class="button" href="https://github.com/abla86" target="_blank" rel="noopener">GitHub Profile</a></div></section>
-</div></main>
-<footer><div class="container">Developer portfolio · Anne Beth Andersen</div></footer>
+<header class="site-header">
+  <nav class="nav container" aria-label="Main navigation">
+    <a class="brand" href="#top">AB<span>.</span></a>
+    <div class="nav-links">
+      <a href="#projects">Projects</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#stack">Stack</a>
+      <a href="#about">About</a>
+    </div>
+    <a class="nav-cta" href="https://github.com/abla86" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero container">
+    <div class="hero-copy">
+      <p class="eyebrow">SOFTWARE · HEALTHTECH · RESEARCH</p>
+      <h1>Building useful software for <span>real-world problems.</span></h1>
+      <p class="lead">I combine healthcare-domain knowledge, knowledge-based practice and hands-on software development to build structured, testable and usable digital solutions.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#projects">Explore projects</a>
+        <a class="button" href="https://github.com/abla86" target="_blank" rel="noopener noreferrer">View GitHub</a>
+      </div>
+      <div class="hero-badges" aria-label="Portfolio highlights">
+        <span class="badge badge-green">✓ Full-stack</span>
+        <span class="badge">CI/CD</span>
+        <span class="badge">CodeQL</span>
+        <span class="badge">Docker</span>
+        <span class="badge">Research software</span>
+      </div>
+    </div>
+    <aside class="terminal-card" aria-label="Current focus">
+      <div class="terminal-bar"><i></i><i></i><i></i><span>current-focus</span></div>
+      <pre><code>$ whoami
+Anne Beth Andersen
+
+$ focus
+Healthcare × software × evidence
+
+$ build
+React · C#/.NET · Python · SQL
+APIs · Docker · GitHub Actions
+
+$ principle
+Build it. Test it. Document it.
+Don't claim what isn't verified.</code></pre>
+    </aside>
+  </section>
+
+  <section class="stats container" aria-label="Verified portfolio statistics">
+    <article class="stat"><strong>18/18</strong><span>backend tests documented in Workforce system</span></article>
+    <article class="stat"><strong>4</strong><span>evidence frameworks supported in appraisal prototype</span></article>
+    <article class="stat"><strong>CI</strong><span>automated build and test workflows</span></article>
+    <article class="stat"><strong>GitHub</strong><span>public engineering portfolio</span></article>
+  </section>
+
+  <section id="projects" class="section container">
+    <div class="section-heading">
+      <p class="eyebrow">01 · SELECTED WORK</p>
+      <h2>Projects with a purpose.</h2>
+      <p>Selected repositories are presented by what they demonstrate, not by inflated claims about maturity.</p>
+    </div>
+
+    <div class="project-grid">
+      <article class="project project-featured">
+        <div class="project-top"><span class="project-type">RESEARCH SOFTWARE</span><span class="status verified">● Prototype</span></div>
+        <h3>Evidence Appraisal Tool</h3>
+        <p>Research-support software for structured critical appraisal and evidence workflow. The application keeps final methodological judgement with the researcher.</p>
+        <div class="tags"><span>React 19</span><span>.NET 9</span><span>AMSTAR 2</span><span>CASP</span><span>AGREE II</span><span>GRADE</span><span>RoB 2</span></div>
+        <ul class="feature-list">
+          <li>Evidence and rationale capture with source locations</li>
+          <li>RIS import, screening, extraction and PRISMA workflow support</li>
+          <li>Reviewer comparison and Cohen's kappa calculation</li>
+          <li>SHA-256 integrity markers and audit history</li>
+          <li>GitHub Actions, CodeQL and Dependabot</li>
+        </ul>
+        <div class="project-links"><a href="https://github.com/abla86/evidence-appraisal-tool" target="_blank" rel="noopener noreferrer">Source ↗</a><a href="https://evidence-appraisal-tool.onrender.com" target="_blank" rel="noopener noreferrer">Live prototype ↗</a></div>
+      </article>
+
+      <article class="project project-featured">
+        <div class="project-top"><span class="project-type">WORKFORCE & COMPETENCE</span><span class="status verified">● Verified workflow</span></div>
+        <h3>Workforce &amp; Competence Management</h3>
+        <p>Full-stack workforce planning system combining shifts, competence requirements and staffing coverage with explainable status.</p>
+        <div class="tags"><span>React</span><span>.NET 10</span><span>EF Core 10</span><span>SQL Server</span><span>Docker</span></div>
+        <ul class="feature-list">
+          <li>Employee and competence management</li>
+          <li>Shift planning and minimum staffing requirements</li>
+          <li>GREEN / YELLOW / RED coverage with gap explanations</li>
+          <li>Availability, absence, overlap and rest-period checks</li>
+          <li>18/18 backend tests plus frontend/build and Docker verification</li>
+        </ul>
+        <div class="project-links"><a href="https://github.com/abla86/workforce-competence-management" target="_blank" rel="noopener noreferrer">Source ↗</a><a href="https://workforce-frontend.onrender.com" target="_blank" rel="noopener noreferrer">Live demo ↗</a></div>
+      </article>
+
+      <article class="project">
+        <div class="project-top"><span class="project-type">HEALTHTECH API</span><span class="status">Backend</span></div>
+        <h3>HealthTech Device API</h3>
+        <p>ASP.NET Core REST API demonstrating validation, CRUD, filters, health endpoints, OpenAPI, testing and containerisation.</p>
+        <div class="tags"><span>C#</span><span>ASP.NET Core</span><span>REST</span><span>Docker</span></div>
+        <div class="project-links"><a href="https://github.com/abla86/HealthTechDeviceApi" target="_blank" rel="noopener noreferrer">Source ↗</a></div>
+      </article>
+
+      <article class="project">
+        <div class="project-top"><span class="project-type">HEALTHCARE DATA</span><span class="status">Python</span></div>
+        <h3>Healthcare Data Analyzer</h3>
+        <p>Python application for structured CSV validation, processing, risk-level analysis and summary reporting.</p>
+        <div class="tags"><span>Python</span><span>pytest</span><span>CSV</span><span>Data analysis</span></div>
+        <div class="project-links"><a href="https://github.com/abla86/healthcare-data-analyzer" target="_blank" rel="noopener noreferrer">Source ↗</a></div>
+      </article>
+
+      <article class="project">
+        <div class="project-top"><span class="project-type">DATABASE</span><span class="status">SQL</span></div>
+        <h3>Healthcare Workforce SQL</h3>
+        <p>Relational SQL model for employees, competencies, staffing requirements, shifts and workforce analysis.</p>
+        <div class="tags"><span>SQL Server</span><span>Relations</span><span>Views</span><span>Queries</span></div>
+        <div class="project-links"><a href="https://github.com/abla86/healthcare-workforce-sql" target="_blank" rel="noopener noreferrer">Source ↗</a></div>
+      </article>
+
+      <article class="project">
+        <div class="project-top"><span class="project-type">WORKFORCE PROTOTYPE</span><span class="status">C# / .NET</span></div>
+        <h3>Shift &amp; Competence Planner</h3>
+        <p>Focused prototype for staffing levels, competence requirements, employee-hour calculations and planning exports.</p>
+        <div class="tags"><span>C#</span><span>.NET</span><span>xUnit</span><span>JSON</span><span>CSV</span></div>
+        <div class="project-links"><a href="https://github.com/abla86/shift-competence-planner" target="_blank" rel="noopener noreferrer">Source ↗</a></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="achievements" class="section section-alt">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">02 · ACHIEVEMENTS</p>
+        <h2>Evidence-backed badges.</h2>
+        <p>Badges describe demonstrated engineering work. They are not commercial certifications.</p>
+      </div>
+      <div class="achievement-grid">
+        <article class="achievement"><div class="achievement-icon">✓</div><div><h3>18/18 Tests</h3><p>Backend test suite documented for Workforce &amp; Competence Management.</p></div></article>
+        <article class="achievement"><div class="achievement-icon">CI</div><div><h3>CI/CD</h3><p>GitHub Actions workflows used for automated build and validation.</p></div></article>
+        <article class="achievement"><div class="achievement-icon">QL</div><div><h3>CodeQL</h3><p>Code scanning is part of the documented engineering workflow.</p></div></article>
+        <article class="achievement"><div class="achievement-icon">DB</div><div><h3>Dependabot</h3><p>Dependency-update and security workflow represented in key repositories.</p></div></article>
+        <article class="achievement"><div class="achievement-icon">API</div><div><h3>API Engineering</h3><p>REST API projects with validation, OpenAPI, testing and health endpoints.</p></div></article>
+        <article class="achievement"><div class="achievement-icon">RX</div><div><h3>Research Software</h3><p>Evidence workflow tooling built with explicit methodological boundaries.</p></div></article>
+        <article class="achievement"><div class="achievement-icon">DO</div><div><h3>Docker</h3><p>Containerised development and verification used in full-stack projects.</p></div></article>
+        <article class="achievement"><div class="achievement-icon">GH</div><div><h3>GitHub Portfolio</h3><p>Public repositories organised around a visible engineering progression.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="stack" class="section container">
+    <div class="section-heading">
+      <p class="eyebrow">03 · TECHNOLOGY</p>
+      <h2>Tools represented in the work.</h2>
+    </div>
+    <div class="stack-grid">
+      <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React</span><span>Vite</span><span>Jest</span>
+      <span>Python</span><span>FastAPI</span><span>pytest</span><span>C#</span><span>.NET</span><span>ASP.NET Core</span>
+      <span>Entity Framework Core</span><span>REST APIs</span><span>OpenAPI</span><span>SQL Server</span><span>PostgreSQL</span>
+      <span>Docker</span><span>Git</span><span>GitHub Actions</span><span>CodeQL</span><span>Dependabot</span><span>PowerShell</span>
+    </div>
+  </section>
+
+  <section id="about" class="section section-about">
+    <div class="container about-grid">
+      <div>
+        <p class="eyebrow">04 · ABOUT</p>
+        <h2>Healthcare knowledge meets software engineering.</h2>
+      </div>
+      <div class="about-copy">
+        <p>I am a Master's student in Knowledge-Based Practice with a background in nursing, healthcare administration and software development.</p>
+        <p>My projects focus on practical systems where domain knowledge matters: evidence appraisal, workforce competence, healthcare data, APIs and automation.</p>
+        <p class="small-note"><strong>Accuracy rule:</strong> the portfolio distinguishes implemented functionality, verified results and prototype status. It does not present software as clinically or scientifically validated merely because it works technically.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer container">
+  <div><strong>Anne Beth Andersen</strong><span> · Software &amp; HealthTech</span></div>
+  <div><a href="https://github.com/abla86" target="_blank" rel="noopener noreferrer">GitHub ↗</a><span> · </span><a href="https://github.com/abla86/developer-portfolio" target="_blank" rel="noopener noreferrer">Source ↗</a><span> · </span><span id="year"></span></div>
+</footer>
 </body>
 </html>
