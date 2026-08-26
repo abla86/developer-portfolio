@@ -1,4 +1,4 @@
-﻿# Developer Portfolio â€” Anne Beth Andersen
+# Developer Portfolio â€” Anne Beth Andersen
 
 **Healthcare Ã— Software Ã— Research**
 
