@@ -67,9 +67,13 @@ Repository: https://github.com/abla86/workforce-competence-management
 
 Smaller application projects are consolidated into one interactive showcase so they can be viewed as a coherent progression rather than a collection of isolated repositories.
 
-**[Open the Engineering Showcase](engineering-showcase.html)**
+**[Open the Small Projects Demo Hub](small-projects-hub.html)**
 
-The showcase groups practical application patterns such as tasks, time, calendar UI, calculator interaction and JavaScript fundamentals. Individual repositories remain the source of truth for their own implementation and verification status.
+The hub brings task management, a digital clock, calendar/planning UI, calculator interaction, JavaScript counters and the related small-project progression together on one page. The demonstrations share a small state model so visitors can see input → state → logic → UI → dashboard flow in practice.
+
+The showcase also makes several skills easier to assess than from isolated repositories alone: event handling, state management, local persistence, date/time handling, responsive UI composition, accessibility-oriented interaction patterns, small-scale validation, reusable UI logic and the transition from simple JavaScript exercises toward integrated application thinking.
+
+Individual repositories remain the source of truth for their own implementation, tests and verification status.
 
 ## Other selected work
 
