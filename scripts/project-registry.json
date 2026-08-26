@@ -68,7 +68,6 @@
   ],
   "excluded": [
     {
-      "repo": "cross-device-sdk",
       "reason": "External/Google Cross Device SDK material; do not present as original work."
     },
     {
@@ -76,7 +75,6 @@
       "reason": "Repository ownership/attribution must be verified before portfolio promotion."
     },
     {
-      "repo": "HA-Desktop-Widget",
       "reason": "Repository README attributes the project to Robertg761; do not promote it as original work without explicit attribution verification."
     },
     {

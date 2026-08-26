@@ -44,7 +44,6 @@ These archived repositories are evidence of progression, not flagship projects.
 
 ## Separate / external project identity
 
-`kana-dojo`, `HA-Desktop-Widget` and `cross-device-sdk` are kept separate from the main Anne Beth Andersen health-tech portfolio narrative because their current repositories contain upstream/third-party project material rather than portfolio-authored work. They are not linked from the main portfolio.
 
 ## Portfolio status rules
 

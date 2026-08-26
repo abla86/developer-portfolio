@@ -37,8 +37,8 @@ A URL returning HTTP 200 is not considered sufficient evidence that a portfolio 
 The Evidence Appraisal Tool is labelled as a public demonstration deployment. Other projects are linked to their verified source repositories unless a live deployment has been independently confirmed as the corresponding application.
 
 
-## CodeSentinel
+## Sentinel
 
-**CodeSentinel** is the portfolio's autonomous integrity and safe-repair layer. It discovers defects, builds a verified repair plan, validates deterministic fixes before applying them, and runs post-repair verification. It is designed to fail safely rather than guess when a repair cannot be proven safe.
+**Sentinel** is the portfolio's autonomous integrity and safe-repair layer. It discovers defects, builds a verified repair plan, validates deterministic fixes before applying them, and runs post-repair verification. It is designed to fail safely rather than guess when a repair cannot be proven safe.
 
 Pipeline: **Discovery → Diagnostics → Verification → Repair Plan → Safe Repair → Regression Verification**.
