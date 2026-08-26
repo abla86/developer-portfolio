@@ -1,6 +1,8 @@
 # Developer Portfolio — Anne Beth Andersen
 
-Personal developer portfolio for software development, HealthTech, research-support software, APIs, data and automation.
+**Healthcare × Software × Research**
+
+Personal portfolio showing software development, HealthTech, research-support software, data, APIs and automation.
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-live-63e6be?style=flat-square)](https://abla86.github.io/developer-portfolio/)
 [![GitHub](https://img.shields.io/badge/GitHub-abla86-181717?style=flat-square&logo=github)](https://github.com/abla86)
@@ -9,15 +11,24 @@ Personal developer portfolio for software development, HealthTech, research-supp
 
 ## Profile
 
-I am a **master's student in Knowledge-Based Practice** with a background in nursing and healthcare-related work. Alongside my studies, I develop software projects focused on practical workflows, data, APIs, automation and digital health.
+I am a **Master's student in Knowledge-Based Practice** with a background in nursing, healthcare-related work and administration. Alongside my studies, I develop software focused on practical workflows, data, APIs, automation and digital health.
 
-The portfolio distinguishes implemented software, prototypes and smaller learning projects. Claims about testing or verification are only made where they are supported by the relevant project documentation.
+The portfolio deliberately distinguishes implemented software, documented verification and prototypes. It does not treat technical functionality as evidence of clinical, scientific or methodological validation.
+
+## What I can contribute
+
+- **HealthTech & digitalisation** — connect healthcare-domain knowledge with practical digital solutions.
+- **Software development** — build frontend applications, backend services, APIs and data-oriented systems.
+- **Research-support technology** — structure evidence workflows while keeping methodological judgement with the researcher.
+- **Workflow improvement** — turn complex manual processes into clearer and more traceable digital workflows.
+- **Data & decision support** — validate, analyse and present structured data.
+- **Engineering practice** — use source control, testing, CI/CD, security scanning and explicit documentation boundaries.
 
 ## Featured work
 
 ### Evidence Appraisal Tool
 
-Advanced research-support prototype for structured evidence appraisal and research workflow support. It keeps methodological judgement with the researcher and is not presented as clinically, scientifically or methodologically validated merely because the software is functional.
+Research-support prototype for structured critical appraisal and evidence workflow support.
 
 - React 19 + Vite
 - ASP.NET Core / .NET 9
@@ -28,6 +39,8 @@ Advanced research-support prototype for structured evidence appraisal and resear
 - Cohen's kappa calculation
 - SHA-256 integrity markers and audit history
 - GitHub Actions, CodeQL and Dependabot
+
+**Status:** prototype / research-support software. Not presented as clinically, scientifically or methodologically validated.
 
 Repository: https://github.com/abla86/evidence-appraisal-tool
 
@@ -50,7 +63,7 @@ Full-stack workforce planning and competence management system.
 
 Repository: https://github.com/abla86/workforce-competence-management
 
-## Other selected repositories
+## Other selected work
 
 - HealthTech Device API
 - Healthcare Data Analyzer
@@ -66,6 +79,8 @@ Repository: https://github.com/abla86/workforce-competence-management
 - Advanced JavaScript Counter
 - Hello HTML
 
+Smaller learning projects are grouped as part of the broader engineering progression rather than presented as separate flagship products.
+
 ## Engineering stack
 
 **Frontend:** HTML5 · CSS3 · JavaScript · React · Vite · Jest
@@ -76,11 +91,16 @@ Repository: https://github.com/abla86/workforce-competence-management
 
 **Automation/IoT:** Home Assistant · MQTT · Zigbee · Raspberry Pi · YAML
 
-## Accuracy principle
+## Portfolio principle
 
-The portfolio distinguishes implemented functionality, documented verification, prototype status and claims requiring separate empirical, clinical or scientific validation.
+The portfolio distinguishes:
 
-Badges on the website are **portfolio achievements**, not external professional certifications.
+1. implemented functionality;
+2. documented verification;
+3. prototype status; and
+4. claims requiring separate empirical, clinical or scientific validation.
+
+Website badges are **portfolio achievements**, not external professional certifications.
 
 ## Portfolio
 
@@ -90,4 +110,6 @@ Source: https://github.com/abla86/developer-portfolio
 
 ## Author
 
-Anne Beth Andersen — **master's student in Knowledge-Based Practice**.
+Anne Beth Andersen — **Master's student in Knowledge-Based Practice**.
+
+This means an ongoing master's education, not a completed master's degree.
