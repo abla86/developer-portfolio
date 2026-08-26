@@ -9,6 +9,19 @@ Personal portfolio showing software development, HealthTech, research-support so
 [![React](https://img.shields.io/badge/React-projects-61dafb?style=flat-square&logo=react&logoColor=111)](https://github.com/abla86?tab=repositories&q=react)
 [![.NET](https://img.shields.io/badge/.NET-projects-512bd4?style=flat-square&logo=dotnet)](https://github.com/abla86?tab=repositories&q=.net)
 
+## Start here
+
+| Need | Go to |
+|---|---|
+| **See the portfolio visually** | [Live portfolio](https://abla86.github.io/developer-portfolio/) |
+| **Try the smaller projects together** | [Small Projects Demo Hub](small-projects-hub.html) |
+| **Inspect the flagship systems** | [Featured work](#featured-work) |
+| **Inspect source code** | [GitHub repositories](https://github.com/abla86?tab=repositories) |
+| **Read maintenance history** | [Portfolio Worklog](PORTFOLIO-WORKLOG.md) |
+| **Contact** | [Email Anne Beth Andersen](mailto:annebeth.andersen@gmail.com) |
+
+The portfolio deliberately separates **visual demo**, **source code**, **documented verification** and **project status** so the reader can find the appropriate level of detail without being overwhelmed.
+
 ## Profile
 
 I am a **Master's student in Knowledge-Based Practice** with a background in nursing, healthcare-related work and administration. Alongside my studies, I develop software focused on practical workflows, data, APIs, automation and digital health.
