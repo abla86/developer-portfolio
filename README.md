@@ -117,3 +117,7 @@ This means an ongoing master's education, not a completed master's degree.
 ## Engineering Lab
 
 Smaller projects are grouped by demonstrated skills and progression. The individual repositories remain the source of truth for implementation, tests and current status.
+
+## Worklog
+
+See [PORTFOLIO-WORKLOG.md](PORTFOLIO-WORKLOG.md) for documented portfolio maintenance changes.
