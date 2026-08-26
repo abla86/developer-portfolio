@@ -63,6 +63,63 @@ for (const file of htmlFiles) {
   }
 }
 
+// LIVE GITHUB REGISTRY VERIFICATION
+const ghToken = process.env.GH_TOKEN || process.env.GITHUB_TOKEN;
+const ghOwner = process.env.GITHUB_REPOSITORY_OWNER || "abla86";
+async function githubJson(url) {
+  if (!ghToken) {
+    failures.push("GitHub verification unavailable: GH_TOKEN/GITHUB_TOKEN is missing");
+    return null;
+  }
+  const response = await fetch(url, {
+    headers: {
+      accept: "application/vnd.github+json",
+      authorization: `Bearer ${ghToken}`,
+      "x-github-api-version": "2022-11-28",
+      "user-agent": "CodeSentinel"
+    }
+  });
+  if (!response.ok) {
+    failures.push(`GitHub API ${response.status}: ${url}`);
+    return null;
+  }
+  return response.json();
+}
+
+if (ghToken) {
+  const registry = JSON.parse(fs.readFileSync(registryPath, "utf8"));
+  const promoted = new Set((registry.projects ?? []).map(p => p.repo.toLowerCase()));
+  const excluded = new Set((registry.excluded ?? []).map(p => p.repo.toLowerCase()));
+
+  for (const entry of registry.projects ?? []) {
+    const repo = await githubJson(`https://api.github.com/repos/${ghOwner}/${entry.repo}`);
+    if (!repo) continue;
+    if (repo.archived) failures.push(`Portfolio project is archived but promoted: ${entry.repo}`);
+    if (repo.owner?.login?.toLowerCase() !== ghOwner.toLowerCase())
+      failures.push(`Portfolio project owner mismatch: ${entry.repo}`);
+    const readme = await githubJson(`https://api.github.com/repos/${ghOwner}/${entry.repo}/readme`);
+    if (!readme?.content) failures.push(`Portfolio project has no readable README: ${entry.repo}`);
+    else {
+      const decoded = Buffer.from(readme.content, "base64").toString("utf8");
+      if (decoded.trim().length < 80) failures.push(`Portfolio project README is unexpectedly short: ${entry.repo}`);
+    }
+  }
+
+  for (const entry of registry.excluded ?? []) {
+    if (promoted.has(entry.repo.toLowerCase()))
+      failures.push(`Repository appears in both promoted and excluded registry: ${entry.repo}`);
+  }
+
+  const allRepos = await githubJson(`https://api.github.com/users/${ghOwner}/repos?per_page=100&type=all&sort=updated`);
+  if (Array.isArray(allRepos)) {
+    for (const repo of allRepos) {
+      if (repo.owner?.login?.toLowerCase() !== ghOwner.toLowerCase()) continue;
+      if (!repo.archived && repo.name !== "developer-portfolio" && !promoted.has(repo.name.toLowerCase()) && !excluded.has(repo.name.toLowerCase()))
+        warnings.push(`Active repository is not classified in portfolio registry: ${repo.name}`);
+    }
+  }
+}
+
 // External targets are validated for identity, not merely HTTP 200.
 const externalChecks = [
   ["Workforce live demo","https://workforce-frontend.onrender.com",["<title>vaktklar","vaktklar – bemanning og kompetanse"]],
