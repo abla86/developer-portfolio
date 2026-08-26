@@ -16,9 +16,6 @@ if (fs.existsSync(registryPath)) {
     if (!p.repo || !p.reason) failures.push(`Invalid exclusion registry entry: ${p.repo ?? "unknown"}`);
   }
 }
-const warnings = [];
-const plan = [];
-const textFiles = [];
 
 function walk(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
