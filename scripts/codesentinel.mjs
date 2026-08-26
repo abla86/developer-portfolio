@@ -65,8 +65,8 @@ for (const file of htmlFiles) {
 
 // External targets are validated for identity, not merely HTTP 200.
 const externalChecks = [
-  ["Workforce live demo","https://workforce-frontend.onrender.com",["workforce","vaktklar"]],
-  ["Evidence live demo","https://evidence-appraisal-tool.onrender.com",["evidence","appraisal"]]
+  ["Workforce live demo","https://workforce-frontend.onrender.com",["<title>vaktklar","vaktklar – bemanning og kompetanse"]],
+  ["Evidence live demo","https://evidence-appraisal-tool.onrender.com",["<title>evidenceflow","evidenceflow – research support"]]
 ];
 for (const [name,url,markers] of externalChecks) {
   try {
