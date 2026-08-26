@@ -66,6 +66,7 @@ for (const file of htmlFiles) {
 // LIVE GITHUB REGISTRY VERIFICATION
 const ghToken = process.env.GH_TOKEN || process.env.GITHUB_TOKEN;
 const ghOwner = process.env.GITHUB_REPOSITORY_OWNER || "abla86";
+const repoNames = new Set();
 async function githubJson(url) {
   if (!ghToken) {
     failures.push("GitHub verification unavailable: GH_TOKEN/GITHUB_TOKEN is missing");
@@ -92,6 +93,8 @@ if (ghToken) {
   const excluded = new Set((registry.excluded ?? []).map(p => p.repo.toLowerCase()));
 
   for (const entry of registry.projects ?? []) {
+    if (repoNames.has(entry.repo.toLowerCase())) failures.push(`Duplicate registry project: ${entry.repo}`);
+    repoNames.add(entry.repo.toLowerCase());
     const repo = await githubJson(`https://api.github.com/repos/${ghOwner}/${entry.repo}`);
     if (!repo) continue;
     if (repo.archived) failures.push(`Portfolio project is archived but promoted: ${entry.repo}`);
