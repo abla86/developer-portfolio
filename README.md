@@ -8,8 +8,6 @@ This repository contains the public portfolio site and its supporting showcase p
 
 - `index.html` — main portfolio
 - `small-projects-hub.html` — unified small-project demonstration hub
-- `small-projects.html` — small-project showcase
-- `mini-projects-showcase.html` — mini-project showcase
 - `engineering-showcase.html` — redirect to the small-project hub
 
 ## Link integrity rule
