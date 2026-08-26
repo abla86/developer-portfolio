@@ -63,6 +63,14 @@ Full-stack workforce planning and competence management system.
 
 Repository: https://github.com/abla86/workforce-competence-management
 
+## Engineering Showcase
+
+Smaller application projects are consolidated into one interactive showcase so they can be viewed as a coherent progression rather than a collection of isolated repositories.
+
+**[Open the Engineering Showcase](engineering-showcase.html)**
+
+The showcase groups practical application patterns such as tasks, time, calendar UI, calculator interaction and JavaScript fundamentals. Individual repositories remain the source of truth for their own implementation and verification status.
+
 ## Other selected work
 
 - HealthTech Device API
