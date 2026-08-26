@@ -3,6 +3,10 @@ import path from "node:path";
 import { spawnSync } from "node:child_process";
 
 const root = process.cwd();
+const failures = [];
+const warnings = [];
+const plan = [];
+const textFiles = [];
 // PROJECT REGISTRY PRECHECK
 const registryPath = path.join(root, "scripts", "project-registry.json");
 if (fs.existsSync(registryPath)) {
@@ -14,7 +18,6 @@ if (fs.existsSync(registryPath)) {
     if (!p.repo || !p.reason) failures.push(`Invalid exclusion registry entry: ${p.repo ?? "unknown"}`);
   }
 }
-const failures = [];
 const warnings = [];
 const plan = [];
 const textFiles = [];
