@@ -1,4 +1,4 @@
-name: Portfolio Self Audit
+name: CodeSentinel
 
 on:
   push:
@@ -12,10 +12,9 @@ on:
 permissions:
   contents: write
   pull-requests: write
-  issues: write
 
 jobs:
-  audit-and-repair:
+  verify:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -23,27 +22,25 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Audit and safe repair
+      - name: Inspect registered GitHub projects
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/github-project-inspector.mjs
+
+      - name: Run CodeSentinel preflight and safe repair
         env:
           GH_TOKEN: ${{ github.token }}
         run: node scripts/codesentinel.mjs
 
-      - name: Create repair PR when safe fixes were made
+      - name: Commit verified project facts
         if: github.event_name != 'pull_request'
-        env:
-          GH_TOKEN: ${{ github.token }}
         run: |
           if git diff --quiet; then
-            echo "No safe repairs required."
+            echo "No generated changes."
             exit 0
           fi
-
-          git config user.name "portfolio-self-audit[bot]"
+          git config user.name "CodeSentinel[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git switch -c "automation/portfolio-self-audit"
-          git add -A
-          git commit -m "chore: apply safe portfolio audit repairs"
-          git push --force-with-lease origin "automation/portfolio-self-audit"
-
-          gh pr create             --base main             --head "automation/portfolio-self-audit"             --title "chore: automated portfolio audit repairs"             --body "Automated audit found deterministic, low-risk repairs. The repair commit is isolated in this PR for review."
+          git add scripts/project-facts.generated.json
+          git commit -m "chore: refresh verified project facts [skip ci]"
+          git push
