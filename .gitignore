@@ -1,0 +1,15 @@
+﻿node_modules/
+.venv/
+venv/
+__pycache__/
+dist/
+build/
+bin/
+obj/
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
