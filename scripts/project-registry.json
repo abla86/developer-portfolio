@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "policy": "Only verified repository facts may be promoted to the portfolio.",
+  "projects": [
+    {"repo":"evidence-appraisal-tool","displayName":"EvidenceFlow","tier":1,"description":"Research-support platform for structured critical appraisal and evidence workflows.","verify":"README"},
+    {"repo":"workforce-competence-management","displayName":"Vaktklar","tier":1,"description":"Workforce planning and competence-management system.","verify":"README"},
+    {"repo":"azure-kubernetes-showcase","displayName":"CloudForge","tier":1,"description":"Cloud-engineering showcase covering .NET, React, Docker, Kubernetes, Azure IaC and DevSecOps.","verify":"README"},
+    {"repo":"HealthTechDeviceApi","displayName":"HealthTech Device API","tier":2,"description":"Healthcare-device REST API demonstrating validation, testing and synthetic healthcare-data workflows.","verify":"README"},
+    {"repo":"healthtech-dashboard","displayName":"HealthTech Monitor","tier":2,"description":"Monitoring dashboard for simulated healthcare-technology devices.","verify":"README"},
+    {"repo":"healthcare-data-analyzer","displayName":"HealthData Quality Lab","tier":2,"description":"Python data-quality and analysis pipeline for synthetic healthcare-related datasets.","verify":"README"},
+    {"repo":"healthcare-workforce-sql","displayName":"Workforce SQL Engine","tier":2,"description":"SQL Server model for workforce, shifts, competence and staffing analysis.","verify":"README"},
+    {"repo":"shift-competence-planner","displayName":"ShiftPlan","tier":2,"description":"C#/.NET planning application for shifts, staffing requirements and competence coverage.","verify":"README"},
+    {"repo":"AB-Engineering-Lab","displayName":"AB Engineering Lab","tier":3,"description":"Collection point for smaller engineering experiments and development work.","verify":"README"}
+  ],
+  "excluded": [
+    {"repo":"cross-device-sdk","reason":"External/Google Cross Device SDK material; do not present as original work."},
+    {"repo":"kana-dojo","reason":"Repository ownership/attribution must be verified before portfolio promotion."}
+  ]
+}
