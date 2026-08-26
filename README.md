@@ -1,6 +1,6 @@
-# Developer Portfolio — Anne Beth Andersen
+﻿# Developer Portfolio â€” Anne Beth Andersen
 
-**Healthcare × Software × Research**
+**Healthcare Ã— Software Ã— Research**
 
 Personal portfolio showing software development, HealthTech, research-support software, data, APIs and automation.
 
@@ -17,12 +17,12 @@ The portfolio deliberately distinguishes implemented software, documented verifi
 
 ## What I can contribute
 
-- **HealthTech & digitalisation** — connect healthcare-domain knowledge with practical digital solutions.
-- **Software development** — build frontend applications, backend services, APIs and data-oriented systems.
-- **Research-support technology** — structure evidence workflows while keeping methodological judgement with the researcher.
-- **Workflow improvement** — turn complex manual processes into clearer and more traceable digital workflows.
-- **Data & decision support** — validate, analyse and present structured data.
-- **Engineering practice** — use source control, testing, CI/CD, security scanning and explicit documentation boundaries.
+- **HealthTech & digitalisation** â€” connect healthcare-domain knowledge with practical digital solutions.
+- **Software development** â€” build frontend applications, backend services, APIs and data-oriented systems.
+- **Research-support technology** â€” structure evidence workflows while keeping methodological judgement with the researcher.
+- **Workflow improvement** â€” turn complex manual processes into clearer and more traceable digital workflows.
+- **Data & decision support** â€” validate, analyse and present structured data.
+- **Engineering practice** â€” use source control, testing, CI/CD, security scanning and explicit documentation boundaries.
 
 ## Featured work
 
@@ -83,13 +83,13 @@ Smaller learning projects are grouped as part of the broader engineering progres
 
 ## Engineering stack
 
-**Frontend:** HTML5 · CSS3 · JavaScript · React · Vite · Jest
+**Frontend:** HTML5 Â· CSS3 Â· JavaScript Â· React Â· Vite Â· Jest
 
-**Backend/data:** Python · FastAPI · C# · .NET · ASP.NET Core · Entity Framework Core · REST · OpenAPI · SQL Server · PostgreSQL
+**Backend/data:** Python Â· FastAPI Â· C# Â· .NET Â· ASP.NET Core Â· Entity Framework Core Â· REST Â· OpenAPI Â· SQL Server Â· PostgreSQL
 
-**Engineering:** Git · GitHub Actions · Docker · CodeQL · Dependabot · xUnit · pytest · PowerShell
+**Engineering:** Git Â· GitHub Actions Â· Docker Â· CodeQL Â· Dependabot Â· xUnit Â· pytest Â· PowerShell
 
-**Automation/IoT:** Home Assistant · MQTT · Zigbee · Raspberry Pi · YAML
+**Automation/IoT:** Home Assistant Â· MQTT Â· Zigbee Â· Raspberry Pi Â· YAML
 
 ## Portfolio principle
 
@@ -110,6 +110,10 @@ Source: https://github.com/abla86/developer-portfolio
 
 ## Author
 
-Anne Beth Andersen — **Master's student in Knowledge-Based Practice**.
+Anne Beth Andersen â€” **Master's student in Knowledge-Based Practice**.
 
 This means an ongoing master's education, not a completed master's degree.
+
+## Engineering Lab
+
+Smaller projects are grouped by demonstrated skills and progression. The individual repositories remain the source of truth for implementation, tests and current status.
