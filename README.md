@@ -16,12 +16,12 @@ A URL returning HTTP 200 is not considered sufficient evidence that a portfolio 
 
 ## Main projects
 
-- Evidence Appraisal Tool — `abla86/evidence-appraisal-tool`
-- Workforce & Competence Management — `abla86/workforce-competence-management`
+- EvidenceFlow — `abla86/evidence-appraisal-tool`
+- Vaktklar — `abla86/workforce-competence-management`
 - HealthTech Device API — `abla86/HealthTechDeviceApi`
-- Healthcare Data Analyzer — `abla86/healthcare-data-analyzer`
-- Healthcare Workforce SQL — `abla86/healthcare-workforce-sql`
-- Shift & Competence Planner — `abla86/shift-competence-planner`
+- HealthData Quality Lab — `abla86/healthcare-data-analyzer`
+- Workforce SQL Engine — `abla86/healthcare-workforce-sql`
+- ShiftPlan — `abla86/shift-competence-planner`
 
 ## Small projects
 
