@@ -1,148 +1,39 @@
 # Developer Portfolio — Anne Beth Andersen
 
-**Healthcare × Software × Research**
+Healthcare · Software · Research
 
-Personal portfolio showing software development, HealthTech, research-support software, data, APIs and automation.
+This repository contains the public portfolio site and its supporting showcase pages. Links are kept tied to the actual GitHub repositories and to verified live demonstrations where a deployment can be identified as the corresponding project.
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-live-63e6be?style=flat-square)](https://abla86.github.io/developer-portfolio/)
-[![GitHub](https://img.shields.io/badge/GitHub-abla86-181717?style=flat-square&logo=github)](https://github.com/abla86)
-[![React](https://img.shields.io/badge/React-projects-61dafb?style=flat-square&logo=react&logoColor=111)](https://github.com/abla86?tab=repositories&q=react)
-[![.NET](https://img.shields.io/badge/.NET-projects-512bd4?style=flat-square&logo=dotnet)](https://github.com/abla86?tab=repositories&q=.net)
+## Portfolio pages
 
-## Start here
+- `index.html` — main portfolio
+- `small-projects-hub.html` — unified small-project demonstration hub
+- `small-projects.html` — small-project showcase
+- `mini-projects-showcase.html` — mini-project showcase
+- `engineering-showcase.html` — redirect to the small-project hub
 
-| Need | Go to |
-|---|---|
-| **See the portfolio visually** | [Live portfolio](https://abla86.github.io/developer-portfolio/) |
-| **Try the smaller projects together** | [Small Projects Demo Hub](small-projects-hub.html) |
-| **Inspect the flagship systems** | [Featured work](#featured-work) |
-| **Inspect source code** | [GitHub repositories](https://github.com/abla86?tab=repositories) |
-| **Read maintenance history** | [Portfolio Worklog](PORTFOLIO-WORKLOG.md) |
-| **Contact** | [Email Anne Beth Andersen](mailto:annebeth.andersen@gmail.com) |
+## Link integrity rule
 
-The portfolio deliberately separates **visual demo**, **source code**, **documented verification** and **project status** so the reader can find the appropriate level of detail without being overwhelmed.
+A URL returning HTTP 200 is not considered sufficient evidence that a portfolio link is correct. Project links must be checked against the repository or deployment they claim to represent. Unverified deployments are not presented as verified live prototypes.
 
-## Profile
+## Main projects
 
-I am a **Master's student in Knowledge-Based Practice** with a background in nursing, healthcare-related work and administration. Alongside my studies, I develop software focused on practical workflows, data, APIs, automation and digital health.
+- Evidence Appraisal Tool — `abla86/evidence-appraisal-tool`
+- Workforce & Competence Management — `abla86/workforce-competence-management`
+- HealthTech Device API — `abla86/HealthTechDeviceApi`
+- Healthcare Data Analyzer — `abla86/healthcare-data-analyzer`
+- Healthcare Workforce SQL — `abla86/healthcare-workforce-sql`
+- Shift & Competence Planner — `abla86/shift-competence-planner`
 
-The portfolio deliberately distinguishes implemented software, documented verification and prototypes. It does not treat technical functionality as evidence of clinical, scientific or methodological validation.
+## Small projects
 
-## What I can contribute
+- `abla86/todo-app`
+- `abla86/task-manager`
+- `abla86/digital-clock`
+- `abla86/calculator`
+- `abla86/javascript-counter`
+- `abla86/advanced-javascript-counter`
 
-- **HealthTech & digitalisation** — connect healthcare-domain knowledge with practical digital solutions.
-- **Software development** — build frontend applications, backend services, APIs and data-oriented systems.
-- **Research-support technology** — structure evidence workflows while keeping methodological judgement with the researcher.
-- **Workflow improvement** — turn complex manual processes into clearer and more traceable digital workflows.
-- **Data & decision support** — validate, analyse and present structured data.
-- **Engineering practice** — use source control, testing, CI/CD, security scanning and explicit documentation boundaries.
+## Deployment boundary
 
-## Featured work
-
-### Evidence Appraisal Tool
-
-Research-support prototype for structured critical appraisal and evidence workflow support.
-
-- React 19 + Vite
-- ASP.NET Core / .NET 9
-- AMSTAR 2, CASP, AGREE II and GRADE workflows
-- RoB 2 prototype workflow
-- Evidence locations, rationale and researcher verification
-- Screening, extraction, PRISMA and reviewer-comparison workflows
-- Cohen's kappa calculation
-- SHA-256 integrity markers and audit history
-- GitHub Actions, CodeQL and Dependabot
-
-**Status:** prototype / research-support software. Not presented as clinically, scientifically or methodologically validated.
-
-Repository: https://github.com/abla86/evidence-appraisal-tool
-
-### Workforce & Competence Management
-
-Full-stack workforce planning and competence management system.
-
-- React + Vite
-- ASP.NET Core / .NET 10
-- Entity Framework Core 10
-- SQL Server and Docker Compose
-- Shift planning and staffing requirements
-- Competence levels and validity tracking
-- GREEN / YELLOW / RED coverage with gap explanations
-- Availability, absence, overlap and rest-period checks
-- What-if planning and candidate suggestions
-- **18/18 backend tests documented in local verification**
-- Frontend/build, Docker and health verification documented
-- GitHub Actions, CodeQL and Dependabot
-
-Repository: https://github.com/abla86/workforce-competence-management
-
-## Engineering Showcase
-
-Smaller application projects are consolidated into one interactive showcase so they can be viewed as a coherent progression rather than a collection of isolated repositories.
-
-**[Open the Small Projects Demo Hub](small-projects-hub.html)**
-
-The hub brings task management, a digital clock, calendar/planning UI, calculator interaction, JavaScript counters and the related small-project progression together on one page. The demonstrations share a small state model so visitors can see input → state → logic → UI → dashboard flow in practice.
-
-The showcase also makes several skills easier to assess than from isolated repositories alone: event handling, state management, local persistence, date/time handling, responsive UI composition, accessibility-oriented interaction patterns, small-scale validation, reusable UI logic and the transition from simple JavaScript exercises toward integrated application thinking.
-
-Individual repositories remain the source of truth for their own implementation, tests and verification status.
-
-## Other selected work
-
-- HealthTech Device API
-- Healthcare Data Analyzer
-- Healthcare Workforce SQL
-- Shift & Competence Planner
-- FastAPI Learning
-- React Task Dashboard
-- To-Do App
-- Task Manager
-- Calculator
-- Digital Clock
-- JavaScript Counter
-- Advanced JavaScript Counter
-- Hello HTML
-
-Smaller learning projects are grouped as part of the broader engineering progression rather than presented as separate flagship products.
-
-## Engineering stack
-
-**Frontend:** HTML5 · CSS3 · JavaScript · React · Vite · Jest
-
-**Backend/data:** Python · FastAPI · C# · .NET · ASP.NET Core · Entity Framework Core · REST · OpenAPI · SQL Server · PostgreSQL
-
-**Engineering:** Git · GitHub Actions · Docker · CodeQL · Dependabot · xUnit · pytest · PowerShell
-
-**Automation/IoT:** Home Assistant · MQTT · Zigbee · Raspberry Pi · YAML
-
-## Portfolio principle
-
-The portfolio distinguishes:
-
-1. implemented functionality;
-2. documented verification;
-3. prototype status; and
-4. claims requiring separate empirical, clinical or scientific validation.
-
-Website badges are **portfolio achievements**, not external professional certifications.
-
-## Portfolio
-
-Live: https://abla86.github.io/developer-portfolio/
-
-Source: https://github.com/abla86/developer-portfolio
-
-## Author
-
-Anne Beth Andersen — **Master's student in Knowledge-Based Practice**.
-
-This means an ongoing master's education, not a completed master's degree.
-
-## Engineering Lab
-
-Smaller projects are grouped by demonstrated skills and progression. The individual repositories remain the source of truth for implementation, tests and current status.
-
-## Worklog
-
-See [PORTFOLIO-WORKLOG.md](PORTFOLIO-WORKLOG.md) for documented portfolio maintenance changes.
+The Evidence Appraisal Tool is labelled as a public demonstration deployment. Other projects are linked to their verified source repositories unless a live deployment has been independently confirmed as the corresponding application.
