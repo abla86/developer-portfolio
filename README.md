@@ -1,44 +1,22 @@
-# Developer Portfolio — Anne Beth Andersen
+# Anne Beth Andersen — Developer Portfolio
 
-Healthcare · Software · Research
+**Healthcare · Software · Research**
 
-This repository contains the public portfolio site and its supporting showcase pages. Links are kept tied to the actual GitHub repositories and to verified live demonstrations where a deployment can be identified as the corresponding project.
+A portfolio of practical software projects combining healthcare domain knowledge, software development and research-oriented thinking.
 
-## Portfolio pages
+### Selected projects
 
-- `index.html` — main portfolio
-- `small-projects-hub.html` — unified small-project demonstration hub
-- `engineering-showcase.html` — redirect to the small-project hub
+- **EvidenceFlow** — research-support and critical appraisal tooling
+- **Vaktklar** — workforce, competence and staffing management
+- **HealthTech Device API** — REST API and backend engineering
+- **HealthData Quality Lab** — healthcare data validation and analysis
+- **Workforce SQL Engine** — relational data modelling and SQL
+- **ShiftPlan** — workforce planning prototype
 
-## Link integrity rule
+### Technologies
 
-A URL returning HTTP 200 is not considered sufficient evidence that a portfolio link is correct. Project links must be checked against the repository or deployment they claim to represent. Unverified deployments are not presented as verified live prototypes.
+C# / .NET · React · Python · SQL · REST APIs · Docker · GitHub Actions · Azure
 
-## Main projects
+**Portfolio:** https://abla86.github.io/developer-portfolio/
 
-- EvidenceFlow — `abla86/evidence-appraisal-tool`
-- Vaktklar — `abla86/workforce-competence-management`
-- HealthTech Device API — `abla86/HealthTechDeviceApi`
-- HealthData Quality Lab — `abla86/healthcare-data-analyzer`
-- Workforce SQL Engine — `abla86/healthcare-workforce-sql`
-- ShiftPlan — `abla86/shift-competence-planner`
-
-## Small projects
-
-- `abla86/todo-app`
-- `abla86/task-manager`
-- `abla86/digital-clock`
-- `abla86/calculator`
-- `abla86/javascript-counter`
-- `abla86/advanced-javascript-counter`
-
-## Deployment boundary
-
-The Evidence Appraisal Tool is labelled as a public demonstration deployment. Other projects are linked to their verified source repositories unless a live deployment has been independently confirmed as the corresponding application.
-
-
-## Sentinel
-
-**Sentinel** is the portfolio's autonomous integrity and safe-repair layer. It discovers defects, builds a verified repair plan, validates deterministic fixes before applying them, and runs post-repair verification. It is designed to fail safely rather than guess when a repair cannot be proven safe.
-
-Pipeline: **Discovery → Diagnostics → Verification → Repair Plan → Safe Repair → Regression Verification**.
+**GitHub:** https://github.com/abla86
