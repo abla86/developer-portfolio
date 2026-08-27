@@ -1,0 +1,9 @@
+Anne Beth Andersen
+
+Healthcare · Software · Research
+
+I work where healthcare, research and technology meet. With a background from healthcare and a Master's in Knowledge-Based Practice (expected completion 2029), I build software around real problems — from evidence and research workflows to workforce planning, healthcare data and practical APIs.
+
+I like turning complicated processes into tools that are easier to understand, test and use. My projects span frontend and backend development, APIs, databases, data processing, Docker, CI/CD and security-conscious engineering.
+
+I build to learn, test ideas and solve useful problems — and I keep the status of the work clear: what is implemented, what is experimental, and what has actually been verified.
