@@ -2,7 +2,7 @@
 
 **Healthcare · Software · Research**
 
-A portfolio of practical software projects combining healthcare domain knowledge, software development and research-oriented thinking.
+I come from healthcare and am completing a Master's in Knowledge-Based Practice. Alongside my academic and professional work, I build software to explore practical problems, improve workflows and turn complex ideas into something people can actually use.
 
 ### Selected projects
 
