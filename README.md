@@ -20,3 +20,7 @@ C# / .NET · React · Python · SQL · REST APIs · Docker · GitHub Actions · 
 **Portfolio:** https://abla86.github.io/developer-portfolio/
 
 **GitHub:** https://github.com/abla86
+
+## Change-control audit
+
+The repository uses an auditable change-control record. Material changes must be traceable to an approved scope, the resulting Git diff, and verification evidence.
