@@ -5,11 +5,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const popover = document.getElementById("skill-popover");
   const nodes = document.querySelectorAll(".yg-node");
   const details = {
-    React: ["React", "Component-driven UI and reusable application interfaces.", "Vaktklar · EvidenceFlow"],
-    "C#/.NET": ["C# / .NET", "Backend APIs, domain logic, validation and full-stack application work.", "Vaktklar · HealthTech Platform · CloudForge"],
-    Python: ["Python", "Data quality, analysis, automation and API work.", "HealthData Quality Lab · CloudForge"],
+    React: ["React", "Component-driven UI and reusable application interfaces.", "CloudForge"],
+    "C#/.NET": ["C# / .NET", "Backend APIs, domain logic and validation.", "HealthTech Platform · CloudForge"],
+    Python: ["Python", "Automation, data and platform tooling.", "CloudForge"],
     Cloud: ["Cloud", "Docker, Kubernetes, Azure, infrastructure as code and delivery pipelines.", "CloudForge"],
-    Security: ["Security", "Security-aware development, scanning, resilience and controlled verification.", "WPWW War Room · CloudForge · Vaktklar"],
+    Security: ["Security", "Application security, DevSecOps, supply-chain controls and resilience.", "HealthTech Platform · CloudForge"],
   };
   const show = (node) => {
     const item = details[node.dataset.skill];
