@@ -24,3 +24,11 @@ C# / .NET · React · Python · SQL · REST APIs · Docker · GitHub Actions · 
 ## Change-control audit
 
 The repository uses an auditable change-control record. Material changes must be traceable to an approved scope, the resulting Git diff, and verification evidence.
+
+
+## Interactive Project Lab
+
+The portfolio includes a unified showcase for smaller projects and interface experiments. The showcase is a presentation layer: original repositories remain separate and traceable.
+
+- [Interactive Project Lab](https://abla86.github.io/developer-portfolio/small-projects-hub.html)
+- Small projects are labelled according to their actual status and are not presented as separate products when they are only showcase variants.
