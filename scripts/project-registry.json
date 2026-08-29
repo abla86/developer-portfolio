@@ -1,6 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "policy": "Only verified repository facts may be promoted to the portfolio.",
+  "projectLab": {
+    "entry": "desktop-clock.html",
+    "legacyEntry": "small-projects-hub.html",
+    "description": "Unified interactive showcase for smaller demonstrations and interface variants."
+  },
   "projects": [
     {
       "repo": "evidence-appraisal-tool",
@@ -68,58 +73,11 @@
   ],
   "excluded": [
     {
-      "reason": "External/Google Cross Device SDK material; do not present as original work."
-    },
-    {
       "repo": "kana-dojo",
-      "reason": "Repository ownership/attribution must be verified before portfolio promotion."
+      "reason": "Removed from portfolio promotion; Project Lab is the sole showcase destination for small demonstrations."
     },
     {
-      "reason": "Repository README attributes the project to Robertg761; do not promote it as original work without explicit attribution verification."
-    },
-    {
-      "repo": "documentation",
-      "reason": "Archived HACS documentation repository; README states it hosts documentation for hacs.xyz and is not original portfolio work."
-    },
-    {
-      "repo": "skills-getting-started-with-github-copilot",
-      "reason": "Archived GitHub Copilot learning exercise; repository content is GitHub training material, not an original software project."
-    },
-    {
-      "repo": "skills-introduction-to-git",
-      "reason": "Archived Git/GitHub learning exercise; keep as learning history, not a portfolio project."
-    },
-    {
-      "repo": "home-assistant-voice-pe",
-      "reason": "Archived Home Assistant Voice PE repository; keep archived unless provenance and original contribution are explicitly documented."
-    },
-    {
-      "repo": "eufy_security",
-      "reason": "Archived Eufy Security repository; keep out of promoted portfolio until provenance and original contribution are documented."
-    },
-    {
-      "repo": "ABandersen.com",
-      "reason": "Archived predecessor portfolio; superseded by developer-portfolio."
-    },
-    {
-      "repo": "ab-portfolio",
-      "reason": "Archived predecessor portfolio; superseded by developer-portfolio."
-    },
-    {
-      "repo": "FastAPI-Learning",
-      "reason": "Archived learning project; retain as GitHub history but do not promote over current projects."
-    },
-    {
-      "repo": "todo-app",
-      "reason": "Archived earlier frontend project; retain as historical work, not a current flagship project."
-    },
-    {
-      "repo": "react-task-dashboard",
-      "reason": "Archived earlier React project; retain as historical work, not a current flagship project."
-    },
-    {
-      "repo": "advanced-javascript-counter",
-      "reason": "Archived earlier JavaScript project; retain as historical work, not a current flagship project."
+      "reason": "External, training, documentation or predecessor repositories remain outside promoted project units unless independently verified as original work."
     }
   ]
 }
