@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "policy": "Only verified repository facts may be promoted to the portfolio.",
   "projectLab": {
     "entry": "desktop-clock.html",
@@ -10,36 +10,31 @@
       "repo": "evidence-appraisal-tool",
       "displayName": "EvidenceFlow",
       "tier": 1,
-      "description": "Research-support platform for structured critical appraisal and evidence workflows.",
+      "description": "Research-support platform for structured critical appraisal, study classification, evidence traceability and methodology-aware assessment.",
       "verify": "README"
     },
     {
       "repo": "workforce-competence-management",
       "displayName": "Vaktklar",
       "tier": 1,
-      "description": "Workforce planning and competence-management system.",
-      "verify": "README"
+      "description": "Unified workforce and competence platform for shift planning, staffing coverage, competence management, audit, data exchange and decision support.",
+      "verify": "README",
+      "supportingDataLayer": "healthcare-workforce-sql"
     },
     {
       "repo": "azure-kubernetes-showcase",
       "displayName": "CloudForge",
       "tier": 1,
-      "description": "Cloud-engineering showcase covering .NET, React, Docker, Kubernetes, Azure IaC and DevSecOps.",
+      "description": "Cloud-engineering showcase covering .NET, React, Docker, Kubernetes, Azure IaC, CI/CD, DevSecOps, observability and controlled resilience.",
       "verify": "README"
     },
     {
       "repo": "HealthTechDeviceApi",
-      "displayName": "HealthTech Device API",
-      "tier": 2,
-      "description": "Healthcare-device REST API demonstrating validation, testing and synthetic healthcare-data workflows.",
-      "verify": "README"
-    },
-    {
-      "repo": "healthtech-dashboard",
-      "displayName": "HealthTech Monitor",
-      "tier": 2,
-      "description": "Monitoring dashboard for simulated healthcare-technology devices.",
-      "verify": "README"
+      "displayName": "HealthTech Platform",
+      "tier": 1,
+      "description": "Healthcare technology platform combining a .NET device API, validation/testing and a separate monitoring dashboard capability.",
+      "verify": "README",
+      "supportingFrontend": "healthtech-dashboard"
     },
     {
       "repo": "healthcare-data-analyzer",
@@ -49,30 +44,25 @@
       "verify": "README"
     },
     {
-      "repo": "healthcare-workforce-sql",
-      "displayName": "Workforce SQL Engine",
-      "tier": 2,
-      "description": "SQL Server model for workforce, shifts, competence and staffing analysis.",
-      "verify": "README"
-    },
-    {
-      "repo": "shift-competence-planner",
-      "displayName": "ShiftPlan",
-      "tier": 2,
-      "description": "C#/.NET planning application for shifts, staffing requirements and competence coverage.",
-      "verify": "README"
-    },
-    {
       "repo": "AB-Engineering-Lab",
       "displayName": "AB Engineering Lab",
       "tier": 3,
-      "description": "Collection point for smaller engineering experiments and development work.",
+      "description": "Collection point for smaller engineering experiments and development work that do not warrant separate flagship treatment.",
       "verify": "README"
     }
   ],
   "excluded": [
     {
-      "reason": "Removed from portfolio promotion; Project Lab is the sole showcase destination for small demonstrations."
+      "repo": "shift-competence-planner",
+      "reason": "Superseded as a separate portfolio unit by workforce-competence-management; retain only as historical source where useful."
+    },
+    {
+      "repo": "healthtech-dashboard",
+      "reason": "Integrated as the supporting frontend/monitoring layer of the HealthTech Platform; do not promote as a separate flagship project."
+    },
+    {
+      "repo": "small-projects-hub.html",
+      "reason": "Removed. desktop-clock.html is the sole Interactive Project Lab entry."
     },
     {
       "reason": "External, training, documentation or predecessor repositories remain outside promoted project units unless independently verified as original work."
