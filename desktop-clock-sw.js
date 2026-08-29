@@ -1,0 +1,1 @@
+const CACHE="yggdrasil-desk-v1";self.addEventListener("install",e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(["desktop-clock.html","desktop-clock.webmanifest"]))));self.addEventListener("fetch",e=>{if(new URL(e.request.url).origin===location.origin)e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request)))})
