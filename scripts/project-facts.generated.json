@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-29T20:09:38.230Z",
+  "generatedAt": "2026-08-29T20:10:01.227Z",
   "source": "GitHub repository inspection",
   "policy": "Only verified repository facts may be promoted to the portfolio.",
   "projects": [
@@ -7,7 +7,7 @@
       "repo": "evidence-appraisal-tool",
       "displayName": "EvidenceFlow",
       "tier": 1,
-      "description": "Research-support platform for structured critical appraisal, study classification, evidence traceability and methodology-aware assessment.",
+      "description": "Research-support platform for study classification, critical appraisal, evidence traceability and methodology-aware assessment.",
       "verify": "README",
       "status": "not-accessible-with-workflow-token",
       "error": "Repository is not accessible to this repository's GITHUB_TOKEN. No project fact was promoted."
@@ -16,11 +16,62 @@
       "repo": "workforce-competence-management",
       "displayName": "Vaktklar",
       "tier": 1,
-      "description": "Unified workforce and competence platform for shift planning, staffing coverage, competence management, audit, data exchange and decision support.",
+      "description": "Industry-flexible workforce and competence platform for shift planning, staffing coverage, competence management, audit, data exchange and decision support.",
       "verify": "README",
       "supportingDataLayer": "healthcare-workforce-sql",
       "status": "not-accessible-with-workflow-token",
       "error": "Repository is not accessible to this repository's GITHUB_TOKEN. No project fact was promoted."
+    },
+    {
+      "repo": "HealthTechDeviceApi",
+      "displayName": "HealthTech Platform",
+      "tier": 1,
+      "description": "Healthcare-technology platform combining a .NET device API with monitoring capability over synthetic data.",
+      "verify": "README",
+      "supportingFrontend": "healthtech-dashboard",
+      "status": "verified-source",
+      "source": {
+        "repo": "abla86/HealthTechDeviceApi",
+        "url": "https://github.com/abla86/HealthTechDeviceApi",
+        "defaultBranch": "main",
+        "archived": false,
+        "description": "Healthcare device management REST API built with C#, .NET 9 and ASP.NET Core.",
+        "stars": 0,
+        "updatedAt": "2026-08-29T20:01:17Z",
+        "pushedAt": "2026-08-29T20:00:52Z",
+        "languages": [
+          "C#",
+          "Dockerfile"
+        ],
+        "detectedTechnology": [
+          "C#",
+          "Dockerfile",
+          ".NET",
+          "Docker",
+          "GitHub Actions"
+        ],
+        "files": [
+          ".dockerignore",
+          ".github",
+          ".gitignore",
+          "Application",
+          "Dockerfile",
+          "Domain",
+          "HealthTechDeviceApi.Tests",
+          "HealthTechDeviceApi.csproj",
+          "HealthTechDeviceApi.http",
+          "Infrastructure",
+          "PORTFOLIO-WORKLOG.md",
+          "Program.cs",
+          "Properties",
+          "README.md",
+          "SECURITY.md",
+          "appsettings.Development.json",
+          "appsettings.json",
+          "docs"
+        ],
+        "readme": "# HealthTech Device Platform\n\nA healthcare-technology engineering project combining a C#/.NET REST API with a browser dashboard for simulated device monitoring. It demonstrates backend/API engineering, validation, layered architecture, OpenAPI, Docker, CI/security controls and frontend integration without using real patient data.\n\n## Portfolio role\n\nThis is a **combined platform unit**. The former standalone monitoring-dashboard capability is represented here because it complements the device API rather than adding a separate portfolio product. The separate `healthtech-dashboard` repository is retained as implementation history and should not be promoted as a second flagship project.\n\n## Implemented\n\n- RESTful device CRUD operations\n- health-check endpoint\n- device filtering and statistics\n- input validation and normalised status values\n- OpenAPI support\n- repository abstraction and dependency injection\n- layered domain/application/infrastructure structure\n- synthetic DICOM Part 10 generation with `fo-dicom`\n- synthetic metadata and de-identification markers\n- bounded `application/dicom` metadata inspection\n- automated API, service and DICOM tests with xUnit\n- GitHub Actions CI\n- Docker build/runtime verification in CI\n- CodeQL scanning\n- Dependabot monitoring\n- browser dashboard integration for simulated device status and metrics\n\n## Technology breadth demonstrated\n\n**C# / .NET** · ASP.NET Core · Minimal APIs · REST · OpenAPI · dependency injection · layered architecture · xUnit · Docker · GitHub Actions · CodeQL · Dependabot · DICOM/fo-dicom · HTML5 · CSS3 · JavaScript · Fetch API\n\n## DICOM development boundary\n\nThe current DICOM implementation is for synthetic demonstration data and bounded inspection. It does not claim production medical-imaging security or clinical validation.\n\nCurrent functionality includes generated synthetic identifiers and DICOM UIDs, de-identification markers, bounded inspection and allow-listed metadata output.\n\nThe repository does not currently claim SQL persistence, authentication/authorization, threat modelling, secure networking or Azure deployment as implemented functionality.\n\nSee `docs/SECURE_DICOM_ROADMAP.md` and `SECURITY.md`.\n\n## Testing\n\n```powershell\ndotnet test .\\HealthTechDeviceApi.Tests\\HealthTechDeviceApi.Tests.csproj\n```\n\nCI builds the API and runs the automated test suite, with Docker verification, CodeQL and Dependabot configuration.\n\n## Docker\n\n```powershell\ndocker build -t healthtech-device-api:latest .\ndocker run --rm -p 8080:8080 healthtech-device-api:latest\n```\n\n## Data safety\n\nUse only synthetic, generated or appropriately de-identified demonstration data. Do not commit real patient information or upload real patient information to public demonstrations.\n\n## Portfolio evidence\n\nThis project demonstrates ASP.NET Core REST API development, validation, dependency injection, layered architecture, automated testing, OpenAPI documentation, Docker execution, CI/security tooling and a complementary browser monitoring interface. The project is a demonstration platform, not a clinically validated medical system.\n\n## Status\n\n**Active portfolio project / demonstration platform.** Current implementation status is represented by the code, repository history and CI verification.\n\n## Portfolio\n\nhttps://abla86.github.io/developer-portfolio/\n\n## Change-control audit\n\nSee [docs/REPOSITORY-CHANGE-AUDIT-2026-08-28.md](docs/REPOSITORY-CHANGE-AUDIT-2026-08-28.md) for the repository change-control and traceability record.\n"
+      }
     },
     {
       "repo": "azure-kubernetes-showcase",
@@ -93,55 +144,13 @@
       }
     },
     {
-      "repo": "HealthTechDeviceApi",
-      "displayName": "HealthTech Platform",
+      "repo": "wpww-warroom",
+      "displayName": "WPWW War Room",
       "tier": 1,
-      "description": "Healthcare technology platform combining a .NET device API, validation/testing and a separate monitoring dashboard capability.",
+      "description": "Controlled security, resilience and observability laboratory for bounded engineering experiments.",
       "verify": "README",
-      "supportingFrontend": "healthtech-dashboard",
-      "status": "verified-source",
-      "source": {
-        "repo": "abla86/HealthTechDeviceApi",
-        "url": "https://github.com/abla86/HealthTechDeviceApi",
-        "defaultBranch": "main",
-        "archived": false,
-        "description": "Healthcare device management REST API built with C#, .NET 9 and ASP.NET Core.",
-        "stars": 0,
-        "updatedAt": "2026-08-29T20:01:17Z",
-        "pushedAt": "2026-08-29T20:00:52Z",
-        "languages": [
-          "C#",
-          "Dockerfile"
-        ],
-        "detectedTechnology": [
-          "C#",
-          "Dockerfile",
-          ".NET",
-          "Docker",
-          "GitHub Actions"
-        ],
-        "files": [
-          ".dockerignore",
-          ".github",
-          ".gitignore",
-          "Application",
-          "Dockerfile",
-          "Domain",
-          "HealthTechDeviceApi.Tests",
-          "HealthTechDeviceApi.csproj",
-          "HealthTechDeviceApi.http",
-          "Infrastructure",
-          "PORTFOLIO-WORKLOG.md",
-          "Program.cs",
-          "Properties",
-          "README.md",
-          "SECURITY.md",
-          "appsettings.Development.json",
-          "appsettings.json",
-          "docs"
-        ],
-        "readme": "# HealthTech Device Platform\n\nA healthcare-technology engineering project combining a C#/.NET REST API with a browser dashboard for simulated device monitoring. It demonstrates backend/API engineering, validation, layered architecture, OpenAPI, Docker, CI/security controls and frontend integration without using real patient data.\n\n## Portfolio role\n\nThis is a **combined platform unit**. The former standalone monitoring-dashboard capability is represented here because it complements the device API rather than adding a separate portfolio product. The separate `healthtech-dashboard` repository is retained as implementation history and should not be promoted as a second flagship project.\n\n## Implemented\n\n- RESTful device CRUD operations\n- health-check endpoint\n- device filtering and statistics\n- input validation and normalised status values\n- OpenAPI support\n- repository abstraction and dependency injection\n- layered domain/application/infrastructure structure\n- synthetic DICOM Part 10 generation with `fo-dicom`\n- synthetic metadata and de-identification markers\n- bounded `application/dicom` metadata inspection\n- automated API, service and DICOM tests with xUnit\n- GitHub Actions CI\n- Docker build/runtime verification in CI\n- CodeQL scanning\n- Dependabot monitoring\n- browser dashboard integration for simulated device status and metrics\n\n## Technology breadth demonstrated\n\n**C# / .NET** · ASP.NET Core · Minimal APIs · REST · OpenAPI · dependency injection · layered architecture · xUnit · Docker · GitHub Actions · CodeQL · Dependabot · DICOM/fo-dicom · HTML5 · CSS3 · JavaScript · Fetch API\n\n## DICOM development boundary\n\nThe current DICOM implementation is for synthetic demonstration data and bounded inspection. It does not claim production medical-imaging security or clinical validation.\n\nCurrent functionality includes generated synthetic identifiers and DICOM UIDs, de-identification markers, bounded inspection and allow-listed metadata output.\n\nThe repository does not currently claim SQL persistence, authentication/authorization, threat modelling, secure networking or Azure deployment as implemented functionality.\n\nSee `docs/SECURE_DICOM_ROADMAP.md` and `SECURITY.md`.\n\n## Testing\n\n```powershell\ndotnet test .\\HealthTechDeviceApi.Tests\\HealthTechDeviceApi.Tests.csproj\n```\n\nCI builds the API and runs the automated test suite, with Docker verification, CodeQL and Dependabot configuration.\n\n## Docker\n\n```powershell\ndocker build -t healthtech-device-api:latest .\ndocker run --rm -p 8080:8080 healthtech-device-api:latest\n```\n\n## Data safety\n\nUse only synthetic, generated or appropriately de-identified demonstration data. Do not commit real patient information or upload real patient information to public demonstrations.\n\n## Portfolio evidence\n\nThis project demonstrates ASP.NET Core REST API development, validation, dependency injection, layered architecture, automated testing, OpenAPI documentation, Docker execution, CI/security tooling and a complementary browser monitoring interface. The project is a demonstration platform, not a clinically validated medical system.\n\n## Status\n\n**Active portfolio project / demonstration platform.** Current implementation status is represented by the code, repository history and CI verification.\n\n## Portfolio\n\nhttps://abla86.github.io/developer-portfolio/\n\n## Change-control audit\n\nSee [docs/REPOSITORY-CHANGE-AUDIT-2026-08-28.md](docs/REPOSITORY-CHANGE-AUDIT-2026-08-28.md) for the repository change-control and traceability record.\n"
-      }
+      "status": "not-accessible-with-workflow-token",
+      "error": "Repository is not accessible to this repository's GITHUB_TOKEN. No project fact was promoted."
     },
     {
       "repo": "healthcare-data-analyzer",
@@ -183,50 +192,6 @@
         ],
         "readme": "# Healthcare Data Analyzer\n\nA small Python portfolio project for validating and analyzing **synthetic healthcare-related CSV data**.\n\nThe included dataset is demonstration data only. It does not contain real patient records.\n\n## Purpose\n\nThe project demonstrates practical Python data-processing skills: structured input validation, explicit data-quality assessment, type-safe transformation, aggregation, filtering, reporting and unit testing.\n\n## Data-quality pipeline\n\nBefore analysis, the input dataset passes through a separate quality gate:\n\n```text\nCSV input\n   ↓\nSchema check\n   ↓\nCompleteness / uniqueness / value validation\n   ↓\nPASS | PASS WITH WARNINGS | FAIL\n   ↓\nAnalysis\n   ↓\nReport\n```\n\nA dataset that fails the quality gate is not analyzed. This prevents invalid input from silently producing a report.\n\n## Features\n\n- Reads CSV files\n- Validates required fields\n- Assesses schema conformity and completeness\n- Detects duplicate patient identifiers\n- Validates numeric, boolean and risk-domain values\n- Converts numeric and boolean values safely\n- Calculates summary metrics\n- Filters records by municipality and risk level\n- Generates a text report\n- Uses type hints and dataclasses\n- Includes pytest unit tests\n- Includes synthetic sample data\n\n## Project structure\n\n```text\nhealthcare-data-analyzer/\n├── data/                  # Synthetic demonstration data\n├── src/                   # Quality, analysis, models and reporting\n├── tests/                 # Unit tests\n├── main.py                # Quality-gated application entry point\n├── requirements.txt\n├── PORTFOLIO-WORKLOG.md\n├── README.md\n└── .gitignore\n```\n\n## Run locally\n\n```powershell\npython -m venv .venv\n.\\.venv\\Scripts\\Activate.ps1\npip install -r requirements.txt\npython main.py\n```\n\n## Testing\n\nRun the automated test suite with:\n\n```powershell\npytest\n```\n\nThe tests cover both the existing analysis behaviour and the data-quality gate, including duplicate identifiers and invalid values.\n\n## Data safety\n\nThe repository uses synthetic demonstration records. No real patient information should be committed to this public repository. The application is an educational/data-engineering demonstration and is not a clinical decision-support system.\n\n## Portfolio value\n\nThis project demonstrates Python, CSV processing, data-quality engineering, validation, data modelling, aggregation, filtering, reporting and automated testing in a healthcare-related but non-sensitive demonstration context.\n\n## Status\n\n**Portfolio / demonstration project.** The repository is the source of truth for the implementation and current project status.\n\n## Change-control audit\n\nSee [docs/REPOSITORY-CHANGE-AUDIT-2026-08-28.md](docs/REPOSITORY-CHANGE-AUDIT-2026-08-28.md) for the repository change-control and traceability record.\n\n\n## Quality and verification\n\nDocumentation is intended to describe the implementation that is actually present. Automated tests, dependency/security controls and repository checks should be used where appropriate. Prototype, demonstration and production status are kept distinct; claims are not made beyond what the code and available evidence support.\n"
       }
-    },
-    {
-      "repo": "AB-Engineering-Lab",
-      "displayName": "AB Engineering Lab",
-      "tier": 3,
-      "description": "Collection point for smaller engineering experiments and development work that do not warrant separate flagship treatment.",
-      "verify": "README",
-      "status": "verified-source",
-      "source": {
-        "repo": "abla86/AB-Engineering-Lab",
-        "url": "https://github.com/abla86/AB-Engineering-Lab",
-        "defaultBranch": "main",
-        "archived": false,
-        "description": null,
-        "stars": 0,
-        "updatedAt": "2026-08-29T14:25:13Z",
-        "pushedAt": "2026-08-29T14:34:31Z",
-        "languages": [
-          "HTML",
-          "JavaScript",
-          "CSS",
-          "Python"
-        ],
-        "detectedTechnology": [
-          "HTML",
-          "JavaScript",
-          "CSS",
-          "Python",
-          "GitHub Actions"
-        ],
-        "files": [
-          ".github",
-          ".gitignore",
-          "PORTFOLIO-WORKLOG.md",
-          "README.md",
-          "SECURITY.md",
-          "apps",
-          "audit",
-          "docs",
-          "frontend",
-          "security-lab"
-        ],
-        "readme": "# AB Engineering Lab\n\n**One project. Multiple engineering layers.**\n\nAB Engineering Lab combines selected software-development projects into one coherent engineering laboratory.\n\n## Start here\n\n| Need | Go to |\n|---|---|\n| Visual showcase | [Developer portfolio](https://abla86.github.io/developer-portfolio/) |\n| Small projects together | [Small Projects Demo Hub](https://abla86.github.io/developer-portfolio/small-projects-hub.html) |\n| Source code | [GitHub repositories](https://github.com/abla86?tab=repositories) |\n| Engineering documentation | [`docs/`](docs/) |\n| Portfolio verification | [`docs/PORTFOLIO-VERIFICATION-STATUS.md`](docs/PORTFOLIO-VERIFICATION-STATUS.md) |\n| Application security work | [`security-lab/`](security-lab/) |\n\n## Engineering progression\n\nHTML / CSS\n    ↓\nJavaScript\n    ↓\nApplications\n    ↓\nReact\n    ↓\nPython / FastAPI\n    ↓\nAPIs\n    ↓\nTesting\n    ↓\nGit / GitHub\n    ↓\nCI/CD\n    ↓\nDeployment\n    ↓\nApplication Security / DevSecOps\n\n## Purpose\n\nThe smaller projects demonstrate development progression and are presented together while their individual implementations remain identifiable.\n\n## Current engineering setup\n\n- React + Vite frontend\n- GitHub Actions build validation\n- GitHub Pages deployment workflow\n- Browser-based project previews where compatible\n- Separate backend and application modules retained in the repository\n- A controlled, local-only application security laboratory with vulnerable and hardened examples\n\nThe backend modules are not described as connected to the React frontend unless that integration has actually been implemented and tested.\n\n## Application security lab\n\n[`security-lab/`](security-lab/) demonstrates an end-to-end security workflow:\n\n`Vulnerable -> Attack/Proof -> Detect -> Fix -> Regression test`\n\nCurrent training modules cover SQL injection, cross-site scripting, broken access control/IDOR, security headers and input validation. The lab is deliberately local-only and is not production code.\n\n## Verification\n\nUse [Portfolio Verification Status](docs/PORTFOLIO-VERIFICATION-STATUS.md) for the current repository-by-repository evidence level. It distinguishes successful checks from repositories that do not currently expose a suitable full CI workflow.\n\nSecurity-lab verification is handled by the dedicated `Security Lab` GitHub Actions workflow.\n\n## Accuracy\n\nDocumentation describes implemented functionality rather than unsupported claims about production readiness, validation or completed functionality.\n\nA configured deployment workflow is not the same as claiming that a deployed system is production-ready.\n\n## Education\n\nThe repository owner is a Master's student in Knowledge-Based Practice.\n\nThis does not indicate completion of a master's degree.\n\n## Change-control audit\n\nSee [docs/REPOSITORY-CHANGE-AUDIT-2026-08-28.md](docs/REPOSITORY-CHANGE-AUDIT-2026-08-28.md) for the repository change-control and traceability record.\n"
-      }
     }
   ],
   "excluded": [
@@ -235,12 +200,12 @@
       "reason": "Superseded as a separate portfolio unit by workforce-competence-management; retain only as historical source where useful."
     },
     {
-      "repo": "healthtech-dashboard",
-      "reason": "Integrated as the supporting frontend/monitoring layer of the HealthTech Platform; do not promote as a separate flagship project."
-    },
-    {
       "repo": "small-projects-hub.html",
       "reason": "Removed. desktop-clock.html is the sole Interactive Project Lab entry."
+    },
+    {
+      "repo": "engineering-showcase.html",
+      "reason": "Removed. Replaced by the unified Interactive Project Lab."
     },
     {
       "reason": "External, training, documentation or predecessor repositories remain outside promoted project units unless independently verified as original work."
