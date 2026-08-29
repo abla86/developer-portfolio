@@ -1,9 +1,8 @@
 {
-  "version": 2,
+  "version": 3,
   "policy": "Only verified repository facts may be promoted to the portfolio.",
   "projectLab": {
     "entry": "desktop-clock.html",
-    "legacyEntry": "desktop-clock.html",
     "description": "Unified interactive showcase for smaller demonstrations and interface variants."
   },
   "projects": [
