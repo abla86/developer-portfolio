@@ -8,19 +8,21 @@ I come from healthcare and am completing a Master's in Knowledge-Based Practice.
 
 The portfolio deliberately uses a quality threshold rather than presenting every repository as a flagship project.
 
-### Current flagship candidates
+### Current public flagship projects
 
-- **EvidenceFlow** — research-support and critical-appraisal tooling
-- **Vaktklar** — workforce and competence platform
+Only projects with publicly inspectable implementation are promoted as flagship work.
+
 - **HealthTech Platform** — healthcare-device API and monitoring capability
 - **CloudForge** — cloud/platform engineering, Kubernetes, Azure, CI/CD and DevSecOps
 
-### Under review — not yet flagship
+### Under review — not currently promoted
 
-- **WPWW War Room** — local security, resilience, observability and verification laboratory. Interesting scope, but not yet promoted as a flagship project.
-- **HealthData Quality Lab** — Python data-quality and analysis workflow. Useful technical evidence, but not yet promoted as a flagship project.
+- **EvidenceFlow** — strong research-software scope, but the repository is currently private and therefore not yet suitable for a public flagship position.
+- **Vaktklar** — substantial full-stack work, but the repository is currently private and remains under development.
+- **WPWW War Room** — security/resilience laboratory; intentionally kept away from the main presentation until its implementation and verification evidence justify promotion.
+- **HealthData Quality Lab** — Python/data-quality work; retained as development evidence until it reaches the same presentation standard as the public flagships.
 
-This distinction is intentional: a project is not promoted simply because it exists or contains many technologies. It must have enough implemented functionality, verification evidence, documentation and distinct portfolio value to justify a primary position.
+This distinction is intentional: a project is not promoted simply because it exists or contains many technologies. It must have enough implemented functionality, verification evidence, documentation, public inspectability and distinct portfolio value to justify a primary position.
 
 ## Supporting implementations
 
