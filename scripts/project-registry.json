@@ -1,5 +1,5 @@
 {
-  "version": 5,
+  "version": 6,
   "policy": "Only verified repository facts may be promoted to the portfolio.",
   "projectLab": {
     "entry": "desktop-clock.html",
@@ -19,7 +19,10 @@
       "tier": 1,
       "description": "Industry-flexible workforce and competence platform for shift planning, staffing coverage, competence management, audit, data exchange and decision support.",
       "verify": "README",
-      "supportingDataLayer": "healthcare-workforce-sql"
+      "supportingDataLayer": {
+        "repo": "healthcare-workforce-sql",
+        "role": "relational data modelling and T-SQL analysis"
+      }
     },
     {
       "repo": "HealthTechDeviceApi",
@@ -55,7 +58,7 @@
     {
       "repo": "healthcare-workforce-sql",
       "role": "Workforce data layer",
-      "reason": "Distinct SQL/T-SQL capability; supports Vaktklar without being a duplicate application."
+      "reason": "Retained because it adds distinct relational database and T-SQL evidence without duplicating the workforce application."
     },
     {
       "repo": "healthtech-dashboard",
