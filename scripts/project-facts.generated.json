@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-29T19:59:10.110Z",
+  "generatedAt": "2026-08-29T20:05:29.282Z",
   "source": "GitHub repository inspection",
   "policy": "Only verified repository facts may be promoted to the portfolio.",
   "projects": [
@@ -7,7 +7,7 @@
       "repo": "evidence-appraisal-tool",
       "displayName": "EvidenceFlow",
       "tier": 1,
-      "description": "Research-support platform for structured critical appraisal and evidence workflows.",
+      "description": "Research-support platform for structured critical appraisal, study classification, evidence traceability and methodology-aware assessment.",
       "verify": "README",
       "status": "not-accessible-with-workflow-token",
       "error": "Repository is not accessible to this repository's GITHUB_TOKEN. No project fact was promoted."
@@ -16,8 +16,9 @@
       "repo": "workforce-competence-management",
       "displayName": "Vaktklar",
       "tier": 1,
-      "description": "Workforce planning and competence-management system.",
+      "description": "Unified workforce and competence platform for shift planning, staffing coverage, competence management, audit, data exchange and decision support.",
       "verify": "README",
+      "supportingDataLayer": "healthcare-workforce-sql",
       "status": "not-accessible-with-workflow-token",
       "error": "Repository is not accessible to this repository's GITHUB_TOKEN. No project fact was promoted."
     },
@@ -25,7 +26,7 @@
       "repo": "azure-kubernetes-showcase",
       "displayName": "CloudForge",
       "tier": 1,
-      "description": "Cloud-engineering showcase covering .NET, React, Docker, Kubernetes, Azure IaC and DevSecOps.",
+      "description": "Cloud-engineering showcase covering .NET, React, Docker, Kubernetes, Azure IaC, CI/CD, DevSecOps, observability and controlled resilience.",
       "verify": "README",
       "status": "verified-source",
       "source": {
@@ -93,10 +94,11 @@
     },
     {
       "repo": "HealthTechDeviceApi",
-      "displayName": "HealthTech Device API",
-      "tier": 2,
-      "description": "Healthcare-device REST API demonstrating validation, testing and synthetic healthcare-data workflows.",
+      "displayName": "HealthTech Platform",
+      "tier": 1,
+      "description": "Healthcare technology platform combining a .NET device API, validation/testing and a separate monitoring dashboard capability.",
       "verify": "README",
+      "supportingFrontend": "healthtech-dashboard",
       "status": "verified-source",
       "source": {
         "repo": "abla86/HealthTechDeviceApi",
@@ -105,8 +107,8 @@
         "archived": false,
         "description": "Healthcare device management REST API built with C#, .NET 9 and ASP.NET Core.",
         "stars": 0,
-        "updatedAt": "2026-08-28T18:21:28Z",
-        "pushedAt": "2026-08-28T18:12:05Z",
+        "updatedAt": "2026-08-29T20:01:17Z",
+        "pushedAt": "2026-08-29T20:00:52Z",
         "languages": [
           "C#",
           "Dockerfile"
@@ -138,49 +140,7 @@
           "appsettings.json",
           "docs"
         ],
-        "readme": "# HealthTech Device API\n\n[![.NET CI](https://github.com/abla86/HealthTechDeviceApi/actions/workflows/dotnet-ci.yml/badge.svg)](https://github.com/abla86/HealthTechDeviceApi/actions/workflows/dotnet-ci.yml)\n\nREST API for healthcare-technology device management and secure medical-imaging development, built with C# and ASP.NET Core.\n\n## Start here\n\n| Need | Go to |\n|---|---|\n| Current scope and status | [Status](#status) |\n| See implemented functionality | [Implemented](#implemented) |\n| Understand DICOM boundaries | [DICOM development boundary](#dicom-development-boundary) |\n| Run tests | [Testing](#testing) |\n| Run with Docker | [Docker](#docker) |\n| See portfolio context | [Developer portfolio](https://abla86.github.io/developer-portfolio/) |\n\n## Status\n\n**Development / demonstration project.**\n\nThe repository demonstrates API engineering, validation, testing, containerisation and security-aware healthcare software development. It is not presented as a production medical-imaging system or clinically validated software.\n\n## Implemented\n\n- RESTful device CRUD operations\n- health-check endpoint\n- device filtering and statistics\n- input validation and normalised status values\n- OpenAPI support\n- repository abstraction and dependency injection\n- layered domain/application/infrastructure structure\n- synthetic DICOM Part 10 generation with `fo-dicom`\n- synthetic metadata and de-identification markers\n- bounded `application/dicom` metadata inspection\n- automated API, service and DICOM tests with xUnit\n- GitHub Actions CI\n- Docker build/runtime verification in CI\n- CodeQL scanning\n- Dependabot monitoring\n\n## DICOM development boundary\n\nThe current DICOM implementation is for synthetic demonstration data and bounded inspection. It does not claim production medical-imaging security or clinical validation.\n\nCurrent functionality includes generated synthetic identifiers and DICOM UIDs, de-identification markers, bounded inspection and allow-listed metadata output.\n\nThe repository does not currently claim SQL persistence, authentication/authorization, threat modelling, secure networking or Azure deployment as implemented functionality.\n\nSee `docs/SECURE_DICOM_ROADMAP.md` and `SECURITY.md`.\n\n## Technology\n\n- C#\n- .NET 9\n- ASP.NET Core\n- Minimal APIs\n- REST\n- OpenAPI\n- fo-dicom 5.2.6\n- xUnit\n- Microsoft.AspNetCore.Mvc.Testing\n- GitHub Actions\n- Docker\n\n## Testing\n\n```powershell\ndotnet test .\\HealthTechDeviceApi.Tests\\HealthTechDeviceApi.Tests.csproj\n```\n\nCI builds the API and runs the automated test suite, with Docker verification, CodeQL and Dependabot configuration.\n\n## Docker\n\n```powershell\ndocker build -t healthtech-device-api:latest .\ndocker run --rm -p 8080:8080 healthtech-device-api:latest\n```\n\n## Data safety\n\nUse only synthetic, generated or appropriately de-identified demonstration data. Do not commit real patient information or upload real patient information to public demonstrations.\n\n## Run locally\n\n```powershell\ndotnet restore\ndotnet run\n```\n\n## Employer / portfolio evidence\n\nThis project demonstrates ASP.NET Core REST API development, validation, dependency injection, layered architecture, automated testing, OpenAPI documentation, Docker execution, CI/security tooling and explicit healthcare data-safety boundaries.\n\n## Author\n\nAnne Beth Andersen\n\n## Portfolio\n\nhttps://abla86.github.io/developer-portfolio/\n\n## Change-control audit\n\nSee [docs/REPOSITORY-CHANGE-AUDIT-2026-08-28.md](docs/REPOSITORY-CHANGE-AUDIT-2026-08-28.md) for the repository change-control and traceability record.\n"
-      }
-    },
-    {
-      "repo": "healthtech-dashboard",
-      "displayName": "HealthTech Monitor",
-      "tier": 2,
-      "description": "Monitoring dashboard for simulated healthcare-technology devices.",
-      "verify": "README",
-      "status": "verified-source",
-      "source": {
-        "repo": "abla86/healthtech-dashboard",
-        "url": "https://github.com/abla86/healthtech-dashboard",
-        "defaultBranch": "main",
-        "archived": false,
-        "description": null,
-        "stars": 0,
-        "updatedAt": "2026-08-28T18:15:40Z",
-        "pushedAt": "2026-08-28T18:12:02Z",
-        "languages": [
-          "JavaScript",
-          "Python",
-          "CSS",
-          "HTML"
-        ],
-        "detectedTechnology": [
-          "JavaScript",
-          "Python",
-          "CSS",
-          "HTML",
-          "GitHub Actions"
-        ],
-        "files": [
-          ".github",
-          ".gitignore",
-          "PORTFOLIO-WORKLOG.md",
-          "README.md",
-          "SECURITY.md",
-          "backend",
-          "docs",
-          "frontend"
-        ],
-        "readme": "# HealthTech Dashboard\n\nA full-stack demonstration project combining a FastAPI REST API with a responsive JavaScript monitoring dashboard.\n\nThe application uses simulated healthcare-technology device data and contains no patient or personal health information.\n\n## Start here\n\n| Need | Go to |\n|---|---|\n| Understand the app | [Features](#features) |\n| Understand the API | [API endpoints](#api-endpoints) |\n| Run locally | [Run locally](#run-locally) |\n| Inspect the source | [GitHub repository](https://github.com/abla86/healthtech-dashboard) |\n| See the wider portfolio | [Developer portfolio](https://abla86.github.io/developer-portfolio/) |\n\n## Verification\n\n[![CI](https://github.com/abla86/healthtech-dashboard/actions/workflows/ci.yml/badge.svg)](https://github.com/abla86/healthtech-dashboard/actions/workflows/ci.yml)\n\nThe baseline CI compiles the Python backend and runs API smoke/integration checks covering health, device listing, create/read/delete behaviour, validation and missing-device handling.\n\n## Features\n\n- FastAPI REST API\n- Device monitoring dashboard\n- API health endpoint\n- Device status and battery metrics\n- Responsive frontend\n- Configurable CORS policy\n- Pydantic validation\n- Create, read and delete API operations\n- Interactive refresh and dashboard metrics\n- OpenAPI / Swagger documentation\n- Configurable frontend API endpoint\n- Explicit API health check before dashboard data loading\n- Safe text-based DOM rendering for returned device data\n- Frontend request timeout and response-shape validation\n\n## Technology Stack\n\n### Backend\n\n- Python\n- FastAPI\n- Pydantic\n- Uvicorn\n- REST API\n\n### Frontend\n\n- HTML5\n- CSS3\n- JavaScript\n- Fetch API\n- Responsive CSS\n\n## API Endpoints\n\n| Method | Endpoint | Purpose |\n|---|---|---|\n| GET | `/` | API information |\n| GET | `/health` | Health check |\n| GET | `/devices` | List devices |\n| GET | `/devices/{id}` | Get device |\n| POST | `/devices` | Create device |\n| DELETE | `/devices/{id}` | Delete device |\n\nInteractive API documentation is available at `/docs` while the backend is running.\n\n## Run Locally\n\nInstall backend dependencies:\n\n```powershell\ncd backend\npython -m venv .venv\n.\\\\.venv\\\\Scripts\\\\Activate.ps1\npip install -r requirements.txt\nuvicorn main:app --reload\n```\n\nRun the baseline tests:\n\n```powershell\npip install pytest httpx\npytest -q\n```\n\nThe frontend API endpoint is configured through the `<body data-api-base=\"...\">` attribute in `frontend/index.html`. Change that value when the API is hosted somewhere other than the local development address.\n\n### CORS configuration\n\nLocal browser origins on `localhost` and `127.0.0.1` are allowed automatically for development. For a hosted frontend, set `ALLOWED_ORIGINS` on the API as a comma-separated list of explicit origins, for example:\n\n```text\nALLOWED_ORIGINS=https://example.example.com\n```\n\nThe API does not enable credentialed cross-origin requests, and the documented HTTP methods remain limited to the API operations actually exposed by the application.\n\n### Frontend API resilience\n\nThe dashboard gives each health/data request an 8-second timeout and validates the returned device payload before rendering. Invalid payloads are treated as an API failure instead of being rendered into the page.\n\n## Data safety\n\nUse simulated or non-sensitive demonstration data only. Do not commit patient or other personal health information to this public repository.\n\n## Status\n\nDemonstration / learning project with automated backend baseline verification. The frontend/API integration includes explicit health checking, configurable endpoint selection, safe DOM rendering, response validation, request timeouts and a configurable CORS policy. The README does not claim clinical validation or production readiness.\n\n## Portfolio\n\nPart of the ABLA86 engineering portfolio. This repository contains the implementation and documentation for the project.\n\n## Change-control audit\n\nSee [docs/REPOSITORY-CHANGE-AUDIT-2026-08-28.md](docs/REPOSITORY-CHANGE-AUDIT-2026-08-28.md) for the repository change-control and traceability record.\n"
+        "readme": "# HealthTech Device Platform\n\nA healthcare-technology engineering project combining a C#/.NET REST API with a browser dashboard for simulated device monitoring. It demonstrates backend/API engineering, validation, layered architecture, OpenAPI, Docker, CI/security controls and frontend integration without using real patient data.\n\n## Portfolio role\n\nThis is a **combined platform unit**. The former standalone monitoring-dashboard capability is represented here because it complements the device API rather than adding a separate portfolio product. The separate `healthtech-dashboard` repository is retained as implementation history and should not be promoted as a second flagship project.\n\n## Implemented\n\n- RESTful device CRUD operations\n- health-check endpoint\n- device filtering and statistics\n- input validation and normalised status values\n- OpenAPI support\n- repository abstraction and dependency injection\n- layered domain/application/infrastructure structure\n- synthetic DICOM Part 10 generation with `fo-dicom`\n- synthetic metadata and de-identification markers\n- bounded `application/dicom` metadata inspection\n- automated API, service and DICOM tests with xUnit\n- GitHub Actions CI\n- Docker build/runtime verification in CI\n- CodeQL scanning\n- Dependabot monitoring\n- browser dashboard integration for simulated device status and metrics\n\n## Technology breadth demonstrated\n\n**C# / .NET** · ASP.NET Core · Minimal APIs · REST · OpenAPI · dependency injection · layered architecture · xUnit · Docker · GitHub Actions · CodeQL · Dependabot · DICOM/fo-dicom · HTML5 · CSS3 · JavaScript · Fetch API\n\n## DICOM development boundary\n\nThe current DICOM implementation is for synthetic demonstration data and bounded inspection. It does not claim production medical-imaging security or clinical validation.\n\nCurrent functionality includes generated synthetic identifiers and DICOM UIDs, de-identification markers, bounded inspection and allow-listed metadata output.\n\nThe repository does not currently claim SQL persistence, authentication/authorization, threat modelling, secure networking or Azure deployment as implemented functionality.\n\nSee `docs/SECURE_DICOM_ROADMAP.md` and `SECURITY.md`.\n\n## Testing\n\n```powershell\ndotnet test .\\HealthTechDeviceApi.Tests\\HealthTechDeviceApi.Tests.csproj\n```\n\nCI builds the API and runs the automated test suite, with Docker verification, CodeQL and Dependabot configuration.\n\n## Docker\n\n```powershell\ndocker build -t healthtech-device-api:latest .\ndocker run --rm -p 8080:8080 healthtech-device-api:latest\n```\n\n## Data safety\n\nUse only synthetic, generated or appropriately de-identified demonstration data. Do not commit real patient information or upload real patient information to public demonstrations.\n\n## Portfolio evidence\n\nThis project demonstrates ASP.NET Core REST API development, validation, dependency injection, layered architecture, automated testing, OpenAPI documentation, Docker execution, CI/security tooling and a complementary browser monitoring interface. The project is a demonstration platform, not a clinically validated medical system.\n\n## Status\n\n**Active portfolio project / demonstration platform.** Current implementation status is represented by the code, repository history and CI verification.\n\n## Portfolio\n\nhttps://abla86.github.io/developer-portfolio/\n\n## Change-control audit\n\nSee [docs/REPOSITORY-CHANGE-AUDIT-2026-08-28.md](docs/REPOSITORY-CHANGE-AUDIT-2026-08-28.md) for the repository change-control and traceability record.\n"
       }
     },
     {
@@ -225,84 +185,10 @@
       }
     },
     {
-      "repo": "healthcare-workforce-sql",
-      "displayName": "Workforce SQL Engine",
-      "tier": 2,
-      "description": "SQL Server model for workforce, shifts, competence and staffing analysis.",
-      "verify": "README",
-      "status": "verified-source",
-      "source": {
-        "repo": "abla86/healthcare-workforce-sql",
-        "url": "https://github.com/abla86/healthcare-workforce-sql",
-        "defaultBranch": "main",
-        "archived": false,
-        "description": null,
-        "stars": 0,
-        "updatedAt": "2026-08-29T14:25:25Z",
-        "pushedAt": "2026-08-29T14:26:02Z",
-        "languages": [
-          "TSQL"
-        ],
-        "detectedTechnology": [
-          "TSQL",
-          "GitHub Actions"
-        ],
-        "files": [
-          ".github",
-          ".gitignore",
-          "PORTFOLIO-WORKLOG.md",
-          "README.md",
-          "SECURITY.md",
-          "docs",
-          "setup.sql",
-          "sql"
-        ],
-        "readme": "# Healthcare Workforce SQL\n\nA Microsoft SQL Server project that models workforce, shift and competence planning using fictional demonstration data.\n\n## Purpose\n\nThe project demonstrates relational database design and SQL analysis for staffing and competence requirements in healthcare-oriented scenarios.\n\n## Verification\n\n[![SQL Validation](https://github.com/abla86/healthcare-workforce-sql/actions/workflows/sql-validation.yml/badge.svg)](https://github.com/abla86/healthcare-workforce-sql/actions/workflows/sql-validation.yml)\n\nBaseline CI parses the repository SQL as T-SQL with SQLFluff. This verifies parser-level syntax consistency; it does not replace execution against a SQL Server instance.\n\n## Implemented\n\n- Employee, role and position-percentage data\n- Competencies and employee–competency many-to-many relationships\n- Day, evening and night shifts\n- Minimum staffing requirements\n- Competence requirements per shift\n- Employee shift assignments\n- Foreign keys, `CHECK` constraints, `UNIQUE` constraints and indexes\n- Views for shift coverage and employee hours\n- Aggregate, JOIN and filtering queries\n- Staffing-gap analysis\n- Competence-coverage analysis\n- Employee-hour calculations\n- Stored procedure\n- Validation queries\n\n## Structure\n\n```text\nsetup.sql\nsql/\n├── 01-create-database.sql\n├── 02-schema.sql\n├── 03-seed-data.sql\n├── 04-views.sql\n├── 05-analysis-queries.sql\n├── 06-stored-procedure.sql\n└── 07-validation.sql\n```\n\n## Database\n\nMicrosoft SQL Server\n\nDatabase name: `HealthWorkforceDb`\n\n## Example analysis\n\nThe SQL scripts can identify understaffed shifts, missing competence coverage, employee workload and employees with specific competencies.\n\n## Run\n\nExample using SQL Server LocalDB:\n\n```powershell\nsqlcmd -S \"(localdb)\\MSSQLLocalDB\" -E -i setup.sql\nsqlcmd -S \"(localdb)\\MSSQLLocalDB\" -E -i sql\\05-analysis-queries.sql\n```\n\n## Data and scope\n\nAll workforce names and records are fictional demonstration data. No patient data is included.\n\nThis is a database-design and analysis project. It is not presented as a production workforce-management system or a validated clinical decision-support system.\n\n## Portfolio evidence\n\nThe project demonstrates relational modelling, constraints, indexing, views, stored procedures, practical SQL analysis and automated parser-level verification.\n\n## Author\n\nAnne Beth Andersen\n\n## Status\n\nThis repository is part of the ABLA86 engineering portfolio. Current implementation status is represented by the code, repository history and CI verification.\n"
-      }
-    },
-    {
-      "repo": "shift-competence-planner",
-      "displayName": "ShiftPlan",
-      "tier": 2,
-      "description": "C#/.NET planning application for shifts, staffing requirements and competence coverage.",
-      "verify": "README",
-      "status": "verified-source",
-      "source": {
-        "repo": "abla86/shift-competence-planner",
-        "url": "https://github.com/abla86/shift-competence-planner",
-        "defaultBranch": "main",
-        "archived": false,
-        "description": null,
-        "stars": 0,
-        "updatedAt": "2026-08-29T14:25:20Z",
-        "pushedAt": "2026-08-29T14:25:59Z",
-        "languages": [
-          "C#"
-        ],
-        "detectedTechnology": [
-          "C#",
-          "GitHub Actions"
-        ],
-        "files": [
-          ".github",
-          ".gitignore",
-          "PORTFOLIO-WORKLOG.md",
-          "README.md",
-          "SECURITY.md",
-          "ShiftPlanner.Tests",
-          "ShiftPlanner.sln",
-          "ShiftPlanner",
-          "data",
-          "docs"
-        ],
-        "readme": "# Shift & Competence Planner\n\nA C#/.NET staffing-planning application for modelling shifts, staffing requirements and competence coverage using fictional workforce data.\n\n## Start here\n\n| Need | Go to |\n|---|---|\n| Run the application | [Run locally](#run-locally) |\n| Run tests | [Test](#test) |\n| Understand scope | [Data and scope](#data-and-scope) |\n| See the portfolio context | [Developer portfolio](https://abla86.github.io/developer-portfolio/) |\n| Inspect source | [GitHub repository](https://github.com/abla86/shift-competence-planner) |\n\n## Demonstrated functionality\n\n- Employee records with role, position percentage and competencies\n- Day, evening and night shifts\n- Minimum staffing requirements per shift\n- Required competencies per shift\n- Assignment of employees to shifts\n- Detection of staffing gaps\n- Detection of missing required competence\n- Planned/worked-hour calculations\n- Local JSON persistence\n- CSV export\n- Automated xUnit tests\n\n## Run locally\n\n```powershell\ndotnet restore\ndotnet run --project ShiftPlanner\n```\n\n## Test\n\n```powershell\ndotnet test\n```\n\n## Data and scope\n\nThe repository uses fictional sample data only. It is a demonstration and planning project, not a validated workforce-management or clinical decision-support system.\n\nDo not commit patient information, confidential employee information, credentials or other sensitive data.\n\n## Portfolio evidence\n\nThe project demonstrates C#/.NET application development, domain modelling, validation logic, local persistence, CSV export and automated testing.\n\n## Status\n\nThis repository is part of the ABLA86 engineering portfolio. Current implementation status is represented by the code and repository history.\n\n## Change-control audit\n\nSee [docs/REPOSITORY-CHANGE-AUDIT-2026-08-28.md](docs/REPOSITORY-CHANGE-AUDIT-2026-08-28.md) for the repository change-control and traceability record.\n"
-      }
-    },
-    {
       "repo": "AB-Engineering-Lab",
       "displayName": "AB Engineering Lab",
       "tier": 3,
-      "description": "Collection point for smaller engineering experiments and development work.",
+      "description": "Collection point for smaller engineering experiments and development work that do not warrant separate flagship treatment.",
       "verify": "README",
       "status": "verified-source",
       "source": {
@@ -345,7 +231,16 @@
   ],
   "excluded": [
     {
-      "reason": "Removed from portfolio promotion; Project Lab is the sole showcase destination for small demonstrations."
+      "repo": "shift-competence-planner",
+      "reason": "Superseded as a separate portfolio unit by workforce-competence-management; retain only as historical source where useful."
+    },
+    {
+      "repo": "healthtech-dashboard",
+      "reason": "Integrated as the supporting frontend/monitoring layer of the HealthTech Platform; do not promote as a separate flagship project."
+    },
+    {
+      "repo": "small-projects-hub.html",
+      "reason": "Removed. desktop-clock.html is the sole Interactive Project Lab entry."
     },
     {
       "reason": "External, training, documentation or predecessor repositories remain outside promoted project units unless independently verified as original work."
