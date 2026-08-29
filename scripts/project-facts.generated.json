@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-29T20:38:33.340Z",
+  "generatedAt": "2026-08-29T20:41:07.934Z",
   "source": "GitHub repository inspection",
   "policy": "Only verified repository facts may be promoted to the portfolio.",
   "projects": [
@@ -22,6 +22,14 @@
         "repo": "healthcare-workforce-sql",
         "role": "relational data modelling and T-SQL analysis"
       },
+      "extensibleDomains": [
+        "healthcare",
+        "offshore",
+        "industrial",
+        "maritime",
+        "emergency",
+        "other shift-based operations"
+      ],
       "status": "not-accessible-with-workflow-token",
       "error": "Repository is not accessible to this repository's GITHUB_TOKEN. No project fact was promoted."
     },
