@@ -13,7 +13,7 @@ if (fs.existsSync(registryPath)) {
     if (!p.repo || !p.displayName || !p.description) failures.push(`Invalid project registry entry: ${p.repo ?? "unknown"}`);
   }
   for (const p of registry.excluded ?? []) {
-    if (!p.repo || !p.reason) failures.push(`Invalid exclusion registry entry: ${p.repo ?? "unknown"}`);
+    if (!p.reason) failures.push(`Invalid exclusion registry entry: ${p.repo ?? "unknown"}`);
   }
 }
 
@@ -90,7 +90,7 @@ async function githubJson(url) {
 if (ghToken) {
   const registry = JSON.parse(fs.readFileSync(registryPath, "utf8"));
   const promoted = new Set((registry.projects ?? []).map(p => p.repo.toLowerCase()));
-  const excluded = new Set((registry.excluded ?? []).map(p => p.repo.toLowerCase()));
+  const excluded = new Set((registry.excluded ?? []).filter(p => p.repo).map(p => p.repo.toLowerCase()));
 
   for (const entry of registry.projects ?? []) {
     if (repoNames.has(entry.repo.toLowerCase())) failures.push(`Duplicate registry project: ${entry.repo}`);
@@ -109,7 +109,7 @@ if (ghToken) {
   }
 
   for (const entry of registry.excluded ?? []) {
-    if (promoted.has(entry.repo.toLowerCase()))
+    if (entry.repo && promoted.has(entry.repo.toLowerCase()))
       failures.push(`Repository appears in both promoted and excluded registry: ${entry.repo}`);
   }
 
