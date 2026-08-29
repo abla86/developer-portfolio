@@ -1,9 +1,11 @@
 {
-  "version": 6,
+  "version": 7,
   "policy": "Only verified repository facts may be promoted to the portfolio.",
   "projectLab": {
     "entry": "desktop-clock.html",
-    "description": "Unified interactive showcase for smaller demonstrations and interface variants."
+    "description": "Unified interactive showcase for smaller demonstrations and interface variants.",
+    "extensible": true,
+    "principle": "Capabilities are represented once as reusable views/components where practical; supporting repositories remain source evidence rather than duplicate flagship products."
   },
   "projects": [
     {
@@ -22,7 +24,8 @@
       "supportingDataLayer": {
         "repo": "healthcare-workforce-sql",
         "role": "relational data modelling and T-SQL analysis"
-      }
+      },
+      "extensibleDomains": ["healthcare", "offshore", "industrial", "maritime", "emergency", "other shift-based operations"]
     },
     {
       "repo": "HealthTechDeviceApi",
