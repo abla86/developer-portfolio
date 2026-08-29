@@ -27,7 +27,8 @@ The repository uses an auditable change-control record. Material changes must be
 
 ## Interactive Project Lab
 
-The portfolio has one unified interactive Lab for smaller demonstrations and interface variants. The Lab is a presentation layer and is intentionally separate from the flagship project units.
+The portfolio has one unified interactive Lab for smaller demonstrations and interface variants.
 
-- [Open the Interactive Project Lab](https://abla86.github.io/developer-portfolio/desktop-clock.html)
-- Small demonstrations are grouped by capability rather than presented as a collection of duplicate products.
+[Open the Interactive Project Lab](https://abla86.github.io/developer-portfolio/desktop-clock.html)
+
+Small demonstrations are grouped by capability rather than presented as duplicate flagship products.

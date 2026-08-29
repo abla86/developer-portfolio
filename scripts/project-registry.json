@@ -3,7 +3,7 @@
   "policy": "Only verified repository facts may be promoted to the portfolio.",
   "projectLab": {
     "entry": "desktop-clock.html",
-    "legacyEntry": "small-projects-hub.html",
+    "legacyEntry": "desktop-clock.html",
     "description": "Unified interactive showcase for smaller demonstrations and interface variants."
   },
   "projects": [
@@ -73,7 +73,6 @@
   ],
   "excluded": [
     {
-      "repo": "kana-dojo",
       "reason": "Removed from portfolio promotion; Project Lab is the sole showcase destination for small demonstrations."
     },
     {
