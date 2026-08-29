@@ -4,18 +4,20 @@
 
 I come from healthcare and am completing a Master's in Knowledge-Based Practice. Alongside my academic and professional work, I build software to explore practical problems, improve workflows and turn complex ideas into something people can actually use.
 
-### Selected projects
+## Selected project units
 
 - **EvidenceFlow** — research-support and critical appraisal tooling
-- **Vaktklar** — workforce, competence and staffing management
-- **HealthTech Device API** — REST API and backend engineering
-- **HealthData Quality Lab** — healthcare data validation and analysis
-- **Workforce SQL Engine** — relational data modelling and SQL
-- **ShiftPlan** — workforce planning prototype
+- **Vaktklar** — unified workforce and competence platform, with SQL Server as supporting data-layer evidence
+- **HealthTech Platform** — healthcare-device API and monitoring capability
+- **CloudForge** — cloud/platform engineering, Kubernetes, Azure, CI/CD and DevSecOps
+- **HealthData Quality Lab** — Python data-quality and analysis workflows
+- **AB Engineering Lab** — smaller experiments that do not warrant separate flagship treatment
 
-### Technologies
+## Engineering breadth
 
-C# / .NET · React · Python · SQL · REST APIs · Docker · GitHub Actions · Azure
+C# / .NET · React · TypeScript · JavaScript · Python · SQL · REST APIs · Docker · Kubernetes · Azure · GitHub Actions · CI/CD · data validation · testing · security
+
+The portfolio intentionally groups related implementations into project units. Supporting repositories may remain separate when they demonstrate a distinct technical layer, but duplicate applications are not presented as separate flagship projects.
 
 **Portfolio:** https://abla86.github.io/developer-portfolio/
 
@@ -27,8 +29,10 @@ The repository uses an auditable change-control record. Material changes must be
 
 ## Interactive Project Lab
 
-The portfolio has one unified interactive Lab for smaller demonstrations and interface variants.
+The portfolio has one unified interactive Lab for smaller demonstrations and interface variants. It is a single presentation/application layer rather than a list of duplicate products.
 
 [Open the Interactive Project Lab](https://abla86.github.io/developer-portfolio/desktop-clock.html)
 
-Small demonstrations are grouped by capability rather than presented as duplicate flagship products.
+## Portfolio principle
+
+Projects are presented at their actual maturity level. Historical, training, archived and supporting repositories are not promoted as separate products when they duplicate or merely support a stronger project unit.
