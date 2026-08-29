@@ -1,0 +1,400 @@
+{
+  "generatedAt": "2026-08-29T02:03:54.420Z",
+  "source": "GitHub repository inspection",
+  "policy": "Only verified repository facts may be promoted to the portfolio.",
+  "projects": [
+    {
+      "repo": "evidence-appraisal-tool",
+      "displayName": "EvidenceFlow",
+      "tier": 1,
+      "description": "Research-support platform for structured critical appraisal and evidence workflows.",
+      "verify": "README",
+      "status": "not-accessible-with-workflow-token",
+      "error": "Repository is not accessible to this repository's GITHUB_TOKEN. No project fact was promoted."
+    },
+    {
+      "repo": "workforce-competence-management",
+      "displayName": "Vaktklar",
+      "tier": 1,
+      "description": "Workforce planning and competence-management system.",
+      "verify": "README",
+      "status": "not-accessible-with-workflow-token",
+      "error": "Repository is not accessible to this repository's GITHUB_TOKEN. No project fact was promoted."
+    },
+    {
+      "repo": "azure-kubernetes-showcase",
+      "displayName": "CloudForge",
+      "tier": 1,
+      "description": "Cloud-engineering showcase covering .NET, React, Docker, Kubernetes, Azure IaC and DevSecOps.",
+      "verify": "README",
+      "status": "verified-source",
+      "source": {
+        "repo": "abla86/azure-kubernetes-showcase",
+        "url": "https://github.com/abla86/azure-kubernetes-showcase",
+        "defaultBranch": "main",
+        "archived": false,
+        "description": "Cloud engineering showcase with .NET, React TypeScript, Docker, Kubernetes, Azure, IaC, CI/CD, security and observability",
+        "stars": 0,
+        "updatedAt": "2026-08-29T02:02:29Z",
+        "pushedAt": "2026-08-29T02:02:25Z",
+        "languages": [
+          "Python",
+          "C#",
+          "HCL",
+          "CSS",
+          "TypeScript",
+          "HTML",
+          "Bicep",
+          "Dockerfile",
+          "PowerShell",
+          "Makefile",
+          "JavaScript"
+        ],
+        "detectedTechnology": [
+          "Python",
+          "C#",
+          "HCL",
+          "CSS",
+          "TypeScript",
+          "HTML",
+          "Bicep",
+          "Dockerfile",
+          "PowerShell",
+          "Makefile",
+          "JavaScript",
+          "Docker",
+          "GitHub Actions"
+        ],
+        "files": [
+          ".github",
+          ".gitignore",
+          ".well-known",
+          "AzureKubernetesShowcase.slnx",
+          "CHANGELOG.md",
+          "CODE_OF_CONDUCT.md",
+          "CONTRIBUTING.md",
+          "Makefile",
+          "README.md",
+          "SECURITY.md",
+          "apps",
+          "docker-compose.yml",
+          "docs",
+          "infra",
+          "k8s",
+          "observability",
+          "scripts",
+          "security",
+          "src",
+          "tests",
+          "tools"
+        ],
+        "readme": "# Azure Kubernetes Showcase\n\n[![CI/CD](https://github.com/abla86/azure-kubernetes-showcase/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/abla86/azure-kubernetes-showcase/actions/workflows/ci-cd.yml)\n\nA cloud-engineering portfolio project demonstrating .NET 10, React/TypeScript, Docker, Kubernetes, Azure IaC and DevSecOps, with deliberately small application services and controlled resilience/security demonstrations.\n\n## Fast evaluation\n\n**Test the application layer locally:**\n\n```powershell\ndocker compose up --build\n```\n\nThen open Security Radar at `http://localhost:5080`, Care Portal at `http://localhost:5001` and Community Hub at `http://localhost:5002`.\n\n**Canonical local verification:**\n\n```powershell\npython scripts/local_smoke_test.py\n```\n\nThe smoke test starts the Compose stack, waits for service health, verifies Security Radar capabilities, exercises the controlled ghost route and rate limiter, validates the local security-event feed, and always tears the stack down afterwards.\n\n## What it demonstrates\n\n- ASP.NET Core / .NET 10 APIs\n- React + TypeScript + Vite\n- Core Showcase API, Care Portal and Community Hub modules\n- Multi-stage non-root Docker containers\n- Kubernetes Deployments, Services, startup/readiness/liveness probes, HPA and NetworkPolicy\n- Restricted Pod Security\n- Azure Bicep and modular Terraform\n- AKS OIDC / Workload Identity\n- ACR pull permissions\n- GitHub Actions CI/CD\n- CodeQL, Dependabot, Trivy and SBOM generation\n- OpenTelemetry with optional local collector and Azure Monitor integration\n- Security Radar for controlled security-event simulation\n- Automated local API security self-tests\n- Controlled Kubernetes resilience testing\n- IaC parity checks and repository-maintenance automation\n\n## Architecture\n\n```text\nDeveloper / PR\n      |\n      v\nGitHub Actions\n  |   |   |   |   |\n  |   |   |   |   +--> SBOM\n  |   |   |   +------> Trivy\n  |   |   +----------> CodeQL\n  |   +--------------> Checkov / Kubeconform / policy\n  +------------------> Build / Test / Smoke\n            |\n            v\n        ACR (OIDC)\n            |\n            v\n          ArgoCD\n            |\n            v\n           AKS\n            |\n    +-------+--------+\n    |       |        |\n    v       v        v\n  Core    Care    Community\n  API    Portal      Hub\n            |\n            +---- Security Radar\n            |\n            v\n  NetworkPolicy / Restricted Pods\n            |\n            v\n OpenTelemetry -> Azure Monitor\n```\n\n## Application modules\n\n### Core Showcase API\n`src/Showcase.Api/`\n\nThe original portfolio API with health, information, metrics and example event endpoints.\n\n### Care Portal\n`apps/care-portal/CarePortal.Api/`\n\nA small demonstration service for care-coordination concepts. It contains no patient data and uses in-memory example data only.\n\n### Community Hub\n`apps/community-hub/CommunityHub.Api/`\n\nA small demonstration service for shared resources. It contains no real personal data and uses in-memory example data only.\n\n### Security Radar\n`apps/security-radar/`\n\nA controlled operations/security demonstration with a local event feed, bounded-delay simulation endpoint, rate limiting and application-level ghost route. It does not claim to be a production SIEM or intrusion-detection platform.\n\n## Local development\n\nPrerequisites: .NET 10 SDK, Node.js 22+, Docker Desktop, kubectl and optionally Azure CLI/Terraform.\n\n```powershell\ndotnet restore\ndotnet build --configuration Release\ndotnet test --configuration Release\npython scripts/local_smoke_test.py\n```\n\nThe local Compose stack contains the application services used for the defensive self-test plus Security Radar. The infrastructure layer remains separately deployable to Azure/AKS.\n\n## Automated security self-test\n\n`security/api-self-test.py` checks only the project's declared local endpoints. It verifies health responses and ensures sensitive-looking paths such as `.env`, `config.json` and `/admin` are not unexpectedly exposed.\n\n`scripts/local_smoke_test.py` is the canonical integration smoke test. It fails on missing or incorrect required behavior and returns a non-zero exit code when any required assertion fails.\n\nThe main CI workflow runs the same smoke test automatically on pushes, pull requests and manual dispatch. Failed Compose runs collect Docker diagnostics.\n\n## Kubernetes\n\nThe `k8s/` directory contains the namespace, application deployments, services, HPA, NetworkPolicies, probes, Gateway API routes and Workload Identity ServiceAccount configuration.\n\nThe NetworkPolicies use default-deny behavior for the protected workloads and explicitly permit required DNS egress. This reduces uncontrolled outbound communication while preserving cluster name resolution.\n\n`scripts/validate_manifests.py` enforces the required workload controls, including non-root execution, no privilege escalation, read-only root filesystems, dropped capabilities, seccomp and startup/readiness/liveness probes. Checkov and Kubeconform provide additional infrastructure and schema validation in CI.\n\n## Azure IaC\n\nTerraform is modularized into networking, ACR, AKS and IAM/Workload Identity. The AKS configuration enables OIDC and Workload Identity and explicitly uses Azure CNI Overlay with Azure Network Policy. The networking mode is documented as an environment-specific trade-off rather than a universal best practice.\n\nBicep remains available as a second IaC representation. CI compiles all Bicep files and validates Terraform formatting and configuration without requiring an Azure deployment.\n\nThe repository does not claim that Azure resources are deployed merely because the configuration exists. Deployment may create billable resources.\n\n### IaC parity\n\nSee [`docs/iac-parity-matrix.md`](docs/iac-parity-matrix.md) and [`docs/iac-parity-exceptions.md`](docs/iac-parity-exceptions.md). Differences are documented explicitly rather than being marked as verified parity when evidence is incomplete.\n\n## Cost controls\n\nTerraform includes a configurable resource-group budget guardrail. Budget thresholds and notification recipients are variables rather than hardcoded secrets. The repository does not automatically delete or resize Azure resources based solely on a cost signal.\n\nThe local cost audit is self-contained and does not require a sibling checkout.\n\n## CI / DevSecOps\n\nGitHub Actions includes:\n\n1. .NET restore, build and tests\n2. Frontend install, lint and build\n3. Kubernetes manifest validation and workload security policy\n4. Bicep compilation\n5. Terraform format and validation\n6. Docker builds for application containers\n7. Trivy vulnerability scanning\n8. CycloneDX SBOM generation\n9. CodeQL analysis\n10. Checkov infrastructure security checks\n11. Kubeconform Kubernetes schema validation\n12. IaC parity-contract checks\n13. Automated local API security self-testing\n14. Canonical local smoke testing of the Compose stack\n15. Automated repository maintenance checks\n\nTerraform planning is automatic; actual Terraform apply is explicitly opt-in through the deployment workflow.\n\n## Security\n\n- Non-root runtime containers\n- `runAsNonRoot`\n- `seccompProfile: RuntimeDefault`\n- `allowPrivilegeEscalation: false`\n- Capabilities dropped with `ALL`\n- Restricted Pod Security labels\n- NetworkPolicy isolation\n- OIDC / Workload Identity\n- Managed identity access to ACR\n- CodeQL and Dependabot\n- Trivy image scanning and SBOM generation\n- Controlled deception/self-test paths\n\nNo credentials, production data or patient information are included.\n\n## Day-2 operations\n\nSee [`docs/observability-runbook.md`](docs/observability-runbook.md) for a concrete diagnostic path from Gateway and routing through NetworkPolicy, pod health, application logs and OpenTelemetry.\n\nThe repository also includes `k8s-pod-doctor` as a standalone operations tool for first-line diagnosis of common pod failures such as `CrashLoopBackOff` and `OOMKilled`.\n\n## Production considerations\n\nSee [`docs/production-considerations.md`](docs/production-considerations.md) for cost, networking, observability and delivery trade-offs. The repository intentionally distinguishes architecture/configuration from runtime evidence.\n\n## Resilience\n\n`.github/workflows/chaos.yml` provides an explicitly triggered resilience test that authenticates to AKS using OIDC, deletes one selected pod and verifies that Kubernetes reconciliation restores the Deployment to its desired state. It does not claim an SLA or run destructive tests automatically.\n\n## Verification discipline\n\nConfiguration in GitHub is not treated as proof of runtime behavior. Runtime claims require successful environment-specific verification, including deployment, HTTPS/TLS, telemetry ingestion, GitOps synchronization and recovery tests.\n\nWhen a required test or file is missing, the repository validation policy treats that as a failure rather than silently skipping it.\n\n## Portfolio tools\n\nThe adjacent repositories extend the engineering lifecycle:\n\n- `git-secrets-sentinel` — local shift-left secret detection\n- `cloud-waste-auditor` — Terraform/FinOps cost-risk guardrail\n- `k8s-pod-doctor` — Kubernetes Day-2 first-line diagnosis\n\n## Automated maintenance\n\nRepository maintenance runs on a schedule and manually. It validates required documentation, scans for unfinished placeholders, checks parity-exception records and creates a maintenance issue on failure instead of silently changing source code.\n\nThe repository also maintains a changelog and architecture log so engineering decisions and material changes remain traceable.\n\n## Scope\n\nThis is a portfolio showcase, not a production healthcare or community-management system. The application modules are intentionally small demonstrations of service boundaries, containers, Kubernetes and Azure platform engineering.\n\n## Repository\n\nhttps://github.com/abla86/azure-kubernetes-showcase\n\n## Automated repository metadata\n\nSee [generated repository snapshot](docs/generated/repository-snapshot.md) for the current repository head and tracked engineering areas.\n\n## Change-control audit\n\nSee [docs/REPOSITORY-CHANGE-AUDIT-2026-08-28.md](docs/REPOSITORY-CHANGE-AUDIT-2026-08-28.md) for the repository change-control and traceability record.\n\n## Automated repository metadata\n\nSee [generated repository snapshot](docs/generated/repository-snapshot.md) for the current repository head and tracked engineering areas.\n"
+      }
+    },
+    {
+      "repo": "HealthTechDeviceApi",
+      "displayName": "HealthTech Device API",
+      "tier": 2,
+      "description": "Healthcare-device REST API demonstrating validation, testing and synthetic healthcare-data workflows.",
+      "verify": "README",
+      "status": "verified-source",
+      "source": {
+        "repo": "abla86/HealthTechDeviceApi",
+        "url": "https://github.com/abla86/HealthTechDeviceApi",
+        "defaultBranch": "main",
+        "archived": false,
+        "description": "Healthcare device management REST API built with C#, .NET 9 and ASP.NET Core.",
+        "stars": 0,
+        "updatedAt": "2026-08-28T18:21:28Z",
+        "pushedAt": "2026-08-28T18:12:05Z",
+        "languages": [
+          "C#",
+          "Dockerfile"
+        ],
+        "detectedTechnology": [
+          "C#",
+          "Dockerfile",
+          ".NET",
+          "Docker",
+          "GitHub Actions"
+        ],
+        "files": [
+          ".dockerignore",
+          ".github",
+          ".gitignore",
+          "Application",
+          "Dockerfile",
+          "Domain",
+          "HealthTechDeviceApi.Tests",
+          "HealthTechDeviceApi.csproj",
+          "HealthTechDeviceApi.http",
+          "Infrastructure",
+          "PORTFOLIO-WORKLOG.md",
+          "Program.cs",
+          "Properties",
+          "README.md",
+          "SECURITY.md",
+          "appsettings.Development.json",
+          "appsettings.json",
+          "docs"
+        ],
+        "readme": "# HealthTech Device API\n\n[![.NET CI](https://github.com/abla86/HealthTechDeviceApi/actions/workflows/dotnet-ci.yml/badge.svg)](https://github.com/abla86/HealthTechDeviceApi/actions/workflows/dotnet-ci.yml)\n\nREST API for healthcare-technology device management and secure medical-imaging development, built with C# and ASP.NET Core.\n\n## Start here\n\n| Need | Go to |\n|---|---|\n| Current scope and status | [Status](#status) |\n| See implemented functionality | [Implemented](#implemented) |\n| Understand DICOM boundaries | [DICOM development boundary](#dicom-development-boundary) |\n| Run tests | [Testing](#testing) |\n| Run with Docker | [Docker](#docker) |\n| See portfolio context | [Developer portfolio](https://abla86.github.io/developer-portfolio/) |\n\n## Status\n\n**Development / demonstration project.**\n\nThe repository demonstrates API engineering, validation, testing, containerisation and security-aware healthcare software development. It is not presented as a production medical-imaging system or clinically validated software.\n\n## Implemented\n\n- RESTful device CRUD operations\n- health-check endpoint\n- device filtering and statistics\n- input validation and normalised status values\n- OpenAPI support\n- repository abstraction and dependency injection\n- layered domain/application/infrastructure structure\n- synthetic DICOM Part 10 generation with `fo-dicom`\n- synthetic metadata and de-identification markers\n- bounded `application/dicom` metadata inspection\n- automated API, service and DICOM tests with xUnit\n- GitHub Actions CI\n- Docker build/runtime verification in CI\n- CodeQL scanning\n- Dependabot monitoring\n\n## DICOM development boundary\n\nThe current DICOM implementation is for synthetic demonstration data and bounded inspection. It does not claim production medical-imaging security or clinical validation.\n\nCurrent functionality includes generated synthetic identifiers and DICOM UIDs, de-identification markers, bounded inspection and allow-listed metadata output.\n\nThe repository does not currently claim SQL persistence, authentication/authorization, threat modelling, secure networking or Azure deployment as implemented functionality.\n\nSee `docs/SECURE_DICOM_ROADMAP.md` and `SECURITY.md`.\n\n## Technology\n\n- C#\n- .NET 9\n- ASP.NET Core\n- Minimal APIs\n- REST\n- OpenAPI\n- fo-dicom 5.2.6\n- xUnit\n- Microsoft.AspNetCore.Mvc.Testing\n- GitHub Actions\n- Docker\n\n## Testing\n\n```powershell\ndotnet test .\\HealthTechDeviceApi.Tests\\HealthTechDeviceApi.Tests.csproj\n```\n\nCI builds the API and runs the automated test suite, with Docker verification, CodeQL and Dependabot configuration.\n\n## Docker\n\n```powershell\ndocker build -t healthtech-device-api:latest .\ndocker run --rm -p 8080:8080 healthtech-device-api:latest\n```\n\n## Data safety\n\nUse only synthetic, generated or appropriately de-identified demonstration data. Do not commit real patient information or upload real patient information to public demonstrations.\n\n## Run locally\n\n```powershell\ndotnet restore\ndotnet run\n```\n\n## Employer / portfolio evidence\n\nThis project demonstrates ASP.NET Core REST API development, validation, dependency injection, layered architecture, automated testing, OpenAPI documentation, Docker execution, CI/security tooling and explicit healthcare data-safety boundaries.\n\n## Author\n\nAnne Beth Andersen\n\n## Portfolio\n\nhttps://abla86.github.io/developer-portfolio/\n\n## Change-control audit\n\nSee [docs/REPOSITORY-CHANGE-AUDIT-2026-08-28.md](docs/REPOSITORY-CHANGE-AUDIT-2026-08-28.md) for the repository change-control and traceability record.\n"
+      }
+    },
+    {
+      "repo": "healthtech-dashboard",
+      "displayName": "HealthTech Monitor",
+      "tier": 2,
+      "description": "Monitoring dashboard for simulated healthcare-technology devices.",
+      "verify": "README",
+      "status": "verified-source",
+      "source": {
+        "repo": "abla86/healthtech-dashboard",
+        "url": "https://github.com/abla86/healthtech-dashboard",
+        "defaultBranch": "main",
+        "archived": false,
+        "description": null,
+        "stars": 0,
+        "updatedAt": "2026-08-28T18:15:40Z",
+        "pushedAt": "2026-08-28T18:12:02Z",
+        "languages": [
+          "JavaScript",
+          "Python",
+          "CSS",
+          "HTML"
+        ],
+        "detectedTechnology": [
+          "JavaScript",
+          "Python",
+          "CSS",
+          "HTML",
+          "GitHub Actions"
+        ],
+        "files": [
+          ".github",
+          ".gitignore",
+          "PORTFOLIO-WORKLOG.md",
+          "README.md",
+          "SECURITY.md",
+          "backend",
+          "docs",
+          "frontend"
+        ],
+        "readme": "# HealthTech Dashboard\n\nA full-stack demonstration project combining a FastAPI REST API with a responsive JavaScript monitoring dashboard.\n\nThe application uses simulated healthcare-technology device data and contains no patient or personal health information.\n\n## Start here\n\n| Need | Go to |\n|---|---|\n| Understand the app | [Features](#features) |\n| Understand the API | [API endpoints](#api-endpoints) |\n| Run locally | [Run locally](#run-locally) |\n| Inspect the source | [GitHub repository](https://github.com/abla86/healthtech-dashboard) |\n| See the wider portfolio | [Developer portfolio](https://abla86.github.io/developer-portfolio/) |\n\n## Verification\n\n[![CI](https://github.com/abla86/healthtech-dashboard/actions/workflows/ci.yml/badge.svg)](https://github.com/abla86/healthtech-dashboard/actions/workflows/ci.yml)\n\nThe baseline CI compiles the Python backend and runs API smoke/integration checks covering health, device listing, create/read/delete behaviour, validation and missing-device handling.\n\n## Features\n\n- FastAPI REST API\n- Device monitoring dashboard\n- API health endpoint\n- Device status and battery metrics\n- Responsive frontend\n- Configurable CORS policy\n- Pydantic validation\n- Create, read and delete API operations\n- Interactive refresh and dashboard metrics\n- OpenAPI / Swagger documentation\n- Configurable frontend API endpoint\n- Explicit API health check before dashboard data loading\n- Safe text-based DOM rendering for returned device data\n- Frontend request timeout and response-shape validation\n\n## Technology Stack\n\n### Backend\n\n- Python\n- FastAPI\n- Pydantic\n- Uvicorn\n- REST API\n\n### Frontend\n\n- HTML5\n- CSS3\n- JavaScript\n- Fetch API\n- Responsive CSS\n\n## API Endpoints\n\n| Method | Endpoint | Purpose |\n|---|---|---|\n| GET | `/` | API information |\n| GET | `/health` | Health check |\n| GET | `/devices` | List devices |\n| GET | `/devices/{id}` | Get device |\n| POST | `/devices` | Create device |\n| DELETE | `/devices/{id}` | Delete device |\n\nInteractive API documentation is available at `/docs` while the backend is running.\n\n## Run Locally\n\nInstall backend dependencies:\n\n```powershell\ncd backend\npython -m venv .venv\n.\\\\.venv\\\\Scripts\\\\Activate.ps1\npip install -r requirements.txt\nuvicorn main:app --reload\n```\n\nRun the baseline tests:\n\n```powershell\npip install pytest httpx\npytest -q\n```\n\nThe frontend API endpoint is configured through the `<body data-api-base=\"...\">` attribute in `frontend/index.html`. Change that value when the API is hosted somewhere other than the local development address.\n\n### CORS configuration\n\nLocal browser origins on `localhost` and `127.0.0.1` are allowed automatically for development. For a hosted frontend, set `ALLOWED_ORIGINS` on the API as a comma-separated list of explicit origins, for example:\n\n```text\nALLOWED_ORIGINS=https://example.example.com\n```\n\nThe API does not enable credentialed cross-origin requests, and the documented HTTP methods remain limited to the API operations actually exposed by the application.\n\n### Frontend API resilience\n\nThe dashboard gives each health/data request an 8-second timeout and validates the returned device payload before rendering. Invalid payloads are treated as an API failure instead of being rendered into the page.\n\n## Data safety\n\nUse simulated or non-sensitive demonstration data only. Do not commit patient or other personal health information to this public repository.\n\n## Status\n\nDemonstration / learning project with automated backend baseline verification. The frontend/API integration includes explicit health checking, configurable endpoint selection, safe DOM rendering, response validation, request timeouts and a configurable CORS policy. The README does not claim clinical validation or production readiness.\n\n## Portfolio\n\nPart of the ABLA86 engineering portfolio. This repository contains the implementation and documentation for the project.\n\n## Change-control audit\n\nSee [docs/REPOSITORY-CHANGE-AUDIT-2026-08-28.md](docs/REPOSITORY-CHANGE-AUDIT-2026-08-28.md) for the repository change-control and traceability record.\n"
+      }
+    },
+    {
+      "repo": "healthcare-data-analyzer",
+      "displayName": "HealthData Quality Lab",
+      "tier": 2,
+      "description": "Python data-quality and analysis pipeline for synthetic healthcare-related datasets.",
+      "verify": "README",
+      "status": "verified-source",
+      "source": {
+        "repo": "abla86/healthcare-data-analyzer",
+        "url": "https://github.com/abla86/healthcare-data-analyzer",
+        "defaultBranch": "main",
+        "archived": false,
+        "description": null,
+        "stars": 0,
+        "updatedAt": "2026-08-28T18:15:28Z",
+        "pushedAt": "2026-08-28T18:11:56Z",
+        "languages": [
+          "Python"
+        ],
+        "detectedTechnology": [
+          "Python",
+          "GitHub Actions"
+        ],
+        "files": [
+          ".github",
+          ".gitignore",
+          "LICENSE",
+          "PORTFOLIO-WORKLOG.md",
+          "README.md",
+          "SECURITY.md",
+          "data",
+          "docs",
+          "main.py",
+          "pytest.ini",
+          "requirements.txt",
+          "src",
+          "tests"
+        ],
+        "readme": "# Healthcare Data Analyzer\n\nA small Python portfolio project for validating and analyzing **synthetic healthcare-related CSV data**.\n\nThe included dataset is demonstration data only. It does not contain real patient records.\n\n## Purpose\n\nThe project demonstrates practical Python data-processing skills: structured input validation, explicit data-quality assessment, type-safe transformation, aggregation, filtering, reporting and unit testing.\n\n## Data-quality pipeline\n\nBefore analysis, the input dataset passes through a separate quality gate:\n\n```text\nCSV input\n   ↓\nSchema check\n   ↓\nCompleteness / uniqueness / value validation\n   ↓\nPASS | PASS WITH WARNINGS | FAIL\n   ↓\nAnalysis\n   ↓\nReport\n```\n\nA dataset that fails the quality gate is not analyzed. This prevents invalid input from silently producing a report.\n\n## Features\n\n- Reads CSV files\n- Validates required fields\n- Assesses schema conformity and completeness\n- Detects duplicate patient identifiers\n- Validates numeric, boolean and risk-domain values\n- Converts numeric and boolean values safely\n- Calculates summary metrics\n- Filters records by municipality and risk level\n- Generates a text report\n- Uses type hints and dataclasses\n- Includes pytest unit tests\n- Includes synthetic sample data\n\n## Project structure\n\n```text\nhealthcare-data-analyzer/\n├── data/                  # Synthetic demonstration data\n├── src/                   # Quality, analysis, models and reporting\n├── tests/                 # Unit tests\n├── main.py                # Quality-gated application entry point\n├── requirements.txt\n├── PORTFOLIO-WORKLOG.md\n├── README.md\n└── .gitignore\n```\n\n## Run locally\n\n```powershell\npython -m venv .venv\n.\\.venv\\Scripts\\Activate.ps1\npip install -r requirements.txt\npython main.py\n```\n\n## Testing\n\nRun the automated test suite with:\n\n```powershell\npytest\n```\n\nThe tests cover both the existing analysis behaviour and the data-quality gate, including duplicate identifiers and invalid values.\n\n## Data safety\n\nThe repository uses synthetic demonstration records. No real patient information should be committed to this public repository. The application is an educational/data-engineering demonstration and is not a clinical decision-support system.\n\n## Portfolio value\n\nThis project demonstrates Python, CSV processing, data-quality engineering, validation, data modelling, aggregation, filtering, reporting and automated testing in a healthcare-related but non-sensitive demonstration context.\n\n## Status\n\n**Portfolio / demonstration project.** The repository is the source of truth for the implementation and current project status.\n\n## Change-control audit\n\nSee [docs/REPOSITORY-CHANGE-AUDIT-2026-08-28.md](docs/REPOSITORY-CHANGE-AUDIT-2026-08-28.md) for the repository change-control and traceability record.\n"
+      }
+    },
+    {
+      "repo": "healthcare-workforce-sql",
+      "displayName": "Workforce SQL Engine",
+      "tier": 2,
+      "description": "SQL Server model for workforce, shifts, competence and staffing analysis.",
+      "verify": "README",
+      "status": "verified-source",
+      "source": {
+        "repo": "abla86/healthcare-workforce-sql",
+        "url": "https://github.com/abla86/healthcare-workforce-sql",
+        "defaultBranch": "main",
+        "archived": false,
+        "description": null,
+        "stars": 0,
+        "updatedAt": "2026-08-29T01:59:52Z",
+        "pushedAt": "2026-08-29T01:59:44Z",
+        "languages": [
+          "TSQL"
+        ],
+        "detectedTechnology": [
+          "TSQL",
+          "GitHub Actions"
+        ],
+        "files": [
+          ".github",
+          ".gitignore",
+          "PORTFOLIO-WORKLOG.md",
+          "README.md",
+          "SECURITY.md",
+          "setup.sql",
+          "sql"
+        ],
+        "readme": "# Healthcare Workforce SQL\n\nA Microsoft SQL Server project that models workforce, shift and competence planning using fictional demonstration data.\n\n## Purpose\n\nThe project demonstrates relational database design and SQL analysis for staffing and competence requirements in healthcare-oriented scenarios.\n\n## Verification\n\n[![SQL Validation](https://github.com/abla86/healthcare-workforce-sql/actions/workflows/sql-validation.yml/badge.svg)](https://github.com/abla86/healthcare-workforce-sql/actions/workflows/sql-validation.yml)\n\nBaseline CI parses the repository SQL as T-SQL with SQLFluff. This verifies parser-level syntax consistency; it does not replace execution against a SQL Server instance.\n\n## Implemented\n\n- Employee, role and position-percentage data\n- Competencies and employee–competency many-to-many relationships\n- Day, evening and night shifts\n- Minimum staffing requirements\n- Competence requirements per shift\n- Employee shift assignments\n- Foreign keys, `CHECK` constraints, `UNIQUE` constraints and indexes\n- Views for shift coverage and employee hours\n- Aggregate, JOIN and filtering queries\n- Staffing-gap analysis\n- Competence-coverage analysis\n- Employee-hour calculations\n- Stored procedure\n- Validation queries\n\n## Structure\n\n```text\nsetup.sql\nsql/\n├── 01-create-database.sql\n├── 02-schema.sql\n├── 03-seed-data.sql\n├── 04-views.sql\n├── 05-analysis-queries.sql\n├── 06-stored-procedure.sql\n└── 07-validation.sql\n```\n\n## Database\n\nMicrosoft SQL Server\n\nDatabase name: `HealthWorkforceDb`\n\n## Example analysis\n\nThe SQL scripts can identify understaffed shifts, missing competence coverage, employee workload and employees with specific competencies.\n\n## Run\n\nExample using SQL Server LocalDB:\n\n```powershell\nsqlcmd -S \"(localdb)\\MSSQLLocalDB\" -E -i setup.sql\nsqlcmd -S \"(localdb)\\MSSQLLocalDB\" -E -i sql\\05-analysis-queries.sql\n```\n\n## Data and scope\n\nAll workforce names and records are fictional demonstration data. No patient data is included.\n\nThis is a database-design and analysis project. It is not presented as a production workforce-management system or a validated clinical decision-support system.\n\n## Portfolio evidence\n\nThe project demonstrates relational modelling, constraints, indexing, views, stored procedures, practical SQL analysis and automated parser-level verification.\n\n## Author\n\nAnne Beth Andersen\n\n## Status\n\nThis repository is part of the ABLA86 engineering portfolio. Current implementation status is represented by the code, repository history and CI verification.\n"
+      }
+    },
+    {
+      "repo": "shift-competence-planner",
+      "displayName": "ShiftPlan",
+      "tier": 2,
+      "description": "C#/.NET planning application for shifts, staffing requirements and competence coverage.",
+      "verify": "README",
+      "status": "verified-source",
+      "source": {
+        "repo": "abla86/shift-competence-planner",
+        "url": "https://github.com/abla86/shift-competence-planner",
+        "defaultBranch": "main",
+        "archived": false,
+        "description": null,
+        "stars": 0,
+        "updatedAt": "2026-08-28T18:12:09Z",
+        "pushedAt": "2026-08-28T18:11:59Z",
+        "languages": [
+          "C#"
+        ],
+        "detectedTechnology": [
+          "C#",
+          "GitHub Actions"
+        ],
+        "files": [
+          ".github",
+          ".gitignore",
+          "PORTFOLIO-WORKLOG.md",
+          "README.md",
+          "SECURITY.md",
+          "ShiftPlanner.Tests",
+          "ShiftPlanner.sln",
+          "ShiftPlanner",
+          "data",
+          "docs"
+        ],
+        "readme": "# Shift & Competence Planner\n\nA C#/.NET staffing-planning application for modelling shifts, staffing requirements and competence coverage using fictional workforce data.\n\n## Start here\n\n| Need | Go to |\n|---|---|\n| Run the application | [Run locally](#run-locally) |\n| Run tests | [Test](#test) |\n| Understand scope | [Data and scope](#data-and-scope) |\n| See the portfolio context | [Developer portfolio](https://abla86.github.io/developer-portfolio/) |\n| Inspect source | [GitHub repository](https://github.com/abla86/shift-competence-planner) |\n\n## Demonstrated functionality\n\n- Employee records with role, position percentage and competencies\n- Day, evening and night shifts\n- Minimum staffing requirements per shift\n- Required competencies per shift\n- Assignment of employees to shifts\n- Detection of staffing gaps\n- Detection of missing required competence\n- Planned/worked-hour calculations\n- Local JSON persistence\n- CSV export\n- Automated xUnit tests\n\n## Run locally\n\n```powershell\ndotnet restore\ndotnet run --project ShiftPlanner\n```\n\n## Test\n\n```powershell\ndotnet test\n```\n\n## Data and scope\n\nThe repository uses fictional sample data only. It is a demonstration and planning project, not a validated workforce-management or clinical decision-support system.\n\nDo not commit patient information, confidential employee information, credentials or other sensitive data.\n\n## Portfolio evidence\n\nThe project demonstrates C#/.NET application development, domain modelling, validation logic, local persistence, CSV export and automated testing.\n\n## Status\n\nThis repository is part of the ABLA86 engineering portfolio. Current implementation status is represented by the code and repository history.\n\n## Change-control audit\n\nSee [docs/REPOSITORY-CHANGE-AUDIT-2026-08-28.md](docs/REPOSITORY-CHANGE-AUDIT-2026-08-28.md) for the repository change-control and traceability record.\n"
+      }
+    },
+    {
+      "repo": "AB-Engineering-Lab",
+      "displayName": "AB Engineering Lab",
+      "tier": 3,
+      "description": "Collection point for smaller engineering experiments and development work.",
+      "verify": "README",
+      "status": "verified-source",
+      "source": {
+        "repo": "abla86/AB-Engineering-Lab",
+        "url": "https://github.com/abla86/AB-Engineering-Lab",
+        "defaultBranch": "main",
+        "archived": false,
+        "description": null,
+        "stars": 0,
+        "updatedAt": "2026-08-28T18:14:41Z",
+        "pushedAt": "2026-08-28T18:11:51Z",
+        "languages": [
+          "HTML",
+          "JavaScript",
+          "CSS",
+          "Python"
+        ],
+        "detectedTechnology": [
+          "HTML",
+          "JavaScript",
+          "CSS",
+          "Python",
+          "GitHub Actions"
+        ],
+        "files": [
+          ".github",
+          ".gitignore",
+          "PORTFOLIO-WORKLOG.md",
+          "README.md",
+          "apps",
+          "audit",
+          "docs",
+          "frontend",
+          "security-lab"
+        ],
+        "readme": "# AB Engineering Lab\n\n**One project. Multiple engineering layers.**\n\nAB Engineering Lab combines selected software-development projects into one coherent engineering laboratory.\n\n## Start here\n\n| Need | Go to |\n|---|---|\n| Visual showcase | [Developer portfolio](https://abla86.github.io/developer-portfolio/) |\n| Small projects together | [Small Projects Demo Hub](https://abla86.github.io/developer-portfolio/small-projects-hub.html) |\n| Source code | [GitHub repositories](https://github.com/abla86?tab=repositories) |\n| Engineering documentation | [`docs/`](docs/) |\n| Portfolio verification | [`docs/PORTFOLIO-VERIFICATION-STATUS.md`](docs/PORTFOLIO-VERIFICATION-STATUS.md) |\n| Application security work | [`security-lab/`](security-lab/) |\n\n## Engineering progression\n\nHTML / CSS\n    ↓\nJavaScript\n    ↓\nApplications\n    ↓\nReact\n    ↓\nPython / FastAPI\n    ↓\nAPIs\n    ↓\nTesting\n    ↓\nGit / GitHub\n    ↓\nCI/CD\n    ↓\nDeployment\n    ↓\nApplication Security / DevSecOps\n\n## Purpose\n\nThe smaller projects demonstrate development progression and are presented together while their individual implementations remain identifiable.\n\n## Current engineering setup\n\n- React + Vite frontend\n- GitHub Actions build validation\n- GitHub Pages deployment workflow\n- Browser-based project previews where compatible\n- Separate backend and application modules retained in the repository\n- A controlled, local-only application security laboratory with vulnerable and hardened examples\n\nThe backend modules are not described as connected to the React frontend unless that integration has actually been implemented and tested.\n\n## Application security lab\n\n[`security-lab/`](security-lab/) demonstrates an end-to-end security workflow:\n\n`Vulnerable -> Attack/Proof -> Detect -> Fix -> Regression test`\n\nCurrent training modules cover SQL injection, cross-site scripting, broken access control/IDOR, security headers and input validation. The lab is deliberately local-only and is not production code.\n\n## Verification\n\nUse [Portfolio Verification Status](docs/PORTFOLIO-VERIFICATION-STATUS.md) for the current repository-by-repository evidence level. It distinguishes successful checks from repositories that do not currently expose a suitable full CI workflow.\n\nSecurity-lab verification is handled by the dedicated `Security Lab` GitHub Actions workflow.\n\n## Accuracy\n\nDocumentation describes implemented functionality rather than unsupported claims about production readiness, validation or completed functionality.\n\nA configured deployment workflow is not the same as claiming that a deployed system is production-ready.\n\n## Education\n\nThe repository owner is a Master's student in Knowledge-Based Practice.\n\nThis does not indicate completion of a master's degree.\n\n## Change-control audit\n\nSee [docs/REPOSITORY-CHANGE-AUDIT-2026-08-28.md](docs/REPOSITORY-CHANGE-AUDIT-2026-08-28.md) for the repository change-control and traceability record.\n"
+      }
+    }
+  ],
+  "excluded": [
+    {
+      "reason": "External/Google Cross Device SDK material; do not present as original work."
+    },
+    {
+      "repo": "kana-dojo",
+      "reason": "Repository ownership/attribution must be verified before portfolio promotion."
+    },
+    {
+      "reason": "Repository README attributes the project to Robertg761; do not promote it as original work without explicit attribution verification."
+    },
+    {
+      "repo": "documentation",
+      "reason": "Archived HACS documentation repository; README states it hosts documentation for hacs.xyz and is not original portfolio work."
+    },
+    {
+      "repo": "skills-getting-started-with-github-copilot",
+      "reason": "Archived GitHub Copilot learning exercise; repository content is GitHub training material, not an original software project."
+    },
+    {
+      "repo": "skills-introduction-to-git",
+      "reason": "Archived Git/GitHub learning exercise; keep as learning history, not a portfolio project."
+    },
+    {
+      "repo": "home-assistant-voice-pe",
+      "reason": "Archived Home Assistant Voice PE repository; keep archived unless provenance and original contribution are explicitly documented."
+    },
+    {
+      "repo": "eufy_security",
+      "reason": "Archived Eufy Security repository; keep out of promoted portfolio until provenance and original contribution are documented."
+    },
+    {
+      "repo": "ABandersen.com",
+      "reason": "Archived predecessor portfolio; superseded by developer-portfolio."
+    },
+    {
+      "repo": "ab-portfolio",
+      "reason": "Archived predecessor portfolio; superseded by developer-portfolio."
+    },
+    {
+      "repo": "FastAPI-Learning",
+      "reason": "Archived learning project; retain as GitHub history but do not promote over current projects."
+    },
+    {
+      "repo": "todo-app",
+      "reason": "Archived earlier frontend project; retain as historical work, not a current flagship project."
+    },
+    {
+      "repo": "react-task-dashboard",
+      "reason": "Archived earlier React project; retain as historical work, not a current flagship project."
+    },
+    {
+      "repo": "advanced-javascript-counter",
+      "reason": "Archived earlier JavaScript project; retain as historical work, not a current flagship project."
+    }
+  ]
+}
