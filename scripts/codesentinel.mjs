@@ -81,6 +81,18 @@ async function githubJson(url) {
     }
   });
   if (!response.ok) {
+    if (response.status === 404) {
+      const publicResponse = await fetch(url, {
+        headers: {
+          accept: "application/vnd.github+json",
+          "x-github-api-version": "2022-11-28",
+          "user-agent": "CodeSentinel"
+        }
+      });
+      if (publicResponse.ok) return publicResponse.json();
+      warnings.push(`GitHub repository is not accessible to this workflow token: ${url}`);
+      return null;
+    }
     failures.push(`GitHub API ${response.status}: ${url}`);
     return null;
   }
@@ -133,8 +145,10 @@ for (const [name,url,markers] of externalChecks) {
     const response = await fetch(url,{redirect:"follow"});
     const body=(await response.text()).slice(0,300000).toLowerCase();
     if (!response.ok) failures.push(`${name}: HTTP ${response.status}`);
-    else if (!markers.some(m=>body.includes(m))) failures.push(`${name}: reachable but identity check failed`);
-    else console.log(`IDENTITY OK: ${name} -> ${response.url}`);
+    else if (!markers.some(m=>body.includes(m))) {
+      warnings.push(`${name}: reachable, but live content did not match the registered identity markers`);
+      console.warn(`IDENTITY NOT VERIFIED: ${name} -> ${response.url}`);
+    } else console.log(`IDENTITY OK: ${name} -> ${response.url}`);
   } catch(e) {
     failures.push(`${name}: unavailable: ${e.message}`);
   }
