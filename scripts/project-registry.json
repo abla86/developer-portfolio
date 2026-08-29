@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 5,
   "policy": "Only verified repository facts may be promoted to the portfolio.",
   "projectLab": {
     "entry": "desktop-clock.html",
@@ -10,16 +10,24 @@
       "repo": "evidence-appraisal-tool",
       "displayName": "EvidenceFlow",
       "tier": 1,
-      "description": "Research-support platform for structured critical appraisal, study classification, evidence traceability and methodology-aware assessment.",
+      "description": "Research-support platform for study classification, critical appraisal, evidence traceability and methodology-aware assessment.",
       "verify": "README"
     },
     {
       "repo": "workforce-competence-management",
       "displayName": "Vaktklar",
       "tier": 1,
-      "description": "Unified workforce and competence platform for shift planning, staffing coverage, competence management, audit, data exchange and decision support.",
+      "description": "Industry-flexible workforce and competence platform for shift planning, staffing coverage, competence management, audit, data exchange and decision support.",
       "verify": "README",
       "supportingDataLayer": "healthcare-workforce-sql"
+    },
+    {
+      "repo": "HealthTechDeviceApi",
+      "displayName": "HealthTech Platform",
+      "tier": 1,
+      "description": "Healthcare-technology platform combining a .NET device API with monitoring capability over synthetic data.",
+      "verify": "README",
+      "supportingFrontend": "healthtech-dashboard"
     },
     {
       "repo": "azure-kubernetes-showcase",
@@ -29,12 +37,11 @@
       "verify": "README"
     },
     {
-      "repo": "HealthTechDeviceApi",
-      "displayName": "HealthTech Platform",
+      "repo": "wpww-warroom",
+      "displayName": "WPWW War Room",
       "tier": 1,
-      "description": "Healthcare technology platform combining a .NET device API, validation/testing and a separate monitoring dashboard capability.",
-      "verify": "README",
-      "supportingFrontend": "healthtech-dashboard"
+      "description": "Controlled security, resilience and observability laboratory for bounded engineering experiments.",
+      "verify": "README"
     },
     {
       "repo": "healthcare-data-analyzer",
@@ -42,13 +49,18 @@
       "tier": 2,
       "description": "Python data-quality and analysis pipeline for synthetic healthcare-related datasets.",
       "verify": "README"
+    }
+  ],
+  "supportingRepositories": [
+    {
+      "repo": "healthcare-workforce-sql",
+      "role": "Workforce data layer",
+      "reason": "Distinct SQL/T-SQL capability; supports Vaktklar without being a duplicate application."
     },
     {
-      "repo": "AB-Engineering-Lab",
-      "displayName": "AB Engineering Lab",
-      "tier": 3,
-      "description": "Collection point for smaller engineering experiments and development work that do not warrant separate flagship treatment.",
-      "verify": "README"
+      "repo": "healthtech-dashboard",
+      "role": "HealthTech monitoring frontend",
+      "reason": "Integrated into HealthTech Platform; not a separate flagship application."
     }
   ],
   "excluded": [
@@ -57,12 +69,12 @@
       "reason": "Superseded as a separate portfolio unit by workforce-competence-management; retain only as historical source where useful."
     },
     {
-      "repo": "healthtech-dashboard",
-      "reason": "Integrated as the supporting frontend/monitoring layer of the HealthTech Platform; do not promote as a separate flagship project."
-    },
-    {
       "repo": "small-projects-hub.html",
       "reason": "Removed. desktop-clock.html is the sole Interactive Project Lab entry."
+    },
+    {
+      "repo": "engineering-showcase.html",
+      "reason": "Removed. Replaced by the unified Interactive Project Lab."
     },
     {
       "reason": "External, training, documentation or predecessor repositories remain outside promoted project units unless independently verified as original work."
