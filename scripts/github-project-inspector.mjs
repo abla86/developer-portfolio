@@ -14,7 +14,11 @@ const headers = {
 
 async function gh(url) {
   const r = await fetch(`https://api.github.com${url}`,{headers});
-  if (!r.ok) throw new Error(`GitHub API ${r.status}: ${url}`);
+  if (!r.ok) {
+    const error = new Error(`GitHub API ${r.status}: ${url}`);
+    error.status = r.status;
+    throw error;
+  }
   return r.json();
 }
 
