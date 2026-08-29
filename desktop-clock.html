@@ -48,5 +48,6 @@ $("stopStart").onclick=()=>{if(!started)started=performance.now();$("stopDisplay
 $("stopPause").onclick=()=>{if(started){elapsed+=performance.now()-started;started=0}};
 $("stopLap").onclick=()=>{const t=elapsed+(started?performance.now()-started:0);laps.push(t);$("laps").textContent=laps.map((v,i)=>"Lap "+(i+1)+": "+(v/1000).toFixed(1)+"s").join(" · ")};
 $("stopReset").onclick=()=>{started=0;elapsed=0;laps=[];$("laps").textContent="";renderStop()};
+if("serviceWorker" in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("desktop-clock-sw.js").catch(()=>{}));
 </script>
 </body></html>
