@@ -8,10 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
     React: ["React", "Component-driven UI and reusable application interfaces.", "Vaktklar · EvidenceFlow"],
     "C#/.NET": ["C# / .NET", "Backend APIs, domain logic, validation and full-stack application work.", "Vaktklar · HealthTech Platform · CloudForge"],
     Python: ["Python", "Data quality, analysis, automation and API work.", "HealthData Quality Lab · CloudForge"],
-    SQL: ["SQL", "Relational modelling, constraints, views, procedures and workforce analysis.", "Vaktklar + Workforce SQL data layer"],
     Cloud: ["Cloud", "Docker, Kubernetes, Azure, infrastructure as code and delivery pipelines.", "CloudForge"],
     Security: ["Security", "Security-aware development, scanning, resilience and controlled verification.", "WPWW War Room · CloudForge · Vaktklar"],
-    Evidence: ["Evidence", "Research-support workflows, provenance and methodology-aware software.", "EvidenceFlow"]
   };
   const show = (node) => {
     const item = details[node.dataset.skill];
