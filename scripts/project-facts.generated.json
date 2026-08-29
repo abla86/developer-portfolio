@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-29T20:10:01.227Z",
+  "generatedAt": "2026-08-29T20:15:14.609Z",
   "source": "GitHub repository inspection",
   "policy": "Only verified repository facts may be promoted to the portfolio.",
   "projects": [
@@ -18,7 +18,10 @@
       "tier": 1,
       "description": "Industry-flexible workforce and competence platform for shift planning, staffing coverage, competence management, audit, data exchange and decision support.",
       "verify": "README",
-      "supportingDataLayer": "healthcare-workforce-sql",
+      "supportingDataLayer": {
+        "repo": "healthcare-workforce-sql",
+        "role": "relational data modelling and T-SQL analysis"
+      },
       "status": "not-accessible-with-workflow-token",
       "error": "Repository is not accessible to this repository's GITHUB_TOKEN. No project fact was promoted."
     },
