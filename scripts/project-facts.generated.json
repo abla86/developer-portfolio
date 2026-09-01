@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T02:06:04.939Z",
+  "generatedAt": "2026-09-01T02:51:35.148Z",
   "source": "GitHub repository inspection",
   "policy": "Only verified repository facts may be promoted to the portfolio.",
   "projects": [
@@ -49,7 +49,7 @@
         "description": "Healthcare device management REST API built with C#, .NET 9 and ASP.NET Core.",
         "stars": 0,
         "updatedAt": "2026-08-29T22:05:29Z",
-        "pushedAt": "2026-08-29T22:05:21Z",
+        "pushedAt": "2026-09-01T02:51:30Z",
         "languages": [
           "C#",
           "Dockerfile"
@@ -77,6 +77,7 @@
           "Properties",
           "README.md",
           "SECURITY.md",
+          "SKILL.md",
           "appsettings.Development.json",
           "appsettings.json",
           "docs"
@@ -178,7 +179,7 @@
         "description": null,
         "stars": 0,
         "updatedAt": "2026-08-29T20:49:45Z",
-        "pushedAt": "2026-08-29T20:49:42Z",
+        "pushedAt": "2026-09-01T02:51:32Z",
         "languages": [
           "Python"
         ],
@@ -193,6 +194,7 @@
           "PORTFOLIO-WORKLOG.md",
           "README.md",
           "SECURITY.md",
+          "SKILL.md",
           "data",
           "docs",
           "main.py",
