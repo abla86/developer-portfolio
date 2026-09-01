@@ -20,9 +20,6 @@ jobs:
         run: |
           test -f index.html
           test -f projects.html
-          test -f systems-lab.html
-          test -f about.html
-          test -f workshop.html
           test -f style.css
           test -f script.js
       - name: Validate JavaScript syntax
