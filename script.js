@@ -34,6 +34,11 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const style = document.createElement("style");
   style.textContent = `
+    .engineering-intro{margin:18px 0 0;color:var(--accent);font:600 .72rem/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;min-height:1.7em;letter-spacing:.04em}
+    .engineering-intro::before{content:"▸ ";opacity:.7}
+    .project{transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+    .project:hover{transform:translateY(-3px);box-shadow:0 18px 48px rgba(0,0,0,.14)}
+
     .interactive-lab{padding:88px 0;border-top:1px solid rgba(255,255,255,.07);background:linear-gradient(180deg,rgba(16,29,48,.34),rgba(7,16,29,.08))}
     .interactive-lab-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:18px;align-items:stretch}
     .lab-panel{border:1px solid var(--border);border-radius:16px;background:rgba(255,255,255,.025);overflow:hidden;box-shadow:0 18px 50px rgba(0,0,0,.12)}
@@ -58,6 +63,32 @@ document.addEventListener("DOMContentLoaded", () => {
     @media(prefers-reduced-motion:reduce){.lab-btn:hover{transform:none}.skill-focus{transform:none}}
   `;
   document.head.appendChild(style);
+
+
+
+  /* Small technical status line: subtle enough for a professional portfolio. */
+  const heroLead=document.querySelector(".hero-copy .lead");
+  if(heroLead&&!document.querySelector(".engineering-intro")){
+    const intro=document.createElement("div");
+    intro.className="engineering-intro";
+    intro.setAttribute("aria-label","Engineering status");
+    heroLead.insertAdjacentElement("afterend",intro);
+    const lines=["Structured systems. Inspectable code.","Build → test → document → validate.","Healthcare × software × research."];
+    let line=0,index=0,erasing=false;
+    const type=()=>{
+      const value=lines[line];
+      if(!erasing){
+        intro.textContent=value.slice(0,index++);
+        if(index>value.length){erasing=true;setTimeout(type,1300);return;}
+      }else{
+        intro.textContent=value.slice(0,--index);
+        if(index===0){erasing=false;line=(line+1)%lines.length;}
+      }
+      setTimeout(type,erasing?22:34);
+    };
+    if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches) type();
+    else intro.textContent=lines[0];
+  }
 
   const projects=document.getElementById("projects");
   if(!projects||document.getElementById("interactive-engineering-lab")) return;
