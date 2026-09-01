@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T02:51:35.148Z",
+  "generatedAt": "2026-09-01T02:54:32.753Z",
   "source": "GitHub repository inspection",
   "policy": "Only verified repository facts may be promoted to the portfolio.",
   "projects": [
@@ -48,7 +48,7 @@
         "archived": false,
         "description": "Healthcare device management REST API built with C#, .NET 9 and ASP.NET Core.",
         "stars": 0,
-        "updatedAt": "2026-08-29T22:05:29Z",
+        "updatedAt": "2026-09-01T02:51:34Z",
         "pushedAt": "2026-09-01T02:51:30Z",
         "languages": [
           "C#",
@@ -99,8 +99,8 @@
         "archived": false,
         "description": "Cloud engineering showcase with .NET, React TypeScript, Docker, Kubernetes, Azure, IaC, CI/CD, security and observability",
         "stars": 0,
-        "updatedAt": "2026-08-31T09:52:26Z",
-        "pushedAt": "2026-08-31T09:45:47Z",
+        "updatedAt": "2026-09-01T02:52:00Z",
+        "pushedAt": "2026-09-01T02:51:55Z",
         "languages": [
           "Python",
           "C#",
@@ -140,6 +140,7 @@
           "Makefile",
           "README.md",
           "SECURITY.md",
+          "SKILL.md",
           "apps",
           "docker-compose.yml",
           "docs",
@@ -178,7 +179,7 @@
         "archived": false,
         "description": null,
         "stars": 0,
-        "updatedAt": "2026-08-29T20:49:45Z",
+        "updatedAt": "2026-09-01T02:51:43Z",
         "pushedAt": "2026-09-01T02:51:32Z",
         "languages": [
           "Python"
