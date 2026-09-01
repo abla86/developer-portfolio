@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Validate required pages
+        run: |
+          test -f index.html
+          test -f projects.html
+          test -f systems-lab.html
+          test -f about.html
+          test -f workshop.html
+          test -f style.css
+          test -f script.js
+      - name: Validate JavaScript syntax
+        run: node --check script.js
+      - name: Check HTML structure
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          for p in Path('.').glob('*.html'):
+              s=p.read_text(encoding='utf-8')
+              assert '<html' in s and '</html>' in s, f'Invalid HTML wrapper: {p}'
+              assert '<head' in s and '</head>' in s, f'Missing head: {p}'
+              assert '<body' in s and '</body>' in s, f'Missing body: {p}'
+          print('HTML structural checks passed')
+          PY
