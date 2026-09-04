@@ -1,51 +1,17 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Evidence Lab — a small public research-support demonstration by Anne Beth Andersen.">
-<title>Evidence Lab · AB Engineering</title>
-<style>
-:root{--bg:#060b13;--panel:#0c1624;--line:#263b55;--text:#eaf4ff;--muted:#91a7bd;--a:#75e2b5;--b:#7da7ff;--warn:#e5c56d}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% 0,#10253a,#060b13 60%);color:var(--text);font:15px/1.55 system-ui,sans-serif}main{max-width:980px;margin:auto;padding:34px 22px 70px}.top{display:flex;justify-content:space-between;align-items:center;gap:15px}.brand{color:var(--a);font-weight:800;letter-spacing:.18em}.back{color:var(--text);text-decoration:none;border:1px solid var(--line);padding:9px 13px;border-radius:10px}h1{font-size:clamp(38px,7vw,70px);line-height:1;margin:70px 0 10px}.lead{color:var(--muted);max-width:700px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:30px}.card{background:#0a1420dd;border:1px solid var(--line);border-radius:18px;padding:20px}.card h2{margin-top:0}.eyebrow{color:var(--a);font:800 11px ui-monospace,monospace;letter-spacing:.15em}.question{padding:14px 0;border-top:1px solid #ffffff10}.question:first-of-type{border-top:0}.answers{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}button{background:#101e30;color:var(--text);border:1px solid var(--line);padding:9px 12px;border-radius:9px;cursor:pointer}button:hover,button.selected{border-color:var(--a);box-shadow:0 0 18px #75e2b51c}.result{position:sticky;top:15px}.signal{font-size:42px;font-weight:800;color:var(--a)}.bar{height:10px;background:#172536;border-radius:10px;overflow:hidden}.bar i{display:block;height:100%;width:0;background:var(--a);transition:.25s}.checks{display:grid;gap:10px}.check{display:flex;justify-content:space-between;gap:12px;padding:12px;border:1px solid #ffffff10;border-radius:10px}.note{color:var(--muted);font-size:13px}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.primary{border-color:var(--a)}.private{border-left:3px solid var(--warn);padding-left:14px;color:var(--muted);font-size:13px}@media(max-width:750px){.grid{grid-template-columns:1fr}.result{position:static}}
-</style>
-</head>
-<body><main>
-<div class="top"><div class="brand">AB / EVIDENCE LAB</div><a class="back" href="index.html">← Portfolio</a></div>
-<h1>RESEARCH, BUT PLAYABLE.</h1>
-<p class="lead">A deliberately small public demonstration of structured evidence review. It is independent from the private Evidence Appraisal Tool and does not expose its code, data, methodology library or full research workflow.</p>
-
-<div class="grid">
-<section class="card">
-<div class="eyebrow">MINI REVIEW · 01</div>
-<h2>Evidence signal</h2>
-<p class="note">Work through the questions. This demo produces a transparent <b>review signal</b>, not a validated methodological quality score.</p>
-<div class="question"><b>1. Is the research question clearly defined?</b><div class="answers" data-q="1"><button data-v="yes">Yes</button><button data-v="unclear">Unclear</button><button data-v="no">No</button></div></div>
-<div class="question"><b>2. Is the study population relevant to the question?</b><div class="answers" data-q="2"><button data-v="yes">Yes</button><button data-v="unclear">Unclear</button><button data-v="no">No</button></div></div>
-<div class="question"><b>3. Can the primary outcome be located in the source?</b><div class="answers" data-q="3"><button data-v="yes">Yes</button><button data-v="unclear">Unclear</button><button data-v="no">No</button></div></div>
-<div class="question"><b>4. Are important limitations reported?</b><div class="answers" data-q="4"><button data-v="yes">Yes</button><button data-v="unclear">Unclear</button><button data-v="no">No</button></div></div>
-<div class="question"><b>5. Can the finding be independently traced to the source?</b><div class="answers" data-q="5"><button data-v="yes">Yes</button><button data-v="unclear">Unclear</button><button data-v="no">No</button></div></div>
-<div class="actions"><button class="primary" id="run">RUN REVIEW SIGNAL</button><button id="reset">RESET</button></div>
-</section>
-
-<aside class="card result">
-<div class="eyebrow">OUTPUT · TRANSPARENT</div>
-<div class="signal" id="signal">—</div>
-<p id="message">Answer the five questions.</p>
-<div class="bar"><i id="bar"></i></div>
-<div class="checks" id="checks" style="margin-top:16px"></div>
-<p class="private"><b>Boundary:</b> This public demo is intentionally limited. The full research-support application remains private. The output here is an interaction demo, not a substitute for researcher judgement or a validated appraisal instrument.</p>
-</aside>
-</div>
-
-<section class="card" style="margin-top:16px">
-<div class="eyebrow">TRACEABILITY · 02</div><h2>Source trail</h2>
-<p>Try the interaction above, then inspect the implementation behind this page. The demo contains no connection to the private application's database or API.</p>
-<div class="actions"><a class="back" href="https://github.com/abla86/developer-portfolio">Portfolio source ↗</a><a class="back" href="https://github.com/abla86/evidence-appraisal-tool">Private project reference ↗</a></div>
-</section>
-</main>
-<script>
-const answers={};document.querySelectorAll('.answers button').forEach(b=>b.onclick=()=>{const q=b.parentElement.dataset.q;answers[q]=b.dataset.v;b.parentElement.querySelectorAll('button').forEach(x=>x.classList.remove('selected'));b.classList.add('selected')});
-document.getElementById('run').onclick=()=>{const vals=Object.values(answers);if(vals.length<5){document.getElementById('message').textContent='Complete all five questions first.';return}let score=vals.reduce((s,v)=>s+(v==='yes'?1:v==='unclear'?.5:0),0),pct=Math.round(score/5*100);document.getElementById('signal').textContent=pct+'%';document.getElementById('bar').style.width=pct+'%';document.getElementById('message').textContent=pct>=80?'Strong review signal — verify the source and rationale.':pct>=50?'Mixed review signal — investigate the unclear items.':'Weak review signal — do not treat the finding as established.';document.getElementById('checks').innerHTML=vals.map((v,i)=>'<div class="check"><span>Item '+(i+1)+'</span><b>'+v.toUpperCase()+'</b></div>').join('')};
-document.getElementById('reset').onclick=()=>location.reload();
-</script>
-</body></html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Research Lab | Anne Beth Andersen</title><link rel="stylesheet" href="style.css"><style>
+.lab{padding:76px 0 100px}.hero{max-width:900px}.hero h1{font-size:clamp(2.8rem,7vw,6rem);line-height:.95;letter-spacing:-.06em;margin:0}.hero h1 span{color:#aebbd0}.hero p{color:var(--muted);line-height:1.7}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:30px 0}.tab,.action{border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--text);padding:10px 13px;border-radius:9px;cursor:pointer;font-weight:750}.tab.active,.tab:hover,.action:hover{border-color:var(--accent);color:var(--accent)}.panel{border:1px solid var(--border);border-radius:18px;padding:26px;background:rgba(255,255,255,.03)}.imrad{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:20px 0}.part{min-height:120px;padding:18px;border:1px solid var(--border);border-radius:13px;cursor:pointer}.part.active{border-color:var(--accent);transform:translateY(-2px)}.part strong{font-size:1.7rem}.part small{display:block;color:var(--accent);font:800 .65rem ui-monospace,monospace;margin-top:10px}.content{margin-top:18px;padding:18px;border-left:3px solid var(--accent2);background:rgba(125,167,255,.05);line-height:1.7}.workflow{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:22px 0}.workflow span{padding:10px 12px;border:1px solid var(--border);border-radius:9px;font:700 .74rem ui-monospace,monospace}.workflow b{color:var(--accent)}.pico{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.field{padding:18px;border:1px solid var(--border);border-radius:13px}.field b{display:block;color:var(--accent);font-size:1.3rem;margin-bottom:8px}.field p{margin:0;color:var(--muted);font-size:.85rem}.notice{margin-top:24px;padding:16px;border:1px dashed var(--border);border-radius:12px;color:var(--muted);font-size:.82rem}@media(max-width:800px){.imrad,.pico{grid-template-columns:1fr 1fr}}@media(max-width:520px){.imrad,.pico{grid-template-columns:1fr}}
+</style></head><body><header class="site-header"><nav class="nav container"><a class="brand" href="index.html">AB<span>.</span></a><div class="nav-links"><a href="index.html">Profile</a><a href="engineering-map.html">Skills Map</a><a href="evidence-lab.html">Research</a><a href="security-lab.html">Security</a></div><a class="nav-cta" href="https://github.com/abla86" target="_blank" rel="noopener">GitHub ↗</a></nav></header>
+<main class="lab"><div class="container"><div class="hero"><p class="eyebrow">RESEARCH · INTERACTIVE LAB</p><h1>Research made <span>inspectable.</span></h1><p>This public demonstrator shows research structure and evidence-workflow concepts. It does not expose private research systems or claim that a small UI replaces formal appraisal.</p></div>
+<div class="tabs" role="tablist"><button class="tab active" data-tab="imrad">IMRaD</button><button class="tab" data-tab="pico">PICO</button><button class="tab" data-tab="workflow">Evidence workflow</button></div>
+<section class="panel" id="panel"></section>
+<div class="notice">Public demonstration only. Advanced research implementation remains separated from private flagship systems. Links to public repositories are provided where appropriate.</div>
+</div></main><script>
+const data={
+imrad:{title:'IMRaD structure',intro:'A compact interactive view of the standard research-report logic: the question, how it was investigated, what was found, and what the findings mean.',body:'<div class="imrad">'+[['I','Introduction','Problem, context, purpose and research question.'],['M','Methods','Design, sample/data, search strategy, analysis and ethics.'],['R','Results','Findings presented systematically without adding interpretation.'],['D','Discussion','Interpretation, limitations, implications and conclusion.']].map((x,i)=>'<button class="part '+(i===0?'active':'')+'" data-i="'+i+'"><strong>'+x[0]+'</strong><small>'+x[1]+'</small></button>').join('')+'</div><div class="content" id="imrad-content"></div>'},
+pico:{title:'PICO builder',intro:'Turn a clinical question into searchable concepts. This is a teaching/demonstration component, not a substitute for a documented search strategy.',body:'<div class="pico">'+[['P','Population','Who or what is the question about?'],['I','Intervention','What intervention/exposure is being considered?'],['C','Comparison','What is it compared with?'],['O','Outcome','Which measurable or meaningful outcome matters?']].map(x=>'<div class="field"><b>'+x[0]+'</b><strong>'+x[1]+'</strong><p>'+x[2]+'</p></div>').join('')+'</div><button class="action" id="build-pico" style="margin-top:20px">Generate example question</button><div class="content" id="pico-result">Select the builder to generate a transparent example.</div>'},
+workflow:{title:'Evidence workflow',intro:'A visible chain from question to evidence and appraisal. Each step can be expanded without exposing private implementation.',body:'<div class="workflow">'+['Question','Search','Screen','Appraise','Synthesize','Apply','Evaluate'].map((x,i)=>(i?'<b>→</b>':'')+'<span>'+x+'</span>').join('')+'</div><div class="content"><strong>Traceability principle:</strong> each transition should have a documented rationale, source, decision rule or output. The public portfolio demonstrates the concept; the advanced implementation belongs in the appropriate repository.</div><p style="margin-top:20px"><a href="https://github.com/abla86/complete-evidence-appraisal-tool" target="_blank" rel="noopener">Evidence Appraisal repository ↗</a></p>'}
+};
+function render(key){const d=data[key];document.getElementById('panel').innerHTML='<h2>'+d.title+'</h2><p>'+d.intro+'</p>'+d.body;if(key==='imrad')setupImrad();if(key==='pico')document.getElementById('build-pico').onclick=()=>document.getElementById('pico-result').textContent='Example: In home-dwelling adults with dementia (P), does cognitive stimulation (I), compared with usual care (C), improve cognitive functioning (O)?';}
+function setupImrad(){const text=[['Introduction','States the problem, context, rationale and research question.'],['Methods','Makes the procedure reproducible: design, eligibility, data sources, search strategy, analysis and ethical considerations.'],['Results','Reports the observed findings in a structured way, distinguishing results from interpretation.'],['Discussion','Interprets the findings, addresses strengths and limitations, and discusses implications.']];const out=document.getElementById('imrad-content');out.textContent=text[0][0]+': '+text[0][1];document.querySelectorAll('.part').forEach((b,i)=>b.onclick=()=>{document.querySelectorAll('.part').forEach(x=>x.classList.remove('active'));b.classList.add('active');out.textContent=text[i][0]+': '+text[i][1]});}
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');render(b.dataset.tab)});render('imrad');
+</script></body></html>
