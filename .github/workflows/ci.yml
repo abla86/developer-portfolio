@@ -24,14 +24,27 @@ jobs:
           test -f script.js
       - name: Validate JavaScript syntax
         run: node --check script.js
-      - name: Check HTML structure
+      - name: Check HTML structure and inline JavaScript
         run: |
           python - <<'PY'
           from pathlib import Path
+          import re
+          import subprocess
           for p in Path('.').glob('*.html'):
               s=p.read_text(encoding='utf-8')
               assert '<html' in s and '</html>' in s, f'Invalid HTML wrapper: {p}'
               assert '<head' in s and '</head>' in s, f'Missing head: {p}'
               assert '<body' in s and '</body>' in s, f'Missing body: {p}'
-          print('HTML structural checks passed')
+              for index, script in enumerate(re.findall(r'<script(?:\s[^>]*)?>(.*?)</script>', s, re.DOTALL | re.IGNORECASE)):
+                  if not script.strip():
+                      continue
+                  result = subprocess.run(
+                      ['node', '--check', '--input-type=module'],
+                      input=script,
+                      text=True,
+                      capture_output=True,
+                  )
+                  if result.returncode:
+                      raise SystemExit(f'{p}: inline script {index} failed syntax check\\n{result.stderr}')
+          print('HTML structure and inline JavaScript checks passed')
           PY
