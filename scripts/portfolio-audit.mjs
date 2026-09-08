@@ -1,6 +1,5 @@
 import fs from "node:fs";
 import path from "node:path";
-import { spawnSync } from "node:child_process";
 
 const root = process.cwd();
 const failures = [];
@@ -54,19 +53,6 @@ for (const file of htmlFiles) {
   }
 }
 
-// External targets are validated for identity, not merely HTTP 200.
-const externalChecks = [];
-for (const [name,url,markers] of externalChecks) {
-  try {
-    const response = await fetch(url,{redirect:"follow"});
-    const body=(await response.text()).slice(0,300000).toLowerCase();
-    if (!response.ok) failures.push(`${name}: HTTP ${response.status}`);
-    else if (!markers.some(m=>body.includes(m))) failures.push(`${name}: reachable but identity check failed`);
-    else console.log(`IDENTITY OK: ${name} -> ${response.url}`);
-  } catch(e) {
-    failures.push(`${name}: unavailable: ${e.message}`);
-  }
-}
 
 // Validate every proposed repair before writing anything.
 for (const item of plan) {
