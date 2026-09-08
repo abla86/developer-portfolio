@@ -35,13 +35,25 @@ jobs:
           grep -q "NetworkDefenderEngine" game-lab/index.html
           for f in game-lab/js/engines/*.js; do test -s "$f"; done
           echo "All Game Lab engines are present and wired"
-      - name: Check broken local references
+      - name: Check HTML structure and local references
         run: |
           python - <<'PY'
           from pathlib import Path
-          for f in Path("docs").glob("*.html"):
-              s=f.read_text(encoding="utf-8",errors="ignore")
+          import re
+          root=Path(".").resolve()
+          files={str(p.relative_to(root)).replace("\\","/") for p in root.rglob("*") if p.is_file()}
+          for p in root.rglob("*.html"):
+              rel=str(p.relative_to(root)).replace("\\","/")
+              s=p.read_text(encoding="utf-8",errors="ignore")
               if "<html" not in s.lower() or "</html>" not in s.lower():
-                  raise SystemExit(f"Malformed HTML: {f}")
-          print("HTML structure checks passed")
+                  raise SystemExit(f"Malformed HTML: {rel}")
+              for m in re.finditer(r'(?:href|src)=["\']([^"\'#?]+)',s,re.I):
+                  t=m.group(1)
+                  if t.startswith(("http:","https:","mailto:","tel:","data:","javascript:")): continue
+                  target=(p.parent/t).resolve()
+                  if target.is_dir(): target=target/"index.html"
+                  try: ok=target.is_file() and target.is_relative_to(root)
+                  except AttributeError: ok=target.is_file() and str(target).startswith(str(root))
+                  if not ok: raise SystemExit(f"Broken local reference: {rel} -> {t}")
+          print("HTML structure and local-reference checks passed")
           PY
