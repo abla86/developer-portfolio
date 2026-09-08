@@ -14,12 +14,13 @@ jobs:
       - uses: actions/checkout@v4
       - name: Check interactive HTML
         run: |
-          test -d docs
-          files=$(find docs -maxdepth 1 -type f -name '*.html' | wc -l)
+          test -f index.html
+          files=$(find . -maxdepth 1 -type f -name '*.html' | wc -l)
           test "$files" -gt 0
-          grep -Rqi '<script' docs
-          grep -Rqi '<button\|addEventListener\|onclick' docs
-          echo "Interactive HTML files: $files"
+          grep -Rqi '<script' --include='*.html' .
+          grep -Rqi '<button\|addEventListener\|onclick' --include='*.html' .
+          echo "Root interactive HTML files: $files"
+          test -f game-lab/index.html
       - name: Check broken local references
         run: |
           python - <<'PY'
