@@ -275,7 +275,8 @@ document.addEventListener("DOMContentLoaded", () => {
   updateMetrics();
   requestAnimationFrame(tick);
 });
-\n
+ 
+
 /* Live GitHub project atlas: public repos -> interactive portfolio surface. */
 (() => {
   const grid = document.getElementById('interactive-atlas-grid');
