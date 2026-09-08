@@ -12,7 +12,7 @@
 <body>
 <div class="wrap">
 <header class="top"><div><div class="eyebrow">AB ENGINEERING · INTERACTIVE GAME LAB</div><h1>PLAY THE SYSTEM.</h1><p>Games are the interface. Algorithms, state, protocols, data and automation are underneath.</p></div><a class="back" href="index.html">← Portfolio</a></header>
-<main class="grid">
+<section id="matrix-wolf" class="card" style="margin-bottom:16px"><div class="meta">00 · GENERATIVE</div><h2>Matrix Wolf</h2><p>Interactive code-rain field with a wolf signal.</p><canvas id="mw" width="1000" height="260" style="width:100%;border:1px solid #ffffff12;border-radius:12px;background:#020609"></canvas></section><main class="grid">
 <section class="card"><div class="meta">01 · AI / STATE</div><h2>Cyber Chess</h2><p>Mini state-driven board. Pick a square and watch the state update.</p><div id="chess" class="board"></div><div id="chessOut" class="output">Select a cell.</div></section>
 <section class="card"><div class="meta">02 · ALGORITHMS</div><h2>Connect 4 AI</h2><p>Play against a deterministic heuristic opponent.</p><div id="c4" class="board"></div><button id="c4go">DROP TOKEN</button><div id="c4Out" class="output"></div></section>
 <section class="card"><div class="meta">03 · NETWORK</div><h2>Packet Rush</h2><p>Visualise a packet moving through a simplified route.</p><div class="nodes"><span class="node">A</span><span class="packet"><i></i></span><span class="node">B</span><span class="packet"><i></i></span><span class="node">C</span></div><button id="ping">SEND PACKET</button><div id="pingOut" class="output">READY</div></section>
@@ -33,5 +33,5 @@ let score=100;const render=()=>{document.getElementById('pipeScore').textContent
 let threat=1;document.getElementById('detect').onclick=()=>{threat=Math.min(9,threat+2);out('defOut','Threat level: '+threat+' · detected event')};document.getElementById('contain').onclick=()=>{threat=Math.max(0,threat-3);out('defOut','Threat level: '+threat+' · containment applied')};
 document.getElementById('benchBtn').onclick=()=>{const t=performance.now();let x=0;for(let i=0;i<1500000;i++)x=Math.sin(i)*Math.cos(i);const ms=(performance.now()-t).toFixed(1);document.getElementById('bench').textContent=ms+' ms';out('benchOut','Repeatable client benchmark · checksum '+x.toFixed(3))};
 document.querySelectorAll('[data-cmd]').forEach(b=>b.onclick=()=>out('term','$ '+b.dataset.cmd+' → '+({help:'commands: help status trace',status:'CI: green · API: ready · nodes: 8',trace:'A → B → C → evidence'}[b.dataset.cmd])));
-</script>
+<script>const mw=document.getElementById("mw");if(mw){const q=mw.getContext("2d"),C="01狼ᚠᚢᚦ<>/";let d=Array(80).fill(0).map(()=>Math.random()*260);function M(){q.fillStyle="rgba(2,6,9,.18)";q.fillRect(0,0,1000,260);for(let i=0;i<80;i++){let y=d[i];q.fillStyle="rgba(80,220,170,.7)";q.font="14px monospace";q.fillText(C[(Math.random()*C.length)|0],i*13,y);d[i]+=5;if(d[i]>260)d[i]=-10}requestAnimationFrame(M)}M()}</script></script>
 </body></html>
