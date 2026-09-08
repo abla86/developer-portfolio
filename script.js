@@ -275,3 +275,65 @@ document.addEventListener("DOMContentLoaded", () => {
   updateMetrics();
   requestAnimationFrame(tick);
 });
+\n
+/* Live GitHub project atlas: public repos -> interactive portfolio surface. */
+(() => {
+  const grid = document.getElementById('interactive-atlas-grid');
+  const filter = document.getElementById('atlas-filter');
+  const refresh = document.getElementById('atlas-refresh');
+  if (!grid) return;
+
+  const demoMap = {
+    'developer-portfolio': 'index.html',
+    'kana-dojo': 'https://abla86.github.io/kana-dojo/',
+    'todo-app': 'https://abla86.github.io/todo-app/',
+    'advanced-javascript-counter': 'https://abla86.github.io/advanced-javascript-counter/',
+    'react-task-dashboard': 'https://abla86.github.io/react-task-dashboard/',
+    'ai-incident-command-center': 'https://abla86.github.io/ai-incident-command-center/',
+    'game-lab': 'game-lab.html',
+    'evidence-lab': 'evidence-lab.html',
+    'engineering-map': 'engineering-map.html'
+  };
+
+  const repoClass = r => {
+    const n=(r.name+' '+(r.description||'')).toLowerCase();
+    if (/evidence|research|health|clinical|care|medical|workforce/.test(n)) return 'research';
+    return 'engineering';
+  };
+  const candidate = r => {
+    const n=(r.name+' '+(r.description||'')).toLowerCase();
+    return !!demoMap[r.name] || /app|dashboard|game|lab|dojo|simulator|interactive|demo|calculator|counter|tool/.test(n);
+  };
+
+  let repos=[];
+  async function load() {
+    grid.innerHTML='<article class="project"><span class="status active">LOADING</span><h3>Reading GitHub…</h3><p>Loading public repositories from the current account.</p></article>';
+    try {
+      const res=await fetch('https://api.github.com/users/abla86/repos?per_page=100&sort=updated');
+      if(!res.ok) throw new Error('GitHub API '+res.status);
+      repos=(await res.json()).filter(r=>!r.private && !r.archived);
+      render();
+    } catch(e) {
+      grid.innerHTML='<article class="project"><span class="status">UNAVAILABLE</span><h3>GitHub data unavailable</h3><p>The portfolio itself remains usable. Open GitHub directly to inspect the repositories.</p><a class="button" href="https://github.com/abla86?tab=repositories" target="_blank" rel="noopener noreferrer">Open GitHub ↗</a></article>';
+    }
+  }
+  function render() {
+    const mode=filter?.value||'all';
+    const list=repos.filter(r=>mode==='all'||(mode==='interactive'?candidate(r):repoClass(r)===mode));
+    grid.innerHTML=list.map(r=>{
+      const demo=demoMap[r.name];
+      const tags=[r.language,...(r.topics||[])].filter(Boolean).slice(0,5);
+      return '<article class="project interactive-card">'+
+        '<div class="project-top"><span class="project-type">'+(repoClass(r)==='research'?'RESEARCH / HEALTHCARE':'ENGINEERING / SOFTWARE')+'</span><span class="status '+(demo?'active':'done')+'">'+(demo?'LIVE / INTERACTIVE':'PUBLIC SOURCE')+'</span></div>'+
+        '<h3>'+r.name.replace(/</g,'&lt;')+'</h3>'+
+        '<p>'+((r.description||'Public repository — inspect the implementation directly.').replace(/</g,'&lt;'))+'</p>'+
+        '<div class="tags">'+tags.map(t=>'<span>'+String(t).replace(/</g,'&lt;')+'</span>').join('')+'</div>'+
+        '<div class="project-links"><a href="'+r.html_url+'" target="_blank" rel="noopener noreferrer">Source ↗</a>'+
+        (demo?'<a href="'+demo+'" target="_blank" rel="noopener noreferrer">Try it ↗</a>':'')+
+        '</div></article>';
+    }).join('') || '<article class="project"><h3>No repositories match this filter.</h3></article>';
+  }
+  filter?.addEventListener('change',render);
+  refresh?.addEventListener('click',load);
+  load();
+})();
