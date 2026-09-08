@@ -21,6 +21,20 @@ jobs:
           grep -Rqi '<button\|addEventListener\|onclick' --include='*.html' .
           echo "Root interactive HTML files: $files"
           test -f game-lab/index.html
+      - name: Syntax-check JavaScript
+        run: |
+          mapfile -t jsfiles < <(find . -type f -name "*.js" -not -path "./node_modules/*")
+          test "${#jsfiles[@]}" -gt 0
+          for f in "${jsfiles[@]}"; do node --check "$f"; done
+          echo "JavaScript syntax checks passed: ${#jsfiles[@]}"
+      - name: Check interactive engine wiring
+        run: |
+          grep -q "CyberChessEngine" game-lab/index.html
+          grep -q "Connect4Engine" game-lab/index.html
+          grep -q "SqlDungeonEngine" game-lab/index.html
+          grep -q "NetworkDefenderEngine" game-lab/index.html
+          for f in game-lab/js/engines/*.js; do test -s "$f"; done
+          echo "All Game Lab engines are present and wired"
       - name: Check broken local references
         run: |
           python - <<'PY'
