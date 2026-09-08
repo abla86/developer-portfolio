@@ -295,6 +295,9 @@ document.addEventListener("DOMContentLoaded", () => {
     'engineering-map': 'engineering-map.html'
   };
 
+  
+  // App-focused portfolio: archived public apps remain visible because they are still inspectable code.
+  const appRepo = r => /app|dashboard|game|dojo|calculator|counter|tool|analyzer|engine|api/i.test(r.name+' '+(r.description||''));
   const repoClass = r => {
     const n=(r.name+' '+(r.description||'')).toLowerCase();
     if (/evidence|research|health|clinical|care|medical|workforce/.test(n)) return 'research';
@@ -311,7 +314,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       const res=await fetch('https://api.github.com/users/abla86/repos?per_page=100&sort=updated');
       if(!res.ok) throw new Error('GitHub API '+res.status);
-      repos=(await res.json()).filter(r=>!r.private && !r.archived);
+      repos=(await res.json()).filter(r=>!r.private && ( !r.archived || /app|dashboard|game|dojo|calculator|counter|tool|lab/i.test(r.name+' '+(r.description||''))));
       render();
     } catch(e) {
       grid.innerHTML='<article class="project"><span class="status">UNAVAILABLE</span><h3>GitHub data unavailable</h3><p>The portfolio itself remains usable. Open GitHub directly to inspect the repositories.</p><a class="button" href="https://github.com/abla86?tab=repositories" target="_blank" rel="noopener noreferrer">Open GitHub ↗</a></article>';
