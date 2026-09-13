@@ -20,6 +20,10 @@ jobs:
         run: |
           test -f index.html
           test -f projects.html
+          test -f stack.html
+          test -f engineering-map.html
+          test -f evidence-lab.html
+          test -f security-lab.html
           test -f style.css
           test -f script.js
       - name: Validate JavaScript syntax
@@ -30,7 +34,7 @@ jobs:
           from pathlib import Path
           import re
           import subprocess
-          for p in Path('.').glob('*.html'):
+          for p in Path('.').rglob('*.html'):
               s=p.read_text(encoding='utf-8')
               assert '<html' in s and '</html>' in s, f'Invalid HTML wrapper: {p}'
               assert '<head' in s and '</head>' in s, f'Missing head: {p}'
