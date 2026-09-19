@@ -286,7 +286,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const demoMap = {
     'developer-portfolio': 'index.html',
-    'kana-dojo': 'https://abla86.github.io/kana-dojo/',
     'todo-app': 'https://abla86.github.io/todo-app/',
     'advanced-javascript-counter': 'https://abla86.github.io/advanced-javascript-counter/',
     'react-task-dashboard': 'https://abla86.github.io/react-task-dashboard/',
