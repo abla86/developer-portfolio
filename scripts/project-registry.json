@@ -9,7 +9,7 @@
   },
   "projects": [
     {
-      "repo": "evidence-appraisal-tool",
+      "repo": "complete-evidence-appraisal-tool",
       "displayName": "EvidenceFlow",
       "tier": 1,
       "description": "Research-support platform for study classification, critical appraisal, evidence traceability and methodology-aware assessment.",
@@ -25,7 +25,14 @@
         "repo": "healthcare-workforce-sql",
         "role": "relational data modelling and T-SQL analysis"
       },
-      "extensibleDomains": ["healthcare", "offshore", "industrial", "maritime", "emergency", "other shift-based operations"]
+      "extensibleDomains": [
+        "healthcare",
+        "offshore",
+        "industrial",
+        "maritime",
+        "emergency",
+        "other shift-based operations"
+      ]
     },
     {
       "repo": "HealthTechDeviceApi",
@@ -50,7 +57,7 @@
       "verify": "README"
     },
     {
-      "repo": "healthcare-data-analyzer",
+      "repo": "healthtech-dashboard",
       "displayName": "HealthData Quality Lab",
       "tier": 2,
       "description": "Python data-quality and analysis pipeline for synthetic healthcare-related datasets.",
@@ -72,7 +79,7 @@
   "excluded": [
     {
       "repo": "shift-competence-planner",
-      "reason": "Superseded as a separate portfolio unit by workforce-competence-management; retain only as historical source where useful."
+      "reason": "Superseded as a separate portfolio unit by workforce-competence-management; retain only as historical source where useful. Now merged into workforce-competence-management/archive/shift-competence-planner; repo deleted."
     },
     {
       "repo": "small-projects-hub.html",

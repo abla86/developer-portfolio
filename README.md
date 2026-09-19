@@ -131,7 +131,7 @@ Repository: https://github.com/abla86/complete-evidence-appraisal-tool
 
 A reusable research-engineering core for document extraction, source search, evidence provenance and integration with evidence-appraisal applications.
 
-Repository: https://github.com/abla86/academic-research-engine
+Repository: https://github.com/abla86/complete-evidence-appraisal-tool/tree/main/archive/academic-research-engine
 
 ## Supporting projects
 

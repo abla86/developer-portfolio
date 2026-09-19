@@ -4,7 +4,7 @@
   "policy": "Only verified repository facts may be promoted to the portfolio.",
   "projects": [
     {
-      "repo": "evidence-appraisal-tool",
+      "repo": "complete-evidence-appraisal-tool",
       "displayName": "EvidenceFlow",
       "tier": 1,
       "description": "Research-support platform for study classification, critical appraisal, evidence traceability and methodology-aware assessment.",
@@ -178,8 +178,8 @@
       "verify": "README",
       "status": "verified-source",
       "source": {
-        "repo": "abla86/healthcare-data-analyzer",
-        "url": "https://github.com/abla86/healthcare-data-analyzer",
+        "repo": "abla86/healthtech-dashboard",
+        "url": "https://github.com/abla86/healthtech-dashboard/tree/main/archive/healthcare-data-analyzer",
         "defaultBranch": "main",
         "archived": false,
         "description": null,

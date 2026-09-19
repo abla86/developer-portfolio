@@ -290,7 +290,7 @@ document.addEventListener("DOMContentLoaded", () => {
     'todo-app': 'https://abla86.github.io/todo-app/',
     'advanced-javascript-counter': 'https://abla86.github.io/advanced-javascript-counter/',
     'react-task-dashboard': 'https://abla86.github.io/react-task-dashboard/',
-    'ai-incident-command-center': 'https://abla86.github.io/ai-incident-command-center/',
+    'ai-incident-command-center': 'https://github.com/abla86/wpww-warroom/tree/main/archive/ai-incident-command-center',
     'game-lab': 'game-lab.html',
     'evidence-lab': 'evidence-lab.html',
     'engineering-map': 'engineering-map.html'
