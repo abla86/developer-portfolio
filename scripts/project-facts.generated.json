@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-19T17:45:50.126Z",
+  "generatedAt": "2026-09-19T17:46:28.210Z",
   "source": "GitHub repository inspection",
   "policy": "Only verified repository facts may be promoted to the portfolio.",
   "projects": [
@@ -38,8 +38,8 @@
         "archived": false,
         "description": "Full-stack workforce and competence management system with React, ASP.NET Core, SQL Server, Docker and automated gap analysis.",
         "stars": 1,
-        "updatedAt": "2026-09-19T17:34:03Z",
-        "pushedAt": "2026-09-19T17:34:00Z",
+        "updatedAt": "2026-09-19T17:46:03Z",
+        "pushedAt": "2026-09-19T17:46:00Z",
         "languages": [
           "C#",
           "JavaScript",
