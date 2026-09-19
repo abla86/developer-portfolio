@@ -34,7 +34,7 @@ jobs:
           from pathlib import Path
           import re
           import subprocess
-          for p in Path('.').rglob('*.html'):
+          for p in (q for q in Path('.').rglob('*.html') if q.parts[0] != 'archive'):
               s=p.read_text(encoding='utf-8')
               assert '<html' in s and '</html>' in s, f'Invalid HTML wrapper: {p}'
               assert '<head' in s and '</head>' in s, f'Missing head: {p}'

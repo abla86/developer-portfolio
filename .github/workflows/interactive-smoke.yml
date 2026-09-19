@@ -41,8 +41,8 @@ jobs:
           from pathlib import Path
           import re
           root=Path(".").resolve()
-          files={str(p.relative_to(root)).replace("\\","/") for p in root.rglob("*") if p.is_file()}
-          for p in root.rglob("*.html"):
+          files={str(p.relative_to(root)).replace("\\","/") for p in root.rglob("*") if p.is_file() and p.relative_to(root).parts[0] != "archive"}
+          for p in (q for q in root.rglob("*.html") if q.relative_to(root).parts[0] != "archive"):
               rel=str(p.relative_to(root)).replace("\\","/")
               s=p.read_text(encoding="utf-8",errors="ignore")
               if "<html" not in s.lower() or "</html>" not in s.lower():

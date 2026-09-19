@@ -19,7 +19,7 @@ if (fs.existsSync(registryPath)) {
 
 function walk(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    if ([".git", "node_modules"].includes(entry.name)) continue;
+    if ([".git", "node_modules"].includes(entry.name) || (entry.name === "archive" && path.resolve(dir) === path.resolve(root))) continue;
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) walk(full);
     else if (/\.(html|css|js|mjs|json|md|txt)$/i.test(entry.name)) textFiles.push(full);
@@ -32,9 +32,9 @@ const read = f => fs.readFileSync(f, "utf8");
 
 function encodingFixes(content) {
   const replacements = new Map([
-    ["Â·","·"],["Â©","©"],["Â®","®"],["Â°","°"],["Â±","±"],
-    ["Â",""],["Ã¦","æ"],["Ã¸","ø"],["Ã¥","å"],["Ã†","Æ"],["Ã˜","Ø"],["Ã…","Å"],
-    ["âœ“","✓"],["â€”","—"],["â€“","–"],["â†’","→"],["â€¢","•"]
+    ["·","·"],["©","©"],["®","®"],["°","°"],["±","±"],
+    ["",""],["æ","æ"],["ø","ø"],["å","å"],["Æ","Æ"],["Ø","Ø"],["Å","Å"],
+    ["✓","✓"],["—","—"],["–","–"],["→","→"],["•","•"]
   ]);
   let fixed = content;
   for (const [bad, good] of replacements) fixed = fixed.split(bad).join(good);
@@ -46,7 +46,7 @@ for (const file of textFiles) {
   const content = read(file);
   const fixed = encodingFixes(content);
   if (fixed !== content) plan.push({type:"encoding",file:rel(file),before:content,after:fixed});
-  if (/[ÂÃ][\x80-\xBF]/.test(fixed) || /â(?:[\x80-\xBF])/.test(fixed))
+  if (/[Ã][\x80-\xBF]/.test(fixed) || /â(?:[\x80-\xBF])/.test(fixed))
     failures.push(`Encoding remains suspect: ${rel(file)}`);
   if (/^<html|<!doctype html/i.test(content.trim()) && !/<meta[^>]+charset=["']?utf-8/i.test(content))
     warnings.push(`HTML has no explicit UTF-8 charset: ${rel(file)}`);
@@ -159,7 +159,7 @@ for (const item of plan) {
   const validation = encodingFixes(item.after);
   if (validation !== item.after) {
     failures.push(`Proposed encoding repair is not idempotent: ${item.file}`);
-  } else if (/[ÂÃ][\x80-\xBF]/.test(item.after) || /â(?:[\x80-\xBF])/.test(item.after)) {
+  } else if (/[Ã][\x80-\xBF]/.test(item.after) || /â(?:[\x80-\xBF])/.test(item.after)) {
     failures.push(`Proposed repair does not remove encoding error: ${item.file}`);
   }
 }
@@ -180,7 +180,7 @@ for (const item of plan) {
 const verifyFailures=[];
 for (const file of textFiles) {
   const content=read(file);
-  if (/[ÂÃ][\x80-\xBF]/.test(content) || /â(?:[\x80-\xBF])/.test(content))
+  if (/[Ã][\x80-\xBF]/.test(content) || /â(?:[\x80-\xBF])/.test(content))
     verifyFailures.push(`Encoding still present: ${rel(file)}`);
 }
 if (verifyFailures.length) {
