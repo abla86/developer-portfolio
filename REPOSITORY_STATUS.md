@@ -18,10 +18,10 @@ This file is the portfolio control document. It separates repositories by portfo
 | `complete-evidence-appraisal-tool` | Research-support software | Implementation, scope, verification, methods boundaries, tests, CI/security |
 | `workforce-competence-management` | Full-stack workforce system | Frontend/backend, database, tests, Docker, CI/security, documented verification |
 | `HealthTechDeviceApi` | HealthTech backend/API | API implementation, validation, tests, containerisation and documentation |
-| `healthtech-dashboard` | Python/data project | Data processing, validation, tests and reproducible usage |
+| `HealthTechDeviceApi` (`archive/healthtech-dashboard`) | Python/data project | Data processing, validation, tests and reproducible usage |
 | `healthcare-workforce-sql` | Database project | Schema, queries, relationships and documented examples |
 | `workforce-competence-management` (archive/shift-competence-planner) | C#/.NET planning application | Domain rules, tests, usage and status |
-| `healthtech-dashboard` | HealthTech demonstration | Implemented frontend/backend scope, data boundaries and status |
+| `HealthTechDeviceApi` (`archive/healthtech-dashboard`) | HealthTech demonstration | Implemented frontend/backend scope, data boundaries and status |
 
 ## Tier 2 — Archived supporting engineering progression
 
