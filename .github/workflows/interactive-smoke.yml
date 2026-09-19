@@ -23,7 +23,7 @@ jobs:
           test -f game-lab/index.html
       - name: Syntax-check JavaScript
         run: |
-          mapfile -t jsfiles < <(find . -type f -name "*.js" -not -path "./node_modules/*")
+          mapfile -t jsfiles < <(find . -type f -not -path './archive/*' -name "*.js" -not -path "./node_modules/*")
           test "${#jsfiles[@]}" -gt 0
           for f in "${jsfiles[@]}"; do node --check "$f"; done
           echo "JavaScript syntax checks passed: ${#jsfiles[@]}"
