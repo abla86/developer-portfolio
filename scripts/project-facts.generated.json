@@ -178,8 +178,8 @@
       "verify": "README",
       "status": "verified-source",
       "source": {
-        "repo": "abla86/healthtech-dashboard",
-        "url": "https://github.com/abla86/healthtech-dashboard/tree/main/archive/healthcare-data-analyzer",
+        "repo": "abla86/HealthTechDeviceApi",
+        "url": "https://github.com/abla86/HealthTechDeviceApi/tree/main/archive/healthtech-dashboard/archive/healthcare-data-analyzer",
         "defaultBranch": "main",
         "archived": false,
         "description": null,
