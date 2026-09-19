@@ -5,66 +5,51 @@
 <meta name="description" content="AB — interactive engineering profile.">
 <title>AB · Interactive Engineering Profile</title>
 <style>
-:root{--bg:#050b12;--panel:#0b1420;--line:#203447;--text:#e8f0f7;--muted:#91a4b8;--accent:#70e0b1;--blue:#7da7ff}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 50% 18%,#122235 0,#07101a 38%,var(--bg) 72%);color:var(--text);font:15px/1.6 system-ui,-apple-system,Segoe UI,sans-serif;min-height:100vh}button,a{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}
-header{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:18px 28px;background:rgba(5,11,18,.72);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06)}.brand{font-size:1.4rem;font-weight:900;letter-spacing:-.06em}.brand span{color:var(--accent)}.top-links{display:flex;gap:8px}.top-links a{padding:8px 12px;border:1px solid var(--line);border-radius:9px;color:var(--muted)}.top-links a:hover{color:var(--accent);border-color:var(--accent)}
-main{max-width:1250px;margin:auto;padding:92px 22px 60px}.hero{text-align:center;padding:35px 0 10px}.eyebrow{font:800 .68rem ui-monospace,monospace;letter-spacing:.16em;color:var(--accent)}h1{font-size:clamp(3.2rem,9vw,7rem);line-height:.86;letter-spacing:-.075em;margin:15px 0}h1 span{color:var(--accent)}.hero p{max-width:650px;margin:22px auto;color:var(--muted)}
-.scene{position:relative;margin:30px auto 0;min-height:570px;border:1px solid rgba(112,224,177,.14);border-radius:28px;background:radial-gradient(circle at 50% 55%,rgba(112,224,177,.08),transparent 31%),linear-gradient(180deg,rgba(11,20,32,.78),rgba(5,11,18,.9));overflow:hidden}.scene canvas{position:absolute;inset:0;width:100%;height:100%}.tree{position:absolute;inset:0;display:grid;place-items:center}.tree svg{width:min(720px,90%);height:500px;overflow:visible}.trunk{stroke:#35516a;stroke-width:10;fill:none;stroke-linecap:round}.branch{stroke:#29455b;stroke-width:5;fill:none;stroke-linecap:round}.root{stroke:#29455b;stroke-width:4;fill:none;stroke-linecap:round}
-.node{fill:var(--panel);stroke:#345269;stroke-width:2;cursor:pointer;transition:.2s}.node:hover,.node.active{stroke:var(--accent);filter:drop-shadow(0 0 12px rgba(112,224,177,.25))}.node-text{fill:var(--text);font-size:13px;font-weight:800;text-anchor:middle;pointer-events:none}.core{fill:#10251f;stroke:var(--accent);stroke-width:3}.core-text{font-size:17px}
-.panel{position:absolute;right:22px;top:22px;width:min(330px,calc(100% - 44px));padding:20px;border:1px solid var(--line);border-radius:17px;background:rgba(5,11,18,.9);backdrop-filter:blur(12px);z-index:5}.panel h2{margin:4px 0 8px;font-size:1.3rem}.panel p{color:var(--muted);font-size:.86rem;margin:0}.panel .tags{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0}.tag{padding:5px 8px;border:1px solid var(--line);border-radius:999px;color:#c7d5e4;font-size:.67rem}.open{display:inline-block;margin-top:5px;padding:9px 12px;border-radius:9px;background:var(--accent);color:#06120c;font-weight:850}.hint{position:absolute;left:22px;bottom:20px;color:#71869b;font:600 .67rem ui-monospace,monospace;z-index:4}.signal{position:absolute;left:22px;top:22px;color:var(--accent);font:700 .65rem ui-monospace,monospace;z-index:4}.command{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin:18px 0}.command button{padding:9px 13px;border:1px solid var(--line);border-radius:9px;background:var(--panel);color:var(--text)}.command button:hover,.command button.active{border-color:var(--accent);color:var(--accent)}
-#about{max-width:760px;margin:30px auto 0;text-align:center;color:var(--muted)}footer{text-align:center;color:#62788e;padding:35px 0;font-size:.75rem}
-@media(max-width:760px){header{padding:14px 16px}.top-links a:nth-child(n+2){display:none}.scene{min-height:650px}.tree svg{height:560px}.panel{top:auto;bottom:18px}.hint{display:none}}
-@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+:root{--bg:#03070d;--ink:#e9f3ff;--muted:#8298ad;--glow:#70e0b1;--line:#183044}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:radial-gradient(circle at 50% 35%,#102336 0,#050b12 48%,#02050a 100%);color:var(--ink);font-family:system-ui,sans-serif}body{overflow-x:hidden}a{text-decoration:none;color:inherit}
+.top{position:fixed;z-index:30;top:0;left:0;right:0;display:flex;justify-content:space-between;padding:16px 22px;background:linear-gradient(#03070ddd,transparent);pointer-events:none}.top>*{pointer-events:auto}.brand{font-weight:950;font-size:1.4rem}.brand span{color:var(--glow)}.gh{border:1px solid #274157;border-radius:10px;padding:8px 12px;color:#a9bbcc;backdrop-filter:blur(8px)}
+main{min-height:100vh;display:grid;place-items:center;padding:70px 12px 30px}.world{position:relative;width:min(1200px,100%);height:min(850px,calc(100vh - 100px));min-height:650px;border-radius:34px;overflow:hidden;border:1px solid #142a3d;background:radial-gradient(circle at 50% 48%,#0c1d2a99,transparent 36%)}canvas{position:absolute;inset:0;width:100%;height:100%}
+.ygg{position:absolute;inset:0;display:grid;place-items:center}.ygg svg{width:min(760px,82vw);height:88%;overflow:visible}.trunk{stroke:#35546a;stroke-width:13;fill:none;stroke-linecap:round}.branch{stroke:#274458;stroke-width:6;fill:none;stroke-linecap:round}.root{stroke:#274458;stroke-width:4;fill:none;stroke-linecap:round}.node{cursor:pointer}.orb{fill:#07131d;stroke:#3b6078;stroke-width:2;transition:.2s}.node:hover .orb,.node.active .orb{stroke:var(--glow);stroke-width:4;filter:drop-shadow(0 0 16px #70e0b155)}.node text{fill:#cfe0ef;font-size:12px;font-weight:850;text-anchor:middle;pointer-events:none}.core .orb{fill:#0b211a;stroke:var(--glow);stroke-width:3}.core text{font-size:15px}
+#info{position:absolute;left:22px;bottom:22px;width:min(390px,calc(100% - 44px));padding:18px;border:1px solid #203b50;border-radius:18px;background:#03070de8;backdrop-filter:blur(16px);z-index:5;opacity:0;transform:translateY(12px);transition:.25s}.world.has-selection #info{opacity:1;transform:none}#info h2{margin:4px 0 5px;font-size:1.15rem}#info p{margin:0;color:var(--muted);font-size:.82rem}.links{display:flex;gap:7px;flex-wrap:wrap;margin-top:13px}.links a{padding:7px 9px;border:1px solid #28445a;border-radius:8px;color:#b9cada;font-size:.72rem}.links a:hover{border-color:var(--glow);color:var(--glow)}
+#legend{position:absolute;right:22px;bottom:22px;color:#60778b;font:600 .65rem ui-monospace,monospace;text-align:right}.pulse{position:absolute;left:50%;top:50%;width:180px;height:180px;transform:translate(-50%,-50%);border:1px solid #70e0b122;border-radius:50%;animation:pulse 3s infinite;pointer-events:none}@keyframes pulse{50%{transform:translate(-50%,-50%) scale(1.22);opacity:.25}100%{transform:translate(-50%,-50%) scale(1);opacity:.7}}
+@media(max-width:700px){main{padding:50px 6px 8px}.world{height:calc(100vh - 58px);min-height:620px}.ygg svg{width:96vw;height:92%}#legend{display:none}.top{padding:12px 14px}}
+@media(prefers-reduced-motion:reduce){.pulse{animation:none}.node .orb{transition:none}}
 </style>
 </head>
 <body>
-<header><a class="brand" href="index.html">AB<span>.</span></a><nav class="top-links"><a href="https://github.com/abla86" target="_blank" rel="noopener">GitHub ↗</a><a href="#about">About</a></nav></header>
-<main>
-<section class="hero"><div class="eyebrow">INTERACTIVE ENGINEERING PROFILE · 2026</div><h1>Build.<br><span>Explore.</span></h1><p>One interactive profile instead of a wall of portfolio pages. Click the branches to inspect the systems behind the work.</p></section>
-<div class="command" role="toolbar" aria-label="Profile controls"><button type="button" class="active" data-filter="all">All systems</button><button type="button" data-filter="platform">Platforms</button><button type="button" data-filter="engineering">Engineering</button><button type="button" data-filter="research">Research</button></div>
-<section class="scene" aria-label="Interactive engineering tree">
-<div class="signal">● SYSTEM MAP / LIVE LOCAL INTERACTION</div>
-<canvas id="fx" aria-hidden="true"></canvas>
-<div class="tree">
-<svg viewBox="0 0 720 500" role="img" aria-label="Interactive tree of engineering platforms">
-<path class="root" d="M360 405 C290 430 230 438 165 455 M360 405 C430 430 490 438 555 455 M360 405 C330 435 310 452 290 468 M360 405 C390 435 410 452 430 468"/>
-<path class="trunk" d="M360 405 C355 350 358 305 360 250 C360 200 350 155 360 105"/>
-<path class="branch" d="M360 300 C300 270 255 230 215 190 M360 300 C420 270 465 230 505 190 M360 235 C310 205 285 165 270 125 M360 235 C410 205 435 165 450 125 M360 175 C335 150 325 120 325 88 M360 175 C385 150 395 120 395 88"/>
-<g id="nodes">
-<g class="node" data-id="research" data-type="research" transform="translate(215 180)"><circle r="48"/><text class="node-text" y="4">RESEARCH</text></g>
-<g class="node" data-id="security" data-type="platform" transform="translate(505 180)"><circle r="48"/><text class="node-text" y="4">SECURITY</text></g>
-<g class="node" data-id="health" data-type="platform" transform="translate(270 115)"><circle r="48"/><text class="node-text" y="4">HEALTHTECH</text></g>
-<g class="node" data-id="cloud" data-type="platform" transform="translate(450 115)"><circle r="48"/><text class="node-text" y="4">CLOUD</text></g>
-<g class="node" data-id="books" data-type="platform" transform="translate(325 78)"><circle r="43"/><text class="node-text" y="4">BOOKS</text></g>
-<g class="node" data-id="workforce" data-type="platform" transform="translate(395 78)"><circle r="43"/><text class="node-text" y="4">VAKTPLAN</text></g>
-<g class="node" data-id="engineering" data-type="engineering" transform="translate(360 315)"><circle class="core" r="63"/><text class="node-text core-text" y="5">ENGINEERING</text></g>
-</g>
+<header class="top"><a class="brand" href="index.html">AB<span>.</span></a><a class="gh" href="https://github.com/abla86" target="_blank" rel="noopener">GitHub ↗</a></header>
+<main><section class="world" id="world">
+<canvas id="particles" aria-hidden="true"></canvas><div class="pulse"></div>
+<div class="ygg">
+<svg viewBox="0 0 760 680" role="img" aria-label="Interactive Yggdrasil engineering profile">
+<path class="root" d="M380 565C270 610 190 625 105 645M380 565C490 610 570 625 655 645M380 565C330 610 300 630 250 655M380 565C430 610 460 630 510 655"/>
+<path class="trunk" d="M380 570C370 500 380 440 378 380C375 310 390 250 380 110"/>
+<path class="branch" d="M380 455C315 420 250 370 185 305M380 455C445 420 510 370 575 305M378 360C320 325 275 275 245 215M378 360C438 325 485 275 515 215M380 275C350 240 335 200 335 150M380 275C410 240 425 200 425 150"/>
+<g class="node" data-id="typescript" transform="translate(185 300)"><circle class="orb" r="47"/><text y="4">TypeScript</text></g>
+<g class="node" data-id="python" transform="translate(575 300)"><circle class="orb" r="47"/><text y="4">Python</text></g>
+<g class="node" data-id="csharp" transform="translate(245 210)"><circle class="orb" r="47"/><text y="4">C# / .NET</text></g>
+<g class="node" data-id="javascript" transform="translate(515 210)"><circle class="orb" r="47"/><text y="4">JavaScript</text></g>
+<g class="node" data-id="sql" transform="translate(335 145)"><circle class="orb" r="43"/><text y="4">SQL</text></g>
+<g class="node" data-id="infra" transform="translate(425 145)"><circle class="orb" r="43"/><text y="4">IaC / YAML</text></g>
+<g class="node core" data-id="engineering" transform="translate(380 455)"><circle class="orb" r="65"/><text y="5">ENGINEERING</text></g>
 </svg></div>
-<div class="panel" id="panel" aria-live="polite"><div class="eyebrow" id="kind">SELECT A NODE</div><h2 id="title">Explore the profile</h2><p id="desc">Choose a system in the tree. The profile stays focused; details appear only when you ask for them.</p><div class="tags" id="tags"></div><a id="open" class="open" href="https://github.com/abla86" target="_blank" rel="noopener">Open GitHub ↗</a></div>
-<div class="hint">CLICK / TAP A NODE · FILTER WITH THE CONTROLS ABOVE</div>
-</section>
-<div id="about"><div class="eyebrow">THE RULE</div><p>No duplicate project walls. No obsolete repositories. The profile is the map; the canonical repositories are the implementation.</p></div>
-</main>
-<footer>AB · Build · test · document · validate</footer>
+<div id="info"><div id="kind" style="color:var(--glow);font:800 .62rem ui-monospace,monospace;letter-spacing:.14em"></div><h2 id="title"></h2><p id="desc"></p><div class="links" id="links"></div></div>
+<div id="legend">CLICK A LANGUAGE · FOLLOW THE EVIDENCE<br>YGGDRASIL / INTERACTIVE SKILL GRAPH</div>
+</section></main>
 <script>
-(()=>{const root=document.querySelector('main'),nodes=[...document.querySelectorAll('.node')],panel=document.getElementById('panel'),kind=document.getElementById('kind'),title=document.getElementById('title'),desc=document.getElementById('desc'),tags=document.getElementById('tags'),open=document.getElementById('open'),buttons=[...document.querySelectorAll('.command button')];
-const data={
-research:{kind:'RESEARCH PLATFORM',title:'Complete Evidence Appraisal Tool',desc:'Structured evidence appraisal with methodology-aware workflows, validation and transparent decisions.',tags:['React','TypeScript','.NET','AMSTAR-2','CASP'],url:'https://github.com/abla86/complete-evidence-appraisal-tool'},
-security:{kind:'SECURITY PLATFORM',title:'CodeSentinel',desc:'Repository verification, security checks, engineering evidence and GitHub automation.',tags:['GitHub','TypeScript','Security','CI'],url:'https://github.com/abla86/CodeSentinel'},
-health:{kind:'HEALTHTECH PLATFORM',title:'HealthTech Device API',desc:'Healthcare-device API engineering with synthetic data boundaries, validation, DICOM and security controls.',tags:['C#','.NET','DICOM','Docker'],url:'https://github.com/abla86/HealthTechDeviceApi'},
-cloud:{kind:'CLOUD / DEVOPS',title:'Azure Kubernetes Showcase',desc:'Cloud engineering across containers, Kubernetes, Azure, infrastructure and CI/CD.',tags:['Azure','Kubernetes','Docker','DevSecOps'],url:'https://github.com/abla86/azure-kubernetes-showcase'},
-books:{kind:'BOOK PLATFORM',title:'Book Forge',desc:'AI-assisted book creation with story structure, continuity, versioning and security boundaries.',tags:['React','TypeScript','AI','PostgreSQL'],url:'https://github.com/abla86/book-forge'},
-workforce:{kind:'WORKFORCE / VAKTPLAN',title:'Workforce Competence Management',desc:'Standalone workforce, competence, staffing and shift-planning platform.',tags:['C#','.NET','React','SQL Server'],url:'https://github.com/abla86/workforce-competence-management'},
-engineering:{kind:'ENGINEERING LAB',title:'AB Engineering Lab',desc:'Canonical home for reusable engineering experiments, EventForge and compact demonstrations.',tags:['Node.js','Python','FastAPI','Kafka'],url:'https://github.com/abla86/AB-Engineering-Lab'}
-};
-function select(id){const d=data[id];nodes.forEach(n=>n.classList.toggle('active',n.dataset.id===id));kind.textContent=d.kind;title.textContent=d.title;desc.textContent=d.desc;tags.innerHTML=d.tags.map(t=>'<span class="tag">'+t+'</span>').join('');open.href=d.url;open.textContent='Open platform ↗';}
-nodes.forEach(n=>n.addEventListener('click',()=>select(n.dataset.id)));
-buttons.forEach(b=>b.addEventListener('click',()=>{buttons.forEach(x=>x.classList.remove('active'));b.classList.add('active');const f=b.dataset.filter;nodes.forEach(n=>{n.style.opacity=f==='all'||n.dataset.type===f||n.dataset.id==='engineering'?'1':'.16'})}));
-const canvas=document.getElementById('fx'),ctx=canvas.getContext('2d');let w=0,h=0,pts=[];
-function resize(){const r=canvas.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);w=r.width;h=r.height;canvas.width=w*d;canvas.height=h*d;ctx.setTransform(d,0,0,d,0,0);pts=Array.from({length:34},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.18,vy:(Math.random()-.5)*.12,r:1+Math.random()*1.5}))}
-function tick(){ctx.clearRect(0,0,w,h);for(const p of pts){p.x=(p.x+p.vx+w)%w;p.y=(p.y+p.vy+h)%h;ctx.fillStyle='rgba(112,224,177,.28)';ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill()}requestAnimationFrame(tick)}
-resize();addEventListener('resize',resize);if(!matchMedia('(prefers-reduced-motion: reduce)').matches)requestAnimationFrame(tick);
-select('engineering');
-})();
+(()=>{const world=document.getElementById('world'),nodes=[...document.querySelectorAll('.node')],kind=document.getElementById('kind'),title=document.getElementById('title'),desc=document.getElementById('desc'),links=document.getElementById('links');
+const d={
+typescript:['LANGUAGE','TypeScript','Primary full-stack language across interactive products, GitHub tooling and application platforms.',[['CodeSentinel','https://github.com/abla86/CodeSentinel'],['Book Forge','https://github.com/abla86/book-forge'],['Evidence','https://github.com/abla86/complete-evidence-appraisal-tool']]],
+python:['LANGUAGE','Python','Automation, platform tooling, tracing and engineering laboratories.',[['AgentTrace','https://github.com/abla86/agenttrace'],['Engineering Lab','https://github.com/abla86/AB-Engineering-Lab']]],
+csharp:['LANGUAGE','C# / .NET','Backend APIs, domain logic, healthcare systems and workforce platforms.',[['HealthTech','https://github.com/abla86/HealthTechDeviceApi'],['Vaktplan','https://github.com/abla86/workforce-competence-management'],['Cloud','https://github.com/abla86/azure-kubernetes-showcase']]],
+javascript:['LANGUAGE','JavaScript','Browser interaction, frontend engineering and executable demonstrations.',[['Engineering Lab','https://github.com/abla86/AB-Engineering-Lab']]],
+sql:['DATA','SQL','Relational persistence and application data models.',[['Vaktplan','https://github.com/abla86/workforce-competence-management'],['Book Forge','https://github.com/abla86/book-forge']]],
+infra:['PLATFORM','IaC / YAML','Delivery, containers, Kubernetes, cloud infrastructure and automation.',[['Azure Kubernetes','https://github.com/abla86/azure-kubernetes-showcase'],['CodeSentinel','https://github.com/abla86/CodeSentinel']]],
+engineering:['CORE','Engineering','The central layer connecting languages to concrete, inspectable systems.',[['All canonical platforms','https://github.com/abla86?tab=repositories']]]};
+function select(id){const x=d[id];nodes.forEach(n=>n.classList.toggle('active',n.dataset.id===id));kind.textContent=x[0];title.textContent=x[1];desc.textContent=x[2];links.innerHTML=x[3].map(a=>'<a href="'+a[1]+'" target="_blank" rel="noopener">'+a[0]+' ↗</a>').join('');world.classList.add('has-selection')}
+nodes.forEach(n=>{n.addEventListener('click',()=>select(n.dataset.id));n.addEventListener('mouseenter',()=>select(n.dataset.id))});
+const c=document.getElementById('particles'),x=c.getContext('2d');let w,h,p=[];
+function resize(){const r=c.getBoundingClientRect(),q=Math.min(devicePixelRatio||1,2);w=r.width;h=r.height;c.width=w*q;c.height=h*q;x.setTransform(q,0,0,q,0,0);p=Array.from({length:55},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.22,vy:(Math.random()-.5)*.16,r:.5+Math.random()*1.4}))}
+function tick(){x.clearRect(0,0,w,h);for(const a of p){a.x=(a.x+a.vx+w)%w;a.y=(a.y+a.vy+h)%h;x.fillStyle='rgba(112,224,177,.3)';x.beginPath();x.arc(a.x,a.y,a.r,0,7);x.fill()}requestAnimationFrame(tick)}resize();addEventListener('resize',resize);if(!matchMedia('(prefers-reduced-motion: reduce)').matches)requestAnimationFrame(tick);select('engineering')})();
 </script>
 </body></html>
