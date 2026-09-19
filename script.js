@@ -286,9 +286,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const demoMap = {
     'developer-portfolio': 'index.html',
-    'todo-app': 'https://abla86.github.io/AB-Engineering-Lab/apps/03-applications/todo-app/',
-    'advanced-javascript-counter': 'https://abla86.github.io/AB-Engineering-Lab/apps/02-javascript/advanced-javascript-counter/',
-    'react-task-dashboard': 'https://abla86.github.io/AB-Engineering-Lab/apps/04-react/react-task-dashboard/',
+    'todo-app': 'https://github.com/abla86/AB-Engineering-Lab/tree/main/apps/03-applications/todo-app',
+    'advanced-javascript-counter': 'https://github.com/abla86/AB-Engineering-Lab/tree/main/apps/02-javascript/advanced-javascript-counter',
+    'react-task-dashboard': 'https://github.com/abla86/AB-Engineering-Lab/tree/main/apps/04-react/react-task-dashboard',
     'ai-incident-command-center': 'https://github.com/abla86/wpww-warroom/tree/main/archive/ai-incident-command-center',
     'game-lab': 'game-lab.html',
     'evidence-lab': 'evidence-lab.html',
