@@ -99,7 +99,9 @@ Repository: https://github.com/abla86/AB-Engineering-Lab/tree/main/projects/even
 
 ### 2. AgentTrace
 
-A technology core for AI-agent policy, provenance, audit and evaluation, with security-oriented prompt/tool controls and deterministic testing.
+A reusable AI-agent security and provenance core with policy evaluation, tool-manifest integrity, audit evidence and deterministic testing. The repository now includes an applied Google ADK + MCP integration: a Google ADK agent consumes MCP tools through a policy gateway backed by AgentTrace. The integration is deliberately synthetic and bounded; it demonstrates the architecture without claiming production deployment.
+
+**Google Cloud training applied here:** cloud security principles, cloud security risk management, secure enterprise AI agents, agent feedback workflows, and collaborative multi-agent systems with ADK/MCP.
 
 Repository: https://github.com/abla86/agenttrace
 
