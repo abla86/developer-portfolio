@@ -28,6 +28,20 @@ Interactive entry points:
 
 The intent is that **every public page has a meaningful interaction**, while the interaction remains technically bounded and does not replace the underlying source repositories.
 
+
+## Google Cloud learning evidence
+
+The following **Google Cloud completion badges** are part of the evidence behind the AgentTrace AI-agent/security work. They are completion badges, not Google Cloud professional certifications:
+
+- **Introduction to Security Principles in Cloud Computing** — completed September 22, 2026
+- **Strategies for Cloud Security Risk Management** — completed September 22, 2026
+- **Secure Enterprise AI Agents** — completed September 11, 2026
+- **AI Boost Bites: Your Personal Feedback Agent** — completed September 6, 2026
+- **Build Collaborative Multi-Agent Systems with ADK & MCP** — completed September 6, 2026
+
+These badges are treated as **training evidence**. The corresponding applied evidence is the AgentTrace Google ADK/MCP integration, including the MCP policy gateway, tool-capability checks, provenance controls and audit trail.
+
+
 ## Core engineering capabilities
 
 ### Software engineering
