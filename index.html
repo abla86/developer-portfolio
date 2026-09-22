@@ -14,12 +14,27 @@ main{min-height:100vh;display:grid;place-items:center;padding:70px 12px 30px}.wo
 #legend{position:absolute;right:22px;bottom:22px;color:#60778b;font:600 .65rem ui-monospace,monospace;text-align:right}.pulse{position:absolute;left:50%;top:50%;width:180px;height:180px;transform:translate(-50%,-50%);border:1px solid #70e0b122;border-radius:50%;animation:pulse 3s infinite;pointer-events:none}@keyframes pulse{50%{transform:translate(-50%,-50%) scale(1.22);opacity:.25}100%{transform:translate(-50%,-50%) scale(1);opacity:.7}}
 @media(max-width:700px){main{padding:50px 6px 8px}.world{height:calc(100vh - 58px);min-height:620px}.ygg svg{width:96vw;height:92%}#legend{display:none}.top{padding:12px 14px}}
 @media(prefers-reduced-motion:reduce){.pulse{animation:none}.node .orb{transition:none}}
+
+.badges{position:absolute;top:22px;left:22px;width:min(440px,calc(100% - 44px));z-index:6;display:grid;grid-template-columns:1fr 1fr;gap:8px;max-height:260px;overflow:auto;padding-right:3px}
+.badge-card{border:1px solid #28445a;border-radius:12px;padding:9px 10px;background:#06101ae8;backdrop-filter:blur(12px);box-shadow:0 0 18px #0006}
+.badge-card .badge-kind{font:800 .55rem ui-monospace,monospace;letter-spacing:.12em;color:var(--glow);text-transform:uppercase}
+.badge-card .badge-title{margin-top:4px;font-size:.68rem;line-height:1.25;font-weight:800;color:#d9e8f5}
+.badge-card .badge-date{margin-top:4px;font-size:.58rem;color:#7f98ac}
+.badge-card:hover{border-color:var(--glow);transform:translateY(-1px)}
+.badges-toggle{display:none}
+@media(max-width:700px){.badges{top:58px;left:10px;width:calc(100% - 20px);grid-template-columns:1fr;max-height:190px}.badge-card{padding:8px}.badge-card .badge-title{font-size:.64rem}}
 </style>
 </head>
 <body>
 <header class="top"><a class="brand" href="index.html">AB<span>.</span></a><a class="gh" href="https://github.com/abla86" target="_blank" rel="noopener">GitHub ↗</a></header>
 <main><section class="world" id="world">
-<canvas id="particles" aria-hidden="true"></canvas><div class="pulse"></div>
+<canvas id="particles" aria-hidden="true"></canvas><div class="pulse"></div><div class="badges" aria-label="Google Cloud completion badges">
+<div class="badge-card"><div class="badge-kind">Google Cloud · Completion Badge</div><div class="badge-title">Introduction to Security Principles in Cloud Computing</div><div class="badge-date">Completed Sep 22, 2026</div></div>
+<div class="badge-card"><div class="badge-kind">Google Cloud · Completion Badge</div><div class="badge-title">Strategies for Cloud Security Risk Management</div><div class="badge-date">Completed Sep 22, 2026</div></div>
+<div class="badge-card"><div class="badge-kind">Google Cloud · Completion Badge</div><div class="badge-title">Secure Enterprise AI Agents</div><div class="badge-date">Completed Sep 11, 2026</div></div>
+<div class="badge-card"><div class="badge-kind">Google Cloud · Completion Badge</div><div class="badge-title">AI Boost Bites: Your Personal Feedback Agent</div><div class="badge-date">Completed Sep 6, 2026</div></div>
+<div class="badge-card"><div class="badge-kind">Google Cloud · Completion Badge</div><div class="badge-title">Build Collaborative Multi-Agent Systems with ADK &amp; MCP</div><div class="badge-date">Completed Sep 6, 2026</div></div>
+</div>
 <div class="ygg">
 <svg viewBox="0 0 760 680" role="img" aria-label="Interactive Yggdrasil engineering profile">
 <path class="root" d="M380 565C270 610 190 625 105 645M380 565C490 610 570 625 655 645M380 565C330 610 300 630 250 655M380 565C430 610 460 630 510 655"/>
