@@ -2,7 +2,7 @@
 
 **Review date:** 2026-09-23
 
-This file is the portfolio control document. It separates active canonical systems from active projects under review and from archived/historical repositories.
+This file is the portfolio control document. It separates active canonical systems from active supporting repositories and from archived/historical repositories.
 
 ## Active canonical portfolio systems
 
@@ -35,24 +35,12 @@ The following remain outside the active portfolio narrative:
 - `intro`
 - `home-assistant-voice-pe`
 - `skills-getting-started-with-github-copilot`
-- `hello-html`
-- `javascript-counter`
-- `skills-introduction-to-git`
-- `digital-clock`
-- `calculator`
-- `task-manager`
-- `advanced-javascript-counter`
-- `todo-app`
-- `react-task-dashboard`
-- `healthcare-workforce-sql`
 - `HA-Desktop-Widget`
 - `cross-device-sdk`
 - `SafetyKatz`
-- `race-condition`
-- `local-deep-research`
 - `chrome-devtools-mcp`
 
-Deleted repositories must not be represented as active links or current project units.
+The legacy repositories deleted during the 2026-09-23 consolidation are documented in `AB-Engineering-Lab/docs/PORTFOLIO-VERIFICATION-STATUS.md` as deleted/consolidated history and must not be represented as current repositories or active links.
 
 ## Portfolio status vocabulary
 
