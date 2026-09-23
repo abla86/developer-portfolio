@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T16:21:04.941Z",
+  "generatedAt": "2026-09-23T17:02:24.516Z",
   "source": "GitHub repository inspection",
   "policy": "Only verified repository facts may be promoted to the portfolio. Archived and deleted repositories are excluded from active project registry entries.",
   "projects": [
@@ -105,8 +105,8 @@
         "archived": false,
         "description": "Full-stack workforce and competence management system with React, ASP.NET Core, SQL Server, Docker and automated gap analysis.",
         "stars": 1,
-        "updatedAt": "2026-09-19T17:46:03Z",
-        "pushedAt": "2026-09-19T17:46:00Z",
+        "updatedAt": "2026-09-23T16:32:12Z",
+        "pushedAt": "2026-09-23T16:34:42Z",
         "languages": [
           "C#",
           "JavaScript",
@@ -226,8 +226,8 @@
         "archived": false,
         "description": "Cloud engineering showcase with .NET, React TypeScript, Docker, Kubernetes, Azure, IaC, CI/CD, security and observability",
         "stars": 0,
-        "updatedAt": "2026-09-21T09:12:58Z",
-        "pushedAt": "2026-09-21T09:12:54Z",
+        "updatedAt": "2026-09-23T16:45:48Z",
+        "pushedAt": "2026-09-23T16:47:17Z",
         "languages": [
           "Python",
           "C#",
@@ -300,8 +300,8 @@
         "archived": false,
         "description": "GITHUB BRANCH AUDIT + SAFE DUPLICATE CLEANUP",
         "stars": 0,
-        "updatedAt": "2026-09-19T18:45:38Z",
-        "pushedAt": "2026-09-20T02:01:49Z",
+        "updatedAt": "2026-09-23T16:27:13Z",
+        "pushedAt": "2026-09-23T16:27:09Z",
         "languages": [
           "TypeScript",
           "Python",
@@ -360,9 +360,9 @@
         "defaultBranch": "master",
         "archived": false,
         "description": "Portable tracing, provenance, policy and audit layer for AI-agent systems",
-        "stars": 0,
-        "updatedAt": "2026-09-23T15:59:28Z",
-        "pushedAt": "2026-09-23T15:59:36Z",
+        "stars": 1,
+        "updatedAt": "2026-09-23T16:48:53Z",
+        "pushedAt": "2026-09-23T16:29:48Z",
         "languages": [
           "Python",
           "TypeScript",
@@ -426,8 +426,8 @@
         "archived": false,
         "description": "lage bok fra ide til komplett på 10 min",
         "stars": 0,
-        "updatedAt": "2026-09-23T16:02:59Z",
-        "pushedAt": "2026-09-23T16:02:55Z",
+        "updatedAt": "2026-09-23T16:47:58Z",
+        "pushedAt": "2026-09-23T16:47:54Z",
         "languages": [
           "TypeScript",
           "HTML",
