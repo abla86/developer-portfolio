@@ -1,79 +1,83 @@
 # Repository Portfolio Status
 
-**Review date:** 2026-08-26
+**Review date:** 2026-09-23
 
-This file is the portfolio control document. It separates repositories by portfolio importance and prevents learning projects from being presented as equivalent to the larger systems.
+This file is the portfolio control document. It separates active canonical systems from active projects under review and from archived/historical repositories.
 
-## Review order
+## Active canonical portfolio systems
 
-1. Featured / large projects — verify implementation, README, tests, CI, security and status before changing portfolio claims.
-2. Supporting engineering projects — verify README and evidence, then improve missing documentation.
-3. Learning / fundamentals — keep concise and label honestly; do not inflate them.
-4. Archived or unrelated repositories — exclude from the main portfolio narrative unless they provide relevant evidence.
-
-## Tier 1 — Featured projects
-
-| Repository | Portfolio role | Required evidence |
+| Repository | Portfolio role | Current evidence boundary |
 |---|---|---|
-| `complete-evidence-appraisal-tool` | Research-support software | Implementation, scope, verification, methods boundaries, tests, CI/security |
-| `workforce-competence-management` | Full-stack workforce system | Frontend/backend, database, tests, Docker, CI/security, documented verification |
-| `HealthTechDeviceApi` | HealthTech backend/API | API implementation, validation, tests, containerisation and documentation |
-| `HealthTechDeviceApi` (`archive/healthtech-dashboard`) | Python/data project | Data processing, validation, tests and reproducible usage |
-| `healthcare-workforce-sql` | Database project | Schema, queries, relationships and documented examples |
-| `workforce-competence-management` (archive/shift-competence-planner) | C#/.NET planning application | Domain rules, tests, usage and status |
-| `HealthTechDeviceApi` (`archive/healthtech-dashboard`) | HealthTech demonstration | Implemented frontend/backend scope, data boundaries and status |
+| `complete-evidence-appraisal-tool` | Research-support software | Implementation, methodology-aware instruments, traceability, tests, CI/security |
+| `workforce-competence-management` | Full-stack workforce system | React, ASP.NET Core/.NET 10, SQL Server, Docker, CI/security, documented verification |
+| `HealthTechDeviceApi` | HealthTech backend/platform | .NET API, synthetic device monitoring, DICOM-oriented work, tests, Docker, CI/security |
+| `azure-kubernetes-showcase` | Cloud/platform engineering | .NET, React, Docker, Kubernetes, Azure IaC, CI/CD, DevSecOps, observability |
+| `CodeSentinel` | GitHub/security engineering | GitHub-grounded verification, audit, security and portfolio registry |
+| `agenttrace` | AI-agent security/provenance | Tracing, policy, provenance, tool integrity, audit and bounded ADK/MCP integration |
+| `book-forge` | AI-assisted publishing platform | Full-stack book workflow, continuity, versioning, security and persistence |
+| `Autonomous-Multi-Agent-App-Builder` | Multi-agent engineering application | Autonomous software-engineering workflow, testing, telemetry and bounded security analysis |
 
-## Tier 2 — Archived supporting engineering progression
+## Active repositories under review
 
-- `react-task-dashboard`
-- `todo-app`
-- `task-manager`
-- `advanced-javascript-counter`
-- `FastAPI-Learning`
+- `wpww-warroom` — active controlled engineering laboratory; README explicitly says it is **not currently promoted as a flagship**.
+- `AB-Engineering-Lab` — active consolidation/lab repository and canonical home for smaller demonstrations.
+- `developer-portfolio` — active presentation/navigation repository.
+- `abla86` — active GitHub profile repository.
 
-These archived repositories demonstrate progression and specific engineering skills but should not compete visually with Tier 1.
+## Archived / historical repositories
 
-## Tier 3 — Archived fundamentals / learning
+The following remain outside the active portfolio narrative:
 
+- `eufy_security`
+- `documentation`
+- `core`
+- `device-tools`
+- `intro`
+- `home-assistant-voice-pe`
+- `skills-getting-started-with-github-copilot`
 - `hello-html`
 - `javascript-counter`
+- `skills-introduction-to-git`
 - `digital-clock`
 - `calculator`
+- `task-manager`
+- `advanced-javascript-counter`
+- `todo-app`
+- `react-task-dashboard`
+- `healthcare-workforce-sql`
+- `HA-Desktop-Widget`
+- `cross-device-sdk`
+- `SafetyKatz`
+- `race-condition`
+- `local-deep-research`
+- `chrome-devtools-mcp`
 
-These archived repositories are evidence of progression, not flagship projects.
+Deleted repositories must not be represented as active links or current project units.
 
-## Separate / external project identity
+## Portfolio status vocabulary
 
+Every promoted project uses one of these states:
 
-## Portfolio status rules
+- **Implemented / documented**
+- **Active development**
+- **Prototype**
+- **Learning / historical**
 
-Every project shown on the portfolio must use one of these states:
-
-- **Implemented / documented** — implementation exists and supporting documentation is available.
-- **Active development** — implementation exists but work is ongoing.
-- **Prototype** — working or partial prototype; not presented as production-ready or validated.
-- **Learning project** — primarily demonstrates learning/progression.
-
-Technical implementation must never be described as clinical, scientific or methodological validation unless independent evidence supports that claim.
+The portfolio must not describe a project as production-ready merely because it builds or has a polished interface. Clinical, scientific or methodological validity must remain separate from software correctness.
 
 ## Employer-facing standard
 
-A recruiter should be able to answer quickly:
+A technical reviewer should be able to identify:
 
-1. What problem does this project address?
-2. What was actually built?
-3. What technologies were actually used?
-4. What has been tested or otherwise verified?
-5. What is the current status?
-6. Where can the source and documentation be inspected?
+1. the problem;
+2. what was actually built;
+3. the technologies actually used;
+4. what was tested or otherwise verified;
+5. the current status;
+6. the source and documentation.
 
-The portfolio should prioritise those answers over decorative badges or unverified technology lists.
-
-## Contact
-
-- annebeth.andersen@gmail.com
-- scriptcore1@pm.me
+The portfolio should prioritise those facts over decorative badges or unverified technology claims.
 
 ## Education wording
 
-The correct wording is **Master's student in Knowledge-Based Practice**. This describes an ongoing master's education and must not be presented as a completed master's degree.
+The correct wording is **Master's student in Knowledge-Based Practice**. This describes ongoing education and must not be presented as a completed master's degree.
