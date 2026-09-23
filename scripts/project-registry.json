@@ -1,11 +1,11 @@
 {
-  "version": 7,
-  "policy": "Only verified repository facts may be promoted to the portfolio.",
+  "version": 8,
+  "policy": "Only verified repository facts may be promoted to the portfolio. Archived and deleted repositories are excluded from active project registry entries.",
   "projectLab": {
     "entry": "desktop-clock.html",
     "description": "Unified interactive showcase for smaller demonstrations and interface variants.",
     "extensible": true,
-    "principle": "Capabilities are represented once as reusable views/components where practical; supporting repositories remain source evidence rather than duplicate flagship products."
+    "principle": "Capabilities are represented once as reusable views/components where practical; canonical repositories remain the implementation evidence."
   },
   "projects": [
     {
@@ -19,75 +19,87 @@
       "repo": "workforce-competence-management",
       "displayName": "Vaktklar",
       "tier": 1,
-      "description": "Industry-flexible workforce and competence platform for shift planning, staffing coverage, competence management, audit, data exchange and decision support.",
-      "verify": "README",
-      "supportingDataLayer": {
-        "repo": "healthcare-workforce-sql",
-        "role": "relational data modelling and T-SQL analysis"
-      },
-      "extensibleDomains": [
-        "healthcare",
-        "offshore",
-        "industrial",
-        "maritime",
-        "emergency",
-        "other shift-based operations"
-      ]
+      "description": "Full-stack workforce and competence platform for shift planning, staffing coverage, competence management, audit, data exchange and decision support.",
+      "verify": "README"
     },
     {
       "repo": "HealthTechDeviceApi",
       "displayName": "HealthTech Platform",
       "tier": 1,
-      "description": "Healthcare-technology platform combining a .NET device API with monitoring capability over synthetic data.",
-      "verify": "README",
-      "supportingFrontend": "healthtech-dashboard"
+      "description": "Healthcare-technology platform combining a .NET device API with synthetic monitoring, DICOM-oriented work, security demonstrations and browser integration.",
+      "verify": "README"
     },
     {
       "repo": "azure-kubernetes-showcase",
       "displayName": "CloudForge",
       "tier": 1,
-      "description": "Cloud-engineering showcase covering .NET, React, Docker, Kubernetes, Azure IaC, CI/CD, DevSecOps, observability and controlled resilience.",
+      "description": "Cloud-engineering showcase covering .NET, React, Docker, Kubernetes, Azure IaC, CI/CD, DevSecOps and observability.",
       "verify": "README"
     },
     {
-      "repo": "wpww-warroom",
-      "displayName": "WPWW War Room",
+      "repo": "CodeSentinel",
+      "displayName": "CodeSentinel",
       "tier": 1,
-      "description": "Controlled security, resilience and observability laboratory for bounded engineering experiments.",
+      "description": "GitHub-grounded verification and security application combining project registry, audit and repository intelligence.",
+      "verify": "README"
+    },
+    {
+      "repo": "agenttrace",
+      "displayName": "AgentTrace",
+      "tier": 1,
+      "description": "Portable AI-agent tracing, provenance, policy, tool-integrity and audit layer with a bounded Google ADK/MCP integration.",
+      "verify": "README"
+    },
+    {
+      "repo": "book-forge",
+      "displayName": "BookForge AI",
+      "tier": 1,
+      "description": "AI-assisted book development platform covering planning, Story Bible, generation, continuity, versioning, assets and security controls.",
+      "verify": "README"
+    },
+    {
+      "repo": "Autonomous-Multi-Agent-App-Builder",
+      "displayName": "SwarmForge",
+      "tier": 1,
+      "description": "Multi-agent software-engineering application builder with coordinated agents, runtime telemetry, regression testing and bounded OWASP-oriented analysis.",
       "verify": "README"
     }
   ],
   "supportingRepositories": [
     {
-      "repo": "healthcare-workforce-sql",
-      "role": "Workforce data layer",
-      "reason": "Retained because it adds distinct relational database and T-SQL evidence without duplicating the workforce application."
+      "repo": "AB-Engineering-Lab",
+      "role": "Engineering lab and consolidation destination",
+      "reason": "Active repository for smaller demonstrations and reusable experiments; not a duplicate flagship product."
     },
     {
-      "repo": "healthtech-dashboard",
-      "role": "HealthTech monitoring frontend",
-      "reason": "Integrated into HealthTech Platform; not a separate flagship application."
+      "repo": "wpww-warroom",
+      "role": "Controlled operations/security laboratory",
+      "reason": "Active but explicitly under review and not currently promoted as a flagship."
     }
   ],
   "excluded": [
     {
-      "repo": "shift-competence-planner",
-      "reason": "Superseded as a separate portfolio unit by workforce-competence-management; retain only as historical source where useful. Now merged into workforce-competence-management/archive/shift-competence-planner; repo deleted."
-    },
-    {
-      "repo": "small-projects-hub.html",
-      "reason": "Removed. desktop-clock.html is the sole Interactive Project Lab entry."
-    },
-    {
-      "repo": "engineering-showcase.html",
-      "reason": "Removed. Replaced by the unified Interactive Project Lab."
-    },
-    {
-      "reason": "External, training, documentation or predecessor repositories remain outside promoted project units unless independently verified as original work."
+      "repo": "healthcare-workforce-sql",
+      "reason": "Archived; historical workforce SQL evidence retained outside the active registry."
     },
     {
       "repo": "healthtech-dashboard",
-      "reason": "Merged into HealthTechDeviceApi/archive/healthtech-dashboard; implementation history only."
+      "reason": "Merged into HealthTechDeviceApi/archive/healthtech-dashboard; historical implementation only."
+    },
+    {
+      "repo": "shift-competence-planner",
+      "reason": "Merged into workforce-competence-management/archive/shift-competence-planner and repository deleted."
+    },
+    {
+      "repo": "small-projects-hub.html",
+      "reason": "Removed; desktop-clock.html is the sole Interactive Project Lab entry."
+    },
+    {
+      "repo": "engineering-showcase.html",
+      "reason": "Removed; replaced by the unified Interactive Project Lab."
+    },
+    {
+      "reason": "Archived, training, documentation and predecessor repositories remain outside promoted project units unless independently verified as active original work."
     }
   ]
 }
