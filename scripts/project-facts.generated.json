@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-23T16:07:55.775Z",
+  "generatedAt": "2026-09-23T16:19:45.915Z",
   "source": "GitHub repository inspection",
-  "policy": "Only verified repository facts may be promoted to the portfolio.",
+  "policy": "Only verified repository facts may be promoted to the portfolio. Archived and deleted repositories are excluded from active project registry entries.",
   "projects": [
     {
       "repo": "complete-evidence-appraisal-tool",
@@ -95,20 +95,8 @@
       "repo": "workforce-competence-management",
       "displayName": "Vaktklar",
       "tier": 1,
-      "description": "Industry-flexible workforce and competence platform for shift planning, staffing coverage, competence management, audit, data exchange and decision support.",
+      "description": "Full-stack workforce and competence platform for shift planning, staffing coverage, competence management, audit, data exchange and decision support.",
       "verify": "README",
-      "supportingDataLayer": {
-        "repo": "healthcare-workforce-sql",
-        "role": "relational data modelling and T-SQL analysis"
-      },
-      "extensibleDomains": [
-        "healthcare",
-        "offshore",
-        "industrial",
-        "maritime",
-        "emergency",
-        "other shift-based operations"
-      ],
       "status": "verified-source",
       "source": {
         "repo": "abla86/workforce-competence-management",
@@ -164,9 +152,8 @@
       "repo": "HealthTechDeviceApi",
       "displayName": "HealthTech Platform",
       "tier": 1,
-      "description": "Healthcare-technology platform combining a .NET device API with monitoring capability over synthetic data.",
+      "description": "Healthcare-technology platform combining a .NET device API with synthetic monitoring, DICOM-oriented work, security demonstrations and browser integration.",
       "verify": "README",
-      "supportingFrontend": "healthtech-dashboard",
       "status": "verified-source",
       "source": {
         "repo": "abla86/HealthTechDeviceApi",
@@ -229,7 +216,7 @@
       "repo": "azure-kubernetes-showcase",
       "displayName": "CloudForge",
       "tier": 1,
-      "description": "Cloud-engineering showcase covering .NET, React, Docker, Kubernetes, Azure IaC, CI/CD, DevSecOps, observability and controlled resilience.",
+      "description": "Cloud-engineering showcase covering .NET, React, Docker, Kubernetes, Azure IaC, CI/CD, DevSecOps and observability.",
       "verify": "README",
       "status": "verified-source",
       "source": {
@@ -300,101 +287,254 @@
       }
     },
     {
-      "repo": "wpww-warroom",
-      "displayName": "WPWW War Room",
+      "repo": "CodeSentinel",
+      "displayName": "CodeSentinel",
       "tier": 1,
-      "description": "Controlled security, resilience and observability laboratory for bounded engineering experiments.",
+      "description": "GitHub-grounded verification and security application combining project registry, audit and repository intelligence.",
       "verify": "README",
       "status": "verified-source",
       "source": {
-        "repo": "abla86/wpww-warroom",
-        "url": "https://github.com/abla86/wpww-warroom",
+        "repo": "abla86/CodeSentinel",
+        "url": "https://github.com/abla86/CodeSentinel",
         "defaultBranch": "main",
         "archived": false,
-        "description": "Live operations and research lab for controlled security and observability experiments",
+        "description": "GITHUB BRANCH AUDIT + SAFE DUPLICATE CLEANUP",
         "stars": 0,
-        "updatedAt": "2026-09-19T17:06:59Z",
-        "pushedAt": "2026-09-19T17:06:41Z",
+        "updatedAt": "2026-09-19T18:45:38Z",
+        "pushedAt": "2026-09-20T02:01:49Z",
         "languages": [
           "TypeScript",
           "Python",
           "HTML",
           "JavaScript",
-          "Shell",
-          "Dockerfile",
-          "Batchfile",
           "CSS",
           "PowerShell",
-          "Makefile"
+          "Dockerfile"
         ],
         "detectedTechnology": [
           "TypeScript",
           "Python",
           "HTML",
           "JavaScript",
-          "Shell",
-          "Dockerfile",
-          "Batchfile",
           "CSS",
           "PowerShell",
-          "Makefile",
+          "Dockerfile",
           "Node.js",
-          "Docker",
           "GitHub Actions"
         ],
         "files": [
           ".env.example",
           ".github",
           ".gitignore",
-          "Dockerfile",
-          "Makefile",
+          ".semgrepignore",
           "README.md",
           "SECURITY.md",
           "SKILL.md",
           "archive",
-          "config",
-          "docker-compose.yml",
+          "assets",
+          "bun.lock",
           "docs",
-          "evolution-attacker",
-          "health.js",
-          "lab",
-          "network-sniffer",
+          "github-app",
+          "index.html",
+          "metadata.json",
           "package.json",
-          "plugins",
-          "public",
-          "reports",
-          "security-radar",
-          "server.js",
-          "tests",
-          "tools",
-          "user_files",
-          "verify_all.py",
-          "wpww.py",
-          "wpww_app.py"
+          "scripts",
+          "server.ts",
+          "src",
+          "tsconfig.json",
+          "vite.config.ts"
         ],
-        "readme": "# WPWW War Room\n\nStandalone live operations and research lab for controlled security, resilience, observability and verification experiments.\n\n## Portfolio status\n\n**Under review — not currently promoted as a flagship portfolio project.** The repository is a private, controlled engineering laboratory. Its portfolio position will be reconsidered after the implementation and verification evidence are strong enough to support public flagship presentation.\n\n## Core\n\nWPWW provides one local control plane for:\n\n- live/DEMO modes\n- Mission Control feature flags\n- Security Radar state\n- controlled simulation\n- alerts with cooldown\n- incident history\n- local lockdown/reset state\n- event replay\n- report generation\n- Auto-Heal runtime repair\n- Evolution Lab\n- module/plugin inventory\n- deterministic E2E verification\n- GitHub Actions CI\n\nUnavailable upstream services are shown as `UNKNOWN`, `DOWN` or `OFFLINE`. WPWW does not turn a container build into a claim of production health.\n\n## Research Lab\n\nThe repository includes an extensible lab contract for manually adding software, databases, telemetry systems and analysis tools.\n\nExperiment modes:\n\n- `single`\n- `pairwise`\n- `matrix`\n- `pipeline`\n\nEvery participant is validated as `wpww-local`. A plugin cannot turn the experiment engine into an arbitrary remote-target runner.\n\n## Database matrix\n\nAvailable as opt-in Docker profiles:\n\n- PostgreSQL\n- MySQL\n- MariaDB\n- MongoDB\n- Redis\n- SQLite lab volume\n\nThese are not started by the default WPWW command.\n\n## Tool matrix\n\nThe lab manifest contains opt-in adapters for established tools including:\n\n- OWASP ZAP\n- Semgrep\n- Trivy\n- Gitleaks\n- Playwright\n- pytest\n- Prometheus\n- Grafana\n- OpenTelemetry\n- Loki\n- Jaeger\n\nA manifest entry does not mean the external product is installed. Disabled adapters are explicitly reported as not installed until their entrypoint exists.\n\n## Evolution Lab\n\n`evolution-attacker/` is a bounded adaptive experiment against WPWW's own fixed local scenarios. The agent uses exploration/learning to choose among controlled observations, records latency/reward/state, and writes a forensic log. It does not accept arbitrary targets.\n\nRun:\n\n```powershell\ndocker compose --profile evolution up --build\n```\n\n## Optional profiles\n\n```powershell\ndocker compose --profile telemetry up --build\n\ndocker compose --profile simulation up --build\ndocker compose --profile evolution up --build\n```\n\nCombine profiles:\n\n```powershell\ndocker compose --profile telemetry --profile simulation --profile evolution up --build\n```\n\n## Local dashboard\n\n```powershell\ndocker compose up --build -d\n```\n\nOpen `http://localhost:8080`.\n\n## Reports\n\nThe Research Lab report contract supports:\n\n- JSON\n- CSV\n- HTML\n\nPDF is reserved for the report adapter layer and should only be marked available when the PDF generator is actually installed and tested in CI.\n\n## Security and secrets\n\nSecrets are never committed to the repository. Webhook URLs and signature secrets are supplied through environment variables or external secret stores. The signature module uses a secret outside source control.\n\n## CI\n\n`.github/workflows/ci.yml` validates source syntax, runtime-state repair, module inventory, required files, Docker startup, `/healthz`, the full verification suite and Mission Control checks. Failures collect container diagnostics before teardown.\n\n## Extension workflow\n\n1. Add the plugin definition to `lab/plugin-manifest.json`.\n2. Add its implementation under the declared entrypoint.\n3. Mark it `enabled: false` until the implementation is present and tested.\n4. Add its result mapping to the common experiment/report schema.\n5. Enable it only after the corresponding smoke/E2E checks are green.\n\n## Safety boundary\n\nWPWW is designed as a local controlled laboratory. Red-side modules are scenario-driven and bounded to WPWW-owned endpoints. Blue-side modules observe, detect, rate-limit, quarantine or report within the same controlled lab. No component is intended to scan, attack or interfere with arbitrary external systems.\n\n## Change-control audit\n\nThe repository uses an auditable change-control record. Material changes must be traceable to an approved scope, the resulting Git diff, and verification evidence.\n"
+        "readme": "# CodeSentinel\n\nCodeSentinel is a GitHub-grounded portfolio registry and verification application. It combines a React/Vite frontend with a Node/Express server and verification-oriented project, security, audit-log, and portfolio views.\n\n## Current stack\n\n- React 19\n- TypeScript 5.8\n- Vite 6\n- Node.js / Express 4\n- esbuild\n- Tailwind CSS 4\n- Google GenAI integration\n\nThe exact dependency versions and scripts are defined in `package.json`. This README does not replace the lockfile or dependency manifest.\n\n## Main capabilities\n\n- Portfolio/project registry\n- GitHub-grounded project information\n- Verification and audit-log views\n- Security-layer dashboard\n- Project detail and search views\n- Authentication-related UI\n- Server-side API integration\n- Environment configuration through `.env.example`\n\n## Development\n\nInstall dependencies using the repository's package manager and lockfile, then run:\n\n```text\nnpm run dev\n```\n\nProduction build:\n\n```text\nnpm run build\nnpm start\n```\n\nTypeScript check:\n\n```text\nnpm run lint\n```\n\n## Evidence and verification principle\n\nCodeSentinel should distinguish clearly between:\n\n1. information retrieved from GitHub;\n2. information verified by an executable check;\n3. information supplied by a project registry;\n4. information generated or summarized by AI.\n\nAn AI-generated statement must not be presented as independently verified evidence.\n\n## Security\n\n**Security correction:** repository code contains no committed demo passwords. Local demo accounts must be injected through `CODE_SENTINEL_DEMO_USERS_JSON`; production requires an explicit `SESSION_SECRET`. Self-registration creates a guest account unless an authenticated lead engineer provisions another role.\n\nSee [SECURITY.md](SECURITY.md).\n\nSecurity and repository-governance configuration is also documented in [docs/REPOSITORY-GOVERNANCE.md](docs/REPOSITORY-GOVERNANCE.md).\n\n## Repository integrity\n\nExisting functionality, historical components, and legacy material are retained unless there is a demonstrated technical reason to change or remove them. Changes should be additive or narrowly scoped whenever possible.\n\n## Status\n\nThis repository is an active development project. Build, test, security, and verification claims should be based on the current repository state and CI results rather than inferred from documentation alone.\n"
+      }
+    },
+    {
+      "repo": "agenttrace",
+      "displayName": "AgentTrace",
+      "tier": 1,
+      "description": "Portable AI-agent tracing, provenance, policy, tool-integrity and audit layer with a bounded Google ADK/MCP integration.",
+      "verify": "README",
+      "status": "verified-source",
+      "source": {
+        "repo": "abla86/agenttrace",
+        "url": "https://github.com/abla86/agenttrace",
+        "defaultBranch": "master",
+        "archived": false,
+        "description": "Portable tracing, provenance, policy and audit layer for AI-agent systems",
+        "stars": 0,
+        "updatedAt": "2026-09-23T15:59:28Z",
+        "pushedAt": "2026-09-23T15:59:36Z",
+        "languages": [
+          "Python",
+          "TypeScript",
+          "HTML",
+          "GLSL",
+          "Go Template",
+          "Dockerfile",
+          "HCL"
+        ],
+        "detectedTechnology": [
+          "Python",
+          "TypeScript",
+          "HTML",
+          "GLSL",
+          "Go Template",
+          "Dockerfile",
+          "HCL",
+          "Docker",
+          "GitHub Actions"
+        ],
+        "files": [
+          ".dockerignore",
+          ".editorconfig",
+          ".github",
+          ".gitignore",
+          "Dockerfile",
+          "LICENSE",
+          "README.md",
+          "SECURITY.md",
+          "SKILL.md",
+          "agenttrace",
+          "agenttrace_audit.db",
+          "charts",
+          "core_integration",
+          "deploy",
+          "docs",
+          "examples",
+          "games",
+          "promptguard",
+          "py.typed",
+          "pyproject.toml",
+          "requirements-dev.txt",
+          "requirements.txt",
+          "security",
+          "tests"
+        ],
+        "readme": "# AgentTrace\n\n**A portable tracing, provenance, policy and audit layer for AI-agent systems.**\n\nAgentTrace is designed to sit beside an existing agent application and make its security-relevant decisions observable, reproducible and auditable. The core API does not require the War-Room UI.\n\n## What it provides\n\n- **Traceable state** — typed nodes with deterministic content hashes and parent relationships.\n- **Provenance / taint** — explicit source labels such as user intent, untrusted RAG, tool output and internal secrets.\n- **Policy evaluation** — phase- and capability-aware ALLOW/BLOCK decisions.\n- **Tool integrity** — manifest registration and fingerprint/Merkle evidence.\n- **Bounded simulation** — attack scenarios are inert test data; payloads are not executed.\n- **Runtime gateway** — optional local HTTP interception and audit surface.\n- **War-Room** — optional visual control and simulation surface built on the same event/state model.\n- **Google ADK + MCP integration example** — an applied interoperability boundary that puts AgentTrace policy and audit controls around MCP tools consumed by a Google ADK agent.\n\n## Install\n\nCore:\n\n```bash\npip install agenttrace\n```\n\nOptional HTTP tooling:\n\n```bash\npip install \"agenttrace[web]\"\n```\n\nDevelopment:\n\n```bash\npip install \"agenttrace[dev]\"\npytest -q\nruff check .\n```\n\nGoogle ADK + MCP example:\n\n```bash\npip install \"agenttrace[google-adk-mcp]\"\n```\n\n## Minimal integration\n\n```python\nfrom agenttrace import EvaluationLab, ActionCapability, AgentPhase, TaintLabel\n\nlab = EvaluationLab()\n\nlab.add_node(\n    \"user-1\",\n    TaintLabel.USER_INTENT,\n    \"read the requested record\",\n)\n\nresult = lab.evaluate(\n    \"example\",\n    AgentPhase.EXECUTION,\n    ActionCapability.READ,\n    [\"user-1\"],\n)\n\nprint(result.decisions[0].decision)\nprint(lab.audit_root())\n```\n\nFor applications that want a lower-level or explicitly named integration surface:\n\n```python\nfrom agenttrace.api import TraceNode, PolicyEngine, AuditLog\n```\n\n## Google ADK + MCP applied integration\n\nThe repository now contains a concrete integration under:\n\n`examples/google_adk_mcp/`\n\n```text\nGoogle ADK agent\n      |\n      | McpToolset / Streamable HTTP\n      v\nMCP policy gateway\n      |\n      v\nAgentTrace\n  |       |       |\nTrace   Policy   Audit\n```\n\nThe ADK agent discovers the MCP tools through `McpToolset`. The MCP gateway\ndoes not execute a privileged operation until AgentTrace has evaluated the\ntool manifest, capability and provenance. The example uses synthetic data and\ndoes not contact external systems.\n\nRun the gateway:\n\n```bash\npython examples/google_adk_mcp/policy_server.py\n```\n\nThe ADK client is defined in:\n\n```\nexamples/google_adk_mcp/adk_agent.py\n```\n\nThis example is intentionally an adapter rather than a fork of the core. The\nAgentTrace package remains usable without Google ADK or MCP.\n\n## Architecture\n\n```text\nExisting agent / application\n            |\n            v\n       AgentTrace core\n     +------+-------+------+\n     |      |       |      |\n   Trace  Policy  Audit  Integrity\n     |      |       |      |\n     +------+-------+------+\n            |\n       optional adapters\n       /       |        \\\n    MCP     HTTP    PromptGuard\n     |\n Google ADK / other MCP hosts\n```\n\nThe important boundary is deliberate: **the core does not depend on the War-Room UI or Google ADK**. ADK/MCP support is an optional interoperability layer.\n\n## Safety and scope\n\nAgentTrace is an evaluation and observability component, not a universal security guarantee. Detection, lexical similarity, taint labels and integrity fingerprints have explicit limits. Generated attack material is treated as inert simulation data.\n\nThe system does not silently rewrite its own source code or deploy production security changes.\n\nThe Google ADK/MCP example is a local synthetic demonstration. Production use would require authenticated identities, secret management, network controls, observability and deployment-specific security testing.\n\n## Reproducibility\n\nSecurity decisions and bounded scenario generation are designed to be reproducible. Hashes use stable canonical representations. Performance claims are not made without benchmark evidence.\n\n## Package design\n\nThe intended dependency direction is:\n\n```text\nagenttrace core\n   ^\n   |\nadapters / integrations\n   ^\n   |\napplications such as War-Room or ADK agents\n```\n\nThis keeps the reusable engine independent from presentation and vendor-specific agent runtimes.\n\n## Status\n\nThe project is under active development. The public package API is intentionally small; internal modules may evolve without being treated as stable integration points.\n\n## License\n\nMIT\n\n## Safety and verification\n\nAgentTrace is deterministic by design. Public demonstrations should use synthetic traces and must not imply that external tools, systems, or production agents were contacted.\n"
+      }
+    },
+    {
+      "repo": "book-forge",
+      "displayName": "BookForge AI",
+      "tier": 1,
+      "description": "AI-assisted book development platform covering planning, Story Bible, generation, continuity, versioning, assets and security controls.",
+      "verify": "README",
+      "status": "verified-source",
+      "source": {
+        "repo": "abla86/book-forge",
+        "url": "https://github.com/abla86/book-forge",
+        "defaultBranch": "main",
+        "archived": false,
+        "description": "lage bok fra ide til komplett på 10 min",
+        "stars": 0,
+        "updatedAt": "2026-09-23T16:02:59Z",
+        "pushedAt": "2026-09-23T16:02:55Z",
+        "languages": [
+          "TypeScript",
+          "HTML",
+          "CSS"
+        ],
+        "detectedTechnology": [
+          "TypeScript",
+          "HTML",
+          "CSS",
+          "Node.js",
+          "GitHub Actions"
+        ],
+        "files": [
+          ".env.example",
+          ".github",
+          ".gitignore",
+          "README.md",
+          "SECURITY.md",
+          "apps",
+          "archive",
+          "assets",
+          "bun.lock",
+          "docs",
+          "index.html",
+          "metadata.json",
+          "package.json",
+          "public",
+          "schema.sql",
+          "server.ts",
+          "src",
+          "tests",
+          "tsconfig.json",
+          "vite.config.ts"
+        ],
+        "readme": "# BookForge AI\n\n> A production-minded AI-assisted book development platform for planning, writing, reviewing, versioning and exporting complete books.\n\n## Overview\n\nBookForge AI treats a book as a persistent project rather than a collection of disconnected AI prompts. The platform combines structured story planning, a Story Bible, chapter generation, continuity auditing, version history, creative assets and controlled AI access behind a server-side API boundary.\n\n## Core capabilities\n\n- **Book planning** — structured project setup, genre, tone, audience, POV and chapter planning.\n- **Full-book generation** — chapter-oriented generation with persistent jobs and resumable workflows.\n- **Story Bible** — characters, locations, timeline and continuity rules kept as project context.\n- **Continuity auditing** — deterministic rule-based analysis with optional AI-assisted review.\n- **Character development** — AI-assisted character journey and arc analysis.\n- **Version history** — snapshots, rollback, chapter-level reversion and version diffs.\n- **Creative assets** — covers, illustrations and character assets through a dedicated engine.\n- **AI integration** — Google Gemini through a server-side API boundary; API keys are never sent to the browser.\n- **Authentication and RBAC** — server-side sessions with FOUNDER, ADMIN, AUTHOR and READER roles.\n- **Security controls** — secure cookies, password hashing, project isolation, rate limiting, cost guarding, audit logging and an emergency kill switch.\n- **Persistence** — PostgreSQL support for production with a disk-backed development adapter.\n\n## Architecture\n\n```text\nReact + TypeScript\n        |\n        v\n  Express API boundary\n        |\n   +----+----------------------+\n   |                           |\n   v                           v\nDomain engines             Security layer\n   |                           |\n   +-----------+---------------+\n               |\n               v\n        Persistence adapter\n          /           \\\n         v             v\n   PostgreSQL      Local disk\n               |\n               v\n          Gemini API\n```\n\nKey engines include:\n\n- Story Bible / context management\n- Full-book generation and recovery\n- Continuity analysis\n- Versioning and rollback\n- Creative asset generation\n- Cost and operational controls\n\nSee [`assets/architecture.svg`](assets/architecture.svg) for the visual architecture overview.\n\n## Security-first design\n\nSecurity is implemented as an application concern, not only as documentation.\n\n- Protected API routes use a **deny-by-default** authentication gate.\n- Identity is derived from a **validated server-side session**, not client-supplied identity headers.\n- Session cookies are `HttpOnly`, `SameSite=Strict` and use the `__Host-` prefix in production.\n- Passwords use **scrypt** with per-password random salts and constant-time verification.\n- Project operations enforce owner/role isolation on the server.\n- AI generation is guarded by rate limits, cost budgets and an emergency kill switch.\n- Security-relevant actions are written to an audit log.\n- Security headers include CSP-adjacent browser hardening headers, frame protection, MIME sniffing protection and production HSTS.\n- Secrets are supplied through environment variables; real credentials must never be committed.\n- Regression tests cover password handling, RBAC and authentication trust boundaries.\n\n## Technology\n\n| Area | Technology |\n|---|---|\n| Frontend | React 19, TypeScript, Vite |\n| Backend | Node.js, Express, TypeScript |\n| AI | Google Gemini API (`gemini-3.8-flash`) |\n| Data | PostgreSQL + development persistence adapter |\n| UI | Tailwind CSS, Framer Motion, Lucide |\n| Documents | PDF-lib, JSZip |\n| Testing | Node test runner + TypeScript/tsx |\n| Tooling | Bun lockfile, npm-compatible scripts |\n| CI | GitHub Actions |\n\n## Local development\n\n### Requirements\n\n- Node.js 20+\n- Bun (recommended because the repository contains `bun.lock`)\n- PostgreSQL for production-style persistence\n- Gemini API credentials for AI generation features\n\n### Setup\n\n```bash\nbun install --frozen-lockfile\ncp .env.example .env\nbun run dev\n```\n\nFor local development, the persistence adapter can operate without PostgreSQL and stores development state under `data/`. That directory is ignored by Git.\n\n### Quality checks\n\n```bash\nbun run lint\nbun run test\nbun run security:test\nbun run build\n```\n\n## Configuration\n\nSee `.env.example` for the required configuration shape:\n\n- `GEMINI_API_KEY` — Gemini API credential.\n- `GEMINI_MODEL` — optional model override; defaults to `gemini-3.8-flash`.\n- `FOUNDER_PASSWORD` — initial founder password, supplied only through a secret manager.\n- `DATABASE_URL` — production PostgreSQL connection string.\n- `APP_URL` — deployment URL where required by the hosting environment.\n\nNever commit a real `.env` file or production credentials.\n\n## Modules and history\n\n- `apps/trusity/` – **Trusity**, AI presentation generator (own `package.json`, own CI: `.github/workflows/trusity.yml`). Active module of the creative/content platform.\n- `archive/` – merged former repositories with full git history: `BookForge-AI`, `Bookplattform`, `Loreforge-Fantasy-Character-Foundry`. Not part of the build; excluded from typecheck and CI scans.\n\n## Project structure\n\n```text\nbook-forge/\n├── src/\n│   ├── components/       # UI components and application views\n│   ├── lib/\n│   │   ├── engine/       # domain engines\n│   │   ├── security.ts   # authentication, RBAC and security services\n│   │   └── db.ts         # persistence adapter\n│   └── types/            # shared TypeScript models\n├── tests/                # automated regression/security tests\n├── public/               # static assets\n├── assets/               # architecture and portfolio visuals\n├── schema.sql            # PostgreSQL schema\n├── server.ts             # Express/Vite server and API boundary\n├── package.json          # scripts and dependencies\n├── bun.lock              # reproducible Bun dependency lockfile\n└── vite.config.ts        # Vite configuration\n```\n\n## Portfolio focus\n\nThis project demonstrates practical work across:\n\n- AI application architecture\n- Full-stack TypeScript\n- REST API design\n- Authentication and authorization\n- Security engineering\n- PostgreSQL persistence\n- Long-running AI workflows and recovery\n- Automated testing\n- Cost controls and auditability\n- Document and asset generation\n- UX for complex creative workflows\n\n## Status\n\n**Portfolio project — active development.**\n\nThe repository is structured as a serious engineering project, with security, persistence, testing and maintainability treated as first-class concerns alongside the user experience.\n"
+      }
+    },
+    {
+      "repo": "Autonomous-Multi-Agent-App-Builder",
+      "displayName": "SwarmForge",
+      "tier": 1,
+      "description": "Multi-agent software-engineering application builder with coordinated agents, runtime telemetry, regression testing and bounded OWASP-oriented analysis.",
+      "verify": "README",
+      "status": "verified-source",
+      "source": {
+        "repo": "abla86/Autonomous-Multi-Agent-App-Builder",
+        "url": "https://github.com/abla86/Autonomous-Multi-Agent-App-Builder",
+        "defaultBranch": "main",
+        "archived": false,
+        "description": "Autonomous Multi-Agent App Builder",
+        "stars": 0,
+        "updatedAt": "2026-09-19T18:26:17Z",
+        "pushedAt": "2026-09-19T17:12:46Z",
+        "languages": [
+          "TypeScript",
+          "HTML",
+          "CSS"
+        ],
+        "detectedTechnology": [
+          "TypeScript",
+          "HTML",
+          "CSS",
+          "Node.js"
+        ],
+        "files": [
+          ".env.example",
+          ".gitignore",
+          "LEGACY.md",
+          "README.md",
+          "archive",
+          "bun.lock",
+          "data",
+          "index.html",
+          "metadata.json",
+          "package.json",
+          "server.ts",
+          "src",
+          "tsconfig.json",
+          "vite.config.ts"
+        ],
+        "readme": "# SWARMFORGE: Autonomous Multi-Agent Software Engineering Swarm\n\n> **A full-stack autonomous application-builder prototype powered by a coordinated 20-agent engineering swarm, runtime performance telemetry, automated regression tests, and bounded OWASP-oriented security analysis.**\n\n---\n\n## Overview & Capabilities\n\nSwarmForge orchestrates 20 specialized autonomous software engineering agents across a disciplined lifecycle:\n**Scan → Diagnose → Parallel Work → Integrate → Real Testing → Production Certification**.\n\nThe repository is designed to exercise real local application behavior rather than mock-only screens. Claims below describe the current implementation and test boundaries:\n- Real Express backend with persistent atomic file-system storage (`data/db.json` with temporary-write-and-rename guarantees).\n- Real-time container performance telemetry tracking actual CPU percent via `process.cpuUsage()`, RSS memory, V8 heap allocations, and host system RAM.\n- Real regression test suite verifying actual runtime schema invariants, REST endpoints, and end-to-end user journeys without test bypasses.\n- Real vulnerability scanner evaluating AST and source code against OWASP Top 10 patterns (leaked tokens, `eval()`, unsafe headers).\n- Real server-side Gemini 3.8 Flash SDK integration for architectural consultation, code refactoring, and test case synthesis.\n\n---\n\n## 🤖 The 20 Autonomous Specialized Agents\n\n| # | Badge | Agent Name | Category | Operational Mandate |\n|---|---|---|---|---|\n| **01** | `ANL-01` | **Codebase Analyst** | Core | Entry points inspection, AST graph verification, dead code pruning |\n| **02** | `FNT-02` | **Frontend Architect** | Core | React 19 component trees, hook stability, responsive design |\n| **03** | `BCK-03` | **Backend Engineer** | Core | Express route controllers, JSON payload parsing, HTTP status semantics |\n| **04** | `DAT-04` | **Database Specialist** | Core | Atomic disk persistence, ACID transaction isolation, schema validation |\n| **05** | `API-05` | **API Inspector** | Core | Contract matching between client fetchers and server handlers |\n| **06** | `AUT-06` | **Auth Guardian** | Quality | Route guards, authentication boundaries, credential protection |\n| **07** | `SEC-07` | **Security Sentinel** | Quality | Leaked API key detection, OWASP Top 10 prevention, safe HTTP headers |\n| **08** | `PRF-08` | **Performance Optimizer** | Quality | Bundle size auditing, memory leak prevention, async bottlenecks |\n| **09** | `UXD-09` | **UX Designer** | Product | Ergonomics, feedback latency, layout balance, interaction polish |\n| **10** | `A11Y-10` | **Accessibility Auditor** | Product | WCAG AA contrast compliance, keyboard navigation, aria-label checks |\n| **11** | `TST-11` | **Test Engineer** | Quality | Genuine unit assertions, edge-case checks, boundary testing |\n| **12** | `E2E-12` | **E2E Scenario Runner** | Quality | User journeys: OPEN → FEATURE → MUTATE → RELOAD roundtrip |\n| **13** | `OPS-13` | **DevOps Engineer** | Infrastructure | Port 3000 container binding, Esbuild bundling, clean builds |\n| **14** | `DEP-14` | **Dependency Sentinel**| Infrastructure | Manifest lock verification, peer dependency compatibility |\n| **15** | `DOC-15` | **Technical Documenter** | Infrastructure | Living API specifications, architecture blueprints, runbooks |\n| **16** | `PRD-16` | **Product Logic Verifier** | Product | Core value flow verification, elimination of mock stubs |\n| **17** | `INT-17` | **Data Integrity Guardian** | Core | Race condition prevention, entity uniqueness constraints |\n| **18** | `REC-18` | **Error Recovery Specialist** | Core | Graceful degradation, unhandled rejection interception |\n| **19** | `AI-19` | **AI Integration Agent** | Product | Server-side Gemini 3.8 Flash SDK integration with telemetry |\n| **20** | `QA-20` | **Final QA Chief** | Quality | 16-point Final Acceptance Checklist and deployment sign-off |\n\n---\n\n## ⚡ Real-Time System Performance Sentinel & Canvas Telemetry\n\nLocated directly in the **20-Agent Swarm** tab, the real-time performance sentinel monitors process-level metrics with hardware-accelerated canvas sparklines:\n\n- **Dual Canvas Sparkline Charts**: High-performance HTML5 Canvas sparklines (powered by Chart.js) rendering:\n  - **CPU Utilization Sparkline**: Instantaneous and rolling CPU percent with smooth bezier interpolation, gradient fills, and peak tracking.\n  - **Memory Heap Allocation Sparkline**: Dual-series canvas tracking V8 Heap Used vs Heap Total (MB) and Process RSS with real-time capacity headroom.\n  - **Layout Controls**: Toggle between Side-by-Side (Dual), CPU-focused, or Memory Heap-focused canvas modes.\n- **Session Historical Mode**: Toggle between:\n  - **Live Rolling Window (60s)**: High-frequency real-time continuous stream with configurable sampling rate (1s, 2s, 5s).\n  - **Session Historical Mode**: Comprehensive timeline tracking performance from session inception, capturing all lifecycle telemetry points.\n- **Session Lifecycle Milestones**: Highlights key events on the timeline (Session Inception, Swarm Orchestration Runs, V8 GC Flushes, Test Validations) with interactive inspection badges.\n- **Session Performance Summary Dashboard**:\n  - Session start timestamp and total elapsed runtime.\n  - Peak CPU spike (%) and minimum CPU recorded across the session.\n  - Session-wide average CPU utilization.\n  - Peak heap memory allocation vs initial heap at boot.\n  - Total V8 memory flushes and total completed swarm cycles.\n  - Historical filtering: \"All Session\", \"Last 5m\", \"Last 15m\", and \"Swarm Runs Only\".\n- **Interactive Controls**:\n  - Live Stream Pause / Resume toggle.\n  - Sampling interval selector (1s, 2s, 5s).\n  - V8 Garbage Collection & Cache Flush trigger (`POST /api/system/gc`).\n  - High-water mark reset (`POST /api/system/performance/reset`).\n  - Process diagnostics drawer displaying PID, platform, architecture, load averages, and uptime.\n\n---\n\n## 🛠️ API Routes Reference\n\n### System & Health\n- `GET /api/health`: Container health check, uptime, and database connectivity.\n- `GET /api/system/status`: High-level system statistics and agent pool count.\n- `GET /api/system/performance`: Real-time CPU, memory, swarm stats, and rolling history points.\n- `GET /api/system/performance/stream`: Server-Sent Events (SSE) 1000ms real-time metric stream.\n- `POST /api/system/performance/reset`: Resets peak memory high-water mark.\n- `POST /api/system/gc`: Invokes V8 garbage collection and cache pruning.\n\n### Project & Code Repository\n- `GET /api/projects`: List all managed software projects.\n- `GET /api/projects/:id`: Get detailed project metadata and repository files.\n- `POST /api/projects`: Initialize a new project scaffold.\n- `PUT /api/projects/:id`: Update project details.\n- `DELETE /api/projects/:id`: Remove project from store.\n- `POST /api/projects/:id/files`: Create or update a source code file.\n- `DELETE /api/projects/:id/files/:fileId`: Delete a file from repository.\n- `GET /api/projects/:id/export`: Export project as a downloadable JSON architecture blueprint.\n\n### Swarm & Quality Assurance\n- `POST /api/projects/:id/swarm/run`: Executes all 20 agents autonomously, returning phase logs, audit findings, and repairs.\n- `POST /api/projects/:id/tests/run`: Executes automated Unit, Integration, API, and E2E assertions.\n- `POST /api/projects/:id/security-scan`: Scans repository code against OWASP Top 10 vulnerabilities.\n- `POST /api/projects/:id/ai/consult`: Consults Agent 19 using server-side Gemini 3.8 Flash for refactoring and test generation.\n- `GET /api/projects/:id/deploy-check`: Evaluates the strict 16-point Final QA Acceptance Checklist.\n\n---\n\n## 🚀 Running & Verification\n\n```bash\n# Install dependencies\nnpm install\n\n# Start development server (Port 3000)\nnpm run dev\n\n# Run TypeScript linter\nnpm run lint\n\n# Compile production bundle\nnpm run build\n```\n"
       }
     }
   ],
   "excluded": [
     {
-      "repo": "shift-competence-planner",
-      "reason": "Superseded as a separate portfolio unit by workforce-competence-management; retain only as historical source where useful. Now merged into workforce-competence-management/archive/shift-competence-planner; repo deleted."
-    },
-    {
-      "repo": "small-projects-hub.html",
-      "reason": "Removed. desktop-clock.html is the sole Interactive Project Lab entry."
-    },
-    {
-      "repo": "engineering-showcase.html",
-      "reason": "Removed. Replaced by the unified Interactive Project Lab."
-    },
-    {
-      "reason": "External, training, documentation or predecessor repositories remain outside promoted project units unless independently verified as original work."
+      "repo": "healthcare-workforce-sql",
+      "reason": "Archived; historical workforce SQL evidence retained outside the active registry."
     },
     {
       "repo": "healthtech-dashboard",
-      "reason": "Merged into HealthTechDeviceApi/archive/healthtech-dashboard; implementation history only."
+      "reason": "Merged into HealthTechDeviceApi/archive/healthtech-dashboard; historical implementation only."
+    },
+    {
+      "repo": "shift-competence-planner",
+      "reason": "Merged into workforce-competence-management/archive/shift-competence-planner and repository deleted."
+    },
+    {
+      "repo": "small-projects-hub.html",
+      "reason": "Removed; desktop-clock.html is the sole Interactive Project Lab entry."
+    },
+    {
+      "repo": "engineering-showcase.html",
+      "reason": "Removed; replaced by the unified Interactive Project Lab."
+    },
+    {
+      "reason": "Archived, training, documentation and predecessor repositories remain outside promoted project units unless independently verified as active original work."
     }
   ]
 }
