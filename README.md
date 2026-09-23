@@ -143,6 +143,24 @@ A full-stack research-support application for structured appraisal workflows, me
 
 Repository: https://github.com/abla86/complete-evidence-appraisal-tool
 
+### 7. Workforce & Competence Management
+
+A full-stack workforce decision-support prototype using React, ASP.NET Core/.NET 10, SQL Server, Docker and automated verification. It models competence, availability, shift requirements and staffing coverage without presenting automated ranking as a substitute for professional or organisational responsibility.
+
+Repository: https://github.com/abla86/workforce-competence-management
+
+### 8. BookForge AI
+
+An AI-assisted publishing platform covering persistent book projects, Story Bible context, generation workflows, continuity auditing, versioning, creative assets, authentication, cost controls and auditability.
+
+Repository: https://github.com/abla86/book-forge
+
+### 9. SwarmForge
+
+A full-stack multi-agent software-engineering prototype with coordinated specialist agents, runtime telemetry, regression testing and bounded OWASP-oriented analysis.
+
+Repository: https://github.com/abla86/Autonomous-Multi-Agent-App-Builder
+
 ### 7. Academic Research Engine
 
 A reusable research-engineering core for document extraction, source search, evidence provenance and integration with evidence-appraisal applications.
