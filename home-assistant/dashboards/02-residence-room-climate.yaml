@@ -1,0 +1,159 @@
+# RESIDENCE — Room & Climate
+# Reference: second supplied dashboard image.
+# Room-first dashboard with climate, environment and scene controls.
+
+title: RESIDENCE — Room & Climate
+views:
+  - title: Residence
+    path: residence
+    icon: mdi:home-variant
+    type: sections
+    max_columns: 4
+    sections:
+      - type: grid
+        column_span: 4
+        cards:
+          - type: heading
+            heading: RESIDENCE
+            heading_style: title
+          - type: horizontal-stack
+            cards:
+              - type: tile
+                entity: sensor.outdoor_temperature
+                name: Ute
+                icon: mdi:thermometer
+              - type: tile
+                entity: sensor.outdoor_humidity
+                name: Ute fukt
+                icon: mdi:water-percent
+              - type: tile
+                entity: sensor.indoor_humidity
+                name: Inne
+                icon: mdi:water-percent
+              - type: tile
+                entity: person.me
+                name: Hjemme
+                icon: mdi:account
+
+      - type: grid
+        cards:
+          - type: heading
+            heading: Stue
+          - type: thermostat
+            entity: climate.living_room
+          - type: tile
+            entity: light.living_room
+            name: Lys
+            features:
+              - type: light-brightness
+          - type: tile
+            entity: media_player.living_room
+            name: Media
+
+      - type: grid
+        cards:
+          - type: heading
+            heading: Kjøkken
+          - type: tile
+            entity: light.kitchen
+            name: Lys
+            features:
+              - type: light-brightness
+          - type: tile
+            entity: binary_sensor.kitchen_motion
+            name: Bevegelse
+          - type: tile
+            entity: fan.kitchen
+            name: Ventilasjon
+
+      - type: grid
+        cards:
+          - type: heading
+            heading: Soverom
+          - type: tile
+            entity: light.bedroom
+            name: Lys
+            features:
+              - type: light-brightness
+          - type: tile
+            entity: climate.bedroom
+            name: Klima
+          - type: tile
+            entity: binary_sensor.bedroom_motion
+            name: Bevegelse
+
+      - type: grid
+        cards:
+          - type: heading
+            heading: Gang
+          - type: tile
+            entity: light.hall
+            name: Lys
+            features:
+              - type: light-brightness
+          - type: tile
+            entity: binary_sensor.hall_motion
+            name: Bevegelse
+          - type: tile
+            entity: lock.front_door
+            name: Ytterdør
+
+      - type: grid
+        cards:
+          - type: heading
+            heading: Miljø
+          - type: sensor
+            entity: sensor.living_room_temperature
+            name: Temperatur
+            graph: line
+            hours_to_show: 24
+          - type: sensor
+            entity: sensor.living_room_humidity
+            name: Luftfuktighet
+            graph: line
+            hours_to_show: 24
+          - type: sensor
+            entity: sensor.co2
+            name: CO₂
+            graph: line
+          - type: sensor
+            entity: sensor.pm25
+            name: PM2.5
+            graph: line
+
+      - type: grid
+        cards:
+          - type: heading
+            heading: Scener
+          - type: button
+            name: Steer
+            icon: mdi:sofa
+            tap_action:
+              action: call-service
+              service: scene.turn_on
+              target:
+                entity_id: scene.living_room
+          - type: button
+            name: Kveld
+            icon: mdi:weather-night
+            tap_action:
+              action: call-service
+              service: scene.turn_on
+              target:
+                entity_id: scene.evening
+          - type: button
+            name: Film
+            icon: mdi:movie-open
+            tap_action:
+              action: call-service
+              service: scene.turn_on
+              target:
+                entity_id: scene.movie
+          - type: button
+            name: Natt
+            icon: mdi:weather-night
+            tap_action:
+              action: call-service
+              service: scene.turn_on
+              target:
+                entity_id: scene.night
