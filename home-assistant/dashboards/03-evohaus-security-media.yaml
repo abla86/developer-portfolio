@@ -1,0 +1,122 @@
+# EVOHAUS — Security & Media
+# Reference: third supplied dashboard image.
+# Camera-centric operational view with media, Wi-Fi, climate and room controls.
+
+title: EVOHAUS — Security & Media
+views:
+  - title: EVOHAUS
+    path: evohaus
+    icon: mdi:shield-home
+    type: sections
+    max_columns: 4
+    sections:
+      - type: grid
+        column_span: 4
+        cards:
+          - type: heading
+            heading: EVOHAUS
+            heading_style: title
+          - type: markdown
+            content: |
+              **Security · Media · Climate · Network**
+
+      - type: grid
+        column_span: 2
+        cards:
+          - type: heading
+            heading: Live
+          - type: picture-entity
+            entity: camera.living_room
+            name: Stue
+            camera_view: live
+            show_state: false
+            show_name: true
+          - type: horizontal-stack
+            cards:
+              - type: button
+                icon: mdi:microphone
+                name: Talk
+                tap_action:
+                  action: more-info
+                  entity_id: camera.living_room
+              - type: button
+                icon: mdi:fullscreen
+                name: Fullscreen
+                tap_action:
+                  action: more-info
+                  entity_id: camera.living_room
+              - type: button
+                icon: mdi:power
+                name: Alarm
+                tap_action:
+                  action: more-info
+                  entity_id: alarm_control_panel.home
+
+      - type: grid
+        cards:
+          - type: heading
+            heading: Media
+          - type: media-control
+            entity: media_player.living_room
+          - type: tile
+            entity: media_player.living_room
+            name: Sonos
+
+      - type: grid
+        cards:
+          - type: heading
+            heading: Wi-Fi
+          - type: tile
+            entity: sensor.router_speed
+            name: Nett
+            icon: mdi:wifi
+          - type: tile
+            entity: sensor.network_devices
+            name: Enheter
+            icon: mdi:access-point-network
+
+      - type: grid
+        cards:
+          - type: heading
+            heading: Temperatur
+          - type: thermostat
+            entity: climate.living_room
+          - type: sensor
+            entity: sensor.living_room_temperature
+            name: Stue
+            graph: line
+
+      - type: grid
+        column_span: 2
+        cards:
+          - type: heading
+            heading: Romkontroll
+          - type: tile
+            entity: light.bedroom
+            name: Soverom Lys
+            features:
+              - type: light-brightness
+          - type: tile
+            entity: light.living_room
+            name: Stue Lys
+            features:
+              - type: light-brightness
+          - type: tile
+            entity: climate.living_room
+            name: Varmepumpe
+          - type: tile
+            entity: switch.bedroom_speaker
+            name: Bluetooth-høyttaler
+
+      - type: grid
+        cards:
+          - type: heading
+            heading: Security
+          - type: lock
+            entity: lock.front_door
+          - type: tile
+            entity: binary_sensor.front_door
+            name: Dør
+          - type: tile
+            entity: binary_sensor.motion
+            name: Bevegelse
