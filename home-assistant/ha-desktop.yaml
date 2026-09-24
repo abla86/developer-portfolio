@@ -1,0 +1,101 @@
+# AB Home Assistant Desktop blueprint
+# Portfolio-safe template. Replace example entity IDs with your actual entities.
+# No private IPs, tokens or credentials belong in this file.
+#
+# The layout follows Home Assistant dashboard concepts: views + sections + cards.
+# See: https://www.home-assistant.io/dashboards/views/
+title: AB Home
+views:
+  - title: Home
+    path: home
+    icon: mdi:home-variant-outline
+    type: sections
+    max_columns: 4
+    sections:
+      - type: grid
+        cards:
+          - type: heading
+            heading: Home control
+            heading_style: title
+          - type: tile
+            entity: person.example
+            name: Presence
+          - type: tile
+            entity: climate.example
+            name: Climate
+          - type: tile
+            entity: lock.front_door
+            name: Front door
+          - type: tile
+            entity: vacuum.example
+            name: Vacuum
+      - type: grid
+        cards:
+          - type: heading
+            heading: Lights
+          - type: tile
+            entity: light.kitchen
+            features:
+              - type: light-brightness
+          - type: tile
+            entity: light.hall
+            features:
+              - type: light-brightness
+          - type: tile
+            entity: light.living_room
+            features:
+              - type: light-brightness
+          - type: tile
+            entity: light.bedroom
+            features:
+              - type: light-brightness
+      - type: grid
+        cards:
+          - type: heading
+            heading: Environment
+          - type: sensor
+            entity: sensor.living_room_temperature
+            name: Temperature
+            graph: line
+          - type: sensor
+            entity: sensor.living_room_humidity
+            name: Humidity
+            graph: line
+          - type: weather-forecast
+            entity: weather.home
+            show_forecast: true
+      - type: grid
+        cards:
+          - type: heading
+            heading: Media
+          - type: media-control
+            entity: media_player.living_room
+      - type: grid
+        cards:
+          - type: heading
+            heading: Security
+          - type: tile
+            entity: binary_sensor.front_door
+            name: Door sensor
+          - type: picture-entity
+            entity: camera.front_door
+            camera_view: live
+            show_name: true
+            show_state: true
+  - title: Energy
+    path: energy
+    icon: mdi:flash-outline
+    type: sections
+    max_columns: 3
+    sections:
+      - type: grid
+        cards:
+          - type: energy-distribution
+          - type: energy-usage-graph
+      - type: grid
+        cards:
+          - type: statistics-graph
+            title: Temperature
+            entities:
+              - sensor.living_room_temperature
+            days_to_show: 1
