@@ -10,18 +10,18 @@
 :root{--bg:#050a11;--panel:#091522;--panel2:#0d1c2a;--ink:#f3f7fa;--muted:#91a8ba;--line:#20384b;--cyan:#58c7ff;--violet:#a98cff;--green:#55d58a;--amber:#ffb45c;--gold:#f1c75b;--blue:#79b8ff;--danger:#ff6f7d}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 50% 0,#10263a 0,#050a11 42%,#03060b 100%);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}a{color:inherit;text-decoration:none}button,input{font:inherit}
 .skip{position:fixed;left:12px;top:12px;z-index:100;padding:10px 14px;background:#fff;color:#000;border-radius:9px;transform:translateY(-150%)}.skip:focus{transform:none}
-header{position:sticky;top:0;z-index:50;background:#050a11df;border-bottom:1px solid #20384b;backdrop-filter:blur(18px)}.nav{max-width:1280px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 22px}.brand{font-weight:900;letter-spacing:.08em}.brand span{color:var(--cyan)}.navlinks{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}.navlinks a,.navlinks button{border:1px solid #26445b;background:#08131e;color:#b9cbd7;border-radius:9px;padding:8px 11px;font-size:.72rem;font-weight:800;cursor:pointer}.navlinks a:hover,.navlinks button:hover,.navlinks .active{border-color:var(--cyan);color:#fff}
+header{display:none;position:sticky;top:0;z-index:50;background:#050a11df;border-bottom:1px solid #20384b;backdrop-filter:blur(18px)}.nav{max-width:1280px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 22px}.brand{font-weight:900;letter-spacing:.08em}.brand span{color:var(--cyan)}.navlinks{display:none}
 main{max-width:1280px;margin:auto;padding:22px}
-.hero{min-height:calc(100vh - 100px);position:relative;display:block;padding-top:18px}.hero-copy{position:absolute;z-index:4;left:4%;top:8%;max-width:560px;padding:20px;border:1px solid #28465c;border-radius:18px;background:#050a11c9;backdrop-filter:blur(12px);box-shadow:0 20px 60px #0008}.eyebrow{font:800 .68rem ui-monospace,monospace;letter-spacing:.18em;color:var(--cyan);text-transform:uppercase}.hero h1{font-size:clamp(3.5rem,8vw,7rem);line-height:.9;margin:12px 0 18px;letter-spacing:-.06em}.hero h1 span{color:var(--cyan)}.hero h2{font-size:clamp(1.1rem,2.4vw,1.7rem);font-weight:500;color:#c7d8e5;margin:0 0 18px}.hero p{max-width:650px;color:var(--muted);font-size:1rem}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:24px}.btn{display:inline-flex;align-items:center;gap:8px;border:1px solid #2b4d66;background:#081522;padding:11px 14px;border-radius:10px;font-size:.76rem;font-weight:850}.btn.primary{background:#0b2940;border-color:var(--cyan);box-shadow:0 0 30px #58c7ff20}.btn:hover{border-color:#fff;transform:translateY(-1px)}
+.hero{min-height:calc(100vh - 100px);position:relative;display:block;padding-top:18px}.hero-copy{display:none}.eyebrow{font:800 .68rem ui-monospace,monospace;letter-spacing:.18em;color:var(--cyan);text-transform:uppercase}.hero h1{font-size:clamp(3.5rem,8vw,7rem);line-height:.9;margin:12px 0 18px;letter-spacing:-.06em}.hero h1 span{color:var(--cyan)}.hero h2{font-size:clamp(1.1rem,2.4vw,1.7rem);font-weight:500;color:#c7d8e5;margin:0 0 18px}.hero p{max-width:650px;color:var(--muted);font-size:1rem}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:24px}.btn{display:inline-flex;align-items:center;gap:8px;border:1px solid #2b4d66;background:#081522;padding:11px 14px;border-radius:10px;font-size:.76rem;font-weight:850}.btn.primary{background:#0b2940;border-color:var(--cyan);box-shadow:0 0 30px #58c7ff20}.btn:hover{border-color:#fff;transform:translateY(-1px)}
 .core{position:relative;min-height:calc(100vh - 150px);border:1px solid #20384b;border-radius:30px;background:#03070d;overflow:hidden;box-shadow:0 0 60px #58c7ff12}.swarm-hero{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}.hotspot{position:absolute;display:block;width:15%;aspect-ratio:1;border-radius:50%;transform:translate(-50%,-50%);outline:none}.hotspot:focus-visible{box-shadow:0 0 0 3px #fff,0 0 26px 8px #58c7ff}.hotspot:hover{background:radial-gradient(circle,transparent 55%,#ffffff18 58%,transparent 72%);box-shadow:0 0 30px 8px #58c7ff35}.hotspot.center{width:24%}
 .modebar{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 28px}.modebar button{border:1px solid #28465c;background:#081522;color:#9eb5c5;border-radius:999px;padding:9px 13px;font-size:.7rem;font-weight:850;cursor:pointer}.modebar button.active,.modebar button:hover{border-color:var(--cyan);color:#fff;background:#0b1e2d}
-.section{padding:70px 0;border-top:1px solid #172c3c}.visual-portal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.visual-link{display:block;border:1px solid #20384b;border-radius:22px;overflow:hidden;background:#050b12;transition:transform .25s,border-color .25s,box-shadow .25s}.visual-link:hover{transform:translateY(-5px);border-color:#58c7ff;box-shadow:0 18px 55px #0008,0 0 30px #58c7ff18}.visual-link img{display:block;width:100%;height:auto}.visual-link:focus-visible{outline:3px solid #fff;outline-offset:4px}.visual-caption{padding:13px 16px;color:#a9c2d1;font:800 .68rem ui-monospace,monospace;letter-spacing:.12em;text-align:center}.visual-only{padding:55px 0}.visual-only .section-head{margin-bottom:18px}.visual-only .section-head p{max-width:none}.swarm-launch{position:absolute;right:3%;bottom:4%;z-index:5}.swarm-launch a{display:inline-flex;border:1px solid #58c7ff;background:#061522d9;color:#fff;padding:11px 14px;border-radius:11px;font-size:.7rem;font-weight:900;backdrop-filter:blur(12px)}@media(max-width:900px){.visual-portal{grid-template-columns:1fr}.swarm-launch{right:12px;bottom:12px}}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:24px}.section h2{font-size:clamp(1.7rem,4vw,3rem);margin:0;letter-spacing:-.04em}.section-head p{max-width:620px;color:var(--muted);margin:0}
+.section{padding:70px 0;border-top:1px solid #172c3c}.visual-portal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.visual-link{display:block;border:1px solid #20384b;border-radius:22px;overflow:hidden;background:#050b12;transition:transform .25s,border-color .25s,box-shadow .25s}.visual-link:hover{transform:translateY(-5px);border-color:#58c7ff;box-shadow:0 18px 55px #0008,0 0 30px #58c7ff18}.visual-link img{display:block;width:100%;height:auto}.visual-link:focus-visible{outline:3px solid #fff;outline-offset:4px}.visual-caption{padding:13px 16px;color:#a9c2d1;font:800 .68rem ui-monospace,monospace;letter-spacing:.12em;text-align:center}.visual-only{padding:55px 0;min-height:70vh}.visual-only .section-head{margin-bottom:18px}.visual-only .section-head p{max-width:none}.swarm-launch{position:absolute;right:3%;bottom:4%;z-index:5}.swarm-launch{display:inline-flex;border:1px solid #58c7ff;background:#061522d9;color:#fff;padding:11px 14px;border-radius:11px;font-size:.7rem;font-weight:900;backdrop-filter:blur(12px)}@media(max-width:900px){.visual-portal{grid-template-columns:1fr}.swarm-launch{right:12px;bottom:12px}}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:24px}.section h2{font-size:clamp(1.7rem,4vw,3rem);margin:0;letter-spacing:-.04em}.section-head p{max-width:620px;color:var(--muted);margin:0}
 .world-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.world-card{position:relative;min-height:220px;border:1px solid #213a4e;border-radius:18px;background:linear-gradient(145deg,#0a1723,#07111a);padding:22px;overflow:hidden;transition:.2s}.world-card:before{content:"";position:absolute;width:150px;height:150px;border-radius:50%;right:-50px;top:-50px;background:radial-gradient(circle,var(--tone),transparent 68%);opacity:.16}.world-card:hover{transform:translateY(-3px);border-color:var(--tone)}.world-card h3{margin:8px 0;font-size:1.2rem}.world-card p{color:var(--muted);font-size:.85rem}.world-card .enter{position:absolute;bottom:18px;color:var(--tone);font:850 .68rem ui-monospace,monospace}
 .trace{border:1px solid #20384b;border-radius:18px;padding:18px;background:#07111a}.trace-line{display:grid;grid-template-columns:repeat(8,1fr);gap:7px;align-items:center}.trace-step{min-height:84px;border:1px solid #28445a;border-radius:12px;background:#081522;display:grid;place-items:center;text-align:center;padding:8px;font-size:.65rem;font-weight:800}.trace-arrow{color:#6d8799;text-align:center}
 .project-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.project{border:1px solid #213a4e;border-radius:18px;background:#07111a;overflow:hidden;display:flex;flex-direction:column;min-height:250px}.project .visual{height:105px;background:radial-gradient(circle at 50% 50%,#16405d,#081522 65%);position:relative}.project .visual:after{content:"";position:absolute;inset:15px;border:1px solid #58c7ff35;border-radius:50%;box-shadow:0 0 30px #58c7ff14}.project .body{padding:16px;display:flex;flex-direction:column;flex:1}.project .domain{font:800 .58rem ui-monospace,monospace;letter-spacing:.1em;color:var(--cyan)}.project h3{font-size:1rem;margin:6px 0}.project p{color:var(--muted);font-size:.75rem;margin:0}.project .proof{margin-top:12px;color:#8da5b6;font-size:.66rem}.project .links{display:flex;gap:7px;margin-top:auto;padding-top:15px}.mini{border:1px solid #28465c;border-radius:8px;padding:7px 9px;font-size:.63rem;font-weight:800}.mini:hover{border-color:#fff}
 .proof-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:12px}.proof-panel{border:1px solid #213a4e;border-radius:18px;background:#07111a;padding:22px}.proof-panel h3{margin-top:0}.proof-list{display:grid;gap:8px}.proof-item{display:flex;gap:10px;align-items:flex-start;padding:10px;border:1px solid #1b3447;border-radius:10px;background:#081522}.proof-dot{width:8px;height:8px;border-radius:50%;background:var(--green);margin-top:6px;flex:0 0 auto}.proof-item span{color:#a8bbc8;font-size:.78rem}
 .stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}.stats img{width:100%;border:1px solid #20384b;border-radius:14px;background:#07111a}
-.contact{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;border:1px solid #28465c;border-radius:22px;padding:28px;background:radial-gradient(circle at 90% 50%,#12354c,#07111a 50%)}footer{padding:40px 0 70px;color:#718b9d;font-size:.7rem;text-align:center}
+.contact{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;border:1px solid #28465c;border-radius:22px;padding:28px;background:radial-gradient(circle at 90% 50%,#12354c,#07111a 50%)}footer{display:none;padding:40px 0 70px;color:#718b9d;font-size:.7rem;text-align:center}
 .hidden{display:none!important}.low-motion *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 @media(max-width:1000px){.hero-copy{position:relative;left:auto;top:auto;margin:0 0 12px}.core{min-height:560px}.project-grid{grid-template-columns:repeat(2,1fr)}.world-grid{grid-template-columns:repeat(2,1fr)}.proof-grid{grid-template-columns:1fr}}
 @media(max-width:650px){main{padding:10px 12px}.hero-copy{padding:14px}.core{min-height:500px}.nav{padding:10px 12px}.navlinks{display:none}.hero{min-height:auto;padding:40px 0}.hero h1{font-size:4rem}.core{min-height:500px}.world-grid,.project-grid{grid-template-columns:1fr}.trace-line{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr}.contact{grid-template-columns:1fr}.modebar{position:sticky;top:60px;z-index:20;background:#050a11ed;padding:8px 0}}
@@ -34,130 +34,41 @@ main{max-width:1280px;margin:auto;padding:22px}
 <a href="#recruiter">Recruiter</a><a href="#technical">Technical</a><a href="#research">Research</a><a href="#projects">Projects</a><a href="#contact">Contact</a><a href="https://github.com/abla86" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
 <button id="motionToggle" type="button" aria-pressed="false">Low motion</button></div></nav></header>
 <main id="main">
-<section id="top" class="hero" aria-labelledby="hero-title">
-<div class="hero-copy">
-<div class="eyebrow">THE ANNE BETH SYSTEM · SWARM INTELLIGENCE ECOSYSTEM</div>
-<h1 id="hero-title">Anne Beth<span>.</span></h1>
-<h2>Software Architecture · DevOps Engineering · Research Methods · Healthcare IT</h2>
-<p>Explore documented engineering work as a connected system: projects, architecture, automation, research and quality evidence linked through the same traceability model.</p>
-<div class="actions"><a class="btn primary" href="#recruiter">Recruiter mode →</a><a class="btn" href="#technical">Technical deep dive</a><a class="btn" href="#research">Research mode</a><a class="btn" href="#projects">Project constellation</a><a class="btn" href="swarm.html">Full swarm →</a></div>
-</div>
-<div class="core" id="core" aria-label="Interactive swarm map">
-<img class="swarm-hero" src="assets/swarm-hero.svg" alt="Anne Beth surrounded by six connected worlds: Architecture, DevOps, Research, Healthcare, Automation and Quality">
-<a class="hotspot" style="left:32.5%;top:27%" href="#architecture" aria-label="Architecture"></a>
-<a class="hotspot" style="left:67.5%;top:27%" href="#devops" aria-label="DevOps"></a>
-<a class="hotspot" style="left:17.5%;top:59%" href="#research" aria-label="Research"></a>
-<a class="hotspot" style="left:82.5%;top:59%" href="#healthcare" aria-label="Healthcare"></a>
-<a class="hotspot" style="left:32.5%;top:80%" href="#automation" aria-label="Automation"></a>
-<a class="hotspot" style="left:67.5%;top:80%" href="#quality" aria-label="Quality"></a>
-<a class="hotspot center" style="left:50%;top:48.5%" href="#recruiter" aria-label="Anne Beth"></a>
+<section id="top" class="hero" aria-label="Anne Beth interactive swarm">
+<div class="core" id="core">
+<img class="swarm-hero" src="assets/swarm-hero.svg" alt="Interactive swarm showing Architecture, DevOps, Research, Healthcare, Automation and Quality">
+<a class="hotspot" style="left:32.5%;top:27%" href="#visual-architecture" aria-label="Architecture"></a>
+<a class="hotspot" style="left:67.5%;top:27%" href="#visual-devops" aria-label="DevOps"></a>
+<a class="hotspot" style="left:17.5%;top:59%" href="#visual-research" aria-label="Research"></a>
+<a class="hotspot" style="left:82.5%;top:59%" href="#visual-healthcare" aria-label="Healthcare"></a>
+<a class="hotspot" style="left:32.5%;top:80%" href="#visual-automation" aria-label="Automation"></a>
+<a class="hotspot" style="left:67.5%;top:80%" href="#visual-quality" aria-label="Quality"></a>
+<a class="hotspot center" style="left:50%;top:48.5%" href="#visual-projects" aria-label="Projects"></a>
+<a class="swarm-launch" href="swarm.html" aria-label="Open full swarm">ENTER SWARM</a>
 </div>
 </section>
 
-<div class="modebar" role="navigation" aria-label="Experience modes">
-<button data-mode="recruiter" class="active">01 · Recruiter</button><button data-mode="technical">02 · Technical</button><button data-mode="research">03 · Research</button><button data-mode="explore">04 · Explore</button>
-</div>
-
-<section id="recruiter" class="section mode recruiter" aria-labelledby="recruiter-title">
-<div class="section-head"><div><div class="eyebrow">RECRUITER VIEW</div><h2 id="recruiter-title">What can be inspected?</h2></div><p>Start with the shortest path from professional direction to concrete evidence.</p></div>
-<div class="proof-grid"><article class="proof-panel"><h3>Evidence-first engineering</h3><div class="proof-list">
-<div class="proof-item"><i class="proof-dot"></i><span>Projects connect directly to repositories and, where available, demonstrations or documentation.</span></div>
-<div class="proof-item"><i class="proof-dot"></i><span>Architecture and delivery claims are represented through inspectable implementation rather than self-assessed scores.</span></div>
-<div class="proof-item"><i class="proof-dot"></i><span>Research-oriented work links methods and evidence appraisal to software workflows.</span></div>
-<div class="proof-item"><i class="proof-dot"></i><span>Automation and quality work is connected to CI/CD, testing, security and traceability.</span></div>
-</div></article>
-<article class="proof-panel"><h3>Fast navigation</h3><div class="actions"><a class="btn primary" href="#projects">Projects</a><a class="btn" href="#evidence">Evidence trail</a><a class="btn" href="#contact">Contact</a><a class="btn" href="https://github.com/abla86" target="_blank" rel="noopener noreferrer">GitHub</a></div></article></div>
-</section>
-
-<section id="technical" class="section mode technical" aria-labelledby="technical-title">
-<div class="section-head"><div><div class="eyebrow">TECHNICAL DEEP DIVE</div><h2 id="technical-title">From requirement to release</h2></div><p>Follow the engineering chain rather than a technology inventory.</p></div>
-<div class="trace"><div class="trace-line"><div class="trace-step" tabindex="0">01<br>Problem</div><div class="trace-step" tabindex="0">02<br>Research</div><div class="trace-step" tabindex="0">03<br>Architecture</div><div class="trace-step" tabindex="0">04<br>Implementation</div><div class="trace-step" tabindex="0">05<br>Test</div><div class="trace-step" tabindex="0">06<br>Verify</div><div class="trace-step" tabindex="0">07<br>Document</div><div class="trace-step" tabindex="0">08<br>Release</div></div></div>
-<div class="proof-grid" style="margin-top:12px"><article class="proof-panel"><h3>Technical evidence</h3><div class="proof-list"><div class="proof-item"><i class="proof-dot"></i><span>Repository structure and implementation boundaries</span></div><div class="proof-item"><i class="proof-dot"></i><span>CI/CD and automated validation where implemented</span></div><div class="proof-item"><i class="proof-dot"></i><span>Testing, security and documentation evidence</span></div><div class="proof-item"><i class="proof-dot"></i><span>Release and maintenance context</span></div></div></article><article class="proof-panel"><h3>Engineering principle</h3><p style="color:var(--muted)">The ecosystem deliberately avoids fabricated confidence indicators. If a fact is not verified from the project source, it is not presented as a result.</p></article></div>
-</section>
-
-<section id="research" class="section mode research" aria-labelledby="research-title">
-<div class="section-head"><div><div class="eyebrow">RESEARCH MODE</div><h2 id="research-title">Method → evidence → implementation</h2></div><p>Research software is treated as an engineering problem with explicit methodology and traceability.</p></div>
-<div class="world-grid"><article class="world-card" style="--tone:#a98cff"><div class="eyebrow">01</div><h3>Research methods</h3><p>Search, appraisal, synthesis and implementation represented through structured workflows.</p><a class="enter" href="evidence-lab.html">ENTER EVIDENCE LAB →</a></article><article class="world-card" style="--tone:#58c7ff"><div class="eyebrow">02</div><h3>Evidence appraisal</h3><p>Digital workflows connect established appraisal approaches with inspectable software behaviour.</p><a class="enter" href="https://github.com/abla86/complete-evidence-appraisal-tool" target="_blank" rel="noopener noreferrer">OPEN REPOSITORY →</a></article><article class="world-card" style="--tone:#55d58a"><div class="eyebrow">03</div><h3>Healthcare context</h3><p>Research and software intersect around healthcare-oriented information and implementation problems.</p><a class="enter" href="#healthcare">ENTER HEALTHCARE →</a></article></div>
-</section>
-
-<section id="capabilities" class="section visual-only" aria-labelledby="visual-capabilities">
-<div class="section-head"><div><div class="eyebrow">INTERACTIVE WORLDS</div><h2 id="visual-capabilities">Explore the system</h2></div><p>Click the visual worlds to enter them.</p></div>
+<section class="visual-only" aria-label="Interactive visual worlds">
 <div class="visual-portal">
-<a class="visual-link" href="#architecture"><img src="assets/capability-network.svg" alt="Capability network: architecture, delivery and connected engineering domains"><div class="visual-caption">CAPABILITY NETWORK</div></a>
-<a class="visual-link" href="#projects"><img src="assets/project-constellation.svg" alt="Project constellation connected to the engineering ecosystem"><div class="visual-caption">PROJECT CONSTELLATION</div></a>
-<a class="visual-link" href="#evidence"><img src="assets/evidence-trail.svg" alt="Evidence trail from problem through implementation and release"><div class="visual-caption">EVIDENCE TRAIL</div></a>
+<a id="visual-architecture" class="visual-link" href="https://github.com/abla86/developer-portfolio" target="_blank" rel="noopener noreferrer"><img src="assets/capability-network.svg" alt="Architecture visual world"><div class="visual-caption">ARCHITECTURE</div></a>
+<a id="visual-devops" class="visual-link" href="https://github.com/abla86/developer-portfolio/actions" target="_blank" rel="noopener noreferrer"><img src="assets/project-constellation.svg" alt="DevOps visual world"><div class="visual-caption">DEVOPS</div></a>
+<a id="visual-research" class="visual-link" href="https://github.com/abla86/complete-evidence-appraisal-tool" target="_blank" rel="noopener noreferrer"><img src="assets/evidence-trail.svg" alt="Research visual world"><div class="visual-caption">RESEARCH</div></a>
+<a id="visual-healthcare" class="visual-link" href="https://github.com/abla86/HealthTechDeviceApi" target="_blank" rel="noopener noreferrer"><img src="assets/identity-swarm.svg" alt="Healthcare visual world"><div class="visual-caption">HEALTHCARE</div></a>
+<a id="visual-automation" class="visual-link" href="https://github.com/abla86/CodeSentinel" target="_blank" rel="noopener noreferrer"><img src="assets/capability-network.svg" alt="Automation visual world"><div class="visual-caption">AUTOMATION</div></a>
+<a id="visual-quality" class="visual-link" href="https://github.com/abla86/developer-portfolio" target="_blank" rel="noopener noreferrer"><img src="assets/evidence-trail.svg" alt="Quality visual world"><div class="visual-caption">QUALITY</div></a>
+<a id="visual-projects" class="visual-link" href="swarm.html"><img src="assets/project-constellation.svg" alt="Interactive project constellation"><div class="visual-caption">PROJECT CONSTELLATION</div></a>
+<a class="visual-link" href="evidence-lab.html"><img src="assets/evidence-trail.svg" alt="Evidence laboratory visual"><div class="visual-caption">EVIDENCE LAB</div></a>
+<a class="visual-link" href="open-source.html"><img src="assets/capability-network.svg" alt="Open source visual"><div class="visual-caption">OPEN SOURCE</div></a>
 </div>
 </section>
-
-<section id="worlds" class="section visual-only" aria-labelledby="worlds-title">
-<div class="section-head"><div><div class="eyebrow">SIX WORLDS</div><h2 id="worlds-title">The swarm is the navigation</h2></div><p>Use the central swarm above. Each visual node opens its corresponding evidence area.</p></div>
-<div class="visual-portal">
-<a class="visual-link" href="#architecture"><img src="assets/identity-swarm.svg" alt="Architecture world entry"><div class="visual-caption">ARCHITECTURE</div></a>
-<a class="visual-link" href="#devops"><img src="assets/capability-network.svg" alt="DevOps world entry"><div class="visual-caption">DEVOPS</div></a>
-<a class="visual-link" href="#research"><img src="assets/evidence-trail.svg" alt="Research world entry"><div class="visual-caption">RESEARCH</div></a>
-</div>
-</section>
-
-<section id="projects" class="section visual-only" aria-labelledby="projects-title">
-<div class="section-head"><div><div class="eyebrow">PROJECT CONSTELLATION</div><h2 id="projects-title">Systems you can enter</h2></div><p>The visual constellation is the project index.</p></div>
-<div class="visual-portal">
-<a class="visual-link" href="https://github.com/abla86/complete-evidence-appraisal-tool" target="_blank" rel="noopener noreferrer"><img src="assets/project-constellation.svg" alt="Evidence appraisal project constellation"><div class="visual-caption">EVIDENCE APPRAISAL</div></a>
-<a class="visual-link" href="https://github.com/abla86/CodeSentinel" target="_blank" rel="noopener noreferrer"><img src="assets/capability-network.svg" alt="Repository intelligence and security project"><div class="visual-caption">CODESENTINEL</div></a>
-<a class="visual-link" href="https://github.com/abla86/agenttrace" target="_blank" rel="noopener noreferrer"><img src="assets/identity-swarm.svg" alt="AI agent tracing project"><div class="visual-caption">AGENTTRACE</div></a>
-</div>
-</section>
-
-<section id="evidence" class="section visual-only" aria-labelledby="evidence-title">
-<div class="section-head"><div><div class="eyebrow">TRACEABILITY</div><h2 id="evidence-title">Follow the evidence</h2></div><p>Visual entry points connect the professional story to inspectable artefacts.</p></div>
-<div class="visual-portal">
-<a class="visual-link" href="evidence-lab.html"><img src="assets/evidence-trail.svg" alt="Evidence trail entry"><div class="visual-caption">EVIDENCE LAB</div></a>
-<a class="visual-link" href="open-source.html"><img src="assets/capability-network.svg" alt="Open source contribution entry"><div class="visual-caption">OPEN SOURCE</div></a>
-<a class="visual-link" href="cloud-badges.html"><img src="assets/identity-swarm.svg" alt="Learning evidence entry"><div class="visual-caption">LEARNING</div></a>
-</div>
-</section>
-
-<section id="cv" class="section" aria-labelledby="cv-title"><div class="section-head"><div><div class="eyebrow">INTERACTIVE CV</div><h2 id="cv-title">Professional evidence map</h2></div><p>Public CV content is kept deliberately factual. Add verified public CV material here as it becomes available.</p></div><div class="proof-grid"><article class="proof-panel"><h3>Current professional direction</h3><div class="proof-list"><div class="proof-item"><i class="proof-dot"></i><span>Software architecture and maintainable application systems</span></div><div class="proof-item"><i class="proof-dot"></i><span>DevOps, CI/CD and repository automation</span></div><div class="proof-item"><i class="proof-dot"></i><span>Research methods and evidence appraisal</span></div><div class="proof-item"><i class="proof-dot"></i><span>Healthcare-oriented digital technology</span></div></div></article><article class="proof-panel"><h3>CV document</h3><p style="color:var(--muted)">No public CV URL is asserted until a verified document or URL is available.</p></article></div></section>
-<section id="open-source" class="section" aria-labelledby="open-title"><div class="section-head"><div><div class="eyebrow">OPEN SOURCE</div><h2 id="open-title">Contribution trail</h2></div><p>Targets and actual contributions remain separate. This page links only to the existing contribution tracker.</p></div><div class="actions"><a class="btn primary" href="open-source.html">Open contribution tracker →</a><a class="btn" href="https://github.com/abla86?tab=activity" target="_blank" rel="noopener noreferrer">GitHub activity ↗</a></div></section>
-<section id="contact" class="section" aria-labelledby="contact-title"><div class="contact"><div><div class="eyebrow">CONTACT PORTAL</div><h2 id="contact-title">Explore the work, then follow the evidence.</h2><p style="color:var(--muted)">The public entry points are GitHub and the interactive ecosystem. Add verified CV or LinkedIn destinations when those public URLs are ready.</p></div><div class="actions"><a class="btn primary" href="https://github.com/abla86" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a class="btn" href="open-source.html">Open source</a><a class="btn" href="cloud-badges.html">Learning evidence</a></div></div></section>
+</main>
 <footer>THE ANNE BETH SYSTEM · evidence-first professional ecosystem · <a href="https://github.com/abla86/developer-portfolio" target="_blank" rel="noopener noreferrer">source repository ↗</a></footer>
 </main>
 <script>
-const DATA_URL="data/ecosystem.json";
-const fallback={"worlds":[],"projects":[]};
-let data=fallback;
-const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
-function renderWorlds(){
- const grid=$("#worldGrid"); grid.innerHTML=data.worlds.map(w=>`<article class="world-card" style="--tone:var(--${w.tone})" data-world="${w.id}"><div class="eyebrow">${w.id.toUpperCase()}</div><h3>${w.label}</h3><p>${w.summary}</p><div class="proof">${w.evidence.length} linked project evidence sources</div><a class="enter" href="#projects/${w.id}">FILTER CONSTELLATION →</a></article>`).join("");
-}
-function renderProjects(filter=""){
- const grid=$("#projectGrid"); const ps=data.projects.filter(p=>!filter||p.domain.toLowerCase().includes(filter)||p.slug.includes(filter));
- grid.innerHTML=ps.map(p=>`<article class="project"><div class="visual" aria-hidden="true"></div><div class="body"><div class="domain">${p.domain}</div><h3>${p.name}</h3><p>${p.summary}</p><div class="proof">Evidence: ${p.proof.join(" · ")}</div><div class="links"><a class="mini" href="${p.repo}" target="_blank" rel="noopener noreferrer">Repository ↗</a>${p.demo?`<a class="mini" href="${p.demo}" target="_blank" rel="noopener noreferrer">Demo ↗</a>`:""}</div></div></article>`).join("");
-}
-function selectMode(mode){
- $$("[data-mode]").forEach(b=>b.classList.toggle("active",b.dataset.mode===mode));
- if(mode==="recruiter") $("#recruiter").scrollIntoView({block:"start"});
- if(mode==="technical") $("#technical").scrollIntoView({block:"start"});
- if(mode==="research") $("#research").scrollIntoView({block:"start"});
- if(mode==="explore") $("#worlds").scrollIntoView({block:"start"});
-}
-function route(){
- const raw=location.hash.replace("#",""); const parts=raw.split("/");
- if(parts[0]==="projects"&&parts[1]){renderProjects(parts[1]);$("#projects").scrollIntoView({block:"start"});}
- else if(["architecture","devops","research","healthcare","automation","quality"].includes(parts[0])){
- const map={architecture:"capabilities",devops:"technical",research:"research",healthcare:"research",automation:"capabilities",quality:"evidence"};
- const el=$("#"+map[parts[0]]); if(el) el.scrollIntoView({block:"start"});
-}
- else if(raw){const el=$("#"+parts[0]); if(el) el.scrollIntoView({block:"start"});}
-}
-async function boot(){
- try{const r=await fetch(DATA_URL,{cache:"no-store"});if(r.ok)data=await r.json();}catch(e){}
- route();
-}
-$$(".core-node").forEach(n=>{const go=()=>location.hash=n.dataset.target;n.addEventListener("click",go);n.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();go();}})});
-$$("[data-mode]").forEach(b=>b.addEventListener("click",()=>selectMode(b.dataset.mode)));
-addEventListener("hashchange",route);
-const motion=$("#motionToggle"); motion.addEventListener("click",()=>{document.documentElement.classList.toggle("low-motion");const on=document.documentElement.classList.contains("low-motion");motion.setAttribute("aria-pressed",String(on));});
-boot();
+const $=s=>document.querySelector(s);
+const motion=$("#motionToggle");
+if(motion) motion.addEventListener("click",()=>{document.documentElement.classList.toggle("low-motion");const on=document.documentElement.classList.contains("low-motion");motion.setAttribute("aria-pressed",String(on));});
+addEventListener("hashchange",()=>{const id=location.hash.slice(1);const el=id&&document.getElementById(id);if(el) el.scrollIntoView({behavior:document.documentElement.classList.contains("low-motion")?"auto":"smooth",block:"start"});});
 </script>
 </body>
 </html>
