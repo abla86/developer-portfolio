@@ -1,0 +1,24 @@
+title: Device Health
+views:
+  - title: Devices
+    path: devices
+    icon: mdi:heart-pulse
+    cards:
+      - type: heading
+        heading: Device Health
+        heading_style: title
+      - type: entities
+        title: Critical devices
+        entities:
+          - entity: lock.front_door
+            name: Front door lock
+          - entity: vacuum.dreame_l20_ultra
+            name: Dreame L20 Ultra
+          - entity: climate.main_heating
+            name: Main climate
+      - type: entities
+        title: Battery watch
+        entities:
+          - sensor.front_door_lock_battery
+          - sensor.motion_hallway_battery
+          - sensor.motion_kitchen_battery
