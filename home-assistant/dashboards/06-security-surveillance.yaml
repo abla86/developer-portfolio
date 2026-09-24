@@ -1,0 +1,92 @@
+# SECURITY — Surveillance
+# Operational camera/lock/sensor view inspired by the security section of the references.
+
+title: SECURITY — Surveillance
+views:
+  - title: Security
+    path: security
+    icon: mdi:shield-home
+    type: sections
+    max_columns: 4
+    sections:
+      - type: grid
+        column_span: 4
+        cards:
+          - type: heading
+            heading: SECURITY CENTER
+            heading_style: title
+          - type: horizontal-stack
+            cards:
+              - type: tile
+                entity: alarm_control_panel.home
+                name: Alarm
+              - type: lock
+                entity: lock.front_door
+              - type: tile
+                entity: binary_sensor.front_door
+                name: Ytterdør
+
+      - type: grid
+        column_span: 4
+        cards:
+          - type: heading
+            heading: Kameraer
+          - type: picture-entity
+            entity: camera.front_door
+            name: Inngang
+            camera_view: live
+          - type: picture-entity
+            entity: camera.garage
+            name: Garasje
+            camera_view: live
+          - type: picture-entity
+            entity: camera.garden
+            name: Hage
+            camera_view: live
+          - type: picture-entity
+            entity: camera.living_room
+            name: Stue
+            camera_view: live
+
+      - type: grid
+        cards:
+          - type: heading
+            heading: Bevegelse
+          - type: tile
+            entity: binary_sensor.hall_motion
+            name: Gang
+          - type: tile
+            entity: binary_sensor.kitchen_motion
+            name: Kjøkken
+          - type: tile
+            entity: binary_sensor.garage_motion
+            name: Garasje
+          - type: tile
+            entity: binary_sensor.garden_motion
+            name: Hage
+
+      - type: grid
+        cards:
+          - type: heading
+            heading: Dører
+          - type: tile
+            entity: binary_sensor.front_door
+            name: Inngang
+          - type: tile
+            entity: binary_sensor.garage_door
+            name: Garasje
+          - type: tile
+            entity: binary_sensor.back_door
+            name: Bakdør
+
+      - type: grid
+        cards:
+          - type: heading
+            heading: Hendelser
+          - type: logbook
+            entities:
+              - binary_sensor.front_door
+              - lock.front_door
+              - binary_sensor.hall_motion
+              - binary_sensor.kitchen_motion
+            hours_to_show: 24
