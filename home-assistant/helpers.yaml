@@ -1,0 +1,10 @@
+input_boolean:
+  home_away_mode:
+    name: Hjemme/Borte
+    icon: mdi:home-account
+  night_mode:
+    name: Nattmodus
+    icon: mdi:weather-night
+  guest_mode:
+    name: Gjester
+    icon: mdi:account-multiple
