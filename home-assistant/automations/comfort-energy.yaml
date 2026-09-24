@@ -1,0 +1,26 @@
+- id: ha_energy_peak_alert
+  alias: "Energy — high consumption alert"
+  mode: single
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.home_power
+      above: 7000
+      for: "00:05:00"
+  action:
+    - service: notify.persistent_notification
+      data:
+        title: "Høyt strømforbruk"
+        message: "Boligen har ligget over 7 kW i minst 5 minutter."
+
+- id: ha_climate_night_mode
+  alias: "Climate — night mode"
+  mode: single
+  trigger:
+    - platform: time
+      at: "23:30:00"
+  action:
+    - service: climate.set_temperature
+      target:
+        entity_id: climate.main_heating
+      data:
+        temperature: 18
