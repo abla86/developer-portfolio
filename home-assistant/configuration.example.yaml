@@ -4,42 +4,42 @@
 
 lovelace:
   dashboards:
-    nexus:
+    nexus-control:
       mode: yaml
       filename: dashboards/01-nexus-mission-control.yaml
       title: NEXUS
       icon: mdi:home-automation
       show_in_sidebar: true
 
-    residence:
+    residence-climate:
       mode: yaml
       filename: dashboards/02-residence-room-climate.yaml
       title: RESIDENCE
       icon: mdi:home-variant
       show_in_sidebar: true
 
-    evohaus:
+    evohaus-security:
       mode: yaml
       filename: dashboards/03-evohaus-security-media.yaml
       title: EVOHAUS
       icon: mdi:shield-home
       show_in_sidebar: true
 
-    energy:
+    energy-intelligence:
       mode: yaml
       filename: dashboards/04-energy-intelligence.yaml
       title: ENERGY
       icon: mdi:lightning-bolt
       show_in_sidebar: true
 
-    devices:
+    devices-health:
       mode: yaml
       filename: dashboards/05-devices-health-network.yaml
       title: DEVICES
       icon: mdi:lan-connect
       show_in_sidebar: true
 
-    security:
+    security-surveillance:
       mode: yaml
       filename: dashboards/06-security-surveillance.yaml
       title: SECURITY
