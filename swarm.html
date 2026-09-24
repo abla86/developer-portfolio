@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Anne Beth — interactive swarm ecosystem.">
+<title>Anne Beth · Swarm</title>
+<style>
+:root{--bg:#02060b;--ink:#f4fbff;--muted:#9ab5c7;--cyan:#58c7ff}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#02060b;color:var(--ink);font-family:Inter,system-ui,sans-serif}body{overflow-x:hidden}
+.stage{min-height:100vh;display:grid;place-items:center;padding:20px;background:radial-gradient(circle at 50% 45%,#0b2437 0,#03080e 52%,#010308 100%)}
+.art{position:relative;width:min(1500px,100%);aspect-ratio:16/10;border:1px solid #25445a;border-radius:28px;overflow:hidden;box-shadow:0 0 100px #58c7ff18}
+.art img{width:100%;height:100%;display:block;object-fit:cover}
+.hot{position:absolute;transform:translate(-50%,-50%);width:11%;aspect-ratio:1;border-radius:50%;outline:0}
+.hot:hover{background:radial-gradient(circle,transparent 45%,#fff2 48%,transparent 70%);box-shadow:0 0 34px 8px #58c7ff55}
+.hot:focus-visible{box-shadow:0 0 0 3px #fff,0 0 30px 8px #58c7ff}
+.center{width:17%}
+.legend{position:absolute;left:24px;bottom:24px;display:flex;gap:8px;flex-wrap:wrap;max-width:70%}
+.legend a,.back{border:1px solid #33556d;background:#06111bde;color:#dcecf5;border-radius:10px;padding:9px 12px;font-size:.7rem;font-weight:800;text-decoration:none;backdrop-filter:blur(10px)}
+.legend a:hover,.back:hover{border-color:var(--cyan)}
+.back{position:absolute;right:24px;top:24px}
+@media(max-width:700px){.stage{padding:8px}.art{border-radius:14px}.legend{left:10px;bottom:10px}.legend a{font-size:.58rem;padding:7px 8px}.back{right:10px;top:10px;font-size:.62rem}}
+</style>
+</head>
+<body>
+<main class="stage">
+<div class="art" aria-label="Interactive swarm">
+<img src="assets/swarm-hero.svg" alt="Anne Beth connected to Architecture, DevOps, Research, Healthcare, Automation and Quality">
+<a class="hot" style="left:32.5%;top:27%" href="index.html#architecture" aria-label="Architecture"></a>
+<a class="hot" style="left:67.5%;top:27%" href="index.html#devops" aria-label="DevOps"></a>
+<a class="hot" style="left:17.5%;top:59%" href="index.html#research" aria-label="Research"></a>
+<a class="hot" style="left:82.5%;top:59%" href="index.html#healthcare" aria-label="Healthcare"></a>
+<a class="hot" style="left:32.5%;top:80%" href="index.html#automation" aria-label="Automation"></a>
+<a class="hot" style="left:67.5%;top:80%" href="index.html#quality" aria-label="Quality"></a>
+<a class="hot center" style="left:50%;top:48.5%" href="index.html#projects" aria-label="Anne Beth projects"></a>
+<a class="back" href="index.html">OPEN ECOSYSTEM →</a>
+<nav class="legend" aria-label="Swarm navigation">
+<a href="index.html#projects">PROJECTS</a><a href="index.html#recruiter">CV</a><a href="https://github.com/abla86" target="_blank" rel="noopener">GITHUB</a><a href="index.html#research">RESEARCH</a><a href="index.html#contact">CONTACT</a>
+</nav>
+</div>
+</main>
+</body>
+</html>
