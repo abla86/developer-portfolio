@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T01:39:35.462Z",
+  "generatedAt": "2026-09-24T15:07:48.106Z",
   "source": "GitHub repository inspection",
   "policy": "Only verified repository facts may be promoted to the portfolio. Archived and deleted repositories are excluded from active project registry entries.",
   "projects": [
@@ -17,8 +17,8 @@
         "archived": false,
         "description": "evidence-appraisal-tool",
         "stars": 0,
-        "updatedAt": "2026-09-19T18:45:49Z",
-        "pushedAt": "2026-09-19T18:45:46Z",
+        "updatedAt": "2026-09-24T13:24:25Z",
+        "pushedAt": "2026-09-24T13:24:21Z",
         "languages": [
           "TypeScript",
           "C#",
@@ -105,8 +105,8 @@
         "archived": false,
         "description": "Full-stack workforce and competence management system with React, ASP.NET Core, SQL Server, Docker and automated gap analysis.",
         "stars": 1,
-        "updatedAt": "2026-09-23T16:32:12Z",
-        "pushedAt": "2026-09-23T16:34:42Z",
+        "updatedAt": "2026-09-24T15:01:53Z",
+        "pushedAt": "2026-09-24T15:01:41Z",
         "languages": [
           "C#",
           "JavaScript",
@@ -162,8 +162,8 @@
         "archived": false,
         "description": "Healthcare device management REST API built with C#, .NET 9 and ASP.NET Core.",
         "stars": 0,
-        "updatedAt": "2026-09-24T00:04:21Z",
-        "pushedAt": "2026-09-24T00:04:17Z",
+        "updatedAt": "2026-09-24T01:40:38Z",
+        "pushedAt": "2026-09-24T01:40:34Z",
         "languages": [
           "C#",
           "HTML",
@@ -240,8 +240,8 @@
         "archived": false,
         "description": "Cloud engineering showcase with .NET, React TypeScript, Docker, Kubernetes, Azure, IaC, CI/CD, security and observability",
         "stars": 0,
-        "updatedAt": "2026-09-23T16:45:48Z",
-        "pushedAt": "2026-09-23T16:47:17Z",
+        "updatedAt": "2026-09-24T15:01:28Z",
+        "pushedAt": "2026-09-24T15:01:07Z",
         "languages": [
           "Python",
           "C#",
@@ -416,8 +416,8 @@
         "archived": false,
         "description": "Portable tracing, provenance, policy and audit layer for AI-agent systems",
         "stars": 1,
-        "updatedAt": "2026-09-24T01:36:14Z",
-        "pushedAt": "2026-09-24T01:38:19Z",
+        "updatedAt": "2026-09-24T13:29:40Z",
+        "pushedAt": "2026-09-24T13:31:21Z",
         "languages": [
           "Python",
           "TypeScript",
@@ -508,8 +508,8 @@
         "archived": false,
         "description": "lage bok fra ide til komplett på 10 min",
         "stars": 0,
-        "updatedAt": "2026-09-24T01:37:42Z",
-        "pushedAt": "2026-09-24T01:39:23Z",
+        "updatedAt": "2026-09-24T14:44:43Z",
+        "pushedAt": "2026-09-24T14:47:33Z",
         "languages": [
           "TypeScript",
           "HTML",
@@ -561,8 +561,8 @@
         "archived": false,
         "description": "Autonomous Multi-Agent App Builder",
         "stars": 0,
-        "updatedAt": "2026-09-24T01:37:31Z",
-        "pushedAt": "2026-09-24T01:37:27Z",
+        "updatedAt": "2026-09-24T13:31:52Z",
+        "pushedAt": "2026-09-24T13:34:53Z",
         "languages": [
           "TypeScript",
           "HTML",
