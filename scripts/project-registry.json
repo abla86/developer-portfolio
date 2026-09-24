@@ -1,5 +1,5 @@
 {
-  "version": 9,
+  "version": 10,
   "policy": "Only verified repository facts may be promoted to the portfolio. Archived and deleted repositories are excluded from active project registry entries.",
   "projectLab": {
     "entry": "desktop-clock.html",
@@ -158,5 +158,215 @@
     {
       "reason": "Archived, training, documentation and predecessor repositories remain outside promoted project units unless independently verified as active original work."
     }
-  ]
+  ],
+  "learningEvidence": {
+    "title": "Learning & credential evidence",
+    "items": [
+      {
+        "provider": "Google Cloud Skills Boost",
+        "name": "Introduction to Security Principles in Cloud Computing",
+        "category": "Cloud Security",
+        "type": "completion",
+        "url": "https://www.skills.google/course_templates/1300",
+        "relevance": "Cloud security foundations",
+        "project": "azure-kubernetes-showcase"
+      },
+      {
+        "provider": "Google Cloud Skills Boost",
+        "name": "Strategies for Cloud Security Risk Management",
+        "category": "Cloud Security",
+        "type": "completion",
+        "url": "https://www.skills.google/course_templates/1301",
+        "relevance": "Cloud security risk management",
+        "project": "azure-kubernetes-showcase"
+      },
+      {
+        "provider": "Google Cloud Skills Boost",
+        "name": "Secure Enterprise AI Agents",
+        "category": "AI Security",
+        "type": "completion",
+        "url": "https://www.skills.google/course_templates/1835",
+        "relevance": "AI security and governance",
+        "project": "CodeSentinel"
+      },
+      {
+        "provider": "Google Cloud Skills Boost",
+        "name": "AI Boost Bites: Your Personal Feedback Agent",
+        "category": "Applied AI",
+        "type": "completion",
+        "url": "https://www.skills.google/course_templates/1449",
+        "relevance": "Applied AI and feedback-agent workflows",
+        "project": "book-forge"
+      },
+      {
+        "provider": "Google Cloud Skills Boost",
+        "name": "Build Collaborative Multi-Agent Systems with ADK & MCP",
+        "category": "AI Agents",
+        "type": "completion",
+        "url": "https://www.skills.google/course_templates/1833",
+        "relevance": "Multi-agent systems, ADK and MCP",
+        "project": "agenttrace"
+      },
+      {
+        "provider": "Google Cloud Skills Boost",
+        "name": "Optimize Agent Behavior",
+        "category": "AI Agents",
+        "type": "completion",
+        "url": "https://www.skills.google/course_templates/1564",
+        "relevance": "Agent behavior optimization",
+        "project": "agenttrace"
+      },
+      {
+        "provider": "Google Cloud Skills Boost",
+        "name": "Agentic Strategy: Discover, Design, and Prototype",
+        "category": "AI Agents",
+        "type": "completion",
+        "url": "https://www.skills.google/course_templates/1672",
+        "relevance": "Agent strategy and prototyping",
+        "project": "agenttrace"
+      },
+      {
+        "provider": "Canva Design School",
+        "name": "AI in the classroom",
+        "category": "AI",
+        "type": "certificate",
+        "date": "2025-08-02",
+        "credentialId": "ca6fcb",
+        "relevance": "AI use in learning and classroom contexts"
+      },
+      {
+        "provider": "Canva Design School",
+        "name": "Canva Essentials",
+        "category": "Design",
+        "type": "certificate",
+        "date": "2025-08-02",
+        "credentialId": "85f51f",
+        "relevance": "Canva fundamentals and visual content creation"
+      },
+      {
+        "provider": "Canva Design School",
+        "name": "Graphic Design Essentials",
+        "category": "Design",
+        "type": "certificate",
+        "date": "2025-08-02",
+        "credentialId": "bf3b17",
+        "relevance": "Graphic design fundamentals"
+      },
+      {
+        "provider": "Microsoft",
+        "name": "Empower your workforce with Microsoft 365 — Copilot: Executives Use Case",
+        "category": "Microsoft 365 / AI",
+        "type": "certificate",
+        "date": "2025-07-19",
+        "relevance": "Microsoft 365 Copilot executive use case"
+      },
+      {
+        "provider": "DigitalNorway",
+        "name": "Hva er kunstig intelligens?",
+        "category": "AI",
+        "type": "course certificate",
+        "date": "2025-10-13",
+        "credentialId": "216638932",
+        "relevance": "AI, machine learning and generative AI fundamentals"
+      },
+      {
+        "provider": "Microsoft Learn",
+        "name": "Microsoft 365 Fundamentals",
+        "category": "Microsoft / Cloud",
+        "type": "badge evidence",
+        "relevance": "Microsoft 365 core concepts"
+      },
+      {
+        "provider": "Microsoft Learn",
+        "name": "Azure Fundamentals",
+        "category": "Azure / Cloud",
+        "type": "badge evidence",
+        "relevance": "Azure architecture and governance fundamentals"
+      },
+      {
+        "provider": "Microsoft Learn",
+        "name": "Introduction to HTML",
+        "category": "Web Development",
+        "type": "badge evidence",
+        "relevance": "HTML fundamentals"
+      },
+      {
+        "provider": "Microsoft Learn",
+        "name": "Explore Scientific Excel",
+        "category": "Data / Excel",
+        "type": "badge evidence",
+        "relevance": "Scientific data work in Excel"
+      },
+      {
+        "provider": "Microsoft Learn",
+        "name": "Introduction to CSS",
+        "category": "Web Development",
+        "type": "badge evidence",
+        "relevance": "CSS fundamentals"
+      },
+      {
+        "provider": "Microsoft Learn",
+        "name": "Introduction to Python",
+        "category": "Python",
+        "type": "badge evidence",
+        "relevance": "Python fundamentals"
+      },
+      {
+        "provider": "Microsoft Learn",
+        "name": "Describe core HR functions",
+        "category": "Microsoft / HR",
+        "type": "badge evidence",
+        "relevance": "Core HR functions"
+      },
+      {
+        "provider": "Microsoft Learn",
+        "name": "Payroll in Dynamics 365 Human Resources",
+        "category": "Microsoft / HR",
+        "type": "badge evidence",
+        "relevance": "Dynamics 365 Human Resources payroll"
+      },
+      {
+        "provider": "Microsoft Learn",
+        "name": "Read data with Python",
+        "category": "Python / Data",
+        "type": "badge evidence",
+        "relevance": "Reading and working with data in Python"
+      },
+      {
+        "provider": "Microsoft Learn",
+        "name": "Conduct a usability study for your website",
+        "category": "UX / Web",
+        "type": "badge evidence",
+        "relevance": "Website usability research"
+      },
+      {
+        "provider": "Microsoft Learn",
+        "name": "Apply CSS grid in your website",
+        "category": "Web Development",
+        "type": "badge evidence",
+        "relevance": "CSS Grid layout"
+      },
+      {
+        "provider": "Microsoft Learn",
+        "name": "Microsoft 365 Fundamentals — additional module evidence",
+        "category": "Microsoft 365",
+        "type": "badge evidence",
+        "relevance": "Additional Microsoft 365 module evidence shown in uploaded badge sheet"
+      },
+      {
+        "provider": "Microsoft Learn",
+        "name": "Azure Fundamentals — additional module evidence",
+        "category": "Azure",
+        "type": "badge evidence",
+        "relevance": "Additional Azure fundamentals module evidence shown in uploaded badge sheet"
+      },
+      {
+        "provider": "Microsoft Learn",
+        "name": "Microsoft 365 Fundamentals — additional module evidence 2",
+        "category": "Microsoft 365",
+        "type": "badge evidence",
+        "relevance": "Additional Microsoft 365 fundamentals evidence shown in uploaded badge sheet"
+      }
+    ]
+  }
 }
