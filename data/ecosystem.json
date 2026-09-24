@@ -1,0 +1,172 @@
+{
+  "profile": {
+    "name": "Anne Beth",
+    "title": "Software Architecture · DevOps Engineering · Research Methods · Healthcare IT",
+    "github": "https://github.com/abla86",
+    "pages": "https://abla86.github.io/developer-portfolio/"
+  },
+  "worlds": [
+    {
+      "id": "architecture",
+      "label": "Architecture",
+      "tone": "cyan",
+      "summary": "System boundaries, data flow, design decisions and maintainability.",
+      "evidence": [
+        "HealthTechDeviceApi",
+        "workforce-competence-management",
+        "complete-evidence-appraisal-tool"
+      ]
+    },
+    {
+      "id": "devops",
+      "label": "DevOps",
+      "tone": "amber",
+      "summary": "CI/CD, containerisation, cloud delivery and automated verification.",
+      "evidence": [
+        "azure-kubernetes-showcase",
+        "CodeSentinel",
+        "AB-Engineering-Lab"
+      ]
+    },
+    {
+      "id": "research",
+      "label": "Research",
+      "tone": "violet",
+      "summary": "Research methods, evidence appraisal and reproducible workflows.",
+      "evidence": [
+        "complete-evidence-appraisal-tool"
+      ]
+    },
+    {
+      "id": "healthcare",
+      "label": "Healthcare",
+      "tone": "green",
+      "summary": "Healthcare-oriented software, digitalisation and responsible information flow.",
+      "evidence": [
+        "HealthTechDeviceApi",
+        "workforce-competence-management"
+      ]
+    },
+    {
+      "id": "automation",
+      "label": "Automation",
+      "tone": "gold",
+      "summary": "Repository workflows, testing, repeatability and engineering automation.",
+      "evidence": [
+        "CodeSentinel",
+        "AB-Engineering-Lab",
+        "agenttrace"
+      ]
+    },
+    {
+      "id": "quality",
+      "label": "Quality",
+      "tone": "blue",
+      "summary": "Testing, security, documentation and traceability across delivery.",
+      "evidence": [
+        "CodeSentinel",
+        "complete-evidence-appraisal-tool",
+        "azure-kubernetes-showcase"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "slug": "complete-evidence-appraisal-tool",
+      "name": "Complete Evidence Appraisal Tool",
+      "domain": "Research",
+      "summary": "Structured research appraisal software spanning established evidence-assessment frameworks.",
+      "repo": "https://github.com/abla86/complete-evidence-appraisal-tool",
+      "demo": "https://abla86.github.io/developer-portfolio/evidence-lab.html",
+      "proof": [
+        "repository",
+        "research workflow",
+        "methodology documentation"
+      ]
+    },
+    {
+      "slug": "codesentinel",
+      "name": "CodeSentinel",
+      "domain": "Quality · DevOps",
+      "summary": "Repository intelligence, automation and security verification.",
+      "repo": "https://github.com/abla86/CodeSentinel",
+      "proof": [
+        "repository",
+        "automation",
+        "security verification"
+      ]
+    },
+    {
+      "slug": "agenttrace",
+      "name": "AgentTrace",
+      "domain": "AI · Automation",
+      "summary": "AI-agent tracing, policy, provenance and audit-oriented engineering.",
+      "repo": "https://github.com/abla86/agenttrace",
+      "proof": [
+        "repository",
+        "examples",
+        "policy/provenance implementation"
+      ]
+    },
+    {
+      "slug": "healthtech-api",
+      "name": "HealthTechDeviceApi",
+      "domain": "Healthcare",
+      "summary": "C#/.NET healthcare-oriented API engineering and device-oriented data modelling.",
+      "repo": "https://github.com/abla86/HealthTechDeviceApi",
+      "proof": [
+        "repository",
+        "API implementation",
+        "documentation"
+      ]
+    },
+    {
+      "slug": "workforce",
+      "name": "Workforce & Competence Management",
+      "domain": "Healthcare · Architecture",
+      "summary": "Workforce planning and competence-management software.",
+      "repo": "https://github.com/abla86/workforce-competence-management",
+      "proof": [
+        "repository",
+        "application architecture",
+        "implementation"
+      ]
+    },
+    {
+      "slug": "azure-kubernetes-showcase",
+      "name": "Azure Kubernetes Showcase",
+      "domain": "DevOps · Cloud",
+      "summary": "Cloud infrastructure, Kubernetes, containers and CI/CD.",
+      "repo": "https://github.com/abla86/azure-kubernetes-showcase",
+      "proof": [
+        "repository",
+        "infrastructure",
+        "CI/CD"
+      ]
+    },
+    {
+      "slug": "book-forge",
+      "name": "Book Forge",
+      "domain": "AI · Full Stack",
+      "summary": "Full-stack AI application with structured context, continuity and security boundaries.",
+      "repo": "https://github.com/abla86/book-forge",
+      "proof": [
+        "repository",
+        "architecture",
+        "security implementation"
+      ]
+    },
+    {
+      "slug": "ab-engineering-lab",
+      "name": "AB Engineering Lab",
+      "domain": "Engineering",
+      "summary": "Small, tested demonstrations across application and backend technologies.",
+      "repo": "https://github.com/abla86/AB-Engineering-Lab",
+      "proof": [
+        "repository",
+        "tests",
+        "demonstrations"
+      ]
+    }
+  ]
+}
