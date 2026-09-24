@@ -1,109 +1,144 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="AB — interactive engineering profile.">
-<title>AB · Interactive Engineering Profile</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Anne Beth — interactive professional ecosystem for software architecture, DevOps, research methods and healthcare IT.">
+<meta name="theme-color" content="#050a11">
+<title>Anne Beth System · Interactive Engineering Ecosystem</title>
 <style>
-:root{--bg:#03070d;--ink:#e9f3ff;--muted:#8298ad;--glow:#70e0b1;--line:#183044}
-*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:radial-gradient(circle at 50% 35%,#102336 0,#050b12 48%,#02050a 100%);color:var(--ink);font-family:system-ui,sans-serif}body{overflow-x:hidden}a{text-decoration:none;color:inherit}
-.top{position:fixed;z-index:30;top:0;left:0;right:0;display:flex;justify-content:space-between;padding:16px 22px;background:linear-gradient(#03070ddd,transparent);pointer-events:none}.top>*{pointer-events:auto}.brand{font-weight:950;font-size:1.4rem}.brand span{color:var(--glow)}.gh{border:1px solid #274157;border-radius:10px;padding:8px 12px;color:#a9bbcc;backdrop-filter:blur(8px)}
-main{min-height:100vh;display:grid;place-items:center;padding:70px 12px 30px}.world{position:relative;width:min(1200px,100%);height:min(850px,calc(100vh - 100px));min-height:650px;border-radius:34px;overflow:hidden;border:1px solid #142a3d;background:radial-gradient(circle at 50% 48%,#0c1d2a99,transparent 36%)}canvas{position:absolute;inset:0;width:100%;height:100%}
-.ygg{position:absolute;inset:0;display:grid;place-items:center}.ygg svg{width:min(760px,82vw);height:88%;overflow:visible}.trunk{stroke:#35546a;stroke-width:13;fill:none;stroke-linecap:round}.branch{stroke:#274458;stroke-width:6;fill:none;stroke-linecap:round}.root{stroke:#274458;stroke-width:4;fill:none;stroke-linecap:round}.node{cursor:pointer;outline:none}.node:focus-visible .orb{stroke:var(--glow);stroke-width:4;filter:drop-shadow(0 0 16px #70e0b155)}.orb{fill:#07131d;stroke:#3b6078;stroke-width:2;transition:.2s}.node:hover .orb,.node.active .orb{stroke:var(--glow);stroke-width:4;filter:drop-shadow(0 0 16px #70e0b155)}.node text{fill:#cfe0ef;font-size:12px;font-weight:850;text-anchor:middle;pointer-events:none}.core .orb{fill:#0b211a;stroke:var(--glow);stroke-width:3}.core text{font-size:15px}
-#info{position:absolute;left:22px;bottom:22px;width:min(390px,calc(100% - 44px));padding:18px;border:1px solid #203b50;border-radius:18px;background:#03070de8;backdrop-filter:blur(16px);z-index:5;opacity:0;transform:translateY(12px);transition:.25s}.world.has-selection #info{opacity:1;transform:none}#info h2{margin:4px 0 5px;font-size:1.15rem}#info p{margin:0;color:var(--muted);font-size:.82rem}.links{display:flex;gap:7px;flex-wrap:wrap;margin-top:13px}.links a{padding:7px 9px;border:1px solid #28445a;border-radius:8px;color:#b9cada;font-size:.72rem}.links a:hover{border-color:var(--glow);color:var(--glow)}
-#legend{position:absolute;right:22px;bottom:22px;color:#60778b;font:600 .65rem ui-monospace,monospace;text-align:right}.pulse{position:absolute;left:50%;top:50%;width:180px;height:180px;transform:translate(-50%,-50%);border:1px solid #70e0b122;border-radius:50%;animation:pulse 3s infinite;pointer-events:none}@keyframes pulse{50%{transform:translate(-50%,-50%) scale(1.22);opacity:.25}100%{transform:translate(-50%,-50%) scale(1);opacity:.7}}
-@media(max-width:700px){main{padding:50px 6px 8px}.world{height:calc(100vh - 58px);min-height:620px}.ygg svg{width:96vw;height:92%}#legend{display:none}.top{padding:12px 14px}}
-@media(prefers-reduced-motion:reduce){.pulse{animation:none}.node .orb{transition:none}}
-
-.badges{position:absolute;top:22px;left:22px;width:min(440px,calc(100% - 44px));z-index:6;display:grid;grid-template-columns:1fr 1fr;gap:8px;max-height:260px;overflow:auto;padding-right:3px}
-.badge-card{border:1px solid #28445a;border-radius:12px;padding:9px 10px;background:#06101ae8;backdrop-filter:blur(12px);box-shadow:0 0 18px #0006}
-.badge-card .badge-kind{font:800 .55rem ui-monospace,monospace;letter-spacing:.12em;color:var(--glow);text-transform:uppercase}
-.badge-card .badge-title{margin-top:4px;font-size:.68rem;line-height:1.25;font-weight:800;color:#d9e8f5}
-.badge-card .badge-date{margin-top:4px;font-size:.58rem;color:#7f98ac}
-.badge-card:hover{border-color:var(--glow);transform:translateY(-1px)}
-.badges-toggle{display:none}
-@media(max-width:700px){.badges{top:58px;left:10px;width:calc(100% - 20px);grid-template-columns:1fr;max-height:190px}.badge-card{padding:8px}.badge-card .badge-title{font-size:.64rem}}
-
-/* Deep interactive profile */
-.profile-tools{position:absolute;top:22px;right:22px;z-index:8;display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end;max-width:420px}.profile-tools button{border:1px solid #28445a;background:#06101ae8;color:#b9cada;border-radius:9px;padding:8px 10px;font:800 .65rem ui-monospace,monospace;cursor:pointer;backdrop-filter:blur(12px);transition:.18s}.profile-tools button:hover,.profile-tools button.active{border-color:var(--glow);color:var(--glow);transform:translateY(-1px)}
-#signal{position:absolute;right:22px;bottom:72px;width:min(300px,calc(100% - 44px));z-index:7;padding:14px 16px;border:1px solid #203b50;border-radius:14px;background:#03070de8;backdrop-filter:blur(16px);display:none}.world.has-selection #signal{display:block}.signal-label{color:#60778b;font:800 .57rem ui-monospace,monospace;letter-spacing:.13em}.signal-bar{height:7px;margin-top:8px;background:#142334;border-radius:999px;overflow:hidden}.signal-bar span{display:block;height:100%;width:72%;background:linear-gradient(90deg,var(--glow),var(--accent2));transition:width .35s ease}.signal-meta{display:flex;justify-content:space-between;margin-top:7px;color:#8ca1b5;font:700 .58rem ui-monospace,monospace}.explore-mode .node:not(.active){opacity:.32;filter:saturate(.45)}.explore-mode .node.active{opacity:1}.node{transition:opacity .25s,filter .25s}.node text{transition:.2s}.node:hover text,.node.active text{fill:#fff}.connection{stroke:#70e0b133;stroke-width:2;fill:none;stroke-dasharray:5 8;animation:flow 8s linear infinite}.connection.active{stroke:#70e0b188;stroke-width:3}@keyframes flow{to{stroke-dashoffset:-100}}
-@media(max-width:700px){.profile-tools{top:54px;right:10px;left:10px;justify-content:center}.profile-tools button{font-size:.58rem}#signal{bottom:18px;right:10px;left:10px;width:auto}.world.has-selection #info{bottom:116px}.world.has-selection #legend{display:none}}
-
-.command-bar{position:absolute;top:76px;left:22px;z-index:9;width:min(390px,calc(100% - 44px));display:flex;gap:7px;align-items:center;padding:8px 10px;border:1px solid #28445a;border-radius:11px;background:#06101ae8;backdrop-filter:blur(12px);box-shadow:0 8px 30px #0005}.command-bar span{color:var(--glow);font:900 1rem ui-monospace,monospace}.command-bar input{min-width:0;flex:1;border:0;outline:0;background:transparent;color:#d9e8f5;font:700 .7rem ui-monospace,monospace}.command-bar input::placeholder{color:#60778b}.command-bar button{border:1px solid #28445a;background:transparent;color:#9bb0c2;border-radius:7px;padding:5px 7px;font:800 .55rem ui-monospace,monospace;cursor:pointer}.command-bar button:hover{border-color:var(--glow);color:var(--glow)}.tree-status{position:absolute;right:22px;top:76px;z-index:8;color:#6e879b;font:800 .56rem ui-monospace,monospace;letter-spacing:.08em;text-align:right}.tree-status span:nth-child(1){color:var(--glow)}.node.search-hit .orb{stroke:#fff;stroke-width:5;filter:drop-shadow(0 0 20px #fff6)}.node.search-dim{opacity:.1!important}.tour-active .node{animation:nodeFloat 2.4s ease-in-out infinite}.tour-active .node:nth-child(2n){animation-delay:.4s}.tour-active .node:nth-child(3n){animation-delay:.8s}@keyframes nodeFloat{50%{transform:translateY(-5px)}}.tour-active .connection{animation-duration:2.2s}.hotkey{position:absolute;right:22px;top:108px;z-index:8;color:#4f687b;font:600 .55rem ui-monospace,monospace}@media(max-width:700px){.command-bar{top:98px;left:10px;width:calc(100% - 20px)}.tree-status{top:145px;right:12px}.hotkey{display:none}} 
+:root{--bg:#050a11;--panel:#091522;--panel2:#0d1c2a;--ink:#f3f7fa;--muted:#91a8ba;--line:#20384b;--cyan:#58c7ff;--violet:#a98cff;--green:#55d58a;--amber:#ffb45c;--gold:#f1c75b;--blue:#79b8ff;--danger:#ff6f7d}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 50% 0,#10263a 0,#050a11 42%,#03060b 100%);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}a{color:inherit;text-decoration:none}button,input{font:inherit}
+.skip{position:fixed;left:12px;top:12px;z-index:100;padding:10px 14px;background:#fff;color:#000;border-radius:9px;transform:translateY(-150%)}.skip:focus{transform:none}
+header{position:sticky;top:0;z-index:50;background:#050a11df;border-bottom:1px solid #20384b;backdrop-filter:blur(18px)}.nav{max-width:1280px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 22px}.brand{font-weight:900;letter-spacing:.08em}.brand span{color:var(--cyan)}.navlinks{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}.navlinks a,.navlinks button{border:1px solid #26445b;background:#08131e;color:#b9cbd7;border-radius:9px;padding:8px 11px;font-size:.72rem;font-weight:800;cursor:pointer}.navlinks a:hover,.navlinks button:hover,.navlinks .active{border-color:var(--cyan);color:#fff}
+main{max-width:1280px;margin:auto;padding:22px}
+.hero{min-height:calc(100vh - 100px);display:grid;grid-template-columns:minmax(320px,.8fr) minmax(520px,1.4fr);gap:20px;align-items:center}.hero-copy{padding:20px 8px}.eyebrow{font:800 .68rem ui-monospace,monospace;letter-spacing:.18em;color:var(--cyan);text-transform:uppercase}.hero h1{font-size:clamp(3.5rem,8vw,7rem);line-height:.9;margin:12px 0 18px;letter-spacing:-.06em}.hero h1 span{color:var(--cyan)}.hero h2{font-size:clamp(1.1rem,2.4vw,1.7rem);font-weight:500;color:#c7d8e5;margin:0 0 18px}.hero p{max-width:650px;color:var(--muted);font-size:1rem}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:24px}.btn{display:inline-flex;align-items:center;gap:8px;border:1px solid #2b4d66;background:#081522;padding:11px 14px;border-radius:10px;font-size:.76rem;font-weight:850}.btn.primary{background:#0b2940;border-color:var(--cyan);box-shadow:0 0 30px #58c7ff20}.btn:hover{border-color:#fff;transform:translateY(-1px)}
+.core{position:relative;min-height:650px;border:1px solid #20384b;border-radius:30px;background:radial-gradient(circle at 50% 48%,#102d43 0,#07111b 38%,#050a11 72%);overflow:hidden}.core canvas{position:absolute;inset:0;width:100%;height:100%}.core svg{position:absolute;inset:0;width:100%;height:100%}.orbit{fill:none;stroke:#2d617f;opacity:.35}.core-node{cursor:pointer}.core-node circle{fill:#071522;stroke-width:2;transition:.2s}.core-node:hover circle,.core-node:focus circle{stroke:#fff;filter:drop-shadow(0 0 14px currentColor)}.core-node text{fill:#e8f3fa;font-size:12px;font-weight:850;text-anchor:middle;pointer-events:none}.center-title{fill:#fff;font-size:25px;font-weight:900;text-anchor:middle;letter-spacing:.12em}.center-sub{fill:#91b5cb;font-size:9px;text-anchor:middle;letter-spacing:.2em}
+.modebar{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 28px}.modebar button{border:1px solid #28465c;background:#081522;color:#9eb5c5;border-radius:999px;padding:9px 13px;font-size:.7rem;font-weight:850;cursor:pointer}.modebar button.active,.modebar button:hover{border-color:var(--cyan);color:#fff;background:#0b1e2d}
+.section{padding:70px 0;border-top:1px solid #172c3c}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:24px}.section h2{font-size:clamp(1.7rem,4vw,3rem);margin:0;letter-spacing:-.04em}.section-head p{max-width:620px;color:var(--muted);margin:0}
+.world-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.world-card{position:relative;min-height:220px;border:1px solid #213a4e;border-radius:18px;background:linear-gradient(145deg,#0a1723,#07111a);padding:22px;overflow:hidden;transition:.2s}.world-card:before{content:"";position:absolute;width:150px;height:150px;border-radius:50%;right:-50px;top:-50px;background:radial-gradient(circle,var(--tone),transparent 68%);opacity:.16}.world-card:hover{transform:translateY(-3px);border-color:var(--tone)}.world-card h3{margin:8px 0;font-size:1.2rem}.world-card p{color:var(--muted);font-size:.85rem}.world-card .enter{position:absolute;bottom:18px;color:var(--tone);font:850 .68rem ui-monospace,monospace}
+.trace{border:1px solid #20384b;border-radius:18px;padding:18px;background:#07111a}.trace-line{display:grid;grid-template-columns:repeat(8,1fr);gap:7px;align-items:center}.trace-step{min-height:84px;border:1px solid #28445a;border-radius:12px;background:#081522;display:grid;place-items:center;text-align:center;padding:8px;font-size:.65rem;font-weight:800}.trace-arrow{color:#6d8799;text-align:center}
+.project-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.project{border:1px solid #213a4e;border-radius:18px;background:#07111a;overflow:hidden;display:flex;flex-direction:column;min-height:250px}.project .visual{height:105px;background:radial-gradient(circle at 50% 50%,#16405d,#081522 65%);position:relative}.project .visual:after{content:"";position:absolute;inset:15px;border:1px solid #58c7ff35;border-radius:50%;box-shadow:0 0 30px #58c7ff14}.project .body{padding:16px;display:flex;flex-direction:column;flex:1}.project .domain{font:800 .58rem ui-monospace,monospace;letter-spacing:.1em;color:var(--cyan)}.project h3{font-size:1rem;margin:6px 0}.project p{color:var(--muted);font-size:.75rem;margin:0}.project .proof{margin-top:12px;color:#8da5b6;font-size:.66rem}.project .links{display:flex;gap:7px;margin-top:auto;padding-top:15px}.mini{border:1px solid #28465c;border-radius:8px;padding:7px 9px;font-size:.63rem;font-weight:800}.mini:hover{border-color:#fff}
+.proof-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:12px}.proof-panel{border:1px solid #213a4e;border-radius:18px;background:#07111a;padding:22px}.proof-panel h3{margin-top:0}.proof-list{display:grid;gap:8px}.proof-item{display:flex;gap:10px;align-items:flex-start;padding:10px;border:1px solid #1b3447;border-radius:10px;background:#081522}.proof-dot{width:8px;height:8px;border-radius:50%;background:var(--green);margin-top:6px;flex:0 0 auto}.proof-item span{color:#a8bbc8;font-size:.78rem}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}.stats img{width:100%;border:1px solid #20384b;border-radius:14px;background:#07111a}
+.contact{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;border:1px solid #28465c;border-radius:22px;padding:28px;background:radial-gradient(circle at 90% 50%,#12354c,#07111a 50%)}footer{padding:40px 0 70px;color:#718b9d;font-size:.7rem;text-align:center}
+.hidden{display:none!important}.low-motion *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+@media(max-width:1000px){.hero{grid-template-columns:1fr}.core{min-height:560px}.project-grid{grid-template-columns:repeat(2,1fr)}.world-grid{grid-template-columns:repeat(2,1fr)}.proof-grid{grid-template-columns:1fr}}
+@media(max-width:650px){main{padding:10px 12px}.nav{padding:10px 12px}.navlinks{display:none}.hero{min-height:auto;padding:40px 0}.hero h1{font-size:4rem}.core{min-height:500px}.world-grid,.project-grid{grid-template-columns:1fr}.trace-line{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr}.contact{grid-template-columns:1fr}.modebar{position:sticky;top:60px;z-index:20;background:#050a11ed;padding:8px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.core-node circle,.world-card,.btn{transition:none}}
 </style>
 </head>
 <body>
-<header class="top"><a class="brand" href="index.html">AB<span>.</span></a><div style="display:flex;gap:8px;align-items:center"><a class="gh" href="cloud-badges.html">Learning evidence ↗</a><a class="gh" href="open-source.html">Open source ↗</a><a class="gh" href="ha-desktop.html">HA desktop ↗</a><a class="gh" href="mission-control.html">Mission Control ↗</a><a class="gh" href="https://github.com/abla86" target="_blank" rel="noopener">GitHub ↗</a></div></header>
-<main><section class="world" id="world">
-<canvas id="particles" aria-hidden="true"></canvas><div class="pulse"></div><div class="profile-tools" aria-label="Profile exploration controls">
-<button data-mode="all" class="active">ALL</button><button data-mode="languages">LANGUAGES</button><button data-mode="systems">SYSTEMS</button><button data-mode="tour">TOUR</button><button data-mode="reset">RESET</button>
+<a class="skip" href="#main">Skip to content</a>
+<header><nav class="nav" aria-label="Primary navigation"><a class="brand" href="#top">ANNE BETH<span>.</span></a><div class="navlinks">
+<a href="#recruiter">Recruiter</a><a href="#technical">Technical</a><a href="#research">Research</a><a href="#projects">Projects</a><a href="#contact">Contact</a><a href="https://github.com/abla86" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+<button id="motionToggle" type="button" aria-pressed="false">Low motion</button></div></nav></header>
+<main id="main">
+<section id="top" class="hero" aria-labelledby="hero-title">
+<div class="hero-copy">
+<div class="eyebrow">THE ANNE BETH SYSTEM · SWARM INTELLIGENCE ECOSYSTEM</div>
+<h1 id="hero-title">Anne Beth<span>.</span></h1>
+<h2>Software Architecture · DevOps Engineering · Research Methods · Healthcare IT</h2>
+<p>Explore documented engineering work as a connected system: projects, architecture, automation, research and quality evidence linked through the same traceability model.</p>
+<div class="actions"><a class="btn primary" href="#recruiter">Recruiter mode →</a><a class="btn" href="#technical">Technical deep dive</a><a class="btn" href="#research">Research mode</a><a class="btn" href="#projects">Project constellation</a></div>
 </div>
-<div class="command-bar" role="search"><span>⌕</span><input id="node-search" type="search" placeholder="Search the tree… (press /)" aria-label="Search Yggdrasil nodes"><button id="random-node" type="button">RANDOM</button></div>
-<div class="tree-status" aria-live="polite"><span id="status-mode">ALL SYSTEMS</span><span>·</span><span id="status-selection">ENGINEERING</span><span>·</span><span id="status-links">0 LINKS</span></div><div class="badges" aria-label="Google Cloud completion badges" title="Google Cloud learning evidence — open Cloud badges for the interactive showcase">
-<div class="badge-card"><div class="badge-kind">Google Cloud · Completion Badge</div><div class="badge-title">Introduction to Security Principles in Cloud Computing</div><div class="badge-date">Completed Sep 22, 2026</div></div>
-<div class="badge-card"><div class="badge-kind">Google Cloud · Completion Badge</div><div class="badge-title">Strategies for Cloud Security Risk Management</div><div class="badge-date">Completed Sep 22, 2026</div></div>
-<div class="badge-card"><div class="badge-kind">Google Cloud · Completion Badge</div><div class="badge-title">Secure Enterprise AI Agents</div><div class="badge-date">Completed Sep 11, 2026</div></div>
-<div class="badge-card"><div class="badge-kind">Google Cloud · Completion Badge</div><div class="badge-title">AI Boost Bites: Your Personal Feedback Agent</div><div class="badge-date">Completed Sep 6, 2026</div></div>
-<div class="badge-card"><div class="badge-kind">Google Cloud · Completion Badge</div><div class="badge-title">Build Collaborative Multi-Agent Systems with ADK &amp; MCP</div><div class="badge-date">Completed Sep 6, 2026</div></div>
-<div class="badge-card"><div class="badge-kind">Google Cloud · Completion</div><div class="badge-title">Optimize Agent Behavior</div><div class="badge-date">Google Skills Boost</div></div><div class="badge-card"><div class="badge-kind">Google Cloud · Completion</div><div class="badge-title">Agentic Strategy: Discover, Design, and Prototype</div><div class="badge-date">Google Skills Boost</div></div></div>
-<div class="ygg">
-<svg viewBox="0 0 760 680" role="img" aria-label="Interactive Yggdrasil engineering profile">
-<path class="root" d="M380 565C270 610 190 625 105 645M380 565C490 610 570 625 655 645M380 565C330 610 300 630 250 655M380 565C430 610 460 630 510 655"/>
-<path class="trunk" d="M380 570C370 500 380 440 378 380C375 310 390 250 380 110"/>
-<path class="connection" d="M125 500 Q250 455 315 470"/><path class="connection" d="M635 500 Q510 455 445 470"/><path class="connection" d="M150 405 Q215 380 245 350"/><path class="connection" d="M610 405 Q545 380 515 350"/><path class="connection" d="M275 90 Q325 125 335 145"/><path class="connection" d="M485 90 Q435 125 425 145"/><path class="branch" d="M380 455C315 420 250 370 185 305M380 455C445 420 510 370 575 305M378 360C320 325 275 275 245 215M378 360C438 325 485 275 515 215M380 275C350 240 335 200 335 150M380 275C410 240 425 200 425 150"/>
-<g class="node" tabindex="0" role="button" aria-label="TypeScript" data-id="typescript" transform="translate(185 300)"><circle class="orb" r="47"/><text y="4">TypeScript</text></g>
-<g class="node" tabindex="0" role="button" aria-label="Python" data-id="python" transform="translate(575 300)"><circle class="orb" r="47"/><text y="4">Python</text></g>
-<g class="node" tabindex="0" role="button" aria-label="C# / .NET" data-id="csharp" transform="translate(245 210)"><circle class="orb" r="47"/><text y="4">C# / .NET</text></g>
-<g class="node" tabindex="0" role="button" aria-label="JavaScript" data-id="javascript" transform="translate(515 210)"><circle class="orb" r="47"/><text y="4">JavaScript</text></g>
-<g class="node" tabindex="0" role="button" aria-label="SQL" data-id="sql" transform="translate(335 145)"><circle class="orb" r="43"/><text y="4">SQL</text></g>
-<g class="node" tabindex="0" role="button" aria-label="Infrastructure as Code and YAML" data-id="infra" transform="translate(425 145)"><circle class="orb" r="43"/><text y="4">IaC / YAML</text></g>
-
-<g class="node" tabindex="0" role="button" aria-label="Evidence research" data-id="evidence" transform="translate(125 500)"><circle class="orb" r="42"/><text y="4">Evidence</text></g>
-<g class="node" tabindex="0" role="button" aria-label="Security engineering" data-id="security" transform="translate(635 500)"><circle class="orb" r="42"/><text y="4">Security</text></g>
-<g class="node" tabindex="0" role="button" aria-label="HealthTech" data-id="health" transform="translate(150 405)"><circle class="orb" r="42"/><text y="4">HealthTech</text></g>
-<g class="node" tabindex="0" role="button" aria-label="Cloud and DevOps" data-id="cloud" transform="translate(610 405)"><circle class="orb" r="42"/><text y="4">Cloud / DevOps</text></g>
-<g class="node" tabindex="0" role="button" aria-label="AI agents" data-id="ai" transform="translate(275 90)"><circle class="orb" r="39"/><text y="4">AI / Agents</text></g>
-<g class="node" tabindex="0" role="button" aria-label="Research software" data-id="research" transform="translate(485 90)"><circle class="orb" r="39"/><text y="4">Research</text></g><g class="node core" tabindex="0" role="button" aria-label="Engineering" data-id="engineering" transform="translate(380 455)"><circle class="orb" r="65"/><text y="5">ENGINEERING</text></g>
+<div class="core" id="core" aria-label="Interactive capability map">
+<canvas id="swarm" aria-hidden="true"></canvas>
+<svg viewBox="0 0 700 650" role="img" aria-labelledby="coreTitle coreDesc">
+<title id="coreTitle">Interactive capability swarm</title><desc id="coreDesc">Select a domain to navigate to its evidence world.</desc>
+<ellipse class="orbit" cx="350" cy="325" rx="235" ry="145"/><ellipse class="orbit" cx="350" cy="325" rx="285" ry="205"/>
+<g class="core-node" tabindex="0" role="button" data-target="architecture" style="color:#58c7ff"><circle cx="350" cy="92" r="48" stroke="#58c7ff"/><text x="350" y="97">ARCHITECTURE</text></g>
+<g class="core-node" tabindex="0" role="button" data-target="devops" style="color:#ffb45c"><circle cx="580" cy="190" r="48" stroke="#ffb45c"/><text x="580" y="195">DEVOPS</text></g>
+<g class="core-node" tabindex="0" role="button" data-target="research" style="color:#a98cff"><circle cx="540" cy="470" r="48" stroke="#a98cff"/><text x="540" y="475">RESEARCH</text></g>
+<g class="core-node" tabindex="0" role="button" data-target="healthcare" style="color:#55d58a"><circle cx="160" cy="470" r="48" stroke="#55d58a"/><text x="160" y="475">HEALTHCARE</text></g>
+<g class="core-node" tabindex="0" role="button" data-target="automation" style="color:#f1c75b"><circle cx="120" cy="190" r="48" stroke="#f1c75b"/><text x="120" y="195">AUTOMATION</text></g>
+<g class="core-node" tabindex="0" role="button" data-target="quality" style="color:#79b8ff"><circle cx="350" cy="555" r="48" stroke="#79b8ff"/><text x="350" y="560">QUALITY</text></g>
+<circle cx="350" cy="325" r="100" fill="#07131e" stroke="#58c7ff" stroke-width="2"/><circle cx="350" cy="325" r="125" fill="none" stroke="#58c7ff" opacity=".18"/>
+<text class="center-title" x="350" y="320">ANNE BETH</text><text class="center-sub" x="350" y="345">TECHNOLOGY · RESEARCH · IMPACT</text>
 </svg></div>
-<div id="info" aria-live="polite"><div id="kind" style="color:var(--glow);font:800 .62rem ui-monospace,monospace;letter-spacing:.14em"></div><h2 id="title"></h2><p id="desc"></p><div class="links" id="links"></div></div>
-<div id="legend">CLICK A LANGUAGE · FOLLOW THE EVIDENCE<br>YGGDRASIL / INTERACTIVE SKILL GRAPH</div>
-</section></main>
+</section>
+
+<div class="modebar" role="navigation" aria-label="Experience modes">
+<button data-mode="recruiter" class="active">01 · Recruiter</button><button data-mode="technical">02 · Technical</button><button data-mode="research">03 · Research</button><button data-mode="explore">04 · Explore</button>
+</div>
+
+<section id="recruiter" class="section mode recruiter" aria-labelledby="recruiter-title">
+<div class="section-head"><div><div class="eyebrow">RECRUITER VIEW</div><h2 id="recruiter-title">What can be inspected?</h2></div><p>Start with the shortest path from professional direction to concrete evidence.</p></div>
+<div class="proof-grid"><article class="proof-panel"><h3>Evidence-first engineering</h3><div class="proof-list">
+<div class="proof-item"><i class="proof-dot"></i><span>Projects connect directly to repositories and, where available, demonstrations or documentation.</span></div>
+<div class="proof-item"><i class="proof-dot"></i><span>Architecture and delivery claims are represented through inspectable implementation rather than self-assessed scores.</span></div>
+<div class="proof-item"><i class="proof-dot"></i><span>Research-oriented work links methods and evidence appraisal to software workflows.</span></div>
+<div class="proof-item"><i class="proof-dot"></i><span>Automation and quality work is connected to CI/CD, testing, security and traceability.</span></div>
+</div></article>
+<article class="proof-panel"><h3>Fast navigation</h3><div class="actions"><a class="btn primary" href="#projects">Projects</a><a class="btn" href="#evidence">Evidence trail</a><a class="btn" href="#contact">Contact</a><a class="btn" href="https://github.com/abla86" target="_blank" rel="noopener noreferrer">GitHub</a></div></article></div>
+</section>
+
+<section id="technical" class="section mode technical" aria-labelledby="technical-title">
+<div class="section-head"><div><div class="eyebrow">TECHNICAL DEEP DIVE</div><h2 id="technical-title">From requirement to release</h2></div><p>Follow the engineering chain rather than a technology inventory.</p></div>
+<div class="trace"><div class="trace-line"><div class="trace-step" tabindex="0">01<br>Problem</div><div class="trace-step" tabindex="0">02<br>Research</div><div class="trace-step" tabindex="0">03<br>Architecture</div><div class="trace-step" tabindex="0">04<br>Implementation</div><div class="trace-step" tabindex="0">05<br>Test</div><div class="trace-step" tabindex="0">06<br>Verify</div><div class="trace-step" tabindex="0">07<br>Document</div><div class="trace-step" tabindex="0">08<br>Release</div></div></div>
+<div class="proof-grid" style="margin-top:12px"><article class="proof-panel"><h3>Technical evidence</h3><div class="proof-list"><div class="proof-item"><i class="proof-dot"></i><span>Repository structure and implementation boundaries</span></div><div class="proof-item"><i class="proof-dot"></i><span>CI/CD and automated validation where implemented</span></div><div class="proof-item"><i class="proof-dot"></i><span>Testing, security and documentation evidence</span></div><div class="proof-item"><i class="proof-dot"></i><span>Release and maintenance context</span></div></div></article><article class="proof-panel"><h3>Engineering principle</h3><p style="color:var(--muted)">The ecosystem deliberately avoids fabricated confidence indicators. If a fact is not verified from the project source, it is not presented as a result.</p></article></div>
+</section>
+
+<section id="research" class="section mode research" aria-labelledby="research-title">
+<div class="section-head"><div><div class="eyebrow">RESEARCH MODE</div><h2 id="research-title">Method → evidence → implementation</h2></div><p>Research software is treated as an engineering problem with explicit methodology and traceability.</p></div>
+<div class="world-grid"><article class="world-card" style="--tone:#a98cff"><div class="eyebrow">01</div><h3>Research methods</h3><p>Search, appraisal, synthesis and implementation represented through structured workflows.</p><a class="enter" href="evidence-lab.html">ENTER EVIDENCE LAB →</a></article><article class="world-card" style="--tone:#58c7ff"><div class="eyebrow">02</div><h3>Evidence appraisal</h3><p>Digital workflows connect established appraisal approaches with inspectable software behaviour.</p><a class="enter" href="https://github.com/abla86/complete-evidence-appraisal-tool" target="_blank" rel="noopener noreferrer">OPEN REPOSITORY →</a></article><article class="world-card" style="--tone:#55d58a"><div class="eyebrow">03</div><h3>Healthcare context</h3><p>Research and software intersect around healthcare-oriented information and implementation problems.</p><a class="enter" href="#healthcare">ENTER HEALTHCARE →</a></article></div>
+</section>
+
+<section id="worlds" class="section" aria-labelledby="worlds-title">
+<div class="section-head"><div><div class="eyebrow">CORE ECOSYSTEM</div><h2 id="worlds-title">Six evidence worlds</h2></div><p>Select a world to filter the project constellation.</p></div>
+<div id="worldGrid" class="world-grid"></div>
+</section>
+
+<section id="projects" class="section" aria-labelledby="projects-title">
+<div class="section-head"><div><div class="eyebrow">PROJECT CONSTELLATION</div><h2 id="projects-title">Systems you can inspect</h2></div><p>Each node below points to an actual repository or an existing demonstration.</p></div>
+<div id="projectGrid" class="project-grid"></div>
+</section>
+
+<section id="evidence" class="section" aria-labelledby="evidence-title">
+<div class="section-head"><div><div class="eyebrow">TRACEABILITY</div><h2 id="evidence-title">Evidence trail</h2></div><p>Claims are connected to artefacts rather than self-ratings.</p></div>
+<div class="proof-grid"><article class="proof-panel"><h3>Inspect the chain</h3><div class="proof-list"><div class="proof-item"><i class="proof-dot"></i><span>Repository → source code → tests → workflows</span></div><div class="proof-item"><i class="proof-dot"></i><span>Research question → method → appraisal → software workflow</span></div><div class="proof-item"><i class="proof-dot"></i><span>Requirement → implementation → verification → documentation</span></div></div></article><article class="proof-panel"><h3>GitHub signal</h3><div class="stats"><img src="https://github-readme-stats.vercel.app/api?username=abla86&show_icons=true&theme=github_dark&hide_border=true&rank_icon=github" alt="GitHub activity statistics"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=abla86&layout=compact&theme=github_dark&hide_border=true&langs_count=8" alt="GitHub language statistics"></div></article></div>
+</section>
+
+<section id="contact" class="section" aria-labelledby="contact-title"><div class="contact"><div><div class="eyebrow">CONTACT PORTAL</div><h2 id="contact-title">Explore the work, then follow the evidence.</h2><p style="color:var(--muted)">The public entry points are GitHub and the interactive ecosystem. Add verified CV or LinkedIn destinations when those public URLs are ready.</p></div><div class="actions"><a class="btn primary" href="https://github.com/abla86" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a class="btn" href="open-source.html">Open source</a><a class="btn" href="cloud-badges.html">Learning evidence</a></div></div></section>
+<footer>THE ANNE BETH SYSTEM · evidence-first professional ecosystem · <a href="https://github.com/abla86/developer-portfolio" target="_blank" rel="noopener noreferrer">source repository ↗</a></footer>
+</main>
 <script>
-(()=>{const world=document.getElementById('world'),nodes=[...document.querySelectorAll('.node')],kind=document.getElementById('kind'),title=document.getElementById('title'),desc=document.getElementById('desc'),links=document.getElementById('links');
-const d={
-typescript:['LANGUAGE','TypeScript','Primary full-stack language across interactive products, GitHub tooling and application platforms.',[['CodeSentinel','https://github.com/abla86/CodeSentinel'],['Book Forge','https://github.com/abla86/book-forge'],['Evidence','https://github.com/abla86/complete-evidence-appraisal-tool']]],
-python:['LANGUAGE','Python','Automation, platform tooling, AI-agent tracing, policy enforcement and Google ADK/MCP integration.',[['AgentTrace','https://github.com/abla86/agenttrace'],['ADK + MCP gateway','https://github.com/abla86/agenttrace/tree/master/examples/google_adk_mcp'],['Engineering Lab','https://github.com/abla86/AB-Engineering-Lab']]],
-csharp:['LANGUAGE','C# / .NET','Backend APIs, domain logic, healthcare systems and workforce platforms.',[['HealthTech','https://github.com/abla86/HealthTechDeviceApi'],['Vaktplan','https://github.com/abla86/workforce-competence-management'],['Cloud','https://github.com/abla86/azure-kubernetes-showcase']]],
-javascript:['LANGUAGE','JavaScript','Browser interaction, frontend engineering and executable demonstrations.',[['Engineering Lab','https://github.com/abla86/AB-Engineering-Lab']]],
-sql:['DATA','SQL','Relational persistence and application data models.',[['Vaktplan','https://github.com/abla86/workforce-competence-management'],['Book Forge','https://github.com/abla86/book-forge']]],
-infra:['PLATFORM','IaC / YAML','Delivery, containers, Kubernetes, cloud infrastructure and automation.',[['Azure Kubernetes','https://github.com/abla86/azure-kubernetes-showcase'],['CodeSentinel','https://github.com/abla86/CodeSentinel']]],
-
-evidence:['DOMAIN','Evidence & Research','Research software for structured appraisal, methodology and transparent evidence workflows.',[['Evidence Appraisal','https://github.com/abla86/complete-evidence-appraisal-tool'],['Research demo','https://abla86.github.io/developer-portfolio/evidence-lab.html']]],
-security:['DOMAIN','Security Engineering','Repository security, verification, automation and controlled defensive engineering.',[['CodeSentinel','https://github.com/abla86/CodeSentinel'],['AgentTrace','https://github.com/abla86/agenttrace']]],
-health:['DOMAIN','HealthTech','Healthcare-oriented API and workforce systems with explicit implementation boundaries.',[['HealthTech API','https://github.com/abla86/HealthTechDeviceApi'],['Workforce','https://github.com/abla86/workforce-competence-management']]],
-cloud:['DOMAIN','Cloud / DevOps','Containers, Kubernetes, Azure, infrastructure-as-code, CI/CD and operational evidence.',[['Azure Kubernetes','https://github.com/abla86/azure-kubernetes-showcase'],['CodeSentinel','https://github.com/abla86/CodeSentinel']]],
-ai:['DOMAIN','AI / Agents','Agent tracing, policy, provenance and multi-agent integrations with inspectable examples.',[['AgentTrace','https://github.com/abla86/agenttrace'],['Book Forge','https://github.com/abla86/book-forge']]],
-research:['DOMAIN','Research Software','Tools that make research workflows explicit, inspectable and reproducible.',[['Evidence Appraisal','https://github.com/abla86/complete-evidence-appraisal-tool'],['Research lab','https://abla86.github.io/developer-portfolio/evidence-lab.html']]],engineering:['CORE','Engineering','The central layer connecting languages to concrete, inspectable systems.',[['All canonical platforms','https://github.com/abla86?tab=repositories']]]};
-function select(id){const x=d[id];nodes.forEach(n=>n.classList.toggle('active',n.dataset.id===id));kind.textContent=x[0];title.textContent=x[1];desc.textContent=x[2];links.innerHTML=x[3].map(a=>'<a href="'+a[1]+'" target="_blank" rel="noopener">'+a[0]+' ↗</a>').join('');world.classList.add('has-selection')}
-nodes.forEach(n=>{n.addEventListener('click',()=>select(n.dataset.id));n.addEventListener('mouseenter',()=>select(n.dataset.id));n.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select(n.dataset.id)}})});
-
-const modes={all:new Set(nodes),languages:new Set(['typescript','python','csharp','javascript','sql','infra']),systems:new Set(['evidence','security','health','cloud','ai','research','engineering'])};
-function setMode(mode){if(mode==='tour'){world.classList.add('tour-active');world.classList.remove('explore-mode');document.getElementById('status-mode').textContent='GUIDED TOUR';document.querySelectorAll('.profile-tools button').forEach(b=>b.classList.toggle('active',b.dataset.mode===mode));startTour();return}world.classList.remove('tour-active');world.classList.toggle('explore-mode',mode!=='all');nodes.forEach(n=>{n.style.opacity=(mode==='all'||modes[mode]?.has(n.dataset.id)||n.classList.contains('active'))?'1':'0.22'});document.getElementById('status-mode').textContent=mode==='all'?'ALL SYSTEMS':mode.toUpperCase();document.querySelectorAll('.profile-tools button').forEach(b=>b.classList.toggle('active',b.dataset.mode===mode));}
-document.querySelectorAll('.profile-tools button').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.mode==='reset'){clearSearch();select('engineering');setMode('all')}else setMode(b.dataset.mode)}));
-const search=document.getElementById('node-search');
-function clearSearch(){search.value='';nodes.forEach(n=>n.classList.remove('search-hit','search-dim'))}
-function runSearch(){const q=search.value.trim().toLowerCase();nodes.forEach(n=>{n.classList.remove('search-hit','search-dim');if(q&&!((d[n.dataset.id]?.[1]||'').toLowerCase().includes(q)||(d[n.dataset.id]?.[2]||'').toLowerCase().includes(q)))n.classList.add('search-dim');else if(q)n.classList.add('search-hit')})}
-search.addEventListener('input',runSearch);
-addEventListener('keydown',e=>{if(e.key==='/'&&document.activeElement!==search){e.preventDefault();search.focus()}if(e.key==='Escape'){search.blur();clearSearch()}});
-document.getElementById('random-node').addEventListener('click',()=>{const visible=nodes.filter(n=>!n.classList.contains('search-dim'));const n=visible[Math.floor(Math.random()*visible.length)]||nodes[0];select(n.dataset.id);n.focus()});
-let tourTimer=null;
-function startTour(){clearInterval(tourTimer);let i=0;const sequence=['engineering','evidence','security','health','cloud','ai','research','typescript','python','csharp','javascript','sql','infra'];const step=()=>{select(sequence[i%sequence.length]);i++};step();tourTimer=setInterval(step,1800)}
-
-const signal=document.createElement('div');signal.id='signal';signal.innerHTML='<div class="signal-label">SELECTED NODE</div><div class="signal-meta"><span id="signal-name">ENGINEERING</span><span id="signal-value">CORE</span></div><div id="signal-extra" style="margin-top:8px;color:#70899d;font:600 .58rem ui-monospace,monospace">Choose a node to trace its evidence.</div>';world.appendChild(signal);
-const oldSelect=select;select=(id)=>{oldSelect(id);const item=d[id];const linkCount=item?.[3]?.length||0;document.getElementById('signal-name').textContent=(item?.[1]||'ENGINEERING').toUpperCase();document.getElementById('signal-value').textContent=linkCount+' EVIDENCE LINK'+(linkCount===1?'':'S');document.getElementById('signal-extra').textContent=item?.[2]||'Choose a node to trace its evidence.';document.getElementById('status-selection').textContent=(item?.[1]||'ENGINEERING').toUpperCase();document.getElementById('status-links').textContent=linkCount+' LINKS';};
-const c=document.getElementById('particles'),x=c.getContext('2d');let w,h,p=[];
-function resize(){const r=c.getBoundingClientRect(),q=Math.min(devicePixelRatio||1,2);w=r.width;h=r.height;c.width=w*q;c.height=h*q;x.setTransform(q,0,0,q,0,0);p=Array.from({length:55},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.22,vy:(Math.random()-.5)*.16,r:.5+Math.random()*1.4}))}
-function tick(){x.clearRect(0,0,w,h);for(const a of p){a.x=(a.x+a.vx+w)%w;a.y=(a.y+a.vy+h)%h;x.fillStyle='rgba(112,224,177,.3)';x.beginPath();x.arc(a.x,a.y,a.r,0,7);x.fill()}requestAnimationFrame(tick)}resize();addEventListener('resize',resize);if(!matchMedia('(prefers-reduced-motion: reduce)').matches)requestAnimationFrame(tick);select('engineering');document.getElementById('status-mode').textContent='ALL SYSTEMS';})();
-
+const DATA_URL="data/ecosystem.json";
+const fallback={"worlds":[],"projects":[]};
+let data=fallback;
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+function renderWorlds(){
+ const grid=$("#worldGrid"); grid.innerHTML=data.worlds.map(w=>`<article class="world-card" style="--tone:var(--${w.tone})" data-world="${w.id}"><div class="eyebrow">${w.id.toUpperCase()}</div><h3>${w.label}</h3><p>${w.summary}</p><div class="proof">${w.evidence.length} linked project evidence sources</div><a class="enter" href="#projects/${w.id}">FILTER CONSTELLATION →</a></article>`).join("");
+}
+function renderProjects(filter=""){
+ const grid=$("#projectGrid"); const ps=data.projects.filter(p=>!filter||p.domain.toLowerCase().includes(filter)||p.slug.includes(filter));
+ grid.innerHTML=ps.map(p=>`<article class="project"><div class="visual" aria-hidden="true"></div><div class="body"><div class="domain">${p.domain}</div><h3>${p.name}</h3><p>${p.summary}</p><div class="proof">Evidence: ${p.proof.join(" · ")}</div><div class="links"><a class="mini" href="${p.repo}" target="_blank" rel="noopener noreferrer">Repository ↗</a>${p.demo?`<a class="mini" href="${p.demo}" target="_blank" rel="noopener noreferrer">Demo ↗</a>`:""}</div></div></article>`).join("");
+}
+function selectMode(mode){
+ $$("[data-mode]").forEach(b=>b.classList.toggle("active",b.dataset.mode===mode));
+ if(mode==="recruiter") $("#recruiter").scrollIntoView({block:"start"});
+ if(mode==="technical") $("#technical").scrollIntoView({block:"start"});
+ if(mode==="research") $("#research").scrollIntoView({block:"start"});
+ if(mode==="explore") $("#worlds").scrollIntoView({block:"start"});
+}
+function route(){
+ const raw=location.hash.replace("#",""); const parts=raw.split("/");
+ if(parts[0]==="projects"&&parts[1]){renderProjects(parts[1]);$("#projects").scrollIntoView({block:"start"});}
+ else if(parts[0]==="architecture"||parts[0]==="devops"||parts[0]==="research"||parts[0]==="healthcare"||parts[0]==="automation"||parts[0]==="quality"){renderProjects(parts[0]);$("#worlds").scrollIntoView({block:"start"});}
+ else if(raw){const el=$("#"+parts[0]); if(el) el.scrollIntoView({block:"start"});}
+}
+async function boot(){
+ try{const r=await fetch(DATA_URL,{cache:"no-store"});if(r.ok)data=await r.json();}catch(e){}
+ renderWorlds();renderProjects();route();
+}
+$$(".core-node").forEach(n=>{const go=()=>location.hash=n.dataset.target;n.addEventListener("click",go);n.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();go();}})});
+$$("[data-mode]").forEach(b=>b.addEventListener("click",()=>selectMode(b.dataset.mode)));
+addEventListener("hashchange",route);
+const motion=$("#motionToggle"); motion.addEventListener("click",()=>{document.documentElement.classList.toggle("low-motion");const on=document.documentElement.classList.contains("low-motion");motion.setAttribute("aria-pressed",String(on));});
+const canvas=$("#swarm"),ctx=canvas.getContext("2d");let pts=[];
+function resize(){const r=canvas.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);canvas.width=r.width*d;canvas.height=r.height*d;ctx.setTransform(d,0,0,d,0,0);pts=Array.from({length:75},()=>({x:Math.random()*r.width,y:Math.random()*r.height,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.18,r:.5+Math.random()*1.2}));}
+function animate(){if(document.documentElement.classList.contains("low-motion")||matchMedia("(prefers-reduced-motion: reduce)").matches)return;const r=canvas.getBoundingClientRect();ctx.clearRect(0,0,r.width,r.height);for(const p of pts){p.x=(p.x+p.vx+r.width)%r.width;p.y=(p.y+p.vy+r.height)%r.height;ctx.fillStyle="rgba(88,199,255,.28)";ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill();}requestAnimationFrame(animate)}
+resize();addEventListener("resize",resize);requestAnimationFrame(animate);boot();
 </script>
-</body></html>
+</body>
+</html>
