@@ -13,3 +13,12 @@ obj/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Home Assistant local state and secrets
+home-assistant/secrets.yaml
+home-assistant/.storage/
+home-assistant/home-assistant.log*
+home-assistant/home-assistant_v2.db*
+home-assistant/backups/
+home-assistant/media/
+home-assistant/tts/
