@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T01:34:01.813Z",
+  "generatedAt": "2026-09-24T01:34:32.707Z",
   "source": "GitHub repository inspection",
   "policy": "Only verified repository facts may be promoted to the portfolio. Archived and deleted repositories are excluded from active project registry entries.",
   "projects": [
@@ -223,6 +223,13 @@
           "url": "https://www.skills.google/course_templates/1301",
           "relevance": "Cloud security risk management",
           "type": "completion"
+        },
+        {
+          "provider": "Microsoft Learn",
+          "name": "Azure Fundamentals",
+          "relevance": "Azure architecture and governance fundamentals",
+          "type": "badge evidence",
+          "source": "uploaded certificate evidence"
         }
       ],
       "status": "verified-source",
@@ -390,6 +397,15 @@
           "url": "https://www.skills.google/course_templates/1833",
           "relevance": "Multi-agent systems, ADK and MCP",
           "type": "completion"
+        },
+        {
+          "provider": "DigitalNorway",
+          "name": "Hva er kunstig intelligens?",
+          "relevance": "AI, machine learning and generative AI fundamentals",
+          "type": "course certificate",
+          "date": "2025-10-13",
+          "credentialId": "216638932",
+          "source": "uploaded certificate evidence"
         }
       ],
       "status": "verified-source",
@@ -464,6 +480,24 @@
           "url": "https://www.skills.google/course_templates/1449",
           "relevance": "Applied AI and feedback-agent workflows",
           "type": "completion"
+        },
+        {
+          "provider": "Canva Design School",
+          "name": "Canva Essentials",
+          "relevance": "Visual content creation for book and asset workflows",
+          "type": "certificate",
+          "date": "2025-08-02",
+          "credentialId": "85f51f",
+          "source": "uploaded certificate evidence"
+        },
+        {
+          "provider": "Canva Design School",
+          "name": "Graphic Design Essentials",
+          "relevance": "Graphic design fundamentals supporting visual book assets",
+          "type": "certificate",
+          "date": "2025-08-02",
+          "credentialId": "bf3b17",
+          "source": "uploaded certificate evidence"
         }
       ],
       "status": "verified-source",
