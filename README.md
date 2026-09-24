@@ -15,6 +15,7 @@ The GitHub profile is deliberately compact and visual. The portfolio is where th
 Interactive entry points:
 
 - `projects.html` — searchable/filterable project atlas with project inspection panels
+- `mission-control.html` — Home / Engineering / Security mission-control interface
 - `stack.html` — interactive technology/competency matrix mapped to canonical repositories
 - `engineering-map.html` — capability-to-evidence map
 - `evidence-lab.html` — interactive research/evidence workflow demonstrations
