@@ -143,7 +143,10 @@ function selectMode(mode){
 function route(){
  const raw=location.hash.replace("#",""); const parts=raw.split("/");
  if(parts[0]==="projects"&&parts[1]){renderProjects(parts[1]);$("#projects").scrollIntoView({block:"start"});}
- else if(parts[0]==="architecture"||parts[0]==="devops"||parts[0]==="research"||parts[0]==="healthcare"||parts[0]==="automation"||parts[0]==="quality"){renderProjects(parts[0]);$("#worlds").scrollIntoView({block:"start"});}
+ else if(["architecture","devops","research","healthcare","automation","quality"].includes(parts[0])){
+ const map={architecture:"capabilities",devops:"technical",research:"research",healthcare:"research",automation:"capabilities",quality:"evidence"};
+ const el=$("#"+map[parts[0]]); if(el) el.scrollIntoView({block:"start"});
+}
  else if(raw){const el=$("#"+parts[0]); if(el) el.scrollIntoView({block:"start"});}
 }
 async function boot(){
