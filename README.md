@@ -35,6 +35,11 @@ The following **Google Cloud completion badges** are part of the evidence behind
 
 - **Introduction to Security Principles in Cloud Computing** — completed September 22, 2026
 - **Strategies for Cloud Security Risk Management** — completed September 22, 2026
+- **Secure Enterprise AI Agents** — completion badge
+- **AI Boost Bites: Your Personal Feedback Agent** — completion badge
+- **Build Collaborative Multi-Agent Systems with ADK & MCP** — completion badge
+- **Optimize Agent Behavior** — completion badge
+- **Agentic Strategy: Discover, Design, and Prototype** — completion badge
 - **Secure Enterprise AI Agents** — completed September 11, 2026
 - **AI Boost Bites: Your Personal Feedback Agent** — completed September 6, 2026
 - **Build Collaborative Multi-Agent Systems with ADK & MCP** — completed September 6, 2026
