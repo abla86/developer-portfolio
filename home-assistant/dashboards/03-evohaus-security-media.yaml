@@ -34,8 +34,8 @@ views:
           - type: horizontal-stack
             cards:
               - type: button
-                icon: mdi:microphone
-                name: Talk
+                icon: mdi:camera
+                name: Kamera
                 tap_action:
                   action: more-info
                   entity_id: camera.living_room
@@ -112,8 +112,10 @@ views:
         cards:
           - type: heading
             heading: Security
-          - type: lock
+          - type: tile
             entity: lock.front_door
+            features:
+              - type: lock-commands
           - type: tile
             entity: binary_sensor.front_door
             name: Dør
