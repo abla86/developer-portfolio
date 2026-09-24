@@ -27,7 +27,10 @@ jobs:
           test -f engineering-map.html
           test -f evidence-lab.html
           test -f security-lab.html
-          test -f style.css\n          test -f ha-desktop.html\n          test -f open-source.html\n          test -f mission-control.html\n          test -f mission-control.html
+          test -f style.css
+          test -f ha-desktop.html
+          test -f open-source.html
+          test -f mission-control.html
       - name: Check HTML structure and inline JavaScript
         run: |
           python - <<'PY'
@@ -52,3 +55,24 @@ jobs:
                       raise SystemExit(f'{p}: inline script {index} failed syntax check\\n{result.stderr}')
           print('HTML structure and inline JavaScript checks passed')
           PY
+
+      - name: Validate Home Assistant YAML
+        run: |
+          python -m pip install --disable-pip-version-check --no-input pyyaml
+          python - <<'PY'
+          from pathlib import Path
+          import yaml
+          root = Path('home-assistant')
+          files = list(root.rglob('*.yaml')) + list(root.rglob('*.yml'))
+          for path in files:
+              if 'secrets.yaml' in path.name or '.storage' in path.parts:
+                  continue
+              yaml.safe_load(path.read_text(encoding='utf-8'))
+          print(f'Validated {len(files)} Home Assistant YAML files')
+          PY
+      - name: Guard Home Assistant secrets
+        run: |
+          if find home-assistant -type f \( -name 'secrets.yaml' -o -name '*.key' -o -name '*.pem' -o -name '*.p12' -o -name '*.pfx' \) -print -quit | grep -q .; then
+            echo 'Tracked Home Assistant secret material detected'
+            exit 1
+          fi
