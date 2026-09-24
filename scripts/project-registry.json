@@ -1,5 +1,5 @@
 {
-  "version": 8,
+  "version": 9,
   "policy": "Only verified repository facts may be promoted to the portfolio. Archived and deleted repositories are excluded from active project registry entries.",
   "projectLab": {
     "entry": "desktop-clock.html",
@@ -34,28 +34,85 @@
       "displayName": "CloudForge",
       "tier": 1,
       "description": "Cloud-engineering showcase covering .NET, React, Docker, Kubernetes, Azure IaC, CI/CD, DevSecOps and observability.",
-      "verify": "README"
+      "verify": "README",
+      "credentials": [
+        {
+          "provider": "Google Cloud Skills Boost",
+          "name": "Introduction to Security Principles in Cloud Computing",
+          "url": "https://www.skills.google/course_templates/1300",
+          "relevance": "Cloud security foundations",
+          "type": "completion"
+        },
+        {
+          "provider": "Google Cloud Skills Boost",
+          "name": "Strategies for Cloud Security Risk Management",
+          "url": "https://www.skills.google/course_templates/1301",
+          "relevance": "Cloud security risk management",
+          "type": "completion"
+        }
+      ]
     },
     {
       "repo": "CodeSentinel",
       "displayName": "CodeSentinel",
       "tier": 1,
       "description": "GitHub-grounded verification and security application combining project registry, audit and repository intelligence.",
-      "verify": "README"
+      "verify": "README",
+      "credentials": [
+        {
+          "provider": "Google Cloud Skills Boost",
+          "name": "Secure Enterprise AI Agents",
+          "url": "https://www.skills.google/course_templates/1835",
+          "relevance": "AI security and governance",
+          "type": "completion"
+        }
+      ]
     },
     {
       "repo": "agenttrace",
       "displayName": "AgentTrace",
       "tier": 1,
       "description": "Portable AI-agent tracing, provenance, policy, tool-integrity and audit layer with a bounded Google ADK/MCP integration.",
-      "verify": "README"
+      "verify": "README",
+      "credentials": [
+        {
+          "provider": "Google Cloud Skills Boost",
+          "name": "Optimize Agent Behavior",
+          "url": "https://www.skills.google/course_templates/1564",
+          "relevance": "Agent behavior optimization",
+          "type": "completion"
+        },
+        {
+          "provider": "Google Cloud Skills Boost",
+          "name": "Agentic Strategy: Discover, Design, and Prototype",
+          "url": "https://www.skills.google/course_templates/1672",
+          "relevance": "Agent strategy and prototyping",
+          "type": "completion"
+        },
+        {
+          "provider": "Google Cloud Skills Boost",
+          "name": "Build Collaborative Multi-Agent Systems with ADK & MCP",
+          "url": "https://www.skills.google/course_templates/1833",
+          "relevance": "Multi-agent systems, ADK and MCP",
+          "type": "completion"
+        }
+      ]
     },
     {
       "repo": "book-forge",
       "displayName": "BookForge AI",
       "tier": 1,
       "description": "AI-assisted book development platform covering planning, Story Bible, generation, continuity, versioning, assets and security controls.",
-      "verify": "README"
+      "verify": "README",
+      "credentials": [
+        {
+          "provider": "Google Cloud Skills Boost",
+          "name": "AI Boost Bites: Your Personal Feedback Agent",
+          "url": "https://www.skills.google/course_templates/1449",
+          "relevance": "Applied AI and feedback-agent workflows",
+          "type": "completion"
+        }
+      ]
     },
     {
       "repo": "Autonomous-Multi-Agent-App-Builder",
