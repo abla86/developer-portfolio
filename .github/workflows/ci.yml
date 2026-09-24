@@ -27,7 +27,7 @@ jobs:
           test -f engineering-map.html
           test -f evidence-lab.html
           test -f security-lab.html
-          test -f style.css
+          test -f style.css\n          test -f ha-desktop.html\n          test -f open-source.html
       - name: Check HTML structure and inline JavaScript
         run: |
           python - <<'PY'
