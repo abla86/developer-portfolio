@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T15:32:04.238Z",
+  "generatedAt": "2026-09-24T22:15:57.407Z",
   "source": "GitHub repository inspection",
   "policy": "Only verified repository facts may be promoted to the portfolio. Archived and deleted repositories are excluded from active project registry entries.",
   "projects": [
@@ -17,8 +17,8 @@
         "archived": false,
         "description": "evidence-appraisal-tool",
         "stars": 0,
-        "updatedAt": "2026-09-24T15:28:05Z",
-        "pushedAt": "2026-09-24T15:27:46Z",
+        "updatedAt": "2026-09-24T17:40:47Z",
+        "pushedAt": "2026-09-24T17:39:47Z",
         "languages": [
           "TypeScript",
           "C#",
@@ -323,8 +323,8 @@
         "archived": false,
         "description": "GITHUB BRANCH AUDIT + SAFE DUPLICATE CLEANUP",
         "stars": 0,
-        "updatedAt": "2026-09-24T15:26:12Z",
-        "pushedAt": "2026-09-24T15:26:08Z",
+        "updatedAt": "2026-09-24T18:23:38Z",
+        "pushedAt": "2026-09-24T18:23:33Z",
         "languages": [
           "TypeScript",
           "Python",
@@ -416,8 +416,8 @@
         "archived": false,
         "description": "Portable tracing, provenance, policy and audit layer for AI-agent systems",
         "stars": 1,
-        "updatedAt": "2026-09-24T13:29:40Z",
-        "pushedAt": "2026-09-24T13:31:21Z",
+        "updatedAt": "2026-09-24T17:44:44Z",
+        "pushedAt": "2026-09-24T17:46:29Z",
         "languages": [
           "Python",
           "TypeScript",
@@ -508,8 +508,8 @@
         "archived": false,
         "description": "lage bok fra ide til komplett på 10 min",
         "stars": 0,
-        "updatedAt": "2026-09-24T14:44:43Z",
-        "pushedAt": "2026-09-24T14:47:33Z",
+        "updatedAt": "2026-09-24T17:26:31Z",
+        "pushedAt": "2026-09-24T17:27:49Z",
         "languages": [
           "TypeScript",
           "HTML",
@@ -561,8 +561,8 @@
         "archived": false,
         "description": "Autonomous Multi-Agent App Builder",
         "stars": 0,
-        "updatedAt": "2026-09-24T13:31:52Z",
-        "pushedAt": "2026-09-24T13:34:53Z",
+        "updatedAt": "2026-09-24T17:28:24Z",
+        "pushedAt": "2026-09-24T17:28:18Z",
         "languages": [
           "TypeScript",
           "HTML",
