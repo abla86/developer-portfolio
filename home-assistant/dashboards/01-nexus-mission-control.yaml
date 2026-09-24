@@ -1,0 +1,154 @@
+# NEXUS — Mission Control
+# Reference: first supplied dashboard image.
+# Whole-home command center. Native HA sections; optional Mushroom/card-mod can refine styling.
+
+title: NEXUS — Mission Control
+views:
+  - title: NEXUS
+    path: nexus
+    icon: mdi:home-automation
+    type: sections
+    max_columns: 4
+    sections:
+      - type: grid
+        column_span: 4
+        cards:
+          - type: heading
+            heading: ABLA SMART HOME
+            heading_style: title
+            icon: mdi:vector-network
+          - type: markdown
+            content: |
+              ## Velkommen hjem
+              **Alt under kontroll** · {{ states('sensor.date_time') if states('sensor.date_time') not in ['unknown','unavailable'] else '' }}
+          - type: horizontal-stack
+            cards:
+              - type: button
+                name: Hjemme
+                icon: mdi:home
+                tap_action:
+                  action: call-service
+                  service: scene.turn_on
+                  target:
+                    entity_id: scene.home
+              - type: button
+                name: Natt
+                icon: mdi:weather-night
+                tap_action:
+                  action: call-service
+                  service: scene.turn_on
+                  target:
+                    entity_id: scene.night
+              - type: button
+                name: Borte
+                icon: mdi:home-export-outline
+                tap_action:
+                  action: call-service
+                  service: scene.turn_on
+                  target:
+                    entity_id: scene.away
+              - type: button
+                name: Alarm
+                icon: mdi:alarm-light
+                tap_action:
+                  action: more-info
+                  entity_id: alarm_control_panel.home
+
+      - type: grid
+        cards:
+          - type: heading
+            heading: Status
+          - type: tile
+            entity: sensor.home_power
+            name: Energi nå
+            icon: mdi:lightning-bolt
+          - type: tile
+            entity: sensor.home_temperature
+            name: Temperatur
+            icon: mdi:thermometer
+          - type: tile
+            entity: sensor.devices_online
+            name: Enheter
+            icon: mdi:devices
+          - type: tile
+            entity: sensor.active_automations
+            name: Automatiseringer
+            icon: mdi:robot
+
+      - type: grid
+        cards:
+          - type: heading
+            heading: Romkontroll
+          - type: tile
+            entity: light.living_room
+            name: Stue
+            features:
+              - type: light-brightness
+          - type: tile
+            entity: light.kitchen
+            name: Kjøkken
+            features:
+              - type: light-brightness
+          - type: tile
+            entity: light.hall
+            name: Gang
+            features:
+              - type: light-brightness
+          - type: tile
+            entity: light.bedroom
+            name: Soverom
+            features:
+              - type: light-brightness
+
+      - type: grid
+        cards:
+          - type: heading
+            heading: Klima
+          - type: thermostat
+            entity: climate.home
+          - type: sensor
+            entity: sensor.living_room_temperature
+            name: Stue
+            graph: line
+            hours_to_show: 12
+          - type: sensor
+            entity: sensor.living_room_humidity
+            name: Luftfuktighet
+            graph: line
+            hours_to_show: 12
+
+      - type: grid
+        cards:
+          - type: heading
+            heading: Kamera og sikkerhet
+          - type: picture-entity
+            entity: camera.front_door
+            name: Inngang
+            camera_view: live
+          - type: tile
+            entity: lock.front_door
+            name: Ytterdør
+          - type: tile
+            entity: binary_sensor.front_door
+            name: Dørstatus
+
+      - type: grid
+        cards:
+          - type: heading
+            heading: Media
+          - type: media-control
+            entity: media_player.living_room
+          - type: tile
+            entity: media_player.living_room
+            name: Sonos
+
+      - type: grid
+        cards:
+          - type: heading
+            heading: Drift
+          - type: tile
+            entity: vacuum.dreame_l20_ultra
+            name: Dreame L20 Ultra
+          - type: weather-forecast
+            entity: weather.home
+            show_forecast: true
