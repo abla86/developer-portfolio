@@ -1,0 +1,47 @@
+# Home Assistant YAML dashboard registration example.
+# Merge the lovelace section into your real configuration.yaml.
+# Keep credentials and private network details out of Git.
+
+lovelace:
+  dashboards:
+    nexus:
+      mode: yaml
+      filename: dashboards/01-nexus-mission-control.yaml
+      title: NEXUS
+      icon: mdi:home-automation
+      show_in_sidebar: true
+
+    residence:
+      mode: yaml
+      filename: dashboards/02-residence-room-climate.yaml
+      title: RESIDENCE
+      icon: mdi:home-variant
+      show_in_sidebar: true
+
+    evohaus:
+      mode: yaml
+      filename: dashboards/03-evohaus-security-media.yaml
+      title: EVOHAUS
+      icon: mdi:shield-home
+      show_in_sidebar: true
+
+    energy:
+      mode: yaml
+      filename: dashboards/04-energy-intelligence.yaml
+      title: ENERGY
+      icon: mdi:lightning-bolt
+      show_in_sidebar: true
+
+    devices:
+      mode: yaml
+      filename: dashboards/05-devices-health-network.yaml
+      title: DEVICES
+      icon: mdi:lan-connect
+      show_in_sidebar: true
+
+    security:
+      mode: yaml
+      filename: dashboards/06-security-surveillance.yaml
+      title: SECURITY
+      icon: mdi:shield-home
+      show_in_sidebar: true
