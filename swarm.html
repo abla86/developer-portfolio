@@ -25,15 +25,115 @@
 <body>
 <main class="stage">
 <div class="art" aria-label="Interactive swarm">
-<img src="assets/swarm-hero.svg" alt="Anne Beth connected to Architecture, DevOps, Research, Healthcare, Automation and Quality">
-<a class="hot" style="left:32.5%;top:27%" href="index.html#architecture" aria-label="Architecture"></a>
-<a class="hot" style="left:67.5%;top:27%" href="index.html#devops" aria-label="DevOps"></a>
-<a class="hot" style="left:17.5%;top:59%" href="index.html#research" aria-label="Research"></a>
-<a class="hot" style="left:82.5%;top:59%" href="index.html#healthcare" aria-label="Healthcare"></a>
-<a class="hot" style="left:32.5%;top:80%" href="index.html#automation" aria-label="Automation"></a>
-<a class="hot" style="left:67.5%;top:80%" href="index.html#quality" aria-label="Quality"></a>
+
+<svg class="swarm-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+<title id="title">Anne Beth — interactive swarm ecosystem</title>
+<desc id="desc">A cinematic network of six connected technology worlds surrounding a central Anne Beth node.</desc>
+<defs>
+  <radialGradient id="bg"><stop stop-color="#123653"/><stop offset=".48" stop-color="#071421"/><stop offset="1" stop-color="#02050a"/></radialGradient>
+  <radialGradient id="core"><stop stop-color="#1d6d9a"/><stop offset=".45" stop-color="#09283e"/><stop offset="1" stop-color="#030911"/></radialGradient>
+  <linearGradient id="water" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071a2a"/><stop offset=".5" stop-color="#0d3850"/><stop offset="1" stop-color="#02070c"/></linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="soft"><feGaussianBlur stdDeviation="22"/></filter>
+  <pattern id="stars" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="8" cy="20" r="1" fill="#fff" opacity=".65"/><circle cx="62" cy="70" r=".8" fill="#9bdcff" opacity=".7"/><circle cx="88" cy="35" r=".6" fill="#fff" opacity=".45"/></pattern>
+  <style>
+    .label{font-family:Inter,Arial,sans-serif;fill:#f5fbff;text-anchor:middle;font-weight:800;letter-spacing:3px}
+    .small{font-family:Inter,Arial,sans-serif;fill:#a9c7d9;text-anchor:middle;font-size:18px}
+    .line{fill:none;stroke:#6fd4ff;stroke-opacity:.34;stroke-width:3}
+    .node{fill:#071522;stroke-width:3}
+  </style>
+</defs>
+<rect width="1600" height="1000" fill="url(#bg)"/>
+<rect width="1600" height="1000" fill="url(#stars)" opacity=".8"/>
+<g opacity=".55" filter="url(#soft)">
+  <circle cx="230" cy="310" r="110" fill="#8b55ff"/><circle cx="1370" cy="300" r="130" fill="#ff9c3b"/>
+  <circle cx="800" cy="470" r="170" fill="#2fbbff"/><circle cx="1260" cy="760" r="120" fill="#45d99a"/>
+</g>
+<path d="M0 720 Q230 590 450 710 T900 700 T1300 680 T1600 720 V1000 H0Z" fill="url(#water)"/>
+<g opacity=".7" fill="#02070b">
+  <path d="M0 720 L100 610 170 680 250 560 330 710 430 590 520 720Z"/>
+  <path d="M1080 710 L1170 590 1230 680 1320 540 1410 690 1510 580 1600 710Z"/>
+</g>
+<!-- orbital network -->
+<ellipse cx="800" cy="485" rx="560" ry="300" class="line"/>
+<ellipse cx="800" cy="485" rx="420" ry="225" class="line" stroke="#d38bff" stroke-opacity=".22"/>
+<path d="M800 485 C610 300 470 260 300 260 M800 485 C990 300 1130 260 1300 260 M800 485 C1120 480 1200 600 1320 650 M800 485 C480 480 400 600 280 650 M800 485 C650 650 570 730 520 820 M800 485 C950 650 1030 730 1080 820" class="line"/>
+<g stroke="#8be0ff" stroke-width="4" opacity=".55" filter="url(#glow)">
+  <circle cx="800" cy="185" r="5" fill="#fff"/><circle cx="1300" cy="260" r="5" fill="#fff"/>
+  <circle cx="1320" cy="650" r="5" fill="#fff"/><circle cx="1080" cy="820" r="5" fill="#fff"/>
+  <circle cx="520" cy="820" r="5" fill="#fff"/><circle cx="280" cy="650" r="5" fill="#fff"/>
+</g>
+
+<!-- floating worlds -->
+<a href="https://abla86.github.io/developer-portfolio/index.html#visual-architecture" target="_top" aria-label="Open world"><g transform="translate(520 220)">
+ <ellipse cx="0" cy="120" rx="170" ry="34" fill="#58c7ff" opacity=".12" filter="url(#soft)"/>
+ <path d="M-145 70 Q0 5 145 70 L105 145 Q0 170 -105 145Z" fill="#071521" stroke="#58c7ff" stroke-width="3"/>
+ <path d="M-115 75 Q0 35 115 75 L80 120 Q0 145 -80 120Z" fill="#102e43"/>
+ <circle cx="0" cy="50" r="54" class="node" stroke="#58c7ff"/>
+ <path d="M-20 45 h40 M0 25 v40" stroke="#58c7ff" stroke-width="8"/>
+ <text class="label" x="0" y="205" font-size="29">ARCHITECTURE</text><text class="small" x="0" y="234">scalable systems</text>
+</a></g>
+<a href="https://abla86.github.io/developer-portfolio/index.html#visual-devops" target="_top" aria-label="Open world"><g transform="translate(1080 220)">
+ <ellipse cx="0" cy="120" rx="170" ry="34" fill="#ffb45c" opacity=".12" filter="url(#soft)"/>
+ <path d="M-145 70 Q0 5 145 70 L105 145 Q0 170 -105 145Z" fill="#071521" stroke="#ffb45c" stroke-width="3"/>
+ <path d="M-115 75 Q0 35 115 75 L80 120 Q0 145 -80 120Z" fill="#34240f"/>
+ <circle cx="0" cy="50" r="54" class="node" stroke="#ffb45c"/>
+ <path d="M-27 45 h54 M0 18 v54" stroke="#ffb45c" stroke-width="8"/>
+ <text class="label" x="0" y="205" font-size="29">DEVOPS</text><text class="small" x="0" y="234">secure delivery</text>
+</a></g>
+<a href="https://abla86.github.io/developer-portfolio/index.html#visual-research" target="_top" aria-label="Open world"><g transform="translate(280 590)">
+ <path d="M-145 70 Q0 5 145 70 L105 145 Q0 170 -105 145Z" fill="#071521" stroke="#a98cff" stroke-width="3"/>
+ <path d="M-115 75 Q0 35 115 75 L80 120 Q0 145 -80 120Z" fill="#27183b"/>
+ <circle cx="0" cy="50" r="54" class="node" stroke="#a98cff"/>
+ <path d="M-22 15 L22 15 L10 38 L28 65 L-28 65 L-10 38Z" fill="none" stroke="#a98cff" stroke-width="6"/>
+ <text class="label" x="0" y="205" font-size="29">RESEARCH</text><text class="small" x="0" y="234">evidence to implementation</text>
+</a></g>
+<a href="https://abla86.github.io/developer-portfolio/index.html#visual-healthcare" target="_top" aria-label="Open world"><g transform="translate(1320 590)">
+ <path d="M-145 70 Q0 5 145 70 L105 145 Q0 170 -105 145Z" fill="#071521" stroke="#55d58a" stroke-width="3"/>
+ <path d="M-115 75 Q0 35 115 75 L80 120 Q0 145 -80 120Z" fill="#123a2c"/>
+ <circle cx="0" cy="50" r="54" class="node" stroke="#55d58a"/>
+ <path d="M-10 15 h20 v25 h25 v20 h-25 v25 h-20 V60 h-25 V40 h25Z" fill="#55d58a"/>
+ <text class="label" x="0" y="205" font-size="29">HEALTHCARE</text><text class="small" x="0" y="234">technology for better care</text>
+</a></g>
+<a href="https://abla86.github.io/developer-portfolio/index.html#visual-automation" target="_top" aria-label="Open world"><g transform="translate(520 800)">
+ <path d="M-145 50 Q0 -5 145 50 L105 125 Q0 150 -105 125Z" fill="#071521" stroke="#f1c75b" stroke-width="3"/>
+ <circle cx="0" cy="35" r="54" class="node" stroke="#f1c75b"/>
+ <path d="M0 5 L12 24 L34 22 L26 42 L38 60 L16 58 L0 76 L-16 58 L-38 60 L-26 42 L-34 22 L-12 24Z" fill="none" stroke="#f1c75b" stroke-width="5"/>
+ <text class="label" x="0" y="182" font-size="29">AUTOMATION</text><text class="small" x="0" y="211">intelligent workflows</text>
+</a></g>
+<a href="https://abla86.github.io/developer-portfolio/index.html#visual-quality" target="_top" aria-label="Open world"><g transform="translate(1080 800)">
+ <path d="M-145 50 Q0 -5 145 50 L105 125 Q0 150 -105 125Z" fill="#071521" stroke="#79b8ff" stroke-width="3"/>
+ <circle cx="0" cy="35" r="54" class="node" stroke="#79b8ff"/>
+ <path d="M0 2 L39 18 L31 55 Q20 73 0 82 Q-20 73 -31 55 L-39 18Z" fill="none" stroke="#79b8ff" stroke-width="6"/>
+ <text class="label" x="0" y="182" font-size="29">QUALITY</text><text class="small" x="0" y="211">security · testing · reliability</text>
+</a></g>
+
+<!-- central intelligence -->
+<a href="https://abla86.github.io/developer-portfolio/swarm.html" target="_top" aria-label="Open full swarm"><g filter="url(#glow)">
+ <circle cx="800" cy="485" r="154" fill="url(#core)" stroke="#6bd7ff" stroke-width="4"/>
+ <circle cx="800" cy="485" r="190" fill="none" stroke="#6bd7ff" stroke-opacity=".24" stroke-width="3"/>
+ <circle cx="800" cy="485" r="215" fill="none" stroke="#a98cff" stroke-opacity=".16" stroke-width="2"/>
+</a></g>
+<path d="M730 520 Q800 420 870 520" fill="none" stroke="#dff7ff" stroke-width="6" opacity=".8"/>
+<circle cx="800" cy="435" r="42" fill="#071522" stroke="#dff7ff" stroke-width="4"/>
+<path d="M770 435 Q800 405 830 435 Q800 465 770 435Z" fill="#58c7ff" opacity=".8"/>
+<text class="label" x="800" y="575" font-size="43">ANNE BETH</text>
+<text class="small" x="800" y="607">SOFTWARE · RESEARCH · HEALTHCARE · AUTOMATION</text>
+
+<!-- title -->
+<text x="70" y="82" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="38" font-weight="900" letter-spacing="8">ANNE BETH</text>
+<text x="72" y="118" fill="#71d4ff" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="4">EXPLORE · CONNECT · BUILD</text>
+<text x="70" y="153" fill="#9bb8c9" font-family="Inter,Arial,sans-serif" font-size="16">One connected system of engineering, research and digital health.</text>
+
+<!-- navigation rail -->
+<g transform="translate(1380 95)">
+ <a href="https://abla86.github.io/developer-portfolio/index.html#visual-projects" target="_top" aria-label="Open link"><rect width="165" height="62" rx="14" fill="#071522" stroke="#58c7ff"/><text x="82" y="38" class="label" font-size="15">PROJECTS</text></a>
+ <a href="https://abla86.github.io/developer-portfolio/index.html#visual-projects" target="_top" aria-label="Open link"><rect y="76" width="165" height="62" rx="14" fill="#071522" stroke="#a98cff"/><text x="82" y="114" class="label" font-size="15">CV</text></a>
+ <a href="https://github.com/abla86" target="_top" aria-label="Open link"><rect y="152" width="165" height="62" rx="14" fill="#071522" stroke="#55d58a"/><text x="82" y="190" class="label" font-size="15">GITHUB</text></a>
+ <a href="https://abla86.github.io/developer-portfolio/index.html#visual-research" target="_top" aria-label="Open link"><rect y="228" width="165" height="62" rx="14" fill="#071522" stroke="#f1c75b"/><text x="82" y="266" class="label" font-size="15">RESEARCH</text></a>
+</g>
+</svg>
 <a class="hot center" style="left:50%;top:48.5%" href="index.html#projects" aria-label="Anne Beth projects"></a>
-<a class="hot" style="left:50%;top:48.5%" href="index.html#projects" aria-label="Open projects"></a>
 </div>
 </main>
 </body>
