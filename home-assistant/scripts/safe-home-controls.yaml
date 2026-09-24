@@ -1,0 +1,20 @@
+script:
+  safe_all_lights_off:
+    alias: "Safe — all lights off"
+    mode: single
+    sequence:
+      - service: light.turn_off
+        target:
+          area_id:
+            - kitchen
+            - hallway
+            - living_room
+
+  announce_security_status:
+    alias: "Security — announce status"
+    mode: single
+    sequence:
+      - service: notify.persistent_notification
+        data:
+          title: "Home status"
+          message: "Kontroller dører, lås og lekkasjesensorer før borte-modus."
