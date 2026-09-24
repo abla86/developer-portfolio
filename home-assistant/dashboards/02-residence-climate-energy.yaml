@@ -1,0 +1,23 @@
+title: Residence Climate & Energy
+views:
+  - title: Climate
+    path: climate
+    icon: mdi:home-thermometer
+    cards:
+      - type: heading
+        heading: Climate & Energy
+        heading_style: title
+      - type: thermostat
+        entity: climate.main_heating
+      - type: tile
+        entity: sensor.indoor_temperature
+        name: Indoor
+      - type: tile
+        entity: sensor.indoor_humidity
+        name: Humidity
+      - type: history-graph
+        title: Temperature
+        hours_to_show: 12
+        entities:
+          - sensor.indoor_temperature
+          - sensor.outdoor_temperature
