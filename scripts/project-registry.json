@@ -1,5 +1,5 @@
 {
-  "version": 10,
+  "version": 11,
   "policy": "Only verified repository facts may be promoted to the portfolio. Archived and deleted repositories are excluded from active project registry entries.",
   "projectLab": {
     "entry": "desktop-clock.html",
@@ -49,6 +49,13 @@
           "url": "https://www.skills.google/course_templates/1301",
           "relevance": "Cloud security risk management",
           "type": "completion"
+        },
+        {
+          "provider": "Microsoft Learn",
+          "name": "Azure Fundamentals",
+          "relevance": "Azure architecture and governance fundamentals",
+          "type": "badge evidence",
+          "source": "uploaded certificate evidence"
         }
       ]
     },
@@ -95,6 +102,15 @@
           "url": "https://www.skills.google/course_templates/1833",
           "relevance": "Multi-agent systems, ADK and MCP",
           "type": "completion"
+        },
+        {
+          "provider": "DigitalNorway",
+          "name": "Hva er kunstig intelligens?",
+          "relevance": "AI, machine learning and generative AI fundamentals",
+          "type": "course certificate",
+          "date": "2025-10-13",
+          "credentialId": "216638932",
+          "source": "uploaded certificate evidence"
         }
       ]
     },
@@ -111,6 +127,24 @@
           "url": "https://www.skills.google/course_templates/1449",
           "relevance": "Applied AI and feedback-agent workflows",
           "type": "completion"
+        },
+        {
+          "provider": "Canva Design School",
+          "name": "Canva Essentials",
+          "relevance": "Visual content creation for book and asset workflows",
+          "type": "certificate",
+          "date": "2025-08-02",
+          "credentialId": "85f51f",
+          "source": "uploaded certificate evidence"
+        },
+        {
+          "provider": "Canva Design School",
+          "name": "Graphic Design Essentials",
+          "relevance": "Graphic design fundamentals supporting visual book assets",
+          "type": "certificate",
+          "date": "2025-08-02",
+          "credentialId": "bf3b17",
+          "source": "uploaded certificate evidence"
         }
       ]
     },
@@ -241,7 +275,8 @@
         "type": "certificate",
         "date": "2025-08-02",
         "credentialId": "85f51f",
-        "relevance": "Canva fundamentals and visual content creation"
+        "relevance": "Visual content creation for book and asset workflows",
+        "project": "book-forge"
       },
       {
         "provider": "Canva Design School",
@@ -250,7 +285,8 @@
         "type": "certificate",
         "date": "2025-08-02",
         "credentialId": "bf3b17",
-        "relevance": "Graphic design fundamentals"
+        "relevance": "Graphic design fundamentals supporting visual book assets",
+        "project": "book-forge"
       },
       {
         "provider": "Microsoft",
@@ -267,7 +303,8 @@
         "type": "course certificate",
         "date": "2025-10-13",
         "credentialId": "216638932",
-        "relevance": "AI, machine learning and generative AI fundamentals"
+        "relevance": "AI, machine learning and generative AI fundamentals",
+        "project": "agenttrace"
       },
       {
         "provider": "Microsoft Learn",
@@ -281,7 +318,8 @@
         "name": "Azure Fundamentals",
         "category": "Azure / Cloud",
         "type": "badge evidence",
-        "relevance": "Azure architecture and governance fundamentals"
+        "relevance": "Azure architecture and governance fundamentals",
+        "project": "azure-kubernetes-showcase"
       },
       {
         "provider": "Microsoft Learn",
