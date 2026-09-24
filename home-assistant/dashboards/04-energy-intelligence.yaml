@@ -1,66 +1,33 @@
-# ENERGY — Intelligence
-# Additional operational dashboard inspired by the telemetry-heavy lower reference.
-# Requires Home Assistant Energy configuration for native energy cards.
-
-title: ENERGY — Intelligence
+title: Energy Intelligence
 views:
   - title: Energy
     path: energy
     icon: mdi:lightning-bolt
-    type: sections
-    max_columns: 4
-    sections:
+    cards:
+      - type: heading
+        heading: Energy Intelligence
+        heading_style: title
       - type: grid
-        column_span: 4
+        columns: 3
+        square: false
         cards:
-          - type: heading
-            heading: ENERGY INTELLIGENCE
-            heading_style: title
-          - type: energy-distribution
-          - type: energy-usage-graph
-          - type: power-sankey
-
-      - type: grid
-        cards:
-          - type: heading
-            heading: Live
-          - type: tile
+          - type: gauge
             entity: sensor.home_power
-            name: Forbruk nå
-            icon: mdi:flash
+            name: Nå
+            min: 0
+            max: 12000
+            severity:
+              green: 0
+              yellow: 4000
+              red: 8000
           - type: tile
-            entity: sensor.solar_power
-            name: Sol
-            icon: mdi:solar-power
+            entity: sensor.daily_energy
+            name: I dag
           - type: tile
-            entity: sensor.battery_level
-            name: Batteri
-            icon: mdi:battery
-
-      - type: grid
-        cards:
-          - type: heading
-            heading: Pris
-          - type: tile
-            entity: sensor.electricity_price
-            name: Strømpris
-            icon: mdi:cash
-          - type: statistic
-            entity: sensor.home_power
-            name: Effekt
-            stat_type: mean
-            period:
-              hours: 24
-
-      - type: grid
-        cards:
-          - type: heading
-            heading: Klima
-          - type: tile
-            entity: climate.home
-            name: Varmepumpe
-          - type: sensor
-            entity: sensor.living_room_temperature
-            name: Temperatur
-            graph: line
-            hours_to_show: 24
+            entity: sensor.monthly_energy
+            name: Denne måneden
+      - type: history-graph
+        title: Forbruk siste 24 timer
+        hours_to_show: 24
+        entities:
+          - sensor.home_power
