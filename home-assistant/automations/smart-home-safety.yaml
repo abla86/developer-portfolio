@@ -1,0 +1,39 @@
+- id: ha_security_door_left_open
+  alias: "Security — door left open"
+  mode: restart
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.front_door
+      to: "on"
+      for: "00:05:00"
+  action:
+    - service: notify.persistent_notification
+      data:
+        title: "Dør står åpen"
+        message: "Front door har stått åpen i mer enn 5 minutter."
+
+- id: ha_security_water_leak
+  alias: "Security — water leak alert"
+  mode: single
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.water_leak
+      to: "on"
+  action:
+    - service: notify.persistent_notification
+      data:
+        title: "LEKKASJEVARSEL"
+        message: "En lekkasjesensor har registrert vann."
+
+- id: ha_security_freeze_warning
+  alias: "Security — freeze warning"
+  mode: single
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.outdoor_temperature
+      below: 2
+  action:
+    - service: notify.persistent_notification
+      data:
+        title: "Frostvarsel"
+        message: "Utetemperaturen er under 2 °C."
