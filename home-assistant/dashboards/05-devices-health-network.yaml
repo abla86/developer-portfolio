@@ -1,0 +1,98 @@
+# DEVICES — Health & Network
+# Operational view for Zigbee, Wi-Fi, integrations and HA host health.
+
+title: DEVICES — Health & Network
+views:
+  - title: Devices
+    path: devices
+    icon: mdi:lan-connect
+    type: sections
+    max_columns: 4
+    sections:
+      - type: grid
+        column_span: 4
+        cards:
+          - type: heading
+            heading: DEVICE CENTER
+            heading_style: title
+          - type: tile
+            entity: sensor.devices_online
+            name: Online
+            icon: mdi:check-circle
+          - type: tile
+            entity: sensor.devices_offline
+            name: Offline
+            icon: mdi:alert-circle
+          - type: tile
+            entity: sensor.low_battery_devices
+            name: Lavt batteri
+            icon: mdi:battery-alert
+          - type: tile
+            entity: sensor.home_assistant_update
+            name: HA
+            icon: mdi:home-assistant
+
+      - type: grid
+        column_span: 2
+        cards:
+          - type: heading
+            heading: Network
+          - type: tile
+            entity: sensor.router_speed
+            name: Wi-Fi
+            icon: mdi:wifi
+          - type: tile
+            entity: sensor.network_devices
+            name: Klienter
+            icon: mdi:devices
+          - type: tile
+            entity: binary_sensor.internet_connection
+            name: Internett
+
+      - type: grid
+        column_span: 2
+        cards:
+          - type: heading
+            heading: Zigbee
+          - type: tile
+            entity: sensor.zigbee_devices
+            name: Zigbee-enheter
+            icon: mdi:zigbee
+          - type: tile
+            entity: sensor.zigbee_network_health
+            name: Nettverk
+            icon: mdi:access-point-network
+          - type: tile
+            entity: sensor.zigbee_coordinator
+            name: Coordinator
+
+      - type: grid
+        cards:
+          - type: heading
+            heading: Host
+          - type: gauge
+            entity: sensor.processor_use
+            name: CPU
+            min: 0
+            max: 100
+          - type: gauge
+            entity: sensor.memory_use_percent
+            name: Minne
+            min: 0
+            max: 100
+          - type: gauge
+            entity: sensor.disk_use_percent
+            name: Disk
+            min: 0
+            max: 100
+
+      - type: grid
+        cards:
+          - type: heading
+            heading: Updates
+          - type: tile
+            entity: update.home_assistant_core_update
+            name: Home Assistant
+          - type: tile
+            entity: update.hacs_update
+            name: HACS
