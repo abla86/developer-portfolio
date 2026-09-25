@@ -28,6 +28,22 @@ class MetadataGeneratorTests(unittest.TestCase):
             record = load_records(path)[0]
             self.assertEqual(record["title"], "Example")
             self.assertEqual(record["year"], "2026")
+    
+    def test_bibtex_entry_closing_brace_is_not_confused_with_field_braces(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "records.bib"
+            path.write_text(
+                "@inproceedings{example,\n"
+                " title = {Example {With} Braces},\n"
+                " year = {2026},\n"
+                " url = {https://example.com/paper}\n"
+                "}\n",
+                encoding="utf-8",
+            )
+            record = load_records(path)[0]
+            self.assertEqual(record["title"], "Example {With} Braces")
+            self.assertEqual(record["year"], "2026")
+            self.assertEqual(record["url"], "https://example.com/paper")
 
     def test_invalid_input_is_rejected(self):
         with tempfile.TemporaryDirectory() as directory:
