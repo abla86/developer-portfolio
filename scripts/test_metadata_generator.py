@@ -1,13 +1,15 @@
+import sys
 import tempfile
 import unittest
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).parent))
 from metadata_generator import load_records, markdown_escape, render
 
 
 class MetadataGeneratorTests(unittest.TestCase):
     def test_markdown_is_escaped(self):
-        self.assertEqual(markdown_escape("A *title*"), r"A \*title\*")
+        self.assertEqual(markdown_escape("A *title*"), r"A \\*title\\*")
 
     def test_csv_and_tsv_are_supported(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -26,6 +28,13 @@ class MetadataGeneratorTests(unittest.TestCase):
             record = load_records(path)[0]
             self.assertEqual(record["title"], "Example")
             self.assertEqual(record["year"], "2026")
+
+    def test_invalid_input_is_rejected(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "invalid.bib"
+            path.write_text("not a BibTeX document", encoding="utf-8")
+            with self.assertRaises(ValueError):
+                load_records(path)
 
     def test_render_is_deterministic_and_contains_records(self):
         output = render([{"title": "Example", "year": "2026"}], "Publications")

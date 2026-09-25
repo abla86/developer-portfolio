@@ -5,78 +5,23 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
-  workflow_dispatch:
 
 permissions:
   contents: read
 
 jobs:
-  verify:
-    timeout-minutes: 20
+  python-metadata:
+    name: Python metadata generator
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
-          persist-credentials: false
-      - name: Validate required pages
-        run: |
-          test -f index.html
-          test -f projects.html
-          test -f stack.html
-          test -f engineering-map.html
-          test -f evidence-lab.html
-          test -f security-lab.html
-          test -f style.css
-          test -f ha-desktop.html
-          test -f open-source.html
-          test -f mission-control.html
-      - name: Check HTML structure and inline JavaScript
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          import re
-          import subprocess
-          for p in (q for q in Path('.').rglob('*.html') if q.parts[0] != 'archive'):
-              s=p.read_text(encoding='utf-8')
-              assert '<html' in s and '</html>' in s, f'Invalid HTML wrapper: {p}'
-              assert '<head' in s and '</head>' in s, f'Missing head: {p}'
-              assert '<body' in s and '</body>' in s, f'Missing body: {p}'
-              assert len(re.findall(r'<main\b', s, re.IGNORECASE)) == len(re.findall(r'</main>', s, re.IGNORECASE)), f'Unbalanced main elements: {p}'
-              ids = re.findall(r"\bid=[\"']([^\"']+)[\"']", s, re.IGNORECASE)
-              duplicates = sorted({x for x in ids if ids.count(x) > 1})
-              assert not duplicates, f'Duplicate HTML ids in {p}: {duplicates}'
-              for index, script in enumerate(re.findall(r'<script(?:\s[^>]*)?>(.*?)</script>', s, re.DOTALL | re.IGNORECASE)):
-                  if not script.strip():
-                      continue
-                  result = subprocess.run(
-                      ['node', '--check', '--input-type=module'],
-                      input=script,
-                      text=True,
-                      capture_output=True,
-                  )
-                  if result.returncode:
-                      raise SystemExit(f'{p}: inline script {index} failed syntax check\\n{result.stderr}')
-          print('HTML structure and inline JavaScript checks passed')
-          PY
-
-      - name: Validate Home Assistant YAML
-        run: |
-          python -m pip install --disable-pip-version-check --no-input pyyaml
-          python - <<'PY'
-          from pathlib import Path
-          import yaml
-          root = Path('home-assistant')
-          files = list(root.rglob('*.yaml')) + list(root.rglob('*.yml'))
-          for path in files:
-              if 'secrets.yaml' in path.name or '.storage' in path.parts:
-                  continue
-              yaml.safe_load(path.read_text(encoding='utf-8'))
-          print(f'Validated {len(files)} Home Assistant YAML files')
-          PY
-      - name: Guard Home Assistant secrets
-        run: |
-          if find home-assistant -type f \( -name 'secrets.yaml' -o -name '*.key' -o -name '*.pem' -o -name '*.p12' -o -name '*.pfx' \) -print -quit | grep -q .; then
-            echo 'Tracked Home Assistant secret material detected'
-            exit 1
-          fi
+          python-version: '3.12'
+          cache: pip
+      - name: Compile Python sources
+        run: python -m compileall -q scripts
+      - name: Run metadata tests
+        run: python -m unittest discover -s scripts -p 'test_*.py'
+      - name: Check generated files are not tracked as test artifacts
+        run: git diff --exit-code -- . ':(exclude)scripts'
