@@ -25,67 +25,113 @@
 <main class="stage">
 <div class="art" aria-label="Interactive swarm">
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="t d">
-<title id="t">Anne Beth — interactive professional swarm</title>
-<desc id="d">A cinematic connected ecosystem with Anne Beth at the center and clickable worlds for architecture, DevOps, research, healthcare, automation, quality, projects, CV, GitHub, education and contact.</desc>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+<title id="title">Anne Beth — interactive swarm ecosystem</title>
+<desc id="desc">A cinematic network of six connected technology worlds surrounding a central Anne Beth node.</desc>
 <defs>
- <radialGradient id="bg"><stop stop-color="#173d58"/><stop offset=".5" stop-color="#071522"/><stop offset="1" stop-color="#02050a"/></radialGradient>
- <radialGradient id="core"><stop stop-color="#5bcfff" stop-opacity=".28"/><stop offset=".65" stop-color="#081827" stop-opacity=".94"/><stop offset="1" stop-color="#02060b"/></radialGradient>
- <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff1a8"/><stop offset=".45" stop-color="#f1b64f"/><stop offset="1" stop-color="#ff7a3d"/></linearGradient>
- <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a9efff"/><stop offset="1" stop-color="#3a8cff"/></linearGradient>
- <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
- <filter id="soft"><feGaussianBlur stdDeviation="30"/></filter>
- <pattern id="stars" width="120" height="120" patternUnits="userSpaceOnUse"><circle cx="15" cy="28" r="1" fill="#fff" opacity=".65"/><circle cx="78" cy="70" r=".8" fill="#9bdcff" opacity=".7"/><circle cx="104" cy="40" r=".7" fill="#fff" opacity=".5"/></pattern>
- <clipPath id="portrait"><circle cx="800" cy="450" r="125"/></clipPath>
- <style>
-  .label{font-family:Inter,Arial,sans-serif;fill:#f7fbff;text-anchor:middle;font-weight:900;letter-spacing:3px}
-  .small{font-family:Inter,Arial,sans-serif;fill:#b6cfde;text-anchor:middle;font-size:16px;letter-spacing:1px}
-  .node{cursor:pointer}
-  .node:hover .halo{opacity:1}
-  .node:focus .halo{opacity:1}
- </style>
+  <radialGradient id="bg"><stop stop-color="#123653"/><stop offset=".48" stop-color="#071421"/><stop offset="1" stop-color="#02050a"/></radialGradient>
+  <radialGradient id="core"><stop stop-color="#1d6d9a"/><stop offset=".45" stop-color="#09283e"/><stop offset="1" stop-color="#030911"/></radialGradient>
+  <linearGradient id="water" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071a2a"/><stop offset=".5" stop-color="#0d3850"/><stop offset="1" stop-color="#02070c"/></linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="soft"><feGaussianBlur stdDeviation="22"/></filter>
+  <pattern id="stars" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="8" cy="20" r="1" fill="#fff" opacity=".65"/><circle cx="62" cy="70" r=".8" fill="#9bdcff" opacity=".7"/><circle cx="88" cy="35" r=".6" fill="#fff" opacity=".45"/></pattern>
+  <style>
+    .label{font-family:Inter,Arial,sans-serif;fill:#f5fbff;text-anchor:middle;font-weight:800;letter-spacing:3px}
+    .small{font-family:Inter,Arial,sans-serif;fill:#a9c7d9;text-anchor:middle;font-size:18px}
+    .line{fill:none;stroke:#6fd4ff;stroke-opacity:.34;stroke-width:3}
+    .node{fill:#071522;stroke-width:3}
+  </style>
 </defs>
 <rect width="1600" height="1000" fill="url(#bg)"/>
-<rect width="1600" height="1000" fill="url(#stars)" opacity=".9"/>
-<g opacity=".35" filter="url(#soft)"><circle cx="210" cy="300" r="150" fill="#a94dff"/><circle cx="1390" cy="300" r="160" fill="#ff9b45"/><circle cx="800" cy="470" r="230" fill="#26bfff"/><circle cx="800" cy="860" r="160" fill="#56d99b"/></g>
-<path d="M0 760 Q250 620 480 760 T960 750 T1360 700 T1600 760 V1000H0Z" fill="#061827"/>
-<g fill="none" stroke="url(#cyan)" stroke-width="3" opacity=".45">
- <ellipse cx="800" cy="470" rx="650" ry="340"/><ellipse cx="800" cy="470" rx="500" ry="260"/>
- <path d="M800 470 C600 290 440 220 270 220 M800 470 C1000 290 1160 220 1330 220 M800 470 C500 480 390 590 230 650 M800 470 C1100 480 1210 590 1370 650 M800 470 C650 650 560 720 500 840 M800 470 C950 650 1040 720 1100 840"/>
+<rect width="1600" height="1000" fill="url(#stars)" opacity=".8"/>
+<g opacity=".55" filter="url(#soft)">
+  <circle cx="230" cy="310" r="110" fill="#8b55ff"/><circle cx="1370" cy="300" r="130" fill="#ff9c3b"/>
+  <circle cx="800" cy="470" r="170" fill="#2fbbff"/><circle cx="1260" cy="760" r="120" fill="#45d99a"/>
 </g>
-<g fill="#8be9ff" filter="url(#glow)"><circle cx="270" cy="220" r="5"/><circle cx="1330" cy="220" r="5"/><circle cx="230" cy="650" r="5"/><circle cx="1370" cy="650" r="5"/><circle cx="500" cy="840" r="5"/><circle cx="1100" cy="840" r="5"/></g>
+<path d="M0 720 Q230 590 450 710 T900 700 T1300 680 T1600 720 V1000 H0Z" fill="url(#water)"/>
+<g opacity=".7" fill="#02070b">
+  <path d="M0 720 L100 610 170 680 250 560 330 710 430 590 520 720Z"/>
+  <path d="M1080 710 L1170 590 1230 680 1320 540 1410 690 1510 580 1600 710Z"/>
+</g>
+<!-- orbital network -->
+<ellipse cx="800" cy="485" rx="560" ry="300" class="line"/>
+<ellipse cx="800" cy="485" rx="420" ry="225" class="line" stroke="#d38bff" stroke-opacity=".22"/>
+<path d="M800 485 C610 300 470 260 300 260 M800 485 C990 300 1130 260 1300 260 M800 485 C1120 480 1200 600 1320 650 M800 485 C480 480 400 600 280 650 M800 485 C650 650 570 730 520 820 M800 485 C950 650 1030 730 1080 820" class="line"/>
+<g stroke="#8be0ff" stroke-width="4" opacity=".55" filter="url(#glow)">
+  <circle cx="800" cy="185" r="5" fill="#fff"/><circle cx="1300" cy="260" r="5" fill="#fff"/>
+  <circle cx="1320" cy="650" r="5" fill="#fff"/><circle cx="1080" cy="820" r="5" fill="#fff"/>
+  <circle cx="520" cy="820" r="5" fill="#fff"/><circle cx="280" cy="650" r="5" fill="#fff"/>
+</g>
 
-<!-- ARCHITECTURE -->
-<a class="node" href="index.html#visual-architecture"><g transform="translate(270 145)"><circle class="halo" cx="0" cy="70" r="105" fill="#58c7ff" opacity=".12"/><rect x="-135" y="15" width="270" height="135" rx="28" fill="#071521" stroke="#58c7ff" stroke-width="3"/><path d="M-85 105V55L0 10l85 45v50H55V70H20v35H-15V70h-35v35z" fill="none" stroke="#7de0ff" stroke-width="7"/><text class="label" y="190" font-size="28">ARCHITECTURE</text><text class="small" y="217">scalable systems · clean solutions</text></g></a>
+<!-- floating worlds -->
+<a href="https://abla86.github.io/developer-portfolio/index.html#visual-architecture" target="_top" aria-label="Open world"><g transform="translate(520 220)">
+ <ellipse cx="0" cy="120" rx="170" ry="34" fill="#58c7ff" opacity=".12" filter="url(#soft)"/>
+ <path d="M-145 70 Q0 5 145 70 L105 145 Q0 170 -105 145Z" fill="#071521" stroke="#58c7ff" stroke-width="3"/>
+ <path d="M-115 75 Q0 35 115 75 L80 120 Q0 145 -80 120Z" fill="#102e43"/>
+ <circle cx="0" cy="50" r="54" class="node" stroke="#58c7ff"/>
+ <path d="M-20 45 h40 M0 25 v40" stroke="#58c7ff" stroke-width="8"/>
+ <text class="label" x="0" y="205" font-size="29">ARCHITECTURE</text><text class="small" x="0" y="234">scalable systems</text>
+</a></g>
+<a href="https://abla86.github.io/developer-portfolio/index.html#visual-devops" target="_top" aria-label="Open world"><g transform="translate(1080 220)">
+ <ellipse cx="0" cy="120" rx="170" ry="34" fill="#ffb45c" opacity=".12" filter="url(#soft)"/>
+ <path d="M-145 70 Q0 5 145 70 L105 145 Q0 170 -105 145Z" fill="#071521" stroke="#ffb45c" stroke-width="3"/>
+ <path d="M-115 75 Q0 35 115 75 L80 120 Q0 145 -80 120Z" fill="#34240f"/>
+ <circle cx="0" cy="50" r="54" class="node" stroke="#ffb45c"/>
+ <path d="M-27 45 h54 M0 18 v54" stroke="#ffb45c" stroke-width="8"/>
+ <text class="label" x="0" y="205" font-size="29">DEVOPS</text><text class="small" x="0" y="234">secure delivery</text>
+</a></g>
+<a href="https://abla86.github.io/developer-portfolio/index.html#visual-research" target="_top" aria-label="Open world"><g transform="translate(280 590)">
+ <path d="M-145 70 Q0 5 145 70 L105 145 Q0 170 -105 145Z" fill="#071521" stroke="#a98cff" stroke-width="3"/>
+ <path d="M-115 75 Q0 35 115 75 L80 120 Q0 145 -80 120Z" fill="#27183b"/>
+ <circle cx="0" cy="50" r="54" class="node" stroke="#a98cff"/>
+ <path d="M-22 15 L22 15 L10 38 L28 65 L-28 65 L-10 38Z" fill="none" stroke="#a98cff" stroke-width="6"/>
+ <text class="label" x="0" y="205" font-size="29">RESEARCH</text><text class="small" x="0" y="234">evidence to implementation</text>
+</a></g>
+<a href="https://abla86.github.io/developer-portfolio/index.html#visual-healthcare" target="_top" aria-label="Open world"><g transform="translate(1320 590)">
+ <path d="M-145 70 Q0 5 145 70 L105 145 Q0 170 -105 145Z" fill="#071521" stroke="#55d58a" stroke-width="3"/>
+ <path d="M-115 75 Q0 35 115 75 L80 120 Q0 145 -80 120Z" fill="#123a2c"/>
+ <circle cx="0" cy="50" r="54" class="node" stroke="#55d58a"/>
+ <path d="M-10 15 h20 v25 h25 v20 h-25 v25 h-20 V60 h-25 V40 h25Z" fill="#55d58a"/>
+ <text class="label" x="0" y="205" font-size="29">HEALTHCARE</text><text class="small" x="0" y="234">technology for better care</text>
+</a></g>
+<a href="https://abla86.github.io/developer-portfolio/index.html#visual-automation" target="_top" aria-label="Open world"><g transform="translate(520 800)">
+ <path d="M-145 50 Q0 -5 145 50 L105 125 Q0 150 -105 125Z" fill="#071521" stroke="#f1c75b" stroke-width="3"/>
+ <circle cx="0" cy="35" r="54" class="node" stroke="#f1c75b"/>
+ <path d="M0 5 L12 24 L34 22 L26 42 L38 60 L16 58 L0 76 L-16 58 L-38 60 L-26 42 L-34 22 L-12 24Z" fill="none" stroke="#f1c75b" stroke-width="5"/>
+ <text class="label" x="0" y="182" font-size="29">AUTOMATION</text><text class="small" x="0" y="211">intelligent workflows</text>
+</a></g>
+<a href="https://abla86.github.io/developer-portfolio/index.html#visual-quality" target="_top" aria-label="Open world"><g transform="translate(1080 800)">
+ <path d="M-145 50 Q0 -5 145 50 L105 125 Q0 150 -105 125Z" fill="#071521" stroke="#79b8ff" stroke-width="3"/>
+ <circle cx="0" cy="35" r="54" class="node" stroke="#79b8ff"/>
+ <path d="M0 2 L39 18 L31 55 Q20 73 0 82 Q-20 73 -31 55 L-39 18Z" fill="none" stroke="#79b8ff" stroke-width="6"/>
+ <text class="label" x="0" y="182" font-size="29">QUALITY</text><text class="small" x="0" y="211">security · testing · reliability</text>
+</a></g>
 
-<!-- DEVOPS -->
-<a class="node" href="index.html#visual-devops"><g transform="translate(1330 145)"><circle class="halo" cx="0" cy="70" r="105" fill="#ff9e45" opacity=".12"/><rect x="-135" y="15" width="270" height="135" rx="28" fill="#071521" stroke="#ffb45c" stroke-width="3"/><path d="M-75 85h150M-40 55h80M-15 115h30" stroke="#ffb45c" stroke-width="9" stroke-linecap="round"/><circle cx="0" cy="85" r="24" fill="none" stroke="#fff0c0" stroke-width="5"/><text class="label" y="190" font-size="28">DEVOPS</text><text class="small" y="217">CI/CD · cloud · secure delivery</text></g></a>
+<!-- central intelligence -->
+<a href="https://abla86.github.io/developer-portfolio/swarm.html" target="_top" aria-label="Open full swarm"><g filter="url(#glow)">
+ <circle cx="800" cy="485" r="154" fill="url(#core)" stroke="#6bd7ff" stroke-width="4"/>
+ <circle cx="800" cy="485" r="190" fill="none" stroke="#6bd7ff" stroke-opacity=".24" stroke-width="3"/>
+ <circle cx="800" cy="485" r="215" fill="none" stroke="#a98cff" stroke-opacity=".16" stroke-width="2"/>
+</a></g>
+<path d="M730 520 Q800 420 870 520" fill="none" stroke="#dff7ff" stroke-width="6" opacity=".8"/>
+<circle cx="800" cy="435" r="42" fill="#071522" stroke="#dff7ff" stroke-width="4"/>
+<path d="M770 435 Q800 405 830 435 Q800 465 770 435Z" fill="#58c7ff" opacity=".8"/>
+<text class="label" x="800" y="575" font-size="43">ANNE BETH</text>
+<text class="small" x="800" y="607">SOFTWARE · RESEARCH · HEALTHCARE · AUTOMATION</text>
 
-<!-- RESEARCH -->
-<a class="node" href="index.html#visual-research"><g transform="translate(220 530)"><circle class="halo" cx="0" cy="70" r="105" fill="#a98cff" opacity=".12"/><rect x="-145" y="15" width="290" height="135" rx="28" fill="#071521" stroke="#a98cff" stroke-width="3"/><path d="M-55 35h55q45 0 55 35v55H0q-55 0-55-35zM0 35v90" fill="none" stroke="#c4aaff" stroke-width="6"/><path d="M-28 65h18M-28 90h18M18 65h18M18 90h18" stroke="#c4aaff" stroke-width="5"/><text class="label" y="190" font-size="28">RESEARCH</text><text class="small" y="217">evidence · methods · implementation</text></g></a>
+<!-- title -->
+<text x="70" y="82" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="38" font-weight="900" letter-spacing="8">ANNE BETH</text>
+<text x="72" y="118" fill="#71d4ff" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="4">EXPLORE · CONNECT · BUILD</text>
+<text x="70" y="153" fill="#9bb8c9" font-family="Inter,Arial,sans-serif" font-size="16">One connected system of engineering, research and digital health.</text>
 
-<!-- HEALTHCARE -->
-<a class="node" href="index.html#visual-healthcare"><g transform="translate(1380 530)"><circle class="halo" cx="0" cy="70" r="105" fill="#55d58a" opacity=".12"/><rect x="-145" y="15" width="290" height="135" rx="28" fill="#071521" stroke="#55d58a" stroke-width="3"/><path d="M-55 85h30V55h50v30h30v50h-110z" fill="none" stroke="#65e7a1" stroke-width="7"/><path d="M0 42v86M-43 85h86" stroke="#65e7a1" stroke-width="5"/><text class="label" y="190" font-size="28">HEALTHCARE</text><text class="small" y="217">digital health · better care</text></g></a>
-
-<!-- AUTOMATION -->
-<a class="node" href="index.html#visual-automation"><g transform="translate(500 750)"><circle class="halo" cx="0" cy="50" r="100" fill="#f1c75b" opacity=".12"/><rect x="-145" y="-5" width="290" height="130" rx="28" fill="#071521" stroke="#f1c75b" stroke-width="3"/><circle cx="0" cy="58" r="35" fill="none" stroke="#f1c75b" stroke-width="6"/><path d="M0 18v18M0 80v18M-40 58h18M22 58h18M-27 31l13 13M14 72l13 13M27 31L14 44M-14 72l-13 13" stroke="#f1c75b" stroke-width="5"/><text class="label" y="165" font-size="28">AUTOMATION</text><text class="small" y="192">intelligent workflows · smart systems</text></g></a>
-
-<!-- QUALITY -->
-<a class="node" href="index.html#visual-quality"><g transform="translate(1100 750)"><circle class="halo" cx="0" cy="50" r="100" fill="#79b8ff" opacity=".12"/><rect x="-145" y="-5" width="290" height="130" rx="28" fill="#071521" stroke="#79b8ff" stroke-width="3"/><path d="M0 20l55 20v35q-10 38-55 52-45-14-55-52V40z" fill="none" stroke="#79b8ff" stroke-width="6"/><path d="M-25 73l18 18 34-39" fill="none" stroke="#b7dcff" stroke-width="7"/><text class="label" y="165" font-size="28">QUALITY</text><text class="small" y="192">testing · security · reliability</text></g></a>
-
-<!-- CENTRAL PERSON -->
-<a class="node" href="swarm.html"><circle cx="800" cy="450" r="188" fill="#071521" stroke="url(#gold)" stroke-width="5"/><circle cx="800" cy="450" r="164" fill="url(#core)" stroke="#6bd7ff" stroke-opacity=".5" stroke-width="2"/><image href="https://avatars.githubusercontent.com/u/195699472?v=4" x="675" y="325" width="250" height="250" preserveAspectRatio="xMidYMid slice" clip-path="url(#portrait)"/><circle cx="800" cy="450" r="125" fill="none" stroke="#fff2bf" stroke-width="3" opacity=".9"/><circle cx="800" cy="450" r="145" fill="none" stroke="#6bd7ff" stroke-opacity=".45" stroke-width="2" stroke-dasharray="7 13"/><text class="label" x="800" y="625" font-size="38">ANNE BETH</text><text class="small" x="800" y="653">EXPLORE · CONNECT · BUILD</text></a>
-
-<!-- lower portals -->
-<a class="node" href="index.html#visual-projects"><g transform="translate(120 875)"><circle cx="0" cy="0" r="60" fill="#071522" stroke="#58c7ff" stroke-width="3"/><text class="label" y="8" font-size="19">&lt;/&gt;</text><text class="label" y="86" font-size="19">PROJECTS</text></g></a>
-<a class="node" href="index.html#cv"><g transform="translate(390 875)"><circle cx="0" cy="0" r="60" fill="#071522" stroke="#a98cff" stroke-width="3"/><text class="label" y="8" font-size="19">CV</text><text class="label" y="86" font-size="19">CV</text></g></a>
-<a class="node" href="https://github.com/abla86"><g transform="translate(650 875)"><circle cx="0" cy="0" r="60" fill="#071522" stroke="#55d58a" stroke-width="3"/><text class="label" y="8" font-size="17">GH</text><text class="label" y="86" font-size="19">GITHUB</text></g></a>
-<a class="node" href="index.html#visual-research"><g transform="translate(950 875)"><circle cx="0" cy="0" r="60" fill="#071522" stroke="#f1c75b" stroke-width="3"/><text class="label" y="8" font-size="18">◆</text><text class="label" y="86" font-size="19">EDUCATION</text></g></a>
-<a class="node" href="index.html#contact"><g transform="translate(1210 875)"><circle cx="0" cy="0" r="60" fill="#071522" stroke="#79b8ff" stroke-width="3"/><text class="label" y="8" font-size="18">✦</text><text class="label" y="86" font-size="19">CONTACT</text></g></a>
-<a class="node" href="open-source.html"><g transform="translate(1480 875)"><circle cx="0" cy="0" r="60" fill="#071522" stroke="#ff9e45" stroke-width="3"/><text class="label" y="8" font-size="18">∞</text><text class="label" y="86" font-size="19">OPEN SOURCE</text></g></a>
-
-<text x="70" y="72" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="34" font-weight="900" letter-spacing="7">ANNE BETH SYSTEM</text>
-<text x="72" y="105" fill="#71d4ff" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="4">ONE CONNECTED PROFESSIONAL ECOSYSTEM</text>
+<!-- navigation rail -->
+<g transform="translate(1380 95)">
+ <a href="https://abla86.github.io/developer-portfolio/index.html#visual-projects" target="_top" aria-label="Open link"><rect width="165" height="62" rx="14" fill="#071522" stroke="#58c7ff"/><text x="82" y="38" class="label" font-size="15">PROJECTS</text></a>
+ <a href="https://abla86.github.io/developer-portfolio/index.html#visual-projects" target="_top" aria-label="Open link"><rect y="76" width="165" height="62" rx="14" fill="#071522" stroke="#a98cff"/><text x="82" y="114" class="label" font-size="15">CV</text></a>
+ <a href="https://github.com/abla86" target="_top" aria-label="Open link"><rect y="152" width="165" height="62" rx="14" fill="#071522" stroke="#55d58a"/><text x="82" y="190" class="label" font-size="15">GITHUB</text></a>
+ <a href="https://abla86.github.io/developer-portfolio/index.html#visual-research" target="_top" aria-label="Open link"><rect y="228" width="165" height="62" rx="14" fill="#071522" stroke="#f1c75b"/><text x="82" y="266" class="label" font-size="15">RESEARCH</text></a>
+</g>
 </svg>
 <a class="hot center" style="left:50%;top:48.5%" href="index.html#projects" aria-label="Anne Beth projects"></a>
 </div>
