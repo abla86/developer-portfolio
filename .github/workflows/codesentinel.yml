@@ -10,11 +10,35 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
 
 jobs:
   verify:
+    if: github.event_name == 'pull_request'
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Inspect registered GitHub projects
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/github-project-inspector.mjs
+
+      - name: Run CodeSentinel preflight and safe repair
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/codesentinel.mjs
+
+  verify-and-commit:
+    if: github.event_name != 'pull_request'
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -33,7 +57,6 @@ jobs:
         run: node scripts/codesentinel.mjs
 
       - name: Commit verified project facts
-        if: github.event_name != 'pull_request'
         run: |
           if git diff --quiet; then
             echo "No generated changes."
