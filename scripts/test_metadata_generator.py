@@ -7,7 +7,7 @@ from metadata_generator import load_records, markdown_escape, render
 
 class MetadataGeneratorTests(unittest.TestCase):
     def test_markdown_is_escaped(self):
-        self.assertEqual(markdown_escape("A *title*"), r"A \\*title\\*")
+        self.assertEqual(markdown_escape("A *title*"), r"A \*title\*")
 
     def test_csv_and_tsv_are_supported(self):
         with tempfile.TemporaryDirectory() as directory:
