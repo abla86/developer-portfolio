@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T19:23:58.413Z",
+  "generatedAt": "2026-09-25T19:40:58.540Z",
   "source": "GitHub repository inspection",
   "policy": "Only verified repository facts may be promoted to the portfolio. Archived and deleted repositories are excluded from active project registry entries.",
   "projects": [
@@ -17,8 +17,8 @@
         "archived": false,
         "description": "evidence-appraisal-tool",
         "stars": 0,
-        "updatedAt": "2026-09-25T19:16:23Z",
-        "pushedAt": "2026-09-25T19:16:19Z",
+        "updatedAt": "2026-09-25T19:32:36Z",
+        "pushedAt": "2026-09-25T19:32:34Z",
         "languages": [
           "TypeScript",
           "C#",
