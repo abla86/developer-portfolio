@@ -43,7 +43,7 @@ jobs:
               assert '<head' in s and '</head>' in s, f'Missing head: {p}'
               assert '<body' in s and '</body>' in s, f'Missing body: {p}'
               assert len(re.findall(r'<main\\b', s, re.IGNORECASE)) == len(re.findall(r'</main>', s, re.IGNORECASE)), f'Unbalanced main elements: {p}'
-              ids = re.findall(r'\\bid=["']([^"']+)["']', s, re.IGNORECASE)
+              ids = re.findall(r"\\bid=[\"']([^\"']+)[\"']", s, re.IGNORECASE)
               duplicates = sorted({x for x in ids if ids.count(x) > 1})
               assert not duplicates, f'Duplicate HTML ids in {p}: {duplicates}'
               for index, script in enumerate(re.findall(r'<script(?:\s[^>]*)?>(.*?)</script>', s, re.DOTALL | re.IGNORECASE)):
