@@ -54,7 +54,7 @@ def _strip_bib_value(value: str) -> str:
 def parse_bibtex(path: Path) -> list[dict[str, str]]:
     text = _read_text(path)
     records: list[dict[str, str]] = []
-    entry_re = re.compile(r"@(?P<kind>[A-Za-z][\w-]*)\s*\{(?P<key>[^,\s]+)\s*,(?P<body>.*?)\n?\}", re.S)
+    entry_re = re.compile(r"@(?P<kind>[A-Za-z][\w-]*)\s*\{(?P<key>[^,\s]+)\s*,(?P<body>.*?)\n\s*\}", re.S)
     for entry in entry_re.finditer(text):
         row = {"type": entry.group("kind").lower(), "key": entry.group("key").strip()}
         body = entry.group("body")
