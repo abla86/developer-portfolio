@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate deterministic Markdown metadata pages from CSV, TSV, or BibTeX."""
+"""Generate deterministic Markdown metadata from CSV, TSV, or BibTeX."""
 from __future__ import annotations
 
 import argparse
@@ -8,30 +8,63 @@ import re
 from pathlib import Path
 from typing import Iterable
 
+MAX_INPUT_BYTES = 2_000_000
+MAX_RECORDS = 10_000
+_FIELD_RE = re.compile(r"(?P<name>[A-Za-z][\w-]*)\s*=\s*(?P<value>\{(?:[^{}]|\{[^{}]*\})*\}|\"(?:[^\"\\]|\\.)*\"|[^,\n]+)", re.S)
+
 
 def markdown_escape(value: object) -> str:
     text = str(value or "").strip()
     return re.sub(r"([\\`*_{}\[\]()<>#+.!|~-])", r"\\\1", text)
 
 
+def _read_text(path: Path) -> str:
+    if not path.is_file():
+        raise ValueError(f"Input file does not exist: {path}")
+    if path.stat().st_size > MAX_INPUT_BYTES:
+        raise ValueError("Input file exceeds the 2 MiB safety limit")
+    return path.read_text(encoding="utf-8-sig")
+
+
 def parse_delimited(path: Path) -> list[dict[str, str]]:
-    with path.open("r", encoding="utf-8-sig", newline="") as handle:
-        sample = handle.read(4096)
-        handle.seek(0)
-        dialect = csv.Sniffer().sniff(sample, delimiters="\t,")
-        rows = list(csv.DictReader(handle, dialect=dialect))
-    return [{str(k).strip().lower(): (v or "").strip() for k, v in row.items()} for row in rows]
+    text = _read_text(path)
+    if not text.strip():
+        return []
+    try:
+        dialect = csv.Sniffer().sniff(text[:4096], delimiters="\t,")
+    except csv.Error as exc:
+        raise ValueError("Could not detect CSV/TSV delimiter") from exc
+    rows = list(csv.DictReader(text.splitlines(), dialect=dialect))
+    if len(rows) > MAX_RECORDS:
+        raise ValueError("Input contains too many records")
+    if not rows or not rows[0]:
+        return []
+    return [{str(k).strip().lower(): (v or "").strip() for k, v in row.items() if k} for row in rows]
+
+
+def _strip_bib_value(value: str) -> str:
+    value = value.strip().rstrip(",").strip()
+    if len(value) >= 2 and value[0] == "{" and value[-1] == "}":
+        return value[1:-1].strip()
+    if len(value) >= 2 and value[0] == '"' and value[-1] == '"':
+        return value[1:-1].replace('\\"', '"').strip()
+    return value
 
 
 def parse_bibtex(path: Path) -> list[dict[str, str]]:
-    text = path.read_text(encoding="utf-8-sig")
+    text = _read_text(path)
     records: list[dict[str, str]] = []
-    for match in re.finditer(r"@(?P<kind>[^,\s{]+)\s*\{(?P<key>[^,]+),(?P<body>.*?)\n\}", text, re.S):
-        row = {"type": match.group("kind").strip(), "key": match.group("key").strip()}
-        body = match.group("body")
-        for field, raw in re.findall(r"([A-Za-z][\w-]*)\s*=\s*(?:\{([^{}]*)\}|\"([^\"]*)\"|([^,\n]+))", body):
-            row[field.lower()] = next((part.strip() for part in raw if part and part.strip()), "")
+    entry_re = re.compile(r"@(?P<kind>[A-Za-z][\w-]*)\s*\{(?P<key>[^,\s]+)\s*,(?P<body>.*?)\n?\}", re.S)
+    for entry in entry_re.finditer(text):
+        row = {"type": entry.group("kind").lower(), "key": entry.group("key").strip()}
+        body = entry.group("body")
+        for field in _FIELD_RE.finditer(body):
+            row[field.group("name").lower()] = _strip_bib_value(field.group("value"))
         records.append(row)
+    if len(records) > MAX_RECORDS:
+        raise ValueError("BibTeX input contains too many records")
+    if text.strip() and not records:
+        raise ValueError("No valid BibTeX records found")
     return records
 
 
@@ -69,7 +102,7 @@ def render(records: Iterable[dict[str, str]], title: str) -> str:
         if venue:
             lines.append(f"- **Venue:** {markdown_escape(venue)}")
         if url:
-            safe_url = url.replace("(", "%28").replace(")", "%29")
+            safe_url = url.replace("(", "%28").replace(")", "%29").replace("\n", "")
             lines.append(f"- **Link:** <{safe_url}>")
         lines.append("")
     return "\n".join(lines).rstrip() + "\n"
@@ -81,9 +114,13 @@ def main() -> int:
     parser.add_argument("output", type=Path)
     parser.add_argument("--title", default="Metadata")
     args = parser.parse_args()
-    records = load_records(args.input)
-    args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(render(records, args.title), encoding="utf-8")
+    try:
+        records = load_records(args.input)
+        output = render(records, args.title)
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(output, encoding="utf-8", newline="\n")
+    except (OSError, ValueError) as exc:
+        parser.error(str(exc))
     return 0
 
 

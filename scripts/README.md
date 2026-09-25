@@ -2,6 +2,15 @@
 
 `metadata_generator.py` converts publication or talk metadata from CSV, TSV, or BibTeX into deterministic Markdown.
 
+## Safety and validation
+
+- Only CSV, TSV, BibTeX and BibLaTeX input extensions are accepted.
+- Input is limited to 2 MiB and 10,000 records.
+- Invalid or empty BibTeX content is rejected.
+- Markdown values are escaped before rendering.
+- Output is written as UTF-8 with normalized LF line endings.
+- The generator does not execute input content or follow input-provided paths.
+
 ## Usage
 
 ```bash
@@ -16,4 +25,4 @@ Run tests from the repository root:
 python3 -m unittest discover -s scripts -p 'test_*.py'
 ```
 
-The legacy generator files remain archived and vendor files are intentionally untouched. This active generator replaces their unfinished format-specific TODOs without pretending that old archived code is complete.
+The legacy generator files remain archived and vendor files are intentionally untouched.
