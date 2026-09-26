@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Home Assistant projects, dashboards, automations and integrations by ABandersen.">
+<title>Home Assistant | ABandersen</title>
+<style>
+:root{color-scheme:dark;--bg:#071018;--panel:#0d1822;--panel2:#101f2c;--line:#203341;--text:#edf5f8;--muted:#9db0ba;--accent:#41c7a8;--accent2:#58a6ff;--shadow:0 18px 55px #0007}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 15% 0%,#123027 0,#071018 38%),var(--bg);color:var(--text);font:15px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 36px));margin:auto}
+nav{height:72px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;backdrop-filter:blur(14px);position:sticky;top:0;background:#071018dd;z-index:5}
+.brand{font-weight:800;letter-spacing:.02em}.brand span{color:var(--accent)}nav .links{display:flex;gap:22px;color:var(--muted)}nav .links a:hover{color:var(--text)}
+.hero{padding:92px 0 65px}.eyebrow{color:var(--accent);font-weight:750;text-transform:uppercase;letter-spacing:.14em;font-size:12px}
+h1{font-size:clamp(42px,7vw,76px);line-height:.98;margin:14px 0 22px;max-width:850px;letter-spacing:-.045em}
+.lead{max-width:720px;color:var(--muted);font-size:18px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{padding:10px 16px;border:1px solid var(--line);border-radius:10px;background:var(--panel);font-weight:700}.btn.primary{background:var(--accent);border-color:var(--accent);color:#04120f}.btn:hover{transform:translateY(-1px)}
+section{padding:28px 0 68px}h2{font-size:27px;margin:0 0 8px}.section-intro{color:var(--muted);margin:0 0 24px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:linear-gradient(145deg,var(--panel),#0a141d);border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:var(--shadow);display:flex;flex-direction:column;min-height:235px}
+.icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:#12372f;border:1px solid #245849;color:var(--accent);font-size:20px;margin-bottom:16px}
+.card h3{margin:0 0 7px;font-size:19px}.card p{color:var(--muted);margin:0 0 18px}.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:auto}.tag{font-size:11px;padding:4px 8px;border-radius:999px;background:#14242f;border:1px solid #263a47;color:#b7c9d2}
+.links{display:flex;gap:14px;margin-top:15px;font-size:13px;font-weight:750}.links a{color:var(--accent2)}
+.feature{display:grid;grid-template-columns:1.4fr .6fr;gap:18px}.feature .card{min-height:210px}.stat{display:grid;place-items:center;text-align:center}.stat strong{font-size:48px;color:var(--accent);line-height:1}.stat span{color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:28px 0 42px;color:var(--muted);display:flex;justify-content:space-between;gap:15px}
+@media(max-width:800px){.grid{grid-template-columns:1fr 1fr}.feature{grid-template-columns:1fr}nav .links{display:none}}
+@media(max-width:540px){.grid{grid-template-columns:1fr}.hero{padding-top:65px}footer{display:block}}
+</style>
+</head>
+<body>
+<nav><div class="wrap" style="display:flex;align-items:center;justify-content:space-between"><a class="brand" href="../">AB<span>.</span> Developer Lab</a><div class="links"><a href="../">Portfolio</a><a href="#projects">Projects</a><a href="#lab">Lab</a><a href="https://github.com/abla86">GitHub</a></div></div></nav>
+
+<main>
+<section class="hero"><div class="wrap">
+<div class="eyebrow">Home Assistant / Open Source</div>
+<h1>Home automation built to be useful.</h1>
+<p class="lead">A focused collection of Home Assistant dashboards, automations, helpers and configuration work — designed around practical automation, clear interfaces and maintainable YAML.</p>
+<div class="actions"><a class="btn primary" href="#projects">Explore projects</a><a class="btn" href="https://github.com/abla86/developer-portfolio">View source</a></div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+<h2>Home Assistant Projects</h2>
+<p class="section-intro">Current work published as part of the ABandersen developer portfolio.</p>
+<div class="grid">
+<article class="card"><div class="icon">⌂</div><h3>HA Desktop</h3><p>A desktop-oriented Home Assistant interface for quick access to rooms, devices, climate, media and system status.</p><div class="tags"><span class="tag">Dashboard</span><span class="tag">YAML</span><span class="tag">UI</span></div><div class="links"><a href="../ha-desktop.html">Preview →</a><a href="ha-desktop.yaml">YAML →</a></div></article>
+<article class="card"><div class="icon">⚙</div><h3>Automation Library</h3><p>Reusable Home Assistant automation patterns for motion lighting, occupancy, time-based behaviour and household routines.</p><div class="tags"><span class="tag">Automations</span><span class="tag">YAML</span></div><div class="links"><a href="automations/">Repository →</a></div></article>
+<article class="card"><div class="icon">◈</div><h3>Helpers & Configuration</h3><p>Example configuration, helpers and safe secrets templates intended for reproducible Home Assistant setups.</p><div class="tags"><span class="tag">Configuration</span><span class="tag">Helpers</span><span class="tag">Safe templates</span></div><div class="links"><a href="configuration.example.yaml">Configuration →</a><a href="helpers.yaml">Helpers →</a></div></article>
+</div></div></section>
+
+<section id="lab"><div class="wrap">
+<h2>Home Assistant Lab</h2>
+<p class="section-intro">The lab is where integrations, dashboards and automation ideas are developed before they become stable portfolio projects.</p>
+<div class="feature">
+<article class="card"><div class="icon">⌘</div><h3>From device to usable automation</h3><p>The focus is not simply connecting hardware. Projects are structured around reliable triggers, explicit conditions, maintainable configuration and interfaces that make system state understandable.</p><div class="tags"><span class="tag">Zigbee</span><span class="tag">Home Assistant</span><span class="tag">Dashboards</span><span class="tag">Automation</span></div></article>
+<article class="card stat"><strong>HA</strong><span>Home automation lab</span></article>
+</div></div></section>
+
+<section><div class="wrap">
+<h2>Source</h2>
+<p class="section-intro">The implementation and configuration files are maintained in the public developer portfolio repository.</p>
+<div class="actions"><a class="btn primary" href="https://github.com/abla86/developer-portfolio/tree/main/home-assistant">GitHub repository</a><a class="btn" href="../projects.html">All projects</a></div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>ABandersen Developer Lab</span><span>Home Assistant · Open Source · 2026</span></div></footer>
+</body>
+</html>
