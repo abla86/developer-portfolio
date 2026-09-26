@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T20:40:52.083Z",
+  "generatedAt": "2026-09-26T12:50:17.062Z",
   "source": "GitHub repository inspection",
   "policy": "Only verified repository facts may be promoted to the portfolio. Archived and deleted repositories are excluded from active project registry entries.",
   "projects": [
@@ -17,8 +17,8 @@
         "archived": false,
         "description": "evidence-appraisal-tool",
         "stars": 0,
-        "updatedAt": "2026-09-25T20:38:09Z",
-        "pushedAt": "2026-09-25T20:38:05Z",
+        "updatedAt": "2026-09-26T08:02:25Z",
+        "pushedAt": "2026-09-26T08:02:24Z",
         "languages": [
           "TypeScript",
           "C#",
@@ -106,8 +106,8 @@
         "archived": false,
         "description": "Full-stack workforce and competence management system with React, ASP.NET Core, SQL Server, Docker and automated gap analysis.",
         "stars": 1,
-        "updatedAt": "2026-09-25T20:38:42Z",
-        "pushedAt": "2026-09-25T20:38:37Z",
+        "updatedAt": "2026-09-26T07:50:58Z",
+        "pushedAt": "2026-09-26T07:50:54Z",
         "languages": [
           "C#",
           "JavaScript",
@@ -328,8 +328,8 @@
         "archived": false,
         "description": "GITHUB BRANCH AUDIT + SAFE DUPLICATE CLEANUP",
         "stars": 0,
-        "updatedAt": "2026-09-25T20:35:26Z",
-        "pushedAt": "2026-09-25T20:35:23Z",
+        "updatedAt": "2026-09-26T12:41:25Z",
+        "pushedAt": "2026-09-26T12:41:21Z",
         "languages": [
           "TypeScript",
           "Python",
@@ -422,8 +422,8 @@
         "archived": false,
         "description": "Portable tracing, provenance, policy and audit layer for AI-agent systems",
         "stars": 1,
-        "updatedAt": "2026-09-25T20:40:07Z",
-        "pushedAt": "2026-09-25T20:40:02Z",
+        "updatedAt": "2026-09-26T08:38:12Z",
+        "pushedAt": "2026-09-26T08:38:08Z",
         "languages": [
           "Python",
           "TypeScript",
@@ -513,9 +513,9 @@
         "defaultBranch": "main",
         "archived": false,
         "description": "lage bok fra ide til komplett på 10 min",
-        "stars": 0,
-        "updatedAt": "2026-09-25T20:39:21Z",
-        "pushedAt": "2026-09-25T20:39:18Z",
+        "stars": 1,
+        "updatedAt": "2026-09-26T08:09:43Z",
+        "pushedAt": "2026-09-26T08:09:41Z",
         "languages": [
           "TypeScript",
           "HTML",
@@ -568,8 +568,8 @@
         "archived": false,
         "description": "Autonomous Multi-Agent App Builder",
         "stars": 0,
-        "updatedAt": "2026-09-25T20:37:53Z",
-        "pushedAt": "2026-09-25T20:37:50Z",
+        "updatedAt": "2026-09-26T08:00:43Z",
+        "pushedAt": "2026-09-26T08:00:40Z",
         "languages": [
           "TypeScript",
           "HTML",
