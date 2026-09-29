@@ -9,21 +9,33 @@ permissions:
   contents: read
 
 jobs:
-  dependency-audit:
+  npm-audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
 
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Audit high and critical vulnerabilities
-        run: npm audit --audit-level=high
+      - name: Audit every npm project
+        shell: bash
+        run: |
+          set -euo pipefail
+          found=0
+          while IFS= read -r package; do
+            found=1
+            dir="$(dirname "$package")"
+            echo "::group::npm audit $dir"
+            if [ -f "$dir/package-lock.json" ]; then
+              npm ci --ignore-scripts --prefix "$dir" --no-audit
+            else
+              npm install --package-lock-only --ignore-scripts --prefix "$dir" --no-audit
+            fi
+            npm audit --audit-level=high --prefix "$dir"
+            echo "::endgroup::"
+          done < <(find . -name package.json -not -path '*/node_modules/*' -not -path './.git/*' -print)
+          if [ "$found" -eq 0 ]; then
+            echo "No npm projects found; npm audit not applicable."
+          fi
