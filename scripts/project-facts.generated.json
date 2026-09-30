@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T12:16:00.150Z",
+  "generatedAt": "2026-09-30T15:05:52.147Z",
   "source": "GitHub repository inspection",
   "policy": "Only verified repository facts may be promoted to the portfolio. Archived and deleted repositories are excluded from active project registry entries.",
   "projects": [
@@ -569,8 +569,8 @@
         "archived": false,
         "description": "Autonomous Multi-Agent App Builder",
         "stars": 0,
-        "updatedAt": "2026-09-30T01:06:32Z",
-        "pushedAt": "2026-09-30T01:06:29Z",
+        "updatedAt": "2026-09-30T13:42:35Z",
+        "pushedAt": "2026-09-30T14:57:51Z",
         "languages": [
           "TypeScript",
           "HTML",
@@ -596,6 +596,7 @@
           "index.html",
           "metadata.json",
           "package.json",
+          "public",
           "server.ts",
           "src",
           "tsconfig.json",
