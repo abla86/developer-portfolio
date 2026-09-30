@@ -47,6 +47,7 @@ main{max-width:1280px;margin:auto;padding:22px}
   <linearGradient id="water" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071a2a"/><stop offset=".5" stop-color="#0d3850"/><stop offset="1" stop-color="#02070c"/></linearGradient>
   <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   <filter id="soft"><feGaussianBlur stdDeviation="22"/></filter>
+  <clipPath id="portrait"><circle cx="128" cy="128" r="128"/></clipPath>
   <pattern id="stars" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="8" cy="20" r="1" fill="#fff" opacity=".65"/><circle cx="62" cy="70" r=".8" fill="#9bdcff" opacity=".7"/><circle cx="88" cy="35" r=".6" fill="#fff" opacity=".45"/></pattern>
   <style>
     .label{font-family:Inter,Arial,sans-serif;fill:#f5fbff;text-anchor:middle;font-weight:800;letter-spacing:3px}
@@ -127,7 +128,7 @@ main{max-width:1280px;margin:auto;padding:22px}
   <circle cx="800" cy="485" r="190" fill="none" stroke="#6bd7ff" stroke-opacity=".24" stroke-width="3"/>
   <circle cx="800" cy="485" r="215" fill="none" stroke="#a98cff" stroke-opacity=".16" stroke-width="2"/>
   <circle cx="800" cy="485" r="128" fill="#071522" stroke="#fff2bf" stroke-width="3"/>
-  <image href="https://avatars.githubusercontent.com/u/195699472?v=4" x="672" y="357" width="256" height="256" preserveAspectRatio="xMidYMid slice" clip-path="circle(128px at 128px 128px)"/>
+  <image href="https://avatars.githubusercontent.com/u/195699472?v=4" x="672" y="357" width="256" height="256" preserveAspectRatio="xMidYMid slice" clip-path="url(#portrait)"/>
  </g>
  <text class="label" x="800" y="675" font-size="43">ANNE BETH</text>
  <text class="small" x="800" y="706">SOFTWARE · RESEARCH · HEALTHCARE · AUTOMATION</text>
