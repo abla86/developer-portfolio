@@ -245,6 +245,13 @@ The visual tree on the profile represents capabilities and their relationship to
 
 ---
 
+
+## Helse Fonna — IKT og helsedata
+
+**Målrettet portefølje for rollen Systemansvarleg – IKT og helsedata:** [Åpne Helse Fonna-showcase](https://abla86.github.io/developer-portfolio/health-fonna.html)
+
+Denne siden samler de mest relevante tekniske bevisene: [HealthTechDeviceApi](https://github.com/abla86/HealthTechDeviceApi), [Complete Evidence Appraisal Tool](https://github.com/abla86/complete-evidence-appraisal-tool), [Azure Kubernetes Showcase](https://github.com/abla86/azure-kubernetes-showcase) og [AgentTrace](https://github.com/abla86/agenttrace). Fokus er koblingen mellom helsefag, kunnskapsbasert praksis, systemforståelse, helsedata, sikkerhet og praktisk programvareutvikling.
+
 ## Development note
 
 Material portfolio changes should remain traceable to the relevant repository state and verification evidence.
