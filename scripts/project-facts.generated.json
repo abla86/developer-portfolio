@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T19:22:33.188Z",
+  "generatedAt": "2026-09-30T00:41:51.168Z",
   "source": "GitHub repository inspection",
   "policy": "Only verified repository facts may be promoted to the portfolio. Archived and deleted repositories are excluded from active project registry entries.",
   "projects": [
@@ -17,8 +17,8 @@
         "archived": false,
         "description": "evidence-appraisal-tool",
         "stars": 0,
-        "updatedAt": "2026-09-26T08:02:25Z",
-        "pushedAt": "2026-09-29T19:20:51Z",
+        "updatedAt": "2026-09-29T19:30:22Z",
+        "pushedAt": "2026-09-29T19:30:16Z",
         "languages": [
           "TypeScript",
           "C#",
@@ -106,8 +106,8 @@
         "archived": false,
         "description": "Full-stack workforce and competence management system with React, ASP.NET Core, SQL Server, Docker and automated gap analysis.",
         "stars": 1,
-        "updatedAt": "2026-09-27T01:31:34Z",
-        "pushedAt": "2026-09-29T19:07:19Z",
+        "updatedAt": "2026-09-30T00:19:59Z",
+        "pushedAt": "2026-09-30T00:19:54Z",
         "languages": [
           "C#",
           "JavaScript",
@@ -244,8 +244,8 @@
         "archived": false,
         "description": "Cloud engineering showcase with .NET, React TypeScript, Docker, Kubernetes, Azure, IaC, CI/CD, security and observability",
         "stars": 0,
-        "updatedAt": "2026-09-29T18:55:49Z",
-        "pushedAt": "2026-09-29T19:19:22Z",
+        "updatedAt": "2026-09-30T00:33:38Z",
+        "pushedAt": "2026-09-30T00:33:36Z",
         "languages": [
           "Python",
           "C#",
@@ -569,7 +569,7 @@
         "description": "Autonomous Multi-Agent App Builder",
         "stars": 0,
         "updatedAt": "2026-09-27T20:42:27Z",
-        "pushedAt": "2026-09-29T19:21:03Z",
+        "pushedAt": "2026-09-29T19:23:12Z",
         "languages": [
           "TypeScript",
           "HTML",
