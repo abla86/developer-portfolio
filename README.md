@@ -167,7 +167,7 @@ A full-stack multi-agent software-engineering prototype with coordinated special
 
 Repository: https://github.com/abla86/Autonomous-Multi-Agent-App-Builder
 
-### 7. Academic Research Engine
+### 10. Academic Research Engine
 
 A reusable research-engineering core for document extraction, source search, evidence provenance and integration with evidence-appraisal applications.
 
@@ -203,7 +203,7 @@ For research-support software, **software correctness is kept separate from scie
 
 A technology from a job description is integrated into the repository where it has a legitimate architectural purpose. If integration would be artificial, it is kept as a bounded demonstration or explicitly marked as a future target.
 
-The current mapping is maintained in `AB-Engineering-Lab/docs/SKILL-INTEGRATION-MATRIX-2026-09.md` and surfaced interactively through `stack.html`.
+The current mapping is maintained in [AB-Engineering-Lab/docs/SKILL-INTEGRATION-MATRIX-2026-09.md](https://github.com/abla86/AB-Engineering-Lab/blob/main/docs/SKILL-INTEGRATION-MATRIX-2026-09.md) and surfaced interactively through `stack.html`.
 
 ## Interactive layer
 
