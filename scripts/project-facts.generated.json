@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T15:05:52.147Z",
+  "generatedAt": "2026-10-03T21:10:41.182Z",
   "source": "GitHub repository inspection",
   "policy": "Only verified repository facts may be promoted to the portfolio. Archived and deleted repositories are excluded from active project registry entries.",
   "projects": [
@@ -17,8 +17,8 @@
         "archived": false,
         "description": "evidence-appraisal-tool",
         "stars": 0,
-        "updatedAt": "2026-09-29T19:30:22Z",
-        "pushedAt": "2026-09-29T19:30:16Z",
+        "updatedAt": "2026-10-03T21:10:12Z",
+        "pushedAt": "2026-10-03T21:10:08Z",
         "languages": [
           "TypeScript",
           "C#",
@@ -106,8 +106,8 @@
         "archived": false,
         "description": "Full-stack workforce and competence management system with React, ASP.NET Core, SQL Server, Docker and automated gap analysis.",
         "stars": 1,
-        "updatedAt": "2026-09-30T00:19:59Z",
-        "pushedAt": "2026-09-30T00:19:54Z",
+        "updatedAt": "2026-10-03T21:01:50Z",
+        "pushedAt": "2026-10-03T21:01:46Z",
         "languages": [
           "C#",
           "JavaScript",
@@ -329,7 +329,7 @@
         "description": "GITHUB BRANCH AUDIT + SAFE DUPLICATE CLEANUP",
         "stars": 0,
         "updatedAt": "2026-09-29T19:21:22Z",
-        "pushedAt": "2026-09-29T19:21:19Z",
+        "pushedAt": "2026-10-03T12:33:45Z",
         "languages": [
           "TypeScript",
           "Python",
@@ -422,8 +422,8 @@
         "archived": false,
         "description": "Portable tracing, provenance, policy and audit layer for AI-agent systems",
         "stars": 1,
-        "updatedAt": "2026-09-29T18:15:15Z",
-        "pushedAt": "2026-09-29T18:53:17Z",
+        "updatedAt": "2026-10-03T21:06:21Z",
+        "pushedAt": "2026-10-03T21:06:17Z",
         "languages": [
           "Python",
           "TypeScript",
@@ -569,8 +569,8 @@
         "archived": false,
         "description": "Autonomous Multi-Agent App Builder",
         "stars": 0,
-        "updatedAt": "2026-09-30T13:42:35Z",
-        "pushedAt": "2026-09-30T14:57:51Z",
+        "updatedAt": "2026-10-03T21:07:54Z",
+        "pushedAt": "2026-10-03T21:07:50Z",
         "languages": [
           "TypeScript",
           "HTML",
