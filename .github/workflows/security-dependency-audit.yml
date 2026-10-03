@@ -35,7 +35,7 @@ jobs:
             fi
             npm audit --audit-level=high --prefix "$dir"
             echo "::endgroup::"
-          done < <(find . -name package.json -not -path '*/node_modules/*' -not -path './.git/*' -print)
+          done < <(find . -name package.json -not -path '*/node_modules/*' -not -path './.git/*' -not -path './archive/*' -print)
           if [ "$found" -eq 0 ]; then
             echo "No npm projects found; npm audit not applicable."
           fi
