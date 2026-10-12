@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T07:09:25.742Z",
+  "generatedAt": "2026-10-12T10:59:35.253Z",
   "source": "GitHub repository inspection",
   "policy": "Only verified repository facts may be promoted to the portfolio. Archived and deleted repositories are excluded from active project registry entries.",
   "projects": [
@@ -17,8 +17,8 @@
         "archived": false,
         "description": "evidence-appraisal-tool",
         "stars": 0,
-        "updatedAt": "2026-10-12T07:01:59Z",
-        "pushedAt": "2026-10-12T07:07:13Z",
+        "updatedAt": "2026-10-12T07:10:26Z",
+        "pushedAt": "2026-10-12T07:10:24Z",
         "languages": [
           "TypeScript",
           "C#",
@@ -165,8 +165,8 @@
         "archived": false,
         "description": "Healthcare device management REST API built with C#, .NET 9 and ASP.NET Core.",
         "stars": 0,
-        "updatedAt": "2026-10-12T04:41:31Z",
-        "pushedAt": "2026-10-12T04:41:29Z",
+        "updatedAt": "2026-10-12T07:30:04Z",
+        "pushedAt": "2026-10-12T07:30:03Z",
         "languages": [
           "C#",
           "HTML",
@@ -244,8 +244,8 @@
         "archived": false,
         "description": "Cloud engineering showcase with .NET, React TypeScript, Docker, Kubernetes, Azure, IaC, CI/CD, security and observability",
         "stars": 0,
-        "updatedAt": "2026-10-05T10:45:53Z",
-        "pushedAt": "2026-10-12T07:08:57Z",
+        "updatedAt": "2026-10-12T10:50:35Z",
+        "pushedAt": "2026-10-12T10:50:31Z",
         "languages": [
           "Python",
           "C#",
@@ -328,8 +328,8 @@
         "archived": false,
         "description": "GITHUB BRANCH AUDIT + SAFE DUPLICATE CLEANUP",
         "stars": 0,
-        "updatedAt": "2026-10-12T07:03:09Z",
-        "pushedAt": "2026-10-12T07:03:06Z",
+        "updatedAt": "2026-10-12T07:12:36Z",
+        "pushedAt": "2026-10-12T07:16:00Z",
         "languages": [
           "TypeScript",
           "Python",
@@ -422,8 +422,8 @@
         "archived": false,
         "description": "Portable tracing, provenance, policy and audit layer for AI-agent systems",
         "stars": 1,
-        "updatedAt": "2026-10-03T21:06:21Z",
-        "pushedAt": "2026-10-05T20:27:26Z",
+        "updatedAt": "2026-10-12T07:23:41Z",
+        "pushedAt": "2026-10-12T07:25:56Z",
         "languages": [
           "Python",
           "TypeScript",
@@ -570,7 +570,7 @@
         "description": "Autonomous Multi-Agent App Builder",
         "stars": 0,
         "updatedAt": "2026-10-03T21:26:35Z",
-        "pushedAt": "2026-10-03T21:26:32Z",
+        "pushedAt": "2026-10-12T07:26:28Z",
         "languages": [
           "TypeScript",
           "HTML",
