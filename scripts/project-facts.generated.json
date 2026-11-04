@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T02:03:11.229Z",
+  "generatedAt": "2026-11-04T05:24:42.973Z",
   "source": "GitHub repository inspection",
   "policy": "Only verified repository facts may be promoted to the portfolio. Archived and deleted repositories are excluded from active project registry entries.",
   "projects": [
@@ -162,6 +162,15 @@
       "displayName": "SwarmForge",
       "tier": 1,
       "description": "Multi-agent software-engineering application builder with coordinated agents, runtime telemetry, regression testing and bounded OWASP-oriented analysis.",
+      "verify": "README",
+      "status": "not-accessible-with-workflow-token",
+      "error": "Repository is not accessible to this repository's GITHUB_TOKEN. No project fact was promoted."
+    },
+    {
+      "repo": "F-rerkortet-teotri---f-rerkort-i-h-nda",
+      "displayName": "Førerkortet – teori og oppkjøring",
+      "tier": 2,
+      "description": "Android learning prototype with Kotlin, Jetpack Compose, vehicle-safety learning, quizzes, progress and a legal-source hub; official-content validation remains outstanding.",
       "verify": "README",
       "status": "not-accessible-with-workflow-token",
       "error": "Repository is not accessible to this repository's GITHUB_TOKEN. No project fact was promoted."
