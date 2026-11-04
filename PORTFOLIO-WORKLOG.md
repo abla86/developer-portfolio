@@ -9,7 +9,9 @@
 - Marked Mission Control and Data Ocean as synthetic/animated demonstrations rather than live telemetry.
 - Added keyboard-operable tabs and accessible selected/hidden states to Mission Control.
 - Corrected Google Cloud learning evidence links and SwarmForge's prototype description.
-- Automated GitHub Actions and browser-level deployment checks remain pending; no production deployment or test pass is claimed without a completed run.
+- PR #21 was merged after all PR checks passed: interactive-site verification, npm verification/audit, Python metadata tests, source integrity, CodeSentinel preflight and CodeQL (JavaScript/TypeScript, Python, Ruby and Actions).
+- GitHub Pages build and deployment completed successfully for main commit `aff47f6b8ea505c8b7abadf84d9c2207d07f3998` (run `41750298845`).
+- Manual cross-browser visual testing, full WCAG 2.2 AA/screen-reader audit and Lighthouse/Core Web Vitals measurement remain outstanding; no claim of those results is made.
 
 
 ## 2026-08-26 — Baseline repair
