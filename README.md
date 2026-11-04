@@ -4,7 +4,7 @@
 
 This is the detailed portfolio behind the GitHub profile.
 
-The GitHub profile is deliberately compact and visual. The portfolio is where the deeper material belongs: project units, technical demonstrations, architecture, implementation evidence, interactive experiments and development history.
+The GitHub profile is deliberately compact and visual. Project repositories are currently private during consolidation; the public portfolio therefore presents selected work as case studies and interactive demonstrations rather than offering inaccessible source links. The portfolio is where the deeper material belongs: project units, technical demonstrations, architecture, implementation evidence, interactive experiments and development history.
 
 ## Portfolio
 
@@ -112,7 +112,7 @@ Projects are promoted according to **public inspectability and evidence**, not s
 
 A public polyglot event-driven platform using a Node.js/TypeScript API, PostgreSQL, Kafka, Python, C#/.NET, Java, Kotlin and Go consumers, Docker, Kubernetes, .NET Aspire and Wolverine. This is the main integration point for the cross-language/full-stack requirements identified in target engineering roles.
 
-Repository: https://github.com/abla86/AB-Engineering-Lab/tree/main/projects/eventforge
+Source repository: private (implementation is not publicly accessible).
 
 ### 2. AgentTrace
 
@@ -120,55 +120,55 @@ A reusable AI-agent security and provenance core with policy evaluation, tool-ma
 
 **Google Cloud training applied here:** cloud security principles, cloud security risk management, secure enterprise AI agents, agent feedback workflows, and collaborative multi-agent systems with ADK/MCP.
 
-Repository: https://github.com/abla86/agenttrace
+Source repository: private (implementation is not publicly accessible).
 
 ### 3. Azure Kubernetes Showcase
 
 A cloud-engineering showcase covering .NET, React, containers, Kubernetes, Azure, IaC, CI/CD, DevSecOps, requirements, operational analysis and observability.
 
-Repository: https://github.com/abla86/azure-kubernetes-showcase
+Source repository: private (implementation is not publicly accessible).
 
 ### 4. CodeSentinel
 
 A security-oriented portfolio verification system combining a React interface with a server-side verification and audit layer.
 
-Repository: https://github.com/abla86/CodeSentinel
+Source repository: private (implementation is not publicly accessible).
 
 ### 5. HealthTechDeviceApi
 
 A healthcare technology API demonstrating C#/.NET, ASP.NET Core, backend services, database persistence, DICOM-oriented work, automated testing, Docker, CI and security boundaries.
 
-Repository: https://github.com/abla86/HealthTechDeviceApi
+Source repository: private (implementation is not publicly accessible).
 
 ### 6. Complete Evidence Appraisal Tool
 
 A full-stack research-support application for structured appraisal workflows, methodology-aware instruments, traceability and review tooling.
 
-Repository: https://github.com/abla86/complete-evidence-appraisal-tool
+Source repository: private (implementation is not publicly accessible).
 
 ### 7. Workforce & Competence Management
 
 A full-stack workforce decision-support prototype using React, ASP.NET Core/.NET 10, SQL Server, Docker and automated verification. It models competence, availability, shift requirements and staffing coverage without presenting automated ranking as a substitute for professional or organisational responsibility.
 
-Repository: https://github.com/abla86/workforce-competence-management
+Source repository: private (implementation is not publicly accessible).
 
 ### 8. BookForge AI
 
 An AI-assisted publishing platform covering persistent book projects, Story Bible context, generation workflows, continuity auditing, versioning, creative assets, authentication, cost controls and auditability.
 
-Repository: https://github.com/abla86/book-forge
+Source repository: private (implementation is not publicly accessible).
 
 ### 9. SwarmForge
 
 An application-builder prototype with project/file management, server telemetry, limited static source-pattern checks and advisory AI suggestions. The 20 listed agent entries are role definitions, not 20 independently executing workers. The project does not automatically build, execute or repair generated applications.
 
-Repository: https://github.com/abla86/Autonomous-Multi-Agent-App-Builder
+Source repository: private (implementation is not publicly accessible).
 
 ### 10. Academic Research Engine
 
 A reusable research-engineering core for document extraction, source search, evidence provenance and integration with evidence-appraisal applications.
 
-Repository: https://github.com/abla86/complete-evidence-appraisal-tool/tree/main/archive/academic-research-engine
+Source repository: private (implementation is not publicly accessible).
 
 ## Supporting projects
 
@@ -200,7 +200,7 @@ For research-support software, **software correctness is kept separate from scie
 
 A technology from a job description is integrated into the repository where it has a legitimate architectural purpose. If integration would be artificial, it is kept as a bounded demonstration or explicitly marked as a future target.
 
-The current mapping is maintained in [AB-Engineering-Lab/docs/SKILL-INTEGRATION-MATRIX-2026-09.md](https://github.com/abla86/AB-Engineering-Lab/blob/main/docs/SKILL-INTEGRATION-MATRIX-2026-09.md) and surfaced interactively through `stack.html`.
+The current mapping is maintained in **AB-Engineering-Lab/docs/SKILL-INTEGRATION-MATRIX-2026-09.md — source repository private** and surfaced interactively through `stack.html`.
 
 ## Interactive layer
 
@@ -247,7 +247,7 @@ The visual tree on the profile represents capabilities and their relationship to
 
 **Målrettet portefølje for rollen Systemansvarleg – IKT og helsedata:** [Åpne Helse Fonna-showcase](https://abla86.github.io/developer-portfolio/health-fonna.html)
 
-Denne siden samler de mest relevante tekniske bevisene: [HealthTechDeviceApi](https://github.com/abla86/HealthTechDeviceApi), [Complete Evidence Appraisal Tool](https://github.com/abla86/complete-evidence-appraisal-tool), [Azure Kubernetes Showcase](https://github.com/abla86/azure-kubernetes-showcase) og [AgentTrace](https://github.com/abla86/agenttrace). Fokus er koblingen mellom helsefag, kunnskapsbasert praksis, systemforståelse, helsedata, sikkerhet og praktisk programvareutvikling.
+Denne siden samler de mest relevante tekniske bevisene: **HealthTechDeviceApi — source repository private**, **Complete Evidence Appraisal Tool — source repository private**, **Azure Kubernetes Showcase — source repository private** og **AgentTrace — source repository private**. Fokus er koblingen mellom helsefag, kunnskapsbasert praksis, systemforståelse, helsedata, sikkerhet og praktisk programvareutvikling.
 
 ## Development note
 
