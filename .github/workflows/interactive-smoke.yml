@@ -57,3 +57,84 @@ jobs:
                   if not ok: raise SystemExit(f"Broken local reference: {rel} -> {t}")
           print("HTML structure and local-reference checks passed")
           PY
+      - name: Check fragment targets and duplicate IDs
+        run: |
+          python - <<'PY'
+          from collections import Counter
+          from html.parser import HTMLParser
+          from pathlib import Path
+          from urllib.parse import unquote, urlsplit
+
+          root = Path(".").resolve()
+          pages = [p for p in root.rglob("*.html") if p.relative_to(root).parts[0] not in {"archive", "node_modules"}]
+
+          class AuditParser(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.ids = []
+                  self.refs = []
+
+              def handle_starttag(self, tag, attrs):
+                  attrs = dict(attrs)
+                  if attrs.get("id"):
+                      self.ids.append(attrs["id"])
+                  for key in ("href", "src"):
+                      if attrs.get(key):
+                          self.refs.append(attrs[key])
+
+              def handle_startendtag(self, tag, attrs):
+                  self.handle_starttag(tag, attrs)
+
+          documents = {}
+          for page in pages:
+              parser = AuditParser()
+              parser.feed(page.read_text(encoding="utf-8", errors="ignore"))
+              documents[page.resolve()] = parser
+              duplicates = [value for value, count in Counter(parser.ids).items() if count > 1]
+              if duplicates:
+                  raise SystemExit(f"Duplicate HTML IDs in {page.relative_to(root)}: {duplicates}")
+
+          for page, parser in documents.items():
+              for ref in parser.refs:
+                  parts = urlsplit(ref)
+                  if parts.scheme or parts.netloc:
+                      continue
+                  path = unquote(parts.path)
+                  if path.startswith("/"):
+                      target = (root / path.lstrip("/")).resolve()
+                  elif path:
+                      target = (page.parent / path).resolve()
+                  else:
+                      target = page
+                  if target.is_dir():
+                      target = target / "index.html"
+                  try:
+                      target.relative_to(root)
+                  except ValueError:
+                      raise SystemExit(f"Reference escapes site root: {page.relative_to(root)} -> {ref}")
+                  if not target.is_file():
+                      raise SystemExit(f"Broken local reference: {page.relative_to(root)} -> {ref}")
+                  if parts.fragment and target.suffix.lower() == ".html":
+                      target_doc = documents.get(target.resolve())
+                      if target_doc and unquote(parts.fragment) not in target_doc.ids:
+                          raise SystemExit(f"Broken fragment: {page.relative_to(root)} -> {ref}")
+
+          print(f"Fragment, duplicate-ID and local-reference checks passed: {len(pages)} HTML pages")
+          PY
+      - name: Check project catalogue filter metadata
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          html = Path("projects.html").read_text(encoding="utf-8")
+          cards = re.findall(r'<article\\b[^>]*class=["\\'][^"\\']*\\bproject\\b[^"\\']*["\\'][^>]*>', html, re.I)
+          if not cards:
+              raise SystemExit("No project cards found")
+          missing = [str(i + 1) for i, card in enumerate(cards) if "data-category=" not in card or "data-search=" not in card]
+          if missing:
+              raise SystemExit("Project cards missing search/filter metadata: " + ", ".join(missing))
+          if "c.dataset.search||c.textContent" not in html:
+              raise SystemExit("Project search does not contain a safe fallback for cards without search metadata")
+          print(f"Project catalogue metadata passed: {len(cards)} cards")
+          PY
