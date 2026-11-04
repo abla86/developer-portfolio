@@ -13,6 +13,7 @@ const entrypoints = [
 ];
 
 const failures = [];
+const privateRepoLink = /https?:\/\/github\.com\/abla86\/(?!developer-portfolio(?:\/|#|\?|$))[A-Za-z0-9_.-]+/i;
 for (const file of entrypoints) {
   const fullPath = join(root, file);
   if (!existsSync(fullPath)) {
@@ -24,6 +25,12 @@ for (const file of entrypoints) {
   if (!/<!doctype\s+html/i.test(html)) failures.push(`${file}: missing HTML5 doctype`);
   if (!/<html\b[^>]*\blang\s*=\s*["'][^"']+["']/i.test(html)) failures.push(`${file}: missing document language`);
   if (!/<title>\s*[^<]+\s*<\/title>/i.test(html)) failures.push(`${file}: missing page title`);
+  if (privateRepoLink.test(html)) failures.push(`${file}: contains a link to a private repository`);
+}
+
+const readmePath = join(root, "README.md");
+if (existsSync(readmePath) && privateRepoLink.test(readFileSync(readmePath, "utf8"))) {
+  failures.push("README.md: contains a link to a private repository");
 }
 
 if (failures.length) {
