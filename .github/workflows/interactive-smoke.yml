@@ -124,14 +124,27 @@ jobs:
       - name: Check project catalogue filter metadata
         run: |
           python - <<'PY'
+          from html.parser import HTMLParser
           from pathlib import Path
-          import re
+
+          class ProjectParser(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.cards = []
+
+              def handle_starttag(self, tag, attrs):
+                  if tag == "article":
+                      values = dict(attrs)
+                      if "project" in values.get("class", "").split():
+                          self.cards.append(values)
 
           html = Path("projects.html").read_text(encoding="utf-8")
-          cards = re.findall(r'<article\\b[^>]*class=["\\'][^"\\']*\\bproject\\b[^"\\']*["\\'][^>]*>', html, re.I)
+          parser = ProjectParser()
+          parser.feed(html)
+          cards = parser.cards
           if not cards:
               raise SystemExit("No project cards found")
-          missing = [str(i + 1) for i, card in enumerate(cards) if "data-category=" not in card or "data-search=" not in card]
+          missing = [str(i + 1) for i, card in enumerate(cards) if not card.get("data-category") or not card.get("data-search")]
           if missing:
               raise SystemExit("Project cards missing search/filter metadata: " + ", ".join(missing))
           if "c.dataset.search||c.textContent" not in html:
