@@ -154,6 +154,13 @@
       "tier": 1,
       "description": "Multi-agent software-engineering application builder with coordinated agents, runtime telemetry, regression testing and bounded OWASP-oriented analysis.",
       "verify": "README"
+    },
+    {
+      "repo": "F-rerkortet-teotri---f-rerkort-i-h-nda",
+      "displayName": "Førerkortet – teori og oppkjøring",
+      "tier": 2,
+      "description": "Android learning prototype with Kotlin, Jetpack Compose, vehicle-safety learning, quizzes, progress and a legal-source hub; official-content validation remains outstanding.",
+      "verify": "README"
     }
   ],
   "supportingRepositories": [
