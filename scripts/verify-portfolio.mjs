@@ -19,6 +19,7 @@ const entrypoints = [
   "yggdrasil.html",
   "ha-desktop.html",
   "game-lab/index.html",
+  "cloud-badges.html",
 ];
 
 const failures = [];
@@ -37,9 +38,18 @@ for (const file of entrypoints) {
   if (hasPrivateRepoLink(html)) failures.push(`${file}: contains a link to a private repository`);
 }
 
-const readmePath = join(root, "README.md");
-if (existsSync(readmePath) && hasPrivateRepoLink(readFileSync(readmePath, "utf8"))) {
-  failures.push("README.md: contains a link to a private repository");
+for (const file of ["README.md", "readme.md", "data/ecosystem.json"]) {
+  const fullPath = join(root, file);
+  if (!existsSync(fullPath)) continue;
+  const content = readFileSync(fullPath, "utf8");
+  if (hasPrivateRepoLink(content)) failures.push(`${file}: contains a link to a private repository`);
+  if (file.endsWith(".json")) {
+    try {
+      JSON.parse(content);
+    } catch {
+      failures.push(`${file}: invalid JSON`);
+    }
+  }
 }
 
 if (failures.length) {
@@ -47,5 +57,5 @@ if (failures.length) {
   for (const failure of failures) console.error(`- ${failure}`);
   process.exitCode = 1;
 } else {
-  console.log(`Portfolio integrity check passed: ${entrypoints.length} public entry points pass metadata and private-repository-link checks.`);
+  console.log(`Portfolio integrity check passed: ${entrypoints.length} public HTML entry points pass metadata and private-repository-link checks; README and project data files pass private-link and JSON validation.`);
 }
