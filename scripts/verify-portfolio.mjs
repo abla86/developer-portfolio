@@ -38,5 +38,5 @@ if (failures.length) {
   for (const failure of failures) console.error(`- ${failure}`);
   process.exitCode = 1;
 } else {
-  console.log(`Portfolio integrity check passed: ${entrypoints.length} public entry points exist and expose basic document metadata.`);
+  console.log(`Portfolio integrity check passed: ${entrypoints.length} public entry points pass metadata and private-repository-link checks.`);
 }
