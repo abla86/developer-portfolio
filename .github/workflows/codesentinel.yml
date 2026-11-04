@@ -35,6 +35,27 @@ jobs:
       - name: Commit verified project facts
         if: github.event_name != 'pull_request'
         run: |
+          comparison=$(node --input-type=module <<'NODE'
+          import fs from "node:fs";
+          import { execFileSync } from "node:child_process";
+          const file = "scripts/project-facts.generated.json";
+          const current = JSON.parse(fs.readFileSync(file, "utf8"));
+          let previous;
+          try {
+            previous = JSON.parse(execFileSync("git", ["show", `HEAD:${file}`], { encoding: "utf8" }));
+          } catch {
+            console.log("changed");
+            process.exit(0);
+          }
+          delete current.generatedAt;
+          delete previous.generatedAt;
+          console.log(JSON.stringify(current) === JSON.stringify(previous) ? "same" : "changed");
+          NODE
+          )
+          if [ "$comparison" = "same" ]; then
+            echo "Verified project facts are unchanged; timestamp-only update skipped."
+            exit 0
+          fi
           if git diff --quiet; then
             echo "No generated changes."
             exit 0
