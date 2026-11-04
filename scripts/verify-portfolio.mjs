@@ -1,26 +1,22 @@
-import { readFileSync, existsSync } from "node:fs";
+import { readFileSync, existsSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 
 const root = process.cwd();
-const entrypoints = [
-  "index.html",
-  "projects.html",
-  "stack.html",
-  "engineering-map.html",
-  "health-fonna.html",
-  "security-lab.html",
-  "swarm.html",
-  "evidence-lab.html",
-  "mission-control.html",
-  "data-ocean.html",
-  "network-simulator.html",
-  "particle-lab.html",
-  "matrix-wolf.html",
-  "yggdrasil.html",
-  "ha-desktop.html",
-  "game-lab/index.html",
-  "cloud-badges.html",
-];
+const ignoredDirectories = new Set([".git", "archive", "node_modules"]);
+const collectHtmlFiles = (directory = root, prefix = "") => {
+  const found = [];
+  for (const entry of readdirSync(directory, { withFileTypes: true })) {
+    if (entry.isDirectory()) {
+      if (!ignoredDirectories.has(entry.name)) {
+        found.push(...collectHtmlFiles(join(directory, entry.name), prefix ? `${prefix}/${entry.name}` : entry.name));
+      }
+    } else if (entry.isFile() && entry.name.toLowerCase().endsWith(".html")) {
+      found.push(prefix ? `${prefix}/${entry.name}` : entry.name);
+    }
+  }
+  return found;
+};
+const entrypoints = collectHtmlFiles().sort();
 
 const failures = [];
 const hasPrivateRepoLink = value => [...value.matchAll(/https?:\/\/github\.com\/abla86\/[A-Za-z0-9_.-]+/gi)].some(match => !match[0].endsWith("/developer-portfolio"));
