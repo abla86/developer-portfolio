@@ -170,6 +170,12 @@ A reusable research-engineering core for document extraction, source search, evi
 
 Source repository: private (implementation is not publicly accessible).
 
+### 11. Førerkortet – teori og oppkjøring
+
+An Android/Kotlin learning prototype built with Jetpack Compose. It includes vehicle-safety learning, quizzes, flashcards, progress tracking, legal-source references and reaction-time exercises. The current Android CI verifies 15 unit tests, Android lint and a debug APK build. It is not an official Statens vegvesen product, and legal/educational content still requires independent validation against current authoritative sources.
+
+Source repository: private (implementation is not publicly accessible).
+
 ## Supporting projects
 
 Selected supporting work demonstrates specific technologies such as data processing, retrieval/vector workflows, automation, interactive UI, finance/risk experimentation or cloud patterns. Small tutorials and historical experiments are kept out of the flagship set unless they provide distinct technical evidence.
