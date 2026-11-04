@@ -8,6 +8,9 @@ on:
       - "scripts/verify-portfolio.mjs"
       - ".github/workflows/portfolio-integrity.yml"
       - "README.md"
+      - "readme.md"
+      - "data/ecosystem.json"
+      - "scripts/project-registry.json"
   pull_request:
     branches: [main]
     paths:
@@ -15,6 +18,9 @@ on:
       - "scripts/verify-portfolio.mjs"
       - ".github/workflows/portfolio-integrity.yml"
       - "README.md"
+      - "readme.md"
+      - "data/ecosystem.json"
+      - "scripts/project-registry.json"
   workflow_dispatch:
 
 permissions:
