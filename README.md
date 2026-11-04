@@ -15,7 +15,7 @@ The GitHub profile is deliberately compact and visual. The portfolio is where th
 Interactive entry points:
 
 - `projects.html` — searchable/filterable project atlas with project inspection panels
-- `mission-control.html` — Home / Engineering / Security mission-control interface
+- `mission-control.html` — Home / Engineering / Security dashboard UI demo (synthetic data; no live integrations)
 - `stack.html` — interactive technology/competency matrix mapped to canonical repositories
 - `engineering-map.html` — capability-to-evidence map
 - `evidence-lab.html` — interactive research/evidence workflow demonstrations
@@ -27,7 +27,7 @@ Interactive entry points:
 - `yggdrasil.html` — interactive systems/visual experiment
 - `game-lab/` — modular interactive engineering engines
 
-The intent is that **every public page has a meaningful interaction**, while the interaction remains technically bounded and does not replace the underlying source repositories.
+The interactive showcase pages expose bounded interactions such as filtering, inspection panels, simulations and visualizations. Static documentation remains documentation; no interface is presented as a live integration unless its connection is implemented and verified.
 
 
 ## Google Cloud learning evidence
