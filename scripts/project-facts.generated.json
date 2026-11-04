@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T23:24:02.315Z",
+  "generatedAt": "2026-11-04T00:49:50.359Z",
   "source": "GitHub repository inspection",
   "policy": "Only verified repository facts may be promoted to the portfolio. Archived and deleted repositories are excluded from active project registry entries.",
   "projects": [
@@ -17,8 +17,8 @@
         "archived": false,
         "description": "evidence-appraisal-tool",
         "stars": 0,
-        "updatedAt": "2026-11-01T11:16:48Z",
-        "pushedAt": "2026-11-03T22:47:07Z",
+        "updatedAt": "2026-11-03T23:39:51Z",
+        "pushedAt": "2026-11-04T00:29:57Z",
         "languages": [
           "TypeScript",
           "C#",
@@ -166,8 +166,8 @@
         "archived": false,
         "description": "Healthcare device management REST API built with C#, .NET 9 and ASP.NET Core.",
         "stars": 1,
-        "updatedAt": "2026-10-29T07:26:07Z",
-        "pushedAt": "2026-10-29T07:26:32Z",
+        "updatedAt": "2026-11-04T00:39:25Z",
+        "pushedAt": "2026-11-04T00:39:29Z",
         "languages": [
           "C#",
           "HTML",
@@ -246,8 +246,8 @@
         "archived": false,
         "description": "Cloud engineering showcase with .NET, React TypeScript, Docker, Kubernetes, Azure, IaC, CI/CD, security and observability",
         "stars": 0,
-        "updatedAt": "2026-11-03T22:50:23Z",
-        "pushedAt": "2026-11-03T22:50:26Z",
+        "updatedAt": "2026-11-04T00:43:57Z",
+        "pushedAt": "2026-11-04T00:43:54Z",
         "languages": [
           "Python",
           "C#",
@@ -331,8 +331,8 @@
         "archived": false,
         "description": "GITHUB BRANCH AUDIT + SAFE DUPLICATE CLEANUP",
         "stars": 0,
-        "updatedAt": "2026-11-01T13:01:50Z",
-        "pushedAt": "2026-11-01T13:01:47Z",
+        "updatedAt": "2026-11-03T23:48:00Z",
+        "pushedAt": "2026-11-03T23:47:58Z",
         "languages": [
           "TypeScript",
           "Python",
@@ -377,7 +377,7 @@
           "tsconfig.json",
           "vite.config.ts"
         ],
-        "readme": "# CodeSentinel\n\nCodeSentinel is a GitHub-grounded portfolio registry and verification application. It combines a React/Vite frontend with a Node/Express server and verification-oriented project, security, audit-log, and portfolio views.\n\n## Current stack\n\n- React 19\n- TypeScript 5.8\n- Vite 6\n- Node.js / Express 4\n- esbuild\n- Tailwind CSS 4\n- Google GenAI integration\n\nThe exact dependency versions and scripts are defined in `package.json`. This README does not replace the lockfile or dependency manifest.\n\n## Main capabilities\n\n- Portfolio/project registry\n- GitHub-grounded project information\n- Verification and audit-log views\n- Security-layer dashboard\n- Project detail and search views\n- Authentication-related UI\n- Server-side API integration\n- Environment configuration through `.env.example`\n\n## Development\n\nInstall dependencies using the repository's package manager and lockfile, then run:\n\n```text\nnpm run dev\n```\n\nProduction build:\n\n```text\nnpm run build\nnpm start\n```\n\nTypeScript check:\n\n```text\nnpm run lint\n```\n\n## Seed data boundary\n\nThe initial registry contains seed records marked **pending verification**. They are not proof that a repository, deployment, feature, metric, or CI run exists. The in-code repository fixtures are synthetic test data; their invented names, stars, issue counts, timestamps, deployment details, and capability descriptions must never be presented as live GitHub evidence. Only data retrieved from the actual GitHub repository and checks run against the relevant commit may be shown as verified.\n\n## Evidence and verification principle\n\nCodeSentinel should distinguish clearly between:\n\n1. information retrieved from GitHub;\n2. information verified by an executable check;\n3. information supplied by a project registry;\n4. information generated or summarized by AI.\n\nAn AI-generated statement must not be presented as independently verified evidence.\n\n## Security\n\n**Security correction:** repository code contains no committed demo passwords. Local demo accounts must be injected through `CODE_SENTINEL_DEMO_USERS_JSON`; production requires an explicit `SESSION_SECRET`. Self-registration creates a guest account unless an authenticated lead engineer provisions another role.\n\nSee [SECURITY.md](SECURITY.md).\n\nSecurity and repository-governance configuration is also documented in [docs/REPOSITORY-GOVERNANCE.md](docs/REPOSITORY-GOVERNANCE.md).\n\n## Repository integrity\n\nExisting functionality, historical components, and legacy material are retained unless there is a demonstrated technical reason to change or remove them. Changes should be additive or narrowly scoped whenever possible.\n\n## Status\n\nThis repository is an active development project. Build, test, security, and verification claims should be based on the current repository state and CI results rather than inferred from documentation alone.\n"
+        "readme": "# CodeSentinel\n\nCodeSentinel is a GitHub-grounded portfolio registry and verification application. It combines a React/Vite frontend with a Node/Express server and verification-oriented project, security, audit-log, and portfolio views.\n\n## Current stack\n\nThe dependency manifest currently specifies:\n\n- React 19 and React DOM 19\n- TypeScript 7\n- Vite 8\n- Express 5\n- Google GenAI SDK\n- Tailwind CSS 4\n- esbuild and tsx\n\nThe exact dependency versions and executable scripts are defined in `package.json`. This list reflects the declared dependencies, not a claim that every integration is configured or production-deployed.\n\n## Main capabilities\n\n- Portfolio/project registry\n- GitHub-grounded project information\n- Verification and audit-log views\n- Security-layer dashboard\n- Project detail and search views\n- Authentication-related UI\n- Server-side API integration\n- Environment configuration through `.env.example`\n\n## Development\n\nInstall dependencies using the repository's package manager and lockfile, then run:\n\n```text\nbun run dev\n```\n\nProduction build:\n\n```text\nbun run build\nbun run start\n```\n\nTypeScript check:\n\n```text\nbun run lint\n```\n\nSmoke test:\n\n```text\nbun run test\n```\n\n## Seed data boundary\n\nThe initial registry contains seed records marked **pending verification**. They are not proof that a repository, deployment, feature, metric, or CI run exists. The in-code repository fixtures are synthetic test data; their invented names, stars, issue counts, timestamps, deployment details, and capability descriptions must never be presented as live GitHub evidence. Only data retrieved from the actual GitHub repository and checks run against the relevant commit may be shown as verified.\n\n## Evidence and verification principle\n\nCodeSentinel should distinguish clearly between:\n\n1. information retrieved from GitHub;\n2. information verified by an executable check;\n3. information supplied by a project registry;\n4. information generated or summarized by AI.\n\nAn AI-generated statement must not be presented as independently verified evidence.\n\n## Security\n\nRepository code contains no committed demo passwords. Local demo accounts must be injected through `CODE_SENTINEL_DEMO_USERS_JSON`; production requires an explicit `SESSION_SECRET`. Self-registration creates a guest account unless an authenticated lead engineer provisions another role.\n\nSee [SECURITY.md](SECURITY.md).\n\nSecurity and repository-governance configuration is also documented in [docs/REPOSITORY-GOVERNANCE.md](docs/REPOSITORY-GOVERNANCE.md).\n\n## Repository integrity\n\nExisting functionality, historical components, and legacy material are retained unless there is a demonstrated technical reason to change or remove them. Changes should be additive or narrowly scoped whenever possible.\n\n## Status\n\nThis repository is an active development project. Build, test, security, and verification claims should be based on the current repository state and CI results rather than inferred from documentation alone.\n"
       }
     },
     {
@@ -519,8 +519,8 @@
         "archived": false,
         "description": "lage bok fra ide til komplett på 10 min",
         "stars": 0,
-        "updatedAt": "2026-11-03T22:40:51Z",
-        "pushedAt": "2026-11-03T22:40:49Z",
+        "updatedAt": "2026-11-03T23:48:47Z",
+        "pushedAt": "2026-11-03T23:50:28Z",
         "languages": [
           "TypeScript",
           "HTML",
