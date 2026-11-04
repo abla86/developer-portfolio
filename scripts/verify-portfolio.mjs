@@ -13,7 +13,7 @@ const entrypoints = [
 ];
 
 const failures = [];
-const privateRepoLink = /https?:\/\/github\.com\/abla86\/(?!developer-portfolio(?:\/|#|\?|$))[A-Za-z0-9_.-]+/i;
+const privateRepoLink = /https?:\\/\\/github\\.com\\/abla86\\/(?!developer-portfolio(?:\\/|#|\\?|[\"']|$))[A-Za-z0-9_.-]+/i;
 for (const file of entrypoints) {
   const fullPath = join(root, file);
   if (!existsSync(fullPath)) {
