@@ -160,7 +160,7 @@ Repository: https://github.com/abla86/book-forge
 
 ### 9. SwarmForge
 
-A full-stack multi-agent software-engineering prototype with coordinated specialist agents, runtime telemetry, regression testing and bounded OWASP-oriented analysis.
+An application-builder prototype with project/file management, server telemetry, limited static source-pattern checks and advisory AI suggestions. The 20 listed agent entries are role definitions, not 20 independently executing workers. The project does not automatically build, execute or repair generated applications.
 
 Repository: https://github.com/abla86/Autonomous-Multi-Agent-App-Builder
 
