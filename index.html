@@ -26,14 +26,24 @@ main{max-width:1280px;margin:auto;padding:22px}
 @media(max-width:1000px){.hero-copy{position:relative;left:auto;top:auto;margin:0 0 12px}.core{min-height:560px}.project-grid{grid-template-columns:repeat(2,1fr)}.world-grid{grid-template-columns:repeat(2,1fr)}.proof-grid{grid-template-columns:1fr}}
 @media(max-width:650px){main{padding:10px 12px}.hero-copy{padding:14px}.core{min-height:500px}.nav{padding:10px 12px}.navlinks{display:none}.hero{min-height:auto;padding:40px 0}.hero h1{font-size:4rem}.core{min-height:500px}.world-grid,.project-grid{grid-template-columns:1fr}.trace-line{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr}.contact{grid-template-columns:1fr}.modebar{position:sticky;top:60px;z-index:20;background:#050a11ed;padding:8px 0}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.core-node circle,.world-card,.btn{transition:none}}
+
+/* Employer-first entry layer — additive overrides, preserving the existing swarm and labs */
+header{display:block}.navlinks{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.navlinks a{font-size:.72rem;color:#b8c9d5;font-weight:750}.navlinks a:hover{color:var(--cyan)}
+.employer-intro{max-width:1280px;margin:0 auto;padding:42px 22px 30px}.employer-inner{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(260px,.8fr);gap:28px;align-items:center;border:1px solid #29475c;border-radius:24px;padding:clamp(22px,4vw,42px);background:radial-gradient(circle at 95% 5%,#16405b88,transparent 42%),linear-gradient(135deg,#0b1a28,#07111a);box-shadow:0 18px 55px #0005}.employer-intro h1{font-size:clamp(2.7rem,6vw,5.3rem);line-height:.98;letter-spacing:-.06em;margin:10px 0}.employer-intro h2{font-size:clamp(1.05rem,2vw,1.5rem);font-weight:600;color:#d6e5ef;margin:0 0 14px}.employer-intro p{max-width:760px;color:#a8bdcc}.employer-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.employer-actions a{display:inline-flex;align-items:center;border:1px solid #35566d;border-radius:10px;padding:10px 13px;font-size:.76rem;font-weight:800}.employer-actions a:hover{border-color:var(--cyan);color:#fff}.employer-actions .employer-primary{background:#0c2a40;border-color:var(--cyan);color:#fff}.employer-hint{font-size:.72rem;margin-top:18px}.employer-facts{display:grid;grid-template-columns:1fr 1fr;gap:10px}.employer-facts div{padding:15px;border:1px solid #254257;border-radius:13px;background:#071522}.employer-facts strong,.employer-facts span{display:block}.employer-facts strong{font-size:.85rem;color:#70d8ff}.employer-facts span{font-size:.68rem;color:#9bb0bf;margin-top:4px}
+@media(max-width:850px){.employer-inner{grid-template-columns:1fr}.employer-facts{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.navlinks{display:flex;overflow-x:auto;flex-wrap:nowrap;max-width:75vw;gap:12px;scrollbar-width:none}.navlinks a{white-space:nowrap}.navlinks button{white-space:nowrap}.employer-intro{padding:20px 12px}.employer-inner{padding:21px}.employer-facts{grid-template-columns:1fr 1fr}.hero{padding-top:15px}}
+
+.cv-actions{display:flex;gap:10px;flex-wrap:wrap;margin:-8px 0 22px}.cv-actions button{cursor:pointer;color:var(--ink)}
+@media print{body{background:#fff!important;color:#111!important}body *{visibility:hidden!important}#cv,#cv *{visibility:visible!important}#cv{position:absolute!important;left:0!important;top:0!important;width:100%!important;padding:0!important;background:#fff!important;color:#111!important}.proof-panel,.contact{background:#fff!important;color:#111!important;border:1px solid #bbb!important;break-inside:avoid}.proof-panel p,.proof-item span,.section-head p{color:#333!important}.modal-meta span{color:#111!important;border-color:#bbb!important}.cv-actions,header,footer{display:none!important}a{color:#111!important;text-decoration:none!important}#cv .project-grid{grid-template-columns:repeat(2,1fr)!important}}
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
 <header><nav class="nav" aria-label="Primary navigation"><a class="brand" href="#top">ANNE BETH<span>.</span></a><div class="navlinks">
-<a href="#recruiter">Recruiter</a><a href="#technical">Technical</a><a href="#research">Research</a><a href="#projects">Projects</a><a href="#contact">Contact</a><a href="https://github.com/abla86" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+<a href="#employer-intro">Profile</a><a href="#worlds">Explore</a><a href="engineering-map.html">Technical map</a><a href="evidence-lab.html">Research</a><a href="projects.html">Projects</a><a href="#contact">Contact</a><a href="https://github.com/abla86" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
 <button id="motionToggle" type="button" aria-pressed="false">Low motion</button></div></nav></header>
 <main id="main">
+<section id="employer-intro" class="employer-intro" aria-labelledby="employer-title"><div class="employer-inner"><div><p class="eyebrow">SOFTWARE ENGINEERING · AI · CLOUD · HEALTH TECHNOLOGY</p><h1 id="employer-title">Anne Beth Andersen</h1><h2>Software development, systems thinking and practical problem-solving.</h2><p>I build software across frontend, backend, APIs, automation and cloud-oriented engineering. My work combines hands-on technical projects with professional experience from healthcare, administration and operational processes.</p><div class="employer-actions"><a class="employer-primary" href="projects.html">Explore selected projects ↗</a><a href="#cv">Professional profile</a><a href="https://github.com/abla86" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div><p class="employer-hint">Choose the interactive worlds below to explore the technical work in more depth.</p></div><div class="employer-facts"><div><strong>C# / .NET</strong><span>Backend & APIs</span></div><div><strong>React / TypeScript</strong><span>Frontend & full-stack</span></div><div><strong>Python / AI</strong><span>Automation & agents</span></div><div><strong>Cloud / DevSecOps</strong><span>Azure · Docker · CI/CD</span></div></div></div></section>
 <section id="top" class="hero" aria-label="Anne Beth interactive swarm">
 <div class="core" id="core">
 
@@ -151,7 +161,7 @@ main{max-width:1280px;margin:auto;padding:22px}
 </div>
 </section>
 
-<section class="visual-only" aria-label="Nine interactive visual worlds">
+<section id="worlds" class="visual-only" aria-label="Nine interactive visual worlds">
 <div class="visual-portal">
 <a id="visual-architecture" class="visual-link" href="https://github.com/abla86/developer-portfolio" target="_blank" rel="noopener noreferrer"><img src="assets/world-architecture.svg" alt="Architecture world"><div class="visual-caption">ARCHITECTURE</div></a>
 <a id="visual-devops" class="visual-link" href="https://github.com/abla86/developer-portfolio/actions" target="_blank" rel="noopener noreferrer"><img src="assets/world-devops.svg" alt="DevOps world"><div class="visual-caption">DEVOPS</div></a>
@@ -169,6 +179,7 @@ main{max-width:1280px;margin:auto;padding:22px}
 <div><p class="eyebrow">EMPLOYER OVERVIEW</p><h2 id="cv-title">Software, systems and applied problem-solving.</h2></div>
 <p>A recruiter-friendly overview of my background, selected engineering work and the evidence available to inspect.</p>
 </div>
+<div class="cv-actions"><button type="button" class="btn primary" id="printCv">Print / Save profile as PDF</button><a class="btn" href="https://github.com/abla86" target="_blank" rel="noopener noreferrer">GitHub profile ↗</a></div>
 <div class="proof-grid">
 <article class="proof-panel">
 <p class="eyebrow">PROFESSIONAL PROFILE</p>
@@ -202,7 +213,7 @@ main{max-width:1280px;margin:auto;padding:22px}
 <div><p class="eyebrow">CONTACT / NEXT STEP</p><h2>Discuss a role or technical challenge.</h2></div>
 <p>For recruitment enquiries, review the selected projects and contact me through my professional profiles. Direct LinkedIn and email links will be added once the correct public details are confirmed.</p>
 </div>
-<div class="contact">
+<div id="contact" class="contact">
 <div><h3 style="margin:0 0 8px">Interested in relevant opportunities</h3><p style="margin:0;color:var(--muted)">Seeking opportunities in software development, application development, API/backend work and technical roles that value structured problem-solving and domain understanding.</p></div>
 <div class="actions" style="margin:0"><a class="btn primary" href="https://github.com/abla86" target="_blank" rel="noopener noreferrer">GitHub profile ↗</a><a class="btn" href="https://github.com/abla86?tab=repositories" target="_blank" rel="noopener noreferrer">Repositories ↗</a></div>
 </div>
@@ -211,6 +222,7 @@ main{max-width:1280px;margin:auto;padding:22px}
 </main>
 <script>
 const $=s=>document.querySelector(s);
+const printCv=document.getElementById("printCv");if(printCv)printCv.addEventListener("click",()=>window.print());
 const motion=$("#motionToggle");
 if(motion) motion.addEventListener("click",()=>{document.documentElement.classList.toggle("low-motion");const on=document.documentElement.classList.contains("low-motion");motion.setAttribute("aria-pressed",String(on));});
 addEventListener("hashchange",()=>{const id=location.hash.slice(1);const el=id&&document.getElementById(id);if(el) el.scrollIntoView({behavior:document.documentElement.classList.contains("low-motion")?"auto":"smooth",block:"start"});});
