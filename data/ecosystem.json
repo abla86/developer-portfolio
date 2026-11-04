@@ -68,6 +68,15 @@
         "complete-evidence-appraisal-tool",
         "azure-kubernetes-showcase"
       ]
+    },
+    {
+      "id": "mobile",
+      "label": "Mobile",
+      "tone": "cyan",
+      "summary": "Android application development, mobile interaction, local progress and testable learning workflows.",
+      "evidence": [
+        "forerkortet-android"
+      ]
     }
   ],
   "projects": [
@@ -165,6 +174,19 @@
         "repository",
         "tests",
         "demonstrations"
+      ],
+      "sourceAvailability": "Private repository; public case study available in the portfolio."
+    },
+    {
+      "slug": "forerkortet-android",
+      "name": "Førerkortet – teori og oppkjøring",
+      "domain": "Mobile · Education",
+      "summary": "Kotlin/Jetpack Compose Android learning prototype with vehicle-safety checks, quizzes, flashcards, progress, legal-source references and reaction-time exercises.",
+      "proof": [
+        "Android CI",
+        "15 unit tests",
+        "Android lint",
+        "debug APK artifact"
       ],
       "sourceAvailability": "Private repository; public case study available in the portfolio."
     }
