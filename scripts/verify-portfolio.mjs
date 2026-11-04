@@ -10,6 +10,15 @@ const entrypoints = [
   "health-fonna.html",
   "security-lab.html",
   "swarm.html",
+  "evidence-lab.html",
+  "mission-control.html",
+  "data-ocean.html",
+  "network-simulator.html",
+  "particle-lab.html",
+  "matrix-wolf.html",
+  "yggdrasil.html",
+  "ha-desktop.html",
+  "game-lab/index.html",
 ];
 
 const failures = [];
