@@ -1,5 +1,17 @@
 # Portfolio Worklog
 
+## 2026-11-04 — Employer-facing portfolio completion
+
+- Updated the project atlas against canonical project READMEs; added project-specific implementation scope, evidence pointers and explicit limitations.
+- Restored all primary project navigation links and added the documented Workforce & Competence Management demo URL.
+- Expanded the printable profile with professional experience and ongoing education, while keeping the Master's degree clearly marked as in progress.
+- Corrected capability labels where a public implementation could not be verified; finance/risk is no longer promoted as implemented.
+- Marked Mission Control and Data Ocean as synthetic/animated demonstrations rather than live telemetry.
+- Added keyboard-operable tabs and accessible selected/hidden states to Mission Control.
+- Corrected Google Cloud learning evidence links and SwarmForge's prototype description.
+- Automated GitHub Actions and browser-level deployment checks remain pending; no production deployment or test pass is claimed without a completed run.
+
+
 ## 2026-08-26 — Baseline repair
 
 - Corrected UTF-8 text encoding in the main portfolio README.

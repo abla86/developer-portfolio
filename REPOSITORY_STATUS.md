@@ -1,6 +1,6 @@
 # Repository Portfolio Status
 
-**Review date:** 2026-09-23
+**Review date:** 2026-11-04
 
 This file is the portfolio control document. It separates active canonical systems from active supporting repositories and from archived/historical repositories.
 
@@ -15,7 +15,7 @@ This file is the portfolio control document. It separates active canonical syste
 | `CodeSentinel` | GitHub/security engineering | GitHub-grounded verification, audit, security and portfolio registry |
 | `agenttrace` | AI-agent security/provenance | Tracing, policy, provenance, tool integrity, audit and bounded ADK/MCP integration |
 | `book-forge` | AI-assisted publishing platform | Full-stack book workflow, continuity, versioning, security and persistence |
-| `Autonomous-Multi-Agent-App-Builder` | Multi-agent engineering application | Autonomous software-engineering workflow, testing, telemetry and bounded security analysis |
+| `Autonomous-Multi-Agent-App-Builder` | Application-builder prototype | Project/file management, server telemetry, limited static source checks and advisory AI suggestions; agent entries are role definitions, not independent workers |
 
 ## Active repositories under review
 
